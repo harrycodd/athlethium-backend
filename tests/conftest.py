@@ -33,9 +33,19 @@ if EMULATORS_UP:
     os.environ.setdefault("STORAGE_EMULATOR_HOST", "http://" + os.environ["FIREBASE_STORAGE_EMULATOR_HOST"])
 
 import firebase_admin  # noqa: E402
+from firebase_admin import credentials  # noqa: E402
+from google.auth.credentials import AnonymousCredentials  # noqa: E402
+
+
+class _EmulatorCredential(credentials.Base):
+    """No real credentials exist in tests; the emulators accept anonymous access."""
+
+    def get_credential(self):
+        return AnonymousCredentials()
+
 
 if not firebase_admin._apps:
-    firebase_admin.initialize_app(options={"projectId": PROJECT_ID, "storageBucket": BUCKET})
+    firebase_admin.initialize_app(_EmulatorCredential(), options={"projectId": PROJECT_ID, "storageBucket": BUCKET})
 
 
 def pytest_collection_modifyitems(config, items):
