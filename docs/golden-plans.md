@@ -13,21 +13,28 @@ file is out of date, so every change to these plans is reviewed.
    A week is planned from the athlete's state on its Monday, so it doesn't shift mid-week.
 2. Load weeks rise at most 10% in hours *and* TSS vs the last load week; recovery weeks
    (65% volume) every 3-4 weeks; cycles count back from the event, offset per athlete otherwise.
-   Level (and so session caps) grows with fitness: CTL 20/45/65 (cycling) or 15/30/45
-   (running, swimming) unlocks intermediate/advanced/elite.
-3. Hard sessions take ~20% of weekly time (max 25%), are never on Monday or back-to-back,
+   Level (and so session caps) grows with fitness, up to pro: CTL 20/45/65/85 (cycling),
+   18/28/38/52 (running), 18/28/42/65 (swimming) unlocks intermediate/advanced/elite/pro.
+   Weekly ceilings per sport at pro: cycling 30 h, running 14 h, swimming 20 h.
+   Advanced+ athletes get an easy second session on a day when singles can't hold the volume.
+3. Sports: the split follows the athlete's priorities (main focus 3 : other focus 2 : rest 1).
+   Each sport ramps from its *own* recent volume: running +10% or one 30-min session a week,
+   cycling/swimming +30% (overall load is still +10%). A new or switched-to sport starts from
+   transfer credit: bike->run 25%, run->bike 75%, swim<->others 25% (min 2 h). Runs are
+   capped at 40% of the week's running (min 1 h). Switching sport never restarts the athlete.
+4. Hard sessions take ~20% of weekly time (max 25%), are never on Monday or back-to-back,
    need at least 40 min, and the day after one is Zone 1 recovery. No tempo/grey-zone sessions.
-4. Beginners: max one hard session, two rest days. Under ~3.3 h/week: no hard sessions.
-5. One long Zone 2 session on the weekend day with most time (~30% of the week, max 40%).
-6. Session caps by sport and level (running is capped hardest for impact; e.g. beginner runs <= 1 h).
-7. Strength (1-2x) only in load/recovery weeks, never the day before a hard session.
-8. Taper: 60% then 40% volume, intensity kept but shorter; race week = opener 3 days out,
+5. Beginners: max one hard session, two rest days. Under ~3.3 h/week: no hard sessions.
+6. One long Zone 2 session on the weekend day with most time (~30% of the week, max 40%).
+7. Session caps by sport and level (running is capped hardest for impact; e.g. beginner runs <= 1 h).
+8. Strength (1-2x) only in load/recovery weeks, never the day before a hard session.
+9. Taper: 60% then 40% volume, intensity kept but shorter; race week = opener 3 days out,
    rest 2 days out, shake-out the day before, race, rest the day after, easy for 2 more days.
-9. Missed sessions are never made up; the plan re-bases on actual fitness.
-10. 7+ days without training: one aerobic-only week, then one hard session the next week.
-11. Minor illness/injury: half volume, no intensity. Severe: rest until cleared.
-12. Benchmark test after each recovery week, and once for new athletes with no threshold.
-13. Day-of fatigue guardrail (TSB < -25 -> recovery) applies to the coming week only.
+10. Missed sessions are never made up; the plan re-bases on actual fitness.
+11. 7+ days without training: one aerobic-only week, then one hard session the next week.
+12. Minor illness/injury: half volume, no intensity. Severe: rest until cleared.
+13. Benchmark test after each recovery week, and once for new athletes with no threshold.
+14. Day-of fatigue guardrail (TSB < -25 -> recovery) applies to the coming week only.
 
 **How to read the weekly table**
 
@@ -294,14 +301,14 @@ Morgan: elite age-group triathlete, 18 h/week, full power/pace data. Olympic-dis
 
 | Wk | Starts | Type | Hours | TSS | Sessions | KEY/TEST | Easy % | High % | Mid % |
 |---:|---|---|---:|---:|---:|---:|---:|---:|---:|
-| 1 | 2026-10-05 | Load | 13.2 | 601 | 6 | 2 | 76 | 6 | 0 |
-| 2 | 2026-10-12 | Load | 12.8 | 586 | 6 | 2 | 78 | 7 | 0 |
-| 3 | 2026-10-19 | Recovery | 8.3 | 368 | 6 | 1 | 80 | 7 | 0 |
-| 4 | 2026-10-26 | Load | 12.7 | 578 | 6 | 2 | 79 | 7 | 0 |
-| 5 | 2026-11-02 | Load | 12.7 | 578 | 6 | 2 | 79 | 7 | 0 |
-| 6 | 2026-11-09 | Load | 12.7 | 578 | 6 | 2 | 79 | 7 | 0 |
-| 7 | 2026-11-16 | Taper | 7.6 | 318 | 6 | 2 | 80 | 7 | 0 |
-| 8 | 2026-11-23 | Race | 2.8 | 113 | 5 | 0 | 100 | 2 | 0 |
+| 1 | 2026-10-05 | Load | 15.2 | 675 | 7 | 2 | 79 | 6 | 0 |
+| 2 | 2026-10-12 | Load | 15.3 | 683 | 7 | 2 | 78 | 6 | 0 |
+| 3 | 2026-10-19 | Recovery | 9.9 | 436 | 6 | 1 | 81 | 6 | 0 |
+| 4 | 2026-10-26 | Load | 15.3 | 683 | 7 | 2 | 78 | 6 | 0 |
+| 5 | 2026-11-02 | Load | 15.3 | 683 | 7 | 2 | 78 | 6 | 0 |
+| 6 | 2026-11-09 | Load | 15.3 | 683 | 7 | 2 | 78 | 6 | 0 |
+| 7 | 2026-11-16 | Taper | 9.2 | 392 | 6 | 2 | 80 | 8 | 0 |
+| 8 | 2026-11-23 | Race | 3.2 | 127 | 5 | 0 | 100 | 2 | 0 |
 
 <details><summary>Day-by-day plan</summary>
 
@@ -309,56 +316,61 @@ Morgan: elite age-group triathlete, 18 h/week, full power/pace data. Olympic-dis
 |---|---|---|---:|---:|---|
 | Mon 05 Oct | Rest | | | | |
 | Tue 06 Oct | KEY | cycling | 1h35 | 88 | 6 x 3 min @ 363-389 W |
-| Wed 07 Oct | Recovery | cycling | 2h00 | 54 | 2h00 @ 165-182 W |
+| Wed 07 Oct | Recovery | swimming | 2h00 | 54 | 2h00 @ 1:45-1:49 /100m |
+| Wed 07 Oct (PM) | Recovery | running | 1h00 | 27 | 1h00 @ 170-187 W |
 | Thu 08 Oct | KEY | running | 1h35 | 94 | 1 x 1 min @ 323-340 W; 4 x 8 min @ 326-347 W |
 | Fri 09 Oct | Strength | strength | 30 min | 0 | Squat to Overhead Press (Thruster), Deadlift / Hip Hinge, Push-Ups / Chest Press |
 | Sat 10 Oct | Long | cycling | 5h00 | 229 | 5h00 @ 214-238 W |
-| Sun 11 Oct | Easy | cycling | 3h00 | 136 | 3h00 @ 214-238 W |
+| Sun 11 Oct | Easy | cycling | 4h00 | 182 | 4h00 @ 214-238 W |
 | Mon 12 Oct | Rest | | | | |
-| Tue 13 Oct | KEY | cycling | 1h25 | 81 | 6 x 3 min @ 363-389 W |
-| Wed 14 Oct | Recovery | cycling | 2h00 | 54 | 2h00 @ 165-182 W |
-| Thu 15 Oct | KEY | running | 1h25 | 86 | 1 x 1 min @ 323-340 W; 4 x 8 min @ 326-347 W |
+| Tue 13 Oct | KEY | cycling | 1h40 | 92 | 6 x 3 min @ 363-389 W |
+| Wed 14 Oct | Recovery | swimming | 2h00 | 54 | 2h00 @ 1:45-1:49 /100m |
+| Wed 14 Oct (PM) | Recovery | running | 1h00 | 27 | 1h00 @ 170-187 W |
+| Thu 15 Oct | KEY | running | 1h40 | 98 | 1 x 1 min @ 323-340 W; 4 x 8 min @ 326-347 W |
 | Fri 16 Oct | Strength | strength | 30 min | 0 | Squat to Overhead Press (Thruster), Deadlift / Hip Hinge, Push-Ups / Chest Press |
 | Sat 17 Oct | Long | cycling | 5h00 | 229 | 5h00 @ 214-238 W |
-| Sun 18 Oct | Easy | cycling | 3h00 | 136 | 3h00 @ 214-238 W |
+| Sun 18 Oct | Easy | cycling | 4h00 | 182 | 4h00 @ 214-238 W |
 | Mon 19 Oct | Rest | | | | |
-| Tue 20 Oct | KEY | cycling | 1h40 | 98 | 1 x 1 min @ 314-330 W; 4 x 8 min @ 317-337 W |
-| Wed 21 Oct | Recovery | running | 1h20 | 36 | 1h20 @ 170-187 W |
-| Thu 22 Oct | Easy | running | 1h25 | 61 | 1h25 @ 221-245 W |
+| Tue 20 Oct | KEY | cycling | 1h55 | 109 | 1 x 1 min @ 314-330 W; 4 x 8 min @ 317-337 W |
+| Wed 21 Oct | Recovery | swimming | 1h40 | 45 | 1h40 @ 1:45-1:49 /100m |
+| Thu 22 Oct | Easy | running | 1h40 | 73 | 1h40 @ 221-245 W |
 | Fri 23 Oct | Strength | strength | 30 min | 0 | Squat to Overhead Press (Thruster), Deadlift / Hip Hinge, Push-Ups / Chest Press |
-| Sat 24 Oct | Long | cycling | 2h30 | 112 | 2h30 @ 214-238 W |
-| Sun 25 Oct | Easy | swimming | 1h25 | 61 | 1h25 @ 1:35-1:39 /100m |
+| Sat 24 Oct | Long | cycling | 2h55 | 132 | 2h55 @ 214-238 W |
+| Sun 25 Oct | Easy | running | 1h45 | 77 | 1h45 @ 221-245 W |
 | Mon 26 Oct | Rest | | | | |
-| Tue 27 Oct | KEY | cycling | 1h20 | 77 | 6 x 3 min @ 363-389 W |
-| Wed 28 Oct | Recovery | cycling | 2h00 | 54 | 2h00 @ 165-182 W |
-| Thu 29 Oct | KEY | running | 1h20 | 82 | 1 x 1 min @ 323-340 W; 4 x 8 min @ 326-347 W |
+| Tue 27 Oct | KEY | cycling | 1h40 | 92 | 6 x 3 min @ 363-389 W |
+| Wed 28 Oct | Recovery | swimming | 2h00 | 54 | 2h00 @ 1:45-1:49 /100m |
+| Wed 28 Oct (PM) | Recovery | running | 1h00 | 27 | 1h00 @ 170-187 W |
+| Thu 29 Oct | KEY | running | 1h40 | 98 | 1 x 1 min @ 323-340 W; 4 x 8 min @ 326-347 W |
 | Fri 30 Oct | Strength | strength | 30 min | 0 | Squat to Overhead Press (Thruster), Deadlift / Hip Hinge, Push-Ups / Chest Press |
 | Sat 31 Oct | Long | cycling | 5h00 | 229 | 5h00 @ 214-238 W |
-| Sun 01 Nov | Easy | cycling | 3h00 | 136 | 3h00 @ 214-238 W |
+| Sun 01 Nov | Easy | cycling | 4h00 | 182 | 4h00 @ 214-238 W |
 | Mon 02 Nov | Rest | | | | |
-| Tue 03 Nov | KEY | cycling | 1h20 | 77 | 6 x 3 min @ 363-389 W |
-| Wed 04 Nov | Recovery | cycling | 2h00 | 54 | 2h00 @ 165-182 W |
-| Thu 05 Nov | KEY | running | 1h20 | 82 | 1 x 1 min @ 323-340 W; 4 x 8 min @ 326-347 W |
+| Tue 03 Nov | KEY | cycling | 1h40 | 92 | 6 x 3 min @ 363-389 W |
+| Wed 04 Nov | Recovery | swimming | 2h00 | 54 | 2h00 @ 1:45-1:49 /100m |
+| Wed 04 Nov (PM) | Recovery | running | 1h00 | 27 | 1h00 @ 170-187 W |
+| Thu 05 Nov | KEY | running | 1h40 | 98 | 1 x 1 min @ 323-340 W; 4 x 8 min @ 326-347 W |
 | Fri 06 Nov | Strength | strength | 30 min | 0 | Squat to Overhead Press (Thruster), Deadlift / Hip Hinge, Push-Ups / Chest Press |
 | Sat 07 Nov | Long | cycling | 5h00 | 229 | 5h00 @ 214-238 W |
-| Sun 08 Nov | Easy | cycling | 3h00 | 136 | 3h00 @ 214-238 W |
+| Sun 08 Nov | Easy | cycling | 4h00 | 182 | 4h00 @ 214-238 W |
 | Mon 09 Nov | Rest | | | | |
-| Tue 10 Nov | KEY | cycling | 1h20 | 77 | 6 x 3 min @ 363-389 W |
-| Wed 11 Nov | Recovery | cycling | 2h00 | 54 | 2h00 @ 165-182 W |
-| Thu 12 Nov | KEY | running | 1h20 | 82 | 1 x 1 min @ 323-340 W; 4 x 8 min @ 326-347 W |
+| Tue 10 Nov | KEY | cycling | 1h40 | 92 | 6 x 3 min @ 363-389 W |
+| Wed 11 Nov | Recovery | swimming | 2h00 | 54 | 2h00 @ 1:45-1:49 /100m |
+| Wed 11 Nov (PM) | Recovery | running | 1h00 | 27 | 1h00 @ 170-187 W |
+| Thu 12 Nov | KEY | running | 1h40 | 98 | 1 x 1 min @ 323-340 W; 4 x 8 min @ 326-347 W |
 | Fri 13 Nov | Strength | strength | 30 min | 0 | Squat to Overhead Press (Thruster), Deadlift / Hip Hinge, Push-Ups / Chest Press |
 | Sat 14 Nov | Long | cycling | 5h00 | 229 | 5h00 @ 214-238 W |
-| Sun 15 Nov | Easy | cycling | 3h00 | 136 | 3h00 @ 214-238 W |
+| Sun 15 Nov | Easy | cycling | 4h00 | 182 | 4h00 @ 214-238 W |
 | Mon 16 Nov | Rest | | | | |
-| Tue 17 Nov | KEY | cycling | 45 min | 47 | 5 x 3 min @ 363-389 W |
-| Wed 18 Nov | Recovery | swimming | 1h15 | 34 | 1h15 @ 1:45-1:49 /100m |
-| Thu 19 Nov | KEY | running | 45 min | 46 | 1 x 1 min @ 323-340 W; 2 x 8 min @ 326-347 W |
-| Fri 20 Nov | Recovery | cycling | 1h15 | 34 | 1h15 @ 165-182 W |
-| Sat 21 Nov | Long | cycling | 2h15 | 100 | 2h15 @ 214-238 W |
-| Sun 22 Nov | Easy | running | 1h20 | 57 | 1h20 @ 221-245 W |
+| Tue 17 Nov | KEY | cycling | 55 min | 59 | 6 x 3 min @ 363-389 W |
+| Wed 18 Nov | Recovery | running | 1h30 | 40 | 1h30 @ 170-187 W |
+| Thu 19 Nov | KEY | running | 55 min | 59 | 1 x 1 min @ 323-340 W; 3 x 8 min @ 326-347 W |
+| Fri 20 Nov | Recovery | cycling | 1h30 | 40 | 1h30 @ 165-182 W |
+| Sat 21 Nov | Long | cycling | 2h45 | 124 | 2h45 @ 214-238 W |
+| Sun 22 Nov | Easy | swimming | 1h35 | 69 | 1h35 @ 1:35-1:39 /100m |
 | Mon 23 Nov | Rest | | | | |
-| Tue 24 Nov | Easy | cycling | 50 min | 35 | 50 min @ 214-238 W |
-| Wed 25 Nov | Easy | cycling | 50 min | 35 | 50 min @ 214-238 W |
+| Tue 24 Nov | Easy | cycling | 1h00 | 42 | 1h00 @ 214-238 W |
+| Wed 25 Nov | Easy | running | 1h00 | 42 | 1h00 @ 221-245 W |
 | Thu 26 Nov | Opener | cycling | 45 min | 27 | 3 x 1 min @ 314-346 W |
 | Fri 27 Nov | Rest | | | | |
 | Sat 28 Nov | Shake-out | cycling | 25 min | 16 | 3 x 20 s @ 346-380 W |

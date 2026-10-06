@@ -928,43 +928,43 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 40.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Cycling Aerobic Base Building",
     "rationale": "Recovery week (Build phase), 5 weeks to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
-    "sport": "running",
+    "sport": "cycling",
     "steps": [
       [
         "warmup",
         360,
         50,
         65,
-        "pace"
+        "power"
       ],
       [
         "interval",
         1680,
         65,
         72,
-        "pace"
+        "power"
       ],
       [
         "cooldown",
         360,
         50,
         58,
-        "pace"
+        "power"
       ]
     ],
-    "targetType": "pace",
+    "targetType": "power",
     "targets": [
       [
-        "s/km",
-        382,
-        399
+        "W",
+        125,
+        145
       ],
       [
-        "s/km",
-        399,
-        438
+        "W",
+        125,
+        162
       ]
     ],
     "tss": 28.1,
@@ -2492,76 +2492,29 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 40.0,
-    "name": "Cycling Active Recovery",
+    "name": "Running Active Recovery",
     "rationale": "Taper week (Taper phase), 1 week to your event. Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
-    "sport": "cycling",
+    "sport": "running",
     "steps": [
       [
         "warmup",
         300,
         45,
         55,
-        "power"
+        "pace"
       ],
       [
         "interval",
         1800,
         50,
         55,
-        "power"
+        "pace"
       ],
       [
         "cooldown",
         300,
         40,
         50,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "targets": [
-      [
-        "W",
-        100,
-        125
-      ],
-      [
-        "W",
-        112,
-        138
-      ]
-    ],
-    "tss": 17.6,
-    "week": "taper"
-  },
-  {
-    "date": "2026-11-19",
-    "intensity": 2,
-    "kind": "easy",
-    "minutes": 40.0,
-    "name": "Running Aerobic Base Building",
-    "rationale": "Taper week (Taper phase), 1 week to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        360,
-        50,
-        65,
-        "pace"
-      ],
-      [
-        "interval",
-        1680,
-        65,
-        72,
-        "pace"
-      ],
-      [
-        "cooldown",
-        360,
-        50,
-        58,
         "pace"
       ]
     ],
@@ -2569,20 +2522,20 @@
     "targets": [
       [
         "s/km",
-        382,
-        399
+        423,
+        438
       ],
       [
         "s/km",
-        399,
-        438
+        423,
+        454
       ]
     ],
-    "tss": 28.1,
+    "tss": 17.6,
     "week": "taper"
   },
   {
-    "date": "2026-11-20",
+    "date": "2026-11-19",
     "intensity": 2,
     "kind": "easy",
     "minutes": 40.0,
@@ -2623,6 +2576,53 @@
         "W",
         125,
         162
+      ]
+    ],
+    "tss": 28.1,
+    "week": "taper"
+  },
+  {
+    "date": "2026-11-20",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 40.0,
+    "name": "Running Aerobic Base Building",
+    "rationale": "Taper week (Taper phase), 1 week to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        360,
+        50,
+        65,
+        "pace"
+      ],
+      [
+        "interval",
+        1680,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "cooldown",
+        360,
+        50,
+        58,
+        "pace"
+      ]
+    ],
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        382,
+        399
+      ],
+      [
+        "s/km",
+        399,
+        438
       ]
     ],
     "tss": 28.1,
@@ -2680,43 +2680,43 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 45.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Cycling Aerobic Base Building",
     "rationale": "Taper week (Taper phase), 1 week to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
-    "sport": "running",
+    "sport": "cycling",
     "steps": [
       [
         "warmup",
         405,
         50,
         65,
-        "pace"
+        "power"
       ],
       [
         "interval",
         1890,
         65,
         72,
-        "pace"
+        "power"
       ],
       [
         "cooldown",
         405,
         50,
         58,
-        "pace"
+        "power"
       ]
     ],
-    "targetType": "pace",
+    "targetType": "power",
     "targets": [
       [
-        "s/km",
-        382,
-        399
+        "W",
+        125,
+        145
       ],
       [
-        "s/km",
-        399,
-        438
+        "W",
+        125,
+        162
       ]
     ],
     "tss": 31.6,
@@ -2738,53 +2738,6 @@
   },
   {
     "date": "2026-11-24",
-    "intensity": 2,
-    "kind": "easy",
-    "minutes": 40.0,
-    "name": "Running Aerobic Base Building",
-    "rationale": "Race week (Race phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        360,
-        50,
-        65,
-        "pace"
-      ],
-      [
-        "interval",
-        1680,
-        65,
-        72,
-        "pace"
-      ],
-      [
-        "cooldown",
-        360,
-        50,
-        58,
-        "pace"
-      ]
-    ],
-    "targetType": "pace",
-    "targets": [
-      [
-        "s/km",
-        382,
-        399
-      ],
-      [
-        "s/km",
-        399,
-        438
-      ]
-    ],
-    "tss": 28.1,
-    "week": "race"
-  },
-  {
-    "date": "2026-11-25",
     "intensity": 2,
     "kind": "easy",
     "minutes": 40.0,
@@ -2825,6 +2778,53 @@
         "W",
         125,
         162
+      ]
+    ],
+    "tss": 28.1,
+    "week": "race"
+  },
+  {
+    "date": "2026-11-25",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 40.0,
+    "name": "Running Aerobic Base Building",
+    "rationale": "Race week (Race phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        360,
+        50,
+        65,
+        "pace"
+      ],
+      [
+        "interval",
+        1680,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "cooldown",
+        360,
+        50,
+        58,
+        "pace"
+      ]
+    ],
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        382,
+        399
+      ],
+      [
+        "s/km",
+        399,
+        438
       ]
     ],
     "tss": 28.1,

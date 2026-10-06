@@ -18,53 +18,6 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 35.0,
-    "name": "Cycling Aerobic Base Building",
-    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
-    "sport": "cycling",
-    "steps": [
-      [
-        "warmup",
-        315,
-        50,
-        65,
-        "power"
-      ],
-      [
-        "interval",
-        1470,
-        65,
-        72,
-        "power"
-      ],
-      [
-        "cooldown",
-        315,
-        50,
-        58,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "targets": [
-      [
-        "W",
-        125,
-        145
-      ],
-      [
-        "W",
-        125,
-        162
-      ]
-    ],
-    "tss": 24.6,
-    "week": "load"
-  },
-  {
-    "date": "2026-10-07",
-    "intensity": 2,
-    "kind": "easy",
-    "minutes": 35.0,
     "name": "Running Aerobic Base Building",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
@@ -102,6 +55,53 @@
         "s/km",
         399,
         438
+      ]
+    ],
+    "tss": 24.6,
+    "week": "load"
+  },
+  {
+    "date": "2026-10-07",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 35.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        315,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        1470,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        315,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
       ]
     ],
     "tss": 24.6,
@@ -220,43 +220,43 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 40.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Cycling Aerobic Base Building",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
-    "sport": "running",
+    "sport": "cycling",
     "steps": [
       [
         "warmup",
         360,
         50,
         65,
-        "pace"
+        "power"
       ],
       [
         "interval",
         1680,
         65,
         72,
-        "pace"
+        "power"
       ],
       [
         "cooldown",
         360,
         50,
         58,
-        "pace"
+        "power"
       ]
     ],
-    "targetType": "pace",
+    "targetType": "power",
     "targets": [
       [
-        "s/km",
-        382,
-        399
+        "W",
+        125,
+        145
       ],
       [
-        "s/km",
-        399,
-        438
+        "W",
+        125,
+        162
       ]
     ],
     "tss": 28.1,
@@ -278,6 +278,53 @@
   },
   {
     "date": "2026-10-13",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 35.0,
+    "name": "Running Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        315,
+        50,
+        65,
+        "pace"
+      ],
+      [
+        "interval",
+        1470,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "cooldown",
+        315,
+        50,
+        58,
+        "pace"
+      ]
+    ],
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        382,
+        399
+      ],
+      [
+        "s/km",
+        399,
+        438
+      ]
+    ],
+    "tss": 24.6,
+    "week": "load"
+  },
+  {
+    "date": "2026-10-14",
     "intensity": 2,
     "kind": "easy",
     "minutes": 35.0,
@@ -324,49 +371,7 @@
     "week": "load"
   },
   {
-    "date": "2026-10-14",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
-    "week": "load"
-  },
-  {
     "date": "2026-10-15",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
-    "week": "load"
-  },
-  {
-    "date": "2026-10-16",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
-    "week": "load"
-  },
-  {
-    "date": "2026-10-17",
     "intensity": 2,
     "kind": "easy",
     "minutes": 40.0,
@@ -413,47 +418,108 @@
     "week": "load"
   },
   {
+    "date": "2026-10-16",
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
+  },
+  {
+    "date": "2026-10-17",
+    "intensity": 2,
+    "kind": "long",
+    "minutes": 60.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        540,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        2520,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        540,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 42.2,
+    "week": "load"
+  },
+  {
     "date": "2026-10-18",
     "intensity": 2,
     "kind": "easy",
     "minutes": 40.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Cycling Aerobic Base Building",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
-    "sport": "running",
+    "sport": "cycling",
     "steps": [
       [
         "warmup",
         360,
         50,
         65,
-        "pace"
+        "power"
       ],
       [
         "interval",
         1680,
         65,
         72,
-        "pace"
+        "power"
       ],
       [
         "cooldown",
         360,
         50,
         58,
-        "pace"
+        "power"
       ]
     ],
-    "targetType": "pace",
+    "targetType": "power",
     "targets": [
       [
-        "s/km",
-        382,
-        399
+        "W",
+        125,
+        145
       ],
       [
-        "s/km",
-        399,
-        438
+        "W",
+        125,
+        162
       ]
     ],
     "tss": 28.1,
@@ -475,44 +541,143 @@
   },
   {
     "date": "2026-10-20",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 35.0,
+    "name": "Running Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        315,
+        50,
+        65,
+        "pace"
+      ],
+      [
+        "interval",
+        1470,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "cooldown",
+        315,
+        50,
+        58,
+        "pace"
+      ]
+    ],
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        382,
+        399
+      ],
+      [
+        "s/km",
+        399,
+        438
+      ]
+    ],
+    "tss": 24.6,
     "week": "load"
   },
   {
     "date": "2026-10-21",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 35.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        315,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        1470,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        315,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 24.6,
     "week": "load"
   },
   {
     "date": "2026-10-22",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 40.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        360,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        1680,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        360,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 28.1,
     "week": "load"
   },
   {
@@ -532,10 +697,118 @@
   {
     "date": "2026-10-24",
     "intensity": 2,
+    "kind": "long",
+    "minutes": 60.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        540,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        2520,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        540,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 42.2,
+    "week": "load"
+  },
+  {
+    "date": "2026-10-25",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 40.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        360,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        1680,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        360,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 28.1,
+    "week": "load"
+  },
+  {
+    "date": "2026-10-26",
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "recovery"
+  },
+  {
+    "date": "2026-10-27",
+    "intensity": 2,
     "kind": "easy",
     "minutes": 30.0,
     "name": "Cycling Aerobic Base Building",
-    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
       [
@@ -574,15 +847,137 @@
       ]
     ],
     "tss": 21.1,
-    "week": "load"
+    "week": "recovery"
   },
   {
-    "date": "2026-10-25",
+    "date": "2026-10-28",
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "recovery"
+  },
+  {
+    "date": "2026-10-29",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 30.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        270,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        1260,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        270,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 21.1,
+    "week": "recovery"
+  },
+  {
+    "date": "2026-10-30",
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "recovery"
+  },
+  {
+    "date": "2026-10-31",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 30.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        270,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        1260,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        270,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 21.1,
+    "week": "recovery"
+  },
+  {
+    "date": "2026-11-01",
     "intensity": 2,
     "kind": "easy",
     "minutes": 30.0,
     "name": "Running Aerobic Base Building",
-    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
       [
@@ -621,104 +1016,6 @@
       ]
     ],
     "tss": 21.1,
-    "week": "load"
-  },
-  {
-    "date": "2026-10-26",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
-    "week": "recovery"
-  },
-  {
-    "date": "2026-10-27",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
-    "week": "recovery"
-  },
-  {
-    "date": "2026-10-28",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
-    "week": "recovery"
-  },
-  {
-    "date": "2026-10-29",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
-    "week": "recovery"
-  },
-  {
-    "date": "2026-10-30",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
-    "week": "recovery"
-  },
-  {
-    "date": "2026-10-31",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
-    "week": "recovery"
-  },
-  {
-    "date": "2026-11-01",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
     "week": "recovery"
   },
   {
@@ -737,44 +1034,143 @@
   },
   {
     "date": "2026-11-03",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 35.0,
+    "name": "Running Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        315,
+        50,
+        65,
+        "pace"
+      ],
+      [
+        "interval",
+        1470,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "cooldown",
+        315,
+        50,
+        58,
+        "pace"
+      ]
+    ],
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        382,
+        399
+      ],
+      [
+        "s/km",
+        399,
+        438
+      ]
+    ],
+    "tss": 24.6,
     "week": "load"
   },
   {
     "date": "2026-11-04",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 35.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        315,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        1470,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        315,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 24.6,
     "week": "load"
   },
   {
     "date": "2026-11-05",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 40.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        360,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        1680,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        360,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 28.1,
     "week": "load"
   },
   {
@@ -794,29 +1190,29 @@
   {
     "date": "2026-11-07",
     "intensity": 2,
-    "kind": "easy",
-    "minutes": 30.0,
+    "kind": "long",
+    "minutes": 60.0,
     "name": "Cycling Aerobic Base Building",
-    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        270,
+        540,
         50,
         65,
         "power"
       ],
       [
         "interval",
-        1260,
+        2520,
         65,
         72,
         "power"
       ],
       [
         "cooldown",
-        270,
+        540,
         50,
         58,
         "power"
@@ -835,21 +1231,54 @@
         162
       ]
     ],
-    "tss": 21.1,
+    "tss": 42.2,
     "week": "load"
   },
   {
     "date": "2026-11-08",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 40.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        360,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        1680,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        360,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 28.1,
     "week": "load"
   },
   {
@@ -868,44 +1297,143 @@
   },
   {
     "date": "2026-11-10",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 35.0,
+    "name": "Running Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        315,
+        50,
+        65,
+        "pace"
+      ],
+      [
+        "interval",
+        1470,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "cooldown",
+        315,
+        50,
+        58,
+        "pace"
+      ]
+    ],
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        382,
+        399
+      ],
+      [
+        "s/km",
+        399,
+        438
+      ]
+    ],
+    "tss": 24.6,
     "week": "load"
   },
   {
     "date": "2026-11-11",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 35.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        315,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        1470,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        315,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 24.6,
     "week": "load"
   },
   {
     "date": "2026-11-12",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 40.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        360,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        1680,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        360,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 28.1,
     "week": "load"
   },
   {
@@ -925,29 +1453,29 @@
   {
     "date": "2026-11-14",
     "intensity": 2,
-    "kind": "easy",
-    "minutes": 30.0,
+    "kind": "long",
+    "minutes": 60.0,
     "name": "Cycling Aerobic Base Building",
-    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        270,
+        540,
         50,
         65,
         "power"
       ],
       [
         "interval",
-        1260,
+        2520,
         65,
         72,
         "power"
       ],
       [
         "cooldown",
-        270,
+        540,
         50,
         58,
         "power"
@@ -966,21 +1494,54 @@
         162
       ]
     ],
-    "tss": 21.1,
+    "tss": 42.2,
     "week": "load"
   },
   {
     "date": "2026-11-15",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 40.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        360,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        1680,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        360,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 28.1,
     "week": "load"
   },
   {
@@ -999,44 +1560,143 @@
   },
   {
     "date": "2026-11-17",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 35.0,
+    "name": "Running Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        315,
+        50,
+        65,
+        "pace"
+      ],
+      [
+        "interval",
+        1470,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "cooldown",
+        315,
+        50,
+        58,
+        "pace"
+      ]
+    ],
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        382,
+        399
+      ],
+      [
+        "s/km",
+        399,
+        438
+      ]
+    ],
+    "tss": 24.6,
     "week": "load"
   },
   {
     "date": "2026-11-18",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 35.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        315,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        1470,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        315,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 24.6,
     "week": "load"
   },
   {
     "date": "2026-11-19",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 40.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        360,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        1680,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        360,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 28.1,
     "week": "load"
   },
   {
@@ -1056,10 +1716,118 @@
   {
     "date": "2026-11-21",
     "intensity": 2,
+    "kind": "long",
+    "minutes": 60.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        540,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        2520,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        540,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 42.2,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-22",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 40.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        360,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        1680,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        360,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 28.1,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-23",
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "recovery"
+  },
+  {
+    "date": "2026-11-24",
+    "intensity": 2,
     "kind": "easy",
     "minutes": 30.0,
     "name": "Cycling Aerobic Base Building",
-    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
       [
@@ -1098,48 +1866,6 @@
       ]
     ],
     "tss": 21.1,
-    "week": "load"
-  },
-  {
-    "date": "2026-11-22",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
-    "week": "load"
-  },
-  {
-    "date": "2026-11-23",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
-    "week": "recovery"
-  },
-  {
-    "date": "2026-11-24",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
     "week": "recovery"
   },
   {
@@ -1158,16 +1884,49 @@
   },
   {
     "date": "2026-11-26",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 30.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        270,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        1260,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        270,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 21.1,
     "week": "recovery"
   },
   {
@@ -1186,30 +1945,96 @@
   },
   {
     "date": "2026-11-28",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 30.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        270,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        1260,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        270,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 21.1,
     "week": "recovery"
   },
   {
     "date": "2026-11-29",
-    "intensity": -1,
-    "kind": "rest",
-    "minutes": 0.0,
-    "name": "Rest & Recovery Day",
-    "rationale": "Planned rest day",
-    "sport": "rest",
-    "steps": [],
-    "targetType": "time",
-    "targets": [],
-    "tss": 0.0,
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 30.0,
+    "name": "Running Aerobic Base Building",
+    "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        270,
+        50,
+        65,
+        "pace"
+      ],
+      [
+        "interval",
+        1260,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "cooldown",
+        270,
+        50,
+        58,
+        "pace"
+      ]
+    ],
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        382,
+        399
+      ],
+      [
+        "s/km",
+        399,
+        438
+      ]
+    ],
+    "tss": 21.1,
     "week": "recovery"
   }
 ]

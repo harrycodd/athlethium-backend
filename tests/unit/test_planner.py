@@ -280,11 +280,13 @@ def test_severe_issue_is_full_rest():
 
 def test_level_and_capacity_helpers():
     assert athlete_level(make_profile(fitness_level="weird", ctl=30)) == 1
-    # fitness unlocks levels: cycling 20/45/65, running & swimming 15/30/45
+    # fitness unlocks levels: cycling 20/45/65/85, running 18/28/38/52, swimming 18/28/42/65
     assert athlete_level(make_profile(fitness_level="beginner", ctl=50)) == 2
     assert athlete_level(make_profile(fitness_level="beginner", ctl=70)) == 3
+    assert athlete_level(make_profile(fitness_level="beginner", ctl=90)) == 4
     run = dict(sports=["running"], focused_sports=["running"], fitness_level="beginner")
-    assert [athlete_level(make_profile(ctl=c, **run)) for c in (10, 16, 31, 46)] == [0, 1, 2, 3]
+    assert [athlete_level(make_profile(ctl=c, **run)) for c in (10, 19, 29, 39, 53)] == [0, 1, 2, 3, 4]
+    assert athlete_level(make_profile(fitness_level="pro", ctl=0)) == 4
     assert athlete_level(make_profile(fitness_level="intermediate", ctl=5)) == 0
     assert athlete_level(make_profile(sports=["strength"], focused_sports=["strength"], ctl=25)) == 1
     p = make_profile(daily_hours_overrides={"2026-10-05": 12}, daily_max_hours={"Tuesday": "x"},
@@ -377,3 +379,30 @@ def test_strength_never_starves_endurance_when_time_is_tiny():
                      daily_max_hours={d: (0.75 if d == "Sunday" else 0) for d in DAYS})
     for w in weeks(p, 4):
         assert w.endurance_hours >= 0.5
+
+
+def test_minor_issue_does_not_compound_week_after_week():
+    """Halving volume for a minor illness must not keep halving every planned week (found in snapshots)."""
+    p = make_profile(illness=1, daily_max_hours=ROOMY, weekly_hours=12)
+    hours = [w.endurance_hours for w in weeks(p, 6) if w.context.week_type == "load"]
+    assert min(hours) >= 0.9 * max(hours) - 0.5
+
+
+def test_planning_ahead_with_sport_history_carries_each_sport_forward():
+    hist = {"2026-09-28": [8.0, 360.0, {"cycling": 6.0, "running": 2.0}]}
+    p = make_profile(ctl=55, atl=55, metrics_date="2026-10-04", daily_max_hours=ROOMY, weekly_hours=25,
+                     sports=["cycling", "running"], focused_sports=["running", "cycling"], recent_weeks=hist, uid="ahead")
+    plans = weeks(p, 4)
+    runs = [w.sport_hours.get("running", 0.0) for w in plans if w.context.week_type == "load"]
+    assert runs[0] <= max(2.0 * 1.1, 2.0 + 0.5) + 1e-6
+    assert all(b <= max(a * 1.1, a + 0.5) + 1e-6 for a, b in zip(runs, runs[1:], strict=False))
+
+
+def test_new_sport_starts_from_transfer_credit():
+    hist = {"2026-09-28": [16.0, 700.0, {"cycling": 16.0}]}
+    p = make_profile(ctl=90, atl=90, metrics_date="2026-10-04", daily_max_hours=ROOMY, weekly_hours=25,
+                     sports=["running"], focused_sports=["running"], recent_weeks=hist, uid="switch")
+    first = weeks(p, 1)[0]
+    if first.context.week_type == "load":
+        assert first.sport_hours["running"] <= 0.25 * 16.0 * 1.10 + 1e-6
+    assert max(s.hours for s in first.sessions if s.sport == "running") <= 0.4 * 0.25 * 16 * 1.10 + 1e-6

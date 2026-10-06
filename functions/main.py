@@ -197,9 +197,9 @@ def generate_training_session(req: https_fn.Request) -> https_fn.Response:
             if WorkoutService.has_workout_for_date(uid, current_date_str):
                 skipped_dates.append(current_date_str)
                 continue
-            workout_doc = TrainingScheduler.schedule_day(user_profile=user_profile, target_date=current_date,
-                                                         user_id=uid, as_of=today)
-            if WorkoutService.save_workout(workout_doc):
+            day_docs = TrainingScheduler.schedule_day_all(user_profile=user_profile, target_date=current_date,
+                                                          user_id=uid, as_of=today)
+            if WorkoutService.save_day(day_docs):
                 generated_dates.append(current_date_str)
             else:
                 skipped_dates.append(current_date_str)

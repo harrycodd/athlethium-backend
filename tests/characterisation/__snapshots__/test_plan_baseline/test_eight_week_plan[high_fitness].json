@@ -114,43 +114,43 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Cycling Active Recovery",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
-    "sport": "running",
+    "sport": "cycling",
     "steps": [
       [
         "warmup",
         300,
         45,
         55,
-        "pace"
+        "power"
       ],
       [
         "interval",
         3000,
         50,
         55,
-        "pace"
+        "power"
       ],
       [
         "cooldown",
         300,
         40,
         50,
-        "pace"
+        "power"
       ]
     ],
-    "targetType": "pace",
+    "targetType": "power",
     "targets": [
       [
-        "s/km",
-        423,
-        438
+        "W",
+        100,
+        125
       ],
       [
-        "s/km",
-        423,
-        454
+        "W",
+        112,
+        138
       ]
     ],
     "tss": 26.7,
@@ -351,43 +351,43 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 120.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Running Aerobic Base Building",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
-    "sport": "cycling",
+    "sport": "running",
     "steps": [
       [
         "warmup",
         600,
         50,
         65,
-        "power"
+        "pace"
       ],
       [
         "interval",
         6000,
         65,
         72,
-        "power"
+        "pace"
       ],
       [
         "cooldown",
         600,
         50,
         58,
-        "power"
+        "pace"
       ]
     ],
-    "targetType": "power",
+    "targetType": "pace",
     "targets": [
       [
-        "W",
-        125,
-        145
+        "s/km",
+        382,
+        399
       ],
       [
-        "W",
-        125,
-        162
+        "s/km",
+        399,
+        438
       ]
     ],
     "tss": 88.6,
@@ -508,43 +508,43 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Cycling Active Recovery",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
-    "sport": "running",
+    "sport": "cycling",
     "steps": [
       [
         "warmup",
         300,
         45,
         55,
-        "pace"
+        "power"
       ],
       [
         "interval",
         3000,
         50,
         55,
-        "pace"
+        "power"
       ],
       [
         "cooldown",
         300,
         40,
         50,
-        "pace"
+        "power"
       ]
     ],
-    "targetType": "pace",
+    "targetType": "power",
     "targets": [
       [
-        "s/km",
-        423,
-        438
+        "W",
+        100,
+        125
       ],
       [
-        "s/km",
-        423,
-        454
+        "W",
+        112,
+        138
       ]
     ],
     "tss": 26.7,
@@ -745,43 +745,43 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 120.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Running Aerobic Base Building",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
-    "sport": "cycling",
+    "sport": "running",
     "steps": [
       [
         "warmup",
         600,
         50,
         65,
-        "power"
+        "pace"
       ],
       [
         "interval",
         6000,
         65,
         72,
-        "power"
+        "pace"
       ],
       [
         "cooldown",
         600,
         50,
         58,
-        "power"
+        "pace"
       ]
     ],
-    "targetType": "power",
+    "targetType": "pace",
     "targets": [
       [
-        "W",
-        125,
-        145
+        "s/km",
+        382,
+        399
       ],
       [
-        "W",
-        125,
-        162
+        "s/km",
+        399,
+        438
       ]
     ],
     "tss": 88.6,
@@ -902,43 +902,43 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Cycling Active Recovery",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
-    "sport": "running",
+    "sport": "cycling",
     "steps": [
       [
         "warmup",
         300,
         45,
         55,
-        "pace"
+        "power"
       ],
       [
         "interval",
         3000,
         50,
         55,
-        "pace"
+        "power"
       ],
       [
         "cooldown",
         300,
         40,
         50,
-        "pace"
+        "power"
       ]
     ],
-    "targetType": "pace",
+    "targetType": "power",
     "targets": [
       [
-        "s/km",
-        423,
-        438
+        "W",
+        100,
+        125
       ],
       [
-        "s/km",
-        423,
-        454
+        "W",
+        112,
+        138
       ]
     ],
     "tss": 26.7,
@@ -1139,43 +1139,43 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 120.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Running Aerobic Base Building",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
-    "sport": "cycling",
+    "sport": "running",
     "steps": [
       [
         "warmup",
         600,
         50,
         65,
-        "power"
+        "pace"
       ],
       [
         "interval",
         6000,
         65,
         72,
-        "power"
+        "pace"
       ],
       [
         "cooldown",
         600,
         50,
         58,
-        "power"
+        "pace"
       ]
     ],
-    "targetType": "power",
+    "targetType": "pace",
     "targets": [
       [
-        "W",
-        125,
-        145
+        "s/km",
+        382,
+        399
       ],
       [
-        "W",
-        125,
-        162
+        "s/km",
+        399,
+        438
       ]
     ],
     "tss": 88.6,
@@ -1296,43 +1296,43 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 40.0,
-    "name": "Running Active Recovery",
+    "name": "Cycling Active Recovery",
     "rationale": "Recovery week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
-    "sport": "running",
+    "sport": "cycling",
     "steps": [
       [
         "warmup",
         300,
         45,
         55,
-        "pace"
+        "power"
       ],
       [
         "interval",
         1800,
         50,
         55,
-        "pace"
+        "power"
       ],
       [
         "cooldown",
         300,
         40,
         50,
-        "pace"
+        "power"
       ]
     ],
-    "targetType": "pace",
+    "targetType": "power",
     "targets": [
       [
-        "s/km",
-        423,
-        438
+        "W",
+        100,
+        125
       ],
       [
-        "s/km",
-        423,
-        454
+        "W",
+        112,
+        138
       ]
     ],
     "tss": 17.6,
@@ -1641,43 +1641,43 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Cycling Active Recovery",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
-    "sport": "running",
+    "sport": "cycling",
     "steps": [
       [
         "warmup",
         300,
         45,
         55,
-        "pace"
+        "power"
       ],
       [
         "interval",
         3000,
         50,
         55,
-        "pace"
+        "power"
       ],
       [
         "cooldown",
         300,
         40,
         50,
-        "pace"
+        "power"
       ]
     ],
-    "targetType": "pace",
+    "targetType": "power",
     "targets": [
       [
-        "s/km",
-        423,
-        438
+        "W",
+        100,
+        125
       ],
       [
-        "s/km",
-        423,
-        454
+        "W",
+        112,
+        138
       ]
     ],
     "tss": 26.7,
@@ -1878,43 +1878,43 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 120.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Running Aerobic Base Building",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
-    "sport": "cycling",
+    "sport": "running",
     "steps": [
       [
         "warmup",
         600,
         50,
         65,
-        "power"
+        "pace"
       ],
       [
         "interval",
         6000,
         65,
         72,
-        "power"
+        "pace"
       ],
       [
         "cooldown",
         600,
         50,
         58,
-        "power"
+        "pace"
       ]
     ],
-    "targetType": "power",
+    "targetType": "pace",
     "targets": [
       [
-        "W",
-        125,
-        145
+        "s/km",
+        382,
+        399
       ],
       [
-        "W",
-        125,
-        162
+        "s/km",
+        399,
+        438
       ]
     ],
     "tss": 88.6,
@@ -2035,43 +2035,43 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Cycling Active Recovery",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
-    "sport": "running",
+    "sport": "cycling",
     "steps": [
       [
         "warmup",
         300,
         45,
         55,
-        "pace"
+        "power"
       ],
       [
         "interval",
         3000,
         50,
         55,
-        "pace"
+        "power"
       ],
       [
         "cooldown",
         300,
         40,
         50,
-        "pace"
+        "power"
       ]
     ],
-    "targetType": "pace",
+    "targetType": "power",
     "targets": [
       [
-        "s/km",
-        423,
-        438
+        "W",
+        100,
+        125
       ],
       [
-        "s/km",
-        423,
-        454
+        "W",
+        112,
+        138
       ]
     ],
     "tss": 26.7,
@@ -2272,43 +2272,43 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 120.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Running Aerobic Base Building",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
-    "sport": "cycling",
+    "sport": "running",
     "steps": [
       [
         "warmup",
         600,
         50,
         65,
-        "power"
+        "pace"
       ],
       [
         "interval",
         6000,
         65,
         72,
-        "power"
+        "pace"
       ],
       [
         "cooldown",
         600,
         50,
         58,
-        "power"
+        "pace"
       ]
     ],
-    "targetType": "power",
+    "targetType": "pace",
     "targets": [
       [
-        "W",
-        125,
-        145
+        "s/km",
+        382,
+        399
       ],
       [
-        "W",
-        125,
-        162
+        "s/km",
+        399,
+        438
       ]
     ],
     "tss": 88.6,
@@ -2429,43 +2429,43 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Cycling Active Recovery",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
-    "sport": "running",
+    "sport": "cycling",
     "steps": [
       [
         "warmup",
         300,
         45,
         55,
-        "pace"
+        "power"
       ],
       [
         "interval",
         3000,
         50,
         55,
-        "pace"
+        "power"
       ],
       [
         "cooldown",
         300,
         40,
         50,
-        "pace"
+        "power"
       ]
     ],
-    "targetType": "pace",
+    "targetType": "power",
     "targets": [
       [
-        "s/km",
-        423,
-        438
+        "W",
+        100,
+        125
       ],
       [
-        "s/km",
-        423,
-        454
+        "W",
+        112,
+        138
       ]
     ],
     "tss": 26.7,
@@ -2666,43 +2666,43 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 120.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Running Aerobic Base Building",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
-    "sport": "cycling",
+    "sport": "running",
     "steps": [
       [
         "warmup",
         600,
         50,
         65,
-        "power"
+        "pace"
       ],
       [
         "interval",
         6000,
         65,
         72,
-        "power"
+        "pace"
       ],
       [
         "cooldown",
         600,
         50,
         58,
-        "power"
+        "pace"
       ]
     ],
-    "targetType": "power",
+    "targetType": "pace",
     "targets": [
       [
-        "W",
-        125,
-        145
+        "s/km",
+        382,
+        399
       ],
       [
-        "W",
-        125,
-        162
+        "s/km",
+        399,
+        438
       ]
     ],
     "tss": 88.6,
@@ -2823,43 +2823,43 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 40.0,
-    "name": "Running Active Recovery",
+    "name": "Cycling Active Recovery",
     "rationale": "Recovery week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
-    "sport": "running",
+    "sport": "cycling",
     "steps": [
       [
         "warmup",
         300,
         45,
         55,
-        "pace"
+        "power"
       ],
       [
         "interval",
         1800,
         50,
         55,
-        "pace"
+        "power"
       ],
       [
         "cooldown",
         300,
         40,
         50,
-        "pace"
+        "power"
       ]
     ],
-    "targetType": "pace",
+    "targetType": "power",
     "targets": [
       [
-        "s/km",
-        423,
-        438
+        "W",
+        100,
+        125
       ],
       [
-        "s/km",
-        423,
-        454
+        "W",
+        112,
+        138
       ]
     ],
     "tss": 17.6,

@@ -28,38 +28,47 @@ class WorkoutService:
 
     @classmethod
     def save_workout(cls, workout: WorkoutDoc) -> Optional[str]:
+        """Saves one planned workout (see save_day)."""
+        saved = cls.save_day([workout])
+        return saved[0] if saved else None
+
+    @classmethod
+    def save_day(cls, workouts: List[WorkoutDoc]) -> List[str]:
         """
-        Saves a planned WorkoutDoc, removing other *uncompleted* workouts on the same day.
-        Never overwrites a completed workout; returns None if the slot is already completed.
+        Saves a day's planned workouts (one, or two on a double day), removing other *uncompleted*
+        workouts on that day that aren't part of this plan. Never overwrites a completed workout.
+        Returns the ids saved.
         """
+        if not workouts:
+            return []
         db = firestore.client()
-        doc_dict = workout.to_dict()
-        doc_dict["createdAt"] = firestore.SERVER_TIMESTAMP
-
-        target_id = workout.workout_id or f"plan_{workout.user_id}_{workout.date}"
-        target_ref = db.collection("workouts").document(target_id)
-
-        existing = target_ref.get()
-        if existing.exists and _is_completed(existing.to_dict() or {}):
-            print(f"[WorkoutService] Not overwriting completed workout {target_id}")
-            return None
+        user_id, date = workouts[0].user_id, workouts[0].date
+        ids = [w.workout_id or f"plan_{w.user_id}_{w.date}" for w in workouts]
 
         same_day = db.collection("workouts") \
-                     .where(filter=FieldFilter("userId", "==", workout.user_id)) \
-                     .where(filter=FieldFilter("date", "==", workout.date)) \
+                     .where(filter=FieldFilter("userId", "==", user_id)) \
+                     .where(filter=FieldFilter("date", "==", date)) \
                      .get()
         for doc_snap in same_day:
             data = doc_snap.to_dict() or {}
-            if doc_snap.id == target_id or _is_completed(data):
-                continue
-            if data.get("type") in ("Goal", "Event"):
+            if doc_snap.id in ids or _is_completed(data) or data.get("type") in ("Goal", "Event"):
                 continue
             doc_snap.reference.delete()
-            print(f"[WorkoutService] Removed duplicate uncompleted workout {doc_snap.id} on {workout.date}")
+            print(f"[WorkoutService] Removed duplicate uncompleted workout {doc_snap.id} on {date}")
 
-        target_ref.set(doc_dict)
-        print(f"[WorkoutService] Saved workout {target_id} for user {workout.user_id} on {workout.date}")
-        return target_id
+        saved = []
+        for workout, target_id in zip(workouts, ids, strict=True):
+            target_ref = db.collection("workouts").document(target_id)
+            existing = target_ref.get()
+            if existing.exists and _is_completed(existing.to_dict() or {}):
+                print(f"[WorkoutService] Not overwriting completed workout {target_id}")
+                continue
+            doc_dict = workout.to_dict()
+            doc_dict["createdAt"] = firestore.SERVER_TIMESTAMP
+            target_ref.set(doc_dict)
+            saved.append(target_id)
+        print(f"[WorkoutService] Saved {saved} for user {user_id} on {date}")
+        return saved
 
     @classmethod
     def has_workout_for_date(cls, user_id: str, date_str: str) -> bool:
@@ -78,10 +87,11 @@ class WorkoutService:
 
     @classmethod
     def recent_load(cls, user_id: str, today: datetime.date,
-                    weeks: int = 3) -> Tuple[Dict[str, List[float]], List[List[Any]]]:
+                    weeks: int = 3) -> Tuple[Dict[str, List[Any]], List[List[Any]]]:
         """
         Completed endurance load for the planner:
-        - per Monday-Sunday week for the `weeks` full weeks before today's week: {Monday: [hours, tss]}
+        - per Monday-Sunday week for the `weeks` full weeks before today's week:
+          {Monday: [hours, tss, {sport: hours}]} (per sport so each sport ramps on its own)
         - this week's completed sessions so far: [[date, tss], ...]
         """
         this_monday = today - datetime.timedelta(days=today.weekday())
@@ -107,8 +117,10 @@ class WorkoutService:
                     week_to_date.append([day.isoformat(), round(tss, 1)])
                 continue
             key = (day - datetime.timedelta(days=day.weekday())).isoformat()
-            week = load.setdefault(key, [0.0, 0.0])
+            week = load.setdefault(key, [0.0, 0.0, {}])
             week[0] += hours
             week[1] += tss
-        return ({k: [round(h, 3), round(t, 1)] for k, (h, t) in load.items()},
+            week[2][data["sport"]] = week[2].get(data["sport"], 0.0) + hours
+        return ({k: [round(h, 3), round(t, 1), {sp: round(x, 3) for sp, x in by.items()}]
+                 for k, (h, t, by) in load.items()},
                 sorted(week_to_date))

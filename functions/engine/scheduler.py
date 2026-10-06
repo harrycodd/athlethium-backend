@@ -8,7 +8,7 @@ and day-of safety guardrails (injury, illness, deep fatigue).
 
 import dataclasses
 import datetime
-from typing import Optional
+from typing import List, Optional
 
 from core.models import TargetType, TrainingPhase, UserProfile, WorkoutDoc
 from engine.guardrails import GuardrailEngine
@@ -60,14 +60,32 @@ class TrainingScheduler:
         as_of: Optional[datetime.date] = None,
     ) -> WorkoutDoc:
         """
-        `as_of` is the athlete's "today" (plans ramp from there). Defaults to target_date, which
-        plans the week stand-alone from the athlete's current fitness.
+        The day's main workout. `as_of` is the athlete's "today" (plans ramp from there). Defaults
+        to target_date, which plans the week stand-alone from the athlete's current fitness.
         """
-        uid = user_id or user_profile.uid
-        date_str = target_date.strftime("%Y-%m-%d")
-        week = WeekPlanner.plan_week(user_profile, target_date, as_of=as_of)
-        session = week.session_on(target_date)
+        return cls.schedule_day_all(user_profile, target_date, user_id, as_of)[0]
 
+    @classmethod
+    def schedule_day_all(
+        cls,
+        user_profile: UserProfile,
+        target_date: datetime.date,
+        user_id: Optional[str] = None,
+        as_of: Optional[datetime.date] = None,
+    ) -> List[WorkoutDoc]:
+        """Every workout for the day: the main one, plus a second ("pm") session on double days."""
+        uid = user_id or user_profile.uid
+        week = WeekPlanner.plan_week(user_profile, target_date, as_of=as_of)
+        docs = [cls._build_doc(user_profile, session, week, uid, target_date, as_of)
+                for session in week.sessions_on(target_date)]
+        # a guardrail can turn the main session into rest; then there is no second session either
+        return docs[:1] if docs[0].sport == "rest" else docs
+
+    @classmethod
+    def _build_doc(cls, user_profile: UserProfile, session: PlannedSession, week: WeekPlan, uid: str,
+                   target_date: datetime.date, as_of: Optional[datetime.date]) -> WorkoutDoc:
+        date_str = target_date.strftime("%Y-%m-%d")
+        workout_id = f"plan_{uid}_{date_str}" + ("_pm" if session.slot == "pm" else "")
         if session.kind == Kind.REST:
             return cls._rest(uid, date_str, session.reason or "Planned rest day", week)
 
@@ -95,12 +113,14 @@ class TrainingScheduler:
         tss = payload_tss(session, payload)
 
         notes = cls._coaching_notes(session, week, clamp_reason, has_targets)
+        if session.slot == "pm":
+            notes += " Second session today: keep it easy and refuel well between sessions."
         description = "\n\n".join(p for p in (payload.get("description", "").strip(), notes) if p)
         total_time_sec = sum(st["duration"] for st in steps) if steps else int(round(session.hours * 3600))
         is_endurance = session.sport in ENDURANCE
 
         return WorkoutDoc(
-            workout_id=f"plan_{uid}_{date_str}",
+            workout_id=workout_id,
             user_id=uid,
             date=date_str,
             name=payload.get("name", f"{session.sport.capitalize()} Session"),
@@ -119,6 +139,7 @@ class TrainingScheduler:
                             else cls._execution_tip(session, has_targets)),
             session_kind=session.kind,
             week_type=week.context.week_type,
+            slot=session.slot,
         )
 
     @classmethod

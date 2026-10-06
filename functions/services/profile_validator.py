@@ -25,7 +25,7 @@ NUMERIC_FIELDS = {
     "intensity_weeks": (1, 6, True),
 }
 INTERVAL_TYPES = {"structured", "mix", "non_structured", "non-structured"}
-FITNESS_LEVELS = {"beginner", "intermediate", "advanced", "elite"}
+FITNESS_LEVELS = {"beginner", "intermediate", "advanced", "elite", "pro"}
 
 
 class ProfileValidator:

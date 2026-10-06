@@ -26,7 +26,7 @@ from engine.physiology import PhysiologyEngine
 from engine.sessions import session_tss
 
 ENDURANCE_SPORTS = ("cycling", "running", "swimming")
-LEVELS = ("beginner", "intermediate", "advanced", "elite")
+LEVELS = ("beginner", "intermediate", "advanced", "elite", "pro")
 
 TSS_PER_HOUR = 55.0          # converts chronic load (CTL) into weekly hours
 RAMP = 1.10                  # max week-on-week rise between load weeks
@@ -55,13 +55,35 @@ SLOT = 1 / 12                # durations are rounded down to 5 minutes
 # CTL that unlocks intermediate / advanced / elite caps, per primary sport. Each threshold sits
 # below what the previous level's caps can sustain, so a compliant athlete always progresses
 # (checked by tests/property/test_career.py). Running/swimming caps are tighter, so lower CTL.
-CTL_LEVEL_THRESHOLDS = {"cycling": (20, 45, 65), "running": (15, 30, 45), "swimming": (15, 30, 45)}
+CTL_LEVEL_THRESHOLDS = {"cycling": (20, 45, 65, 85), "running": (18, 28, 38, 52), "swimming": (18, 28, 42, 65)}
 HISTORY_WEEKS = 3                    # completed weeks used as the ramp baseline
-START_HOURS = (2.5, 4.0, 6.0, 8.0)  # first week for athletes with no training history, by level
-MAX_HARD_H = (1.0, 1.25, 1.5, 1.75)
-MAX_RECOVERY_H = (0.75, 1.0, 1.5, 2.0)  # day after a hard or long session
-MAX_SESSION_H = {"cycling": (1.5, 2.0, 2.5, 3.0), "running": (1.0, 1.25, 1.5, 1.75), "swimming": (1.0, 1.25, 1.5, 1.75)}
-MAX_LONG_H = {"cycling": (2.5, 3.5, 4.5, 5.5), "running": (1.25, 1.75, 2.25, 2.75), "swimming": (1.0, 1.25, 1.5, 2.0)}
+START_HOURS = (2.5, 4.0, 6.0, 8.0, 10.0)  # first week for athletes with no training history, by level
+MAX_HARD_H = (1.0, 1.25, 1.5, 1.75, 2.0)
+MAX_RECOVERY_H = (0.75, 1.0, 1.5, 2.0, 2.5)  # day after a hard session
+MAX_SESSION_H = {"cycling": (1.5, 2.0, 2.5, 3.0, 4.5), "running": (1.0, 1.25, 1.5, 1.75, 2.0),
+                 "swimming": (1.0, 1.25, 1.5, 1.75, 2.0)}
+MAX_LONG_H = {"cycling": (2.5, 3.5, 4.5, 5.5, 6.5), "running": (1.25, 1.75, 2.25, 2.75, 3.0),
+              "swimming": (1.0, 1.25, 1.5, 2.0, 2.5)}
+DOUBLES_MIN_LEVEL = 2                 # advanced+ athletes may train twice a day (only when needed)
+# Most weekly hours in one sport, by level. Running is limited hardest (impact): even pro
+# marathoners rarely run more than ~14 h a week; swimmers and cyclists go much higher.
+MAX_WEEKLY_H = {"cycling": (8.0, 12.0, 18.0, 24.0, 30.0), "running": (4.0, 6.0, 8.0, 11.0, 14.0),
+                "swimming": (4.0, 6.0, 9.0, 14.0, 20.0)}
+
+# Share of training in one sport that counts towards the starting volume of another. Aerobic
+# fitness carries over, but impact and technique don't: a cyclist new to running starts at a
+# quarter of their riding volume, a runner keeps most of theirs on the bike.
+TRANSFER = {
+    "cycling": {"running": 0.25, "swimming": 0.25},
+    "running": {"cycling": 0.75, "swimming": 0.25},
+    "swimming": {"cycling": 0.25, "running": 0.25},
+}
+# Per-sport week-on-week growth: running is held to the 10% rule (impact injuries); low-impact
+# cycling and swimming may shift faster *within* the overall +10% weekly load.
+SPORT_RAMP = {"running": 1.10, "cycling": 1.30, "swimming": 1.30}
+NEW_SPORT_FLOOR_H = 2.0              # any sport can always take ~2 h (e.g. 3 short sessions)
+RUN_SESSION_SHARE = 0.40             # no run exceeds 40% of the week's running (impact rule)
+MIN_RUN_CAP_H = 1.0                  # ...but a 1 h run is always fine
 DEFAULT_RACE_H = {"cycling": 2.0, "running": 1.0, "swimming": 0.75}
 
 # Weekday preferences (0 = Monday). Hard sessions never go on Monday.
@@ -94,6 +116,7 @@ class PlannedSession:
     hours: float = 0.0
     style: Optional[str] = None   # "threshold" | "vo2" for hard sessions
     reason: str = ""
+    slot: str = "am"              # "pm" = second session of a double day
 
 
 @dataclass(frozen=True)
@@ -106,12 +129,25 @@ class WeekPlan:
     tss: float = 0.0
 
     def session_on(self, day: datetime.date) -> PlannedSession:
+        """The day's main (or only) session."""
         return self.sessions[(day - self.context.week_start).days]
+
+    def sessions_on(self, day: datetime.date) -> List[PlannedSession]:
+        """All sessions that day: the main one, then a second ("pm") session on double days."""
+        return [s for s in self.sessions if s.date == day and (s.slot == "am" or s.kind != Kind.REST)]
 
     @property
     def endurance_hours(self) -> float:
         """Endurance training volume (excludes strength, mobility and the race itself)."""
         return round(sum(s.hours for s in self.sessions if s.sport in ENDURANCE_SPORTS and s.kind != Kind.RACE), 4)
+
+    @property
+    def sport_hours(self) -> Dict[str, float]:
+        out: Dict[str, float] = {}
+        for s in self.sessions:
+            if s.sport in ENDURANCE_SPORTS and s.kind != Kind.RACE:
+                out[s.sport] = out.get(s.sport, 0.0) + s.hours
+        return out
 
 
 def _floor_slot(hours: float) -> float:
@@ -157,7 +193,8 @@ def _sport_weights(profile: UserProfile, sports: Sequence[str], focus: Sequence[
     pcts = {s: float(profile.sport_percentages.get(s, 0) or 0) for s in sports}
     if sum(pcts.values()) > 0:
         return pcts
-    return {s: (2.0 if s in focus else 1.0) for s in sports}
+    # priority order matters: main focus 3, other focus sports 2, the rest 1
+    return {s: (3.0 if focus and s == focus[0] else 2.0 if s in focus else 1.0) for s in sports}
 
 
 def _parse_date(value: Optional[str]) -> Optional[datetime.date]:
@@ -201,26 +238,33 @@ class WeekPlanner:
 
         # What the athlete actually completed recently is the true baseline for the 10% rule (CTL
         # lags weeks behind, which would stall progression). Not after a gap: then fitness rules.
+        sport_reference: Optional[Dict[str, float]] = None
         if history and not comeback:
             # baseline = the most recent completed *load* week (recovery weeks don't reset the ramp)
             loads = [w for w in history if week_context(profile.goal, w[0], profile.intensity_weeks,
                                                         profile.uid).week_type == WeekType.LOAD]
-            _, base_h, base_tss = max(loads or history)
+            _, base_h, base_tss, base_sports = max(loads or history, key=lambda w: w[0])
             reference = max(base_h, entry / RAMP, 1.0)
             reference_tss = base_tss if base_tss > 0 else None
+            sport_reference = base_sports
 
         current = anchor
         while True:
             plan = cls._plan_single_week(profile, current, reference, level, comeback=comeback and current == anchor,
                                          reintroduce=comeback and current == anchor + datetime.timedelta(days=7),
                                          reference_tss=reference_tss,
-                                         first_week=first_ever_week and current == anchor)
+                                         first_week=first_ever_week and current == anchor,
+                                         sport_reference=sport_reference)
             if current >= week_start:
                 return plan
-            if plan.context.week_type == WeekType.LOAD or plan.comeback:
+            # weeks cut back for a minor injury/illness are temporary: they don't lower the baseline
+            minor_issue = profile.injury == 1 or profile.illness == 1
+            if (plan.context.week_type == WeekType.LOAD or plan.comeback) and not minor_issue:
                 reference = max(plan.endurance_hours, 1.0)
                 # an aerobic-only comeback week is not a fair TSS baseline for the first week back
                 reference_tss = None if plan.comeback else plan.tss
+                if sport_reference is not None:
+                    sport_reference = plan.sport_hours
             current += datetime.timedelta(days=7)
 
     @classmethod
@@ -245,7 +289,7 @@ class WeekPlanner:
         ctl, _ = PhysiologyEngine.rewind_metrics(max(ctl, 0.0), max(atl, 0.0), metrics_date, eve)
         # Last session before this week isn't stored; the completed-weeks history tells us.
         idle = None
-        trained = {start for start, hours, _ in cls._completed_weeks(profile, anchor) if hours > 0}
+        trained = {w[0] for w in cls._completed_weeks(profile, anchor) if w[1] > 0}
         for weeks_back in range(1, HISTORY_WEEKS + 1):
             if anchor - datetime.timedelta(weeks=weeks_back) in trained:
                 idle = 0 if weeks_back == 1 else 7 * (weeks_back - 1)
@@ -255,18 +299,22 @@ class WeekPlanner:
         return ctl, idle
 
     @staticmethod
-    def _completed_weeks(profile: UserProfile, anchor: datetime.date) -> List[Tuple[datetime.date, float, float]]:
+    def _completed_weeks(profile: UserProfile,
+                         anchor: datetime.date) -> List[Tuple[datetime.date, float, float, Optional[Dict[str, float]]]]:
+        """[(week start, hours, tss, {sport: hours} or None)] for the completed weeks before anchor."""
         out = []
         for key, value in (profile.recent_weeks or {}).items():
             start = _parse_date(key)
-            if start is None or not isinstance(value, (list, tuple)) or len(value) != 2:
+            if start is None or not isinstance(value, (list, tuple)) or len(value) not in (2, 3):
                 continue
             try:
                 hours, tss = float(value[0]), float(value[1])
-            except (TypeError, ValueError):
+                by_sport = ({str(k): float(v) for k, v in value[2].items() if k in ENDURANCE_SPORTS}
+                            if len(value) == 3 and isinstance(value[2], dict) else None)
+            except (TypeError, ValueError, AttributeError):
                 continue
             if anchor - datetime.timedelta(weeks=HISTORY_WEEKS) <= start < anchor:
-                out.append((start, hours, tss))
+                out.append((start, hours, tss, by_sport))
         return out
 
     # ------------------------------------------------------------------ one week
@@ -274,7 +322,8 @@ class WeekPlanner:
     @classmethod
     def _plan_single_week(cls, profile: UserProfile, week_start: datetime.date, reference: float,
                           level: int, comeback: bool, reintroduce: bool = False,
-                          reference_tss: Optional[float] = None, first_week: bool = False) -> WeekPlan:
+                          reference_tss: Optional[float] = None, first_week: bool = False,
+                          sport_reference: Optional[Dict[str, float]] = None) -> WeekPlan:
         ctx = week_context(profile.goal, week_start, profile.intensity_weeks, profile.uid)
         days = [week_start + datetime.timedelta(days=i) for i in range(7)]
         caps = [day_capacity(profile, d) for d in days]
@@ -305,26 +354,104 @@ class WeekPlanner:
             target *= 0.5
         target = _floor_slot(target)
 
+        allowance = cls.sport_allowances(sport_reference, sports, ctx.week_type, comeback, reference, level)
         sessions = [PlannedSession(d, Kind.REST) for d in days]
         if not sports:
             sessions = cls._strength_only_week(profile, ctx, days, caps, target)
         else:
             no_intensity = comeback or minor_issue or ctx.week_type in (WeekType.POST_RACE, WeekType.RACE)
             sessions = cls._layout(profile, ctx, days, caps, target, level, sports, focus, no_intensity,
-                                   strength_sessions, max_hard=1 if reintroduce else 2, first_week=first_week)
+                                   strength_sessions, max_hard=1 if reintroduce else 2, first_week=first_week,
+                                   allowance=allowance)
         sessions = cls._apply_race_proximity(profile, ctx, sessions, caps, sports, focus)
         sessions = cls._trim_to(sessions, target)
         sessions = cls._add_mobility(profile, sessions, caps)
+        if sports and level >= DOUBLES_MIN_LEVEL and ctx.week_type in (WeekType.LOAD, WeekType.RECOVERY) \
+                and not comeback and not minor_issue:
+            sessions = cls._add_doubles(profile, sessions, caps, target, level, sports, focus, allowance)
         if ctx.week_type == WeekType.LOAD and not comeback and reference_tss:
             sessions = cls._cap_load(profile, sessions, RAMP * reference_tss)
         # last: every earlier step can only shorten easy time, so polarisation is checked at the end
         sessions = cls._enforce_polarisation(sessions)
+        # a second session that got trimmed away is simply not there
+        sessions = [s for s in sessions if s.slot == "am" or s.kind != Kind.REST]
         tss = round(sum(session_tss(s, profile) for s in sessions if s.kind != Kind.RACE), 1)
         return WeekPlan(ctx, target, tuple(sessions), comeback, level, tss)
 
+    @staticmethod
+    def sport_allowances(sport_reference: Optional[Dict[str, float]], sports: Sequence[str], week_type: str,
+                         comeback: bool, reference: float, level: int = 1) -> Dict[str, float]:
+        """
+        Weekly hours each sport may take this week. Always capped by the level's weekly ceiling for
+        the sport. With per-sport history (and not after a gap): +10% on the sport's own volume from
+        the last load week, or partial credit from the other sports for a sport that is new or
+        growing (TRANSFER), never below a small floor so any sport can get started.
+        """
+        out = {sport: MAX_WEEKLY_H[sport][level] for sport in sports}
+        if sport_reference is None or comeback:
+            return out
+        for sport in sports:
+            factor = SPORT_RAMP[sport] if week_type == WeekType.LOAD else FACTORS.get(week_type, 1.0)
+            own = sport_reference.get(sport, 0.0)
+            credit = sum(TRANSFER[other].get(sport, 0.0) * hours
+                         for other, hours in sport_reference.items() if other != sport and other in TRANSFER)
+            base = max(own, credit)
+            # "10% or one more 30-min session, whichever is more" (overall load still <= +10%),
+            # otherwise a sport whose sessions are all at their cap could never grow
+            grown = max(factor * base, base + MIN_SESSION_H) if week_type == WeekType.LOAD and own > 0 \
+                else factor * base
+            ramped = max(grown, NEW_SPORT_FLOOR_H)
+            out[sport] = min(out[sport], ramped, max(RAMP * reference, NEW_SPORT_FLOOR_H))
+        return out
+
+    @staticmethod
+    def _sport_cap(sport: str, level: int, allowance: Optional[Dict[str, float]], kind: str = Kind.EASY) -> float:
+        """Longest session allowed: the level's cap; runs also <= 40% of the week's running allowance."""
+        cap = (MAX_LONG_H if kind == Kind.LONG else MAX_SESSION_H)[sport][level]
+        if sport == "running" and allowance is not None:
+            cap = min(cap, max(MIN_RUN_CAP_H, RUN_SESSION_SHARE * allowance[sport]))
+        return cap
+
+    @classmethod
+    def _add_doubles(cls, profile, sessions, caps, target, level, sports, focus, allowance):
+        """
+        Elite/pro athletes: when single sessions can't hold the week's volume, add an easy second
+        session on days with time left (never on hard, race-week or rest days).
+        """
+        out = list(sessions)
+        weights = _sport_weights(profile, sports, focus)
+        used = {sp: 0.0 for sp in sports}
+        for s in out:
+            if s.sport in used:
+                used[s.sport] += s.hours
+        deficit = target - sum(used.values())
+        share = {sp: weights.get(sp, 0) / (sum(weights.values()) or 1.0) for sp in sports}
+        days_by_room = sorted(range(7), key=lambda i: (-(caps[i] - out[i].hours), i))
+        for i in days_by_room:
+            if deficit < MIN_SESSION_H:
+                break
+            main = out[i]
+            if main.kind not in (Kind.EASY, Kind.RECOVERY, Kind.LONG) or caps[i] - main.hours < MIN_SESSION_H:
+                continue
+            room = {sp: allowance[sp] - used[sp] for sp in sports}
+            options = [sp for sp in sports if room[sp] >= MIN_SESSION_H and weights.get(sp, 0) > 0]
+            if not options:
+                break
+            # prefer a different sport from the morning session (classic AM swim / PM ride), then
+            # whichever sport is furthest below its priority share of the week
+            sport = max(options, key=lambda sp: (sp != main.sport, share[sp] * target - used[sp], -sports.index(sp)))
+            # every term is >= MIN_SESSION_H here, so the session is long enough
+            hours = _floor_slot(min(deficit, caps[i] - main.hours, room[sport], cls._sport_cap(sport, level, allowance),
+                                    MAX_RECOVERY_H[level] if main.kind == Kind.RECOVERY else 24.0))
+            kind, intensity = (Kind.RECOVERY, 1) if main.kind == Kind.RECOVERY else (Kind.EASY, 2)
+            out.append(PlannedSession(main.date, kind, sport, intensity, hours, slot="pm"))
+            used[sport] += hours
+            deficit -= hours
+        return out
+
     @classmethod
     def _layout(cls, profile, ctx: WeekContext, days, caps, target, level, sports, focus, no_intensity,
-                strength_sessions, max_hard=2, first_week=False):
+                strength_sessions, max_hard=2, first_week=False, allowance=None):
         n_rest_min = 2 if level == 0 or target < 4 else 1
         rest = {i for i in range(7) if caps[i] < MIN_SESSION_H}
         rest.update([i for i in REST_DAY_PREFERENCE if i not in rest][:max(0, n_rest_min - len(rest))])
@@ -333,8 +460,13 @@ class WeekPlanner:
         if not train or target < MIN_SESSION_H:
             return sessions
 
-        def max_session(sport):
-            return MAX_SESSION_H[sport][level]
+        used = {sp: 0.0 for sp in sports}
+
+        def room(sport):
+            return allowance[sport] - used[sport]
+
+        def max_session(sport, kind=Kind.EASY):
+            return min(cls._sport_cap(sport, level, allowance, kind), room(sport))
 
         # 1. Long session on the weekend day with the most time (chosen first so a lone big
         #    day isn't used up by a hard session)
@@ -345,11 +477,18 @@ class WeekPlanner:
             pool = weekend or [i for i in free if caps[i] >= MIN_LONG_H]
             if pool:
                 long_day = max(pool, key=lambda i: (caps[i], -abs(i - 5)))
-        long_sport = max(focus, key=lambda s: MAX_LONG_H[s][level])
-        if long_day is not None:
-            hours = _floor_slot(min(MAX_LONG_H[long_sport][level], caps[long_day], max(MIN_LONG_H, LONG_SHARE * target)))
+        weights = _sport_weights(profile, sports, focus)
+        long_options = [s for s in focus if max_session(s, Kind.LONG) >= MIN_LONG_H] or \
+            [s for s in sports if max_session(s, Kind.LONG) >= MIN_LONG_H]
+        if long_day is not None and long_options:
+            long_sport = max(long_options, key=lambda s: (weights.get(s, 0), MAX_LONG_H[s][level]))
+            hours = _floor_slot(min(max_session(long_sport, Kind.LONG), caps[long_day],
+                                    max(MIN_LONG_H, LONG_SHARE * target)))
             sessions[long_day] = PlannedSession(days[long_day], Kind.LONG, long_sport, 2, hours)
+            used[long_sport] += hours
             free.remove(long_day)
+        else:
+            long_day = None
 
         # 2. Hard sessions (never Monday, never on consecutive days)
         hard_days: List[int] = []
@@ -367,12 +506,14 @@ class WeekPlanner:
                     break
                 if i not in free or any(abs(i - j) == 1 for j in hard_days):
                     continue
-                sport = focus[len(hard_days) % len(focus)]
+                rotation = focus[len(hard_days) % len(focus):] + focus[:len(hard_days) % len(focus)]
+                sport = next((sp for sp in rotation if max_session(sp) >= MIN_HARD_H), rotation[0])
                 hours = _floor_slot(min(budget, MAX_HARD_H[level], max_session(sport), caps[i]))
                 if hours < MIN_HARD_H:
                     continue
                 style = styles[len(hard_days) % len(styles)]
                 sessions[i] = PlannedSession(days[i], Kind.HARD, sport, 5 if style == "vo2" else 4, hours, style)
+                used[sport] += hours
                 hard_days.append(i)
             cls._maybe_benchmark(profile, ctx, sessions, hard_days, caps, target, focus, first_week)
             free = [i for i in free if i not in hard_days]
@@ -386,7 +527,8 @@ class WeekPlanner:
             # not enough room without the strength days: endurance comes first
             strength_days = strength_days[:max(0, len(strength_days) - 1)]
             easy_days = [i for i in free if i not in strength_days]
-        cls._fill_easy(profile, sessions, days, caps, easy_days, remaining, level, sports, focus, hard_days, long_day)
+        cls._fill_easy(profile, sessions, days, caps, easy_days, remaining, level, sports, focus, hard_days, long_day,
+                       allowance)
 
         # 4. Strength on the remaining day(s): never the day before a hard session
         for i in strength_days:  # never given to easy sessions above
@@ -436,10 +578,11 @@ class WeekPlanner:
         sessions[first] = PlannedSession(sessions[first].date, Kind.BENCHMARK, sport, 5, BENCHMARK_H)
 
     @classmethod
-    def _fill_easy(cls, profile, sessions, days, caps, free, remaining, level, sports, focus, hard_days, long_day):
+    def _fill_easy(cls, profile, sessions, days, caps, free, remaining, level, sports, focus, hard_days, long_day,
+                   allowance=None):
         weights = _sport_weights(profile, sports, focus)
         long_cap = sessions[long_day].hours if long_day is not None else None
-        biggest_session = max(MAX_SESSION_H[s][level] for s in sports)
+        biggest_session = max(cls._sport_cap(s, level, allowance) for s in sports)
 
         def follows_quality(i):
             # Day after a hard session is recovery. Back-to-back weekend endurance is fine.
@@ -460,8 +603,9 @@ class WeekPlanner:
 
         if long_day is not None and left >= SLOT:
             s = sessions[long_day]
-            room = min(MAX_LONG_H[s.sport][level], caps[long_day], LONG_MAX_SHARE * (remaining + sum(
-                x.hours for x in sessions if x.sport in ENDURANCE_SPORTS))) - s.hours
+            room = min(cls._sport_cap(s.sport, level, allowance, Kind.LONG), caps[long_day], LONG_MAX_SHARE * (
+                remaining + sum(x.hours for x in sessions if x.sport in ENDURANCE_SPORTS))) - s.hours
+            room = min(room, allowance[s.sport] - sum(x.hours for x in sessions if x.sport == s.sport))
             extra = _floor_slot(min(room, left))
             if extra > 0:
                 sessions[long_day] = PlannedSession(s.date, s.kind, s.sport, s.intensity, s.hours + extra)
@@ -477,21 +621,55 @@ class WeekPlanner:
         planned_endurance = sum(totals.values()) + sum(alloc.values())
         weight_sum = sum(weights.values()) or 1.0
         limits = profile.sport_sessions_per_week or {}
+        carry = 0.0
         for i in sorted(alloc, key=lambda i: (-alloc[i], i)):
-            hours = alloc[i]  # >= MIN_SESSION_H: n days chosen so each share is at least that
+            # >= MIN_SESSION_H; plus any time a shorter-capped sport couldn't use on an earlier day
+            hours = min(alloc[i] + carry, ceiling(i))
+            carry = alloc[i] + carry - hours
             candidates = [sp for sp in sports if weights.get(sp, 0) > 0] or list(sports)
             allowed = [sp for sp in candidates if not limits.get(sp) or counts[sp] < int(limits[sp])] or candidates
-            fits = [sp for sp in allowed if MAX_SESSION_H[sp][level] >= hours] or allowed
+            allowed = [sp for sp in allowed if allowance[sp] - totals[sp] >= MIN_SESSION_H]
+            if not allowed:
+                continue  # every sport is at its safe weekly limit: leave the day free
+
+            def cap(sp):
+                return min(cls._sport_cap(sp, level, allowance), allowance[sp] - totals[sp])
 
             def shortfall(sp):
                 return weights.get(sp, 0) / weight_sum * planned_endurance - totals[sp]
 
-            sport = max(fits, key=lambda sp: (shortfall(sp), -sports.index(sp)))
-            hours = _floor_slot(min(hours, MAX_SESSION_H[sport][level]))
+            # the sport furthest below its share gets the day (priorities win), clipped to its cap;
+            # whatever it can't use carries over to the next day
+            sport = max(allowed, key=lambda sp: (shortfall(sp) > MIN_SESSION_H, cap(sp) >= hours,
+                                                 shortfall(sp), -sports.index(sp)))
+            placed = _floor_slot(min(hours, cap(sport)))  # both >= MIN_SESSION_H
+            carry += hours - placed
+            hours = placed
             kind, intensity = (Kind.RECOVERY, 1) if follows_quality(i) else (Kind.EASY, 2)
             sessions[i] = PlannedSession(days[i], kind, sport, intensity, hours)
             totals[sport] += hours
             counts[sport] += 1
+
+        # Top-up: time a short-capped sport couldn't use goes to easy sessions with room left
+        # (within their day, session and weekly sport caps), so priorities never cost volume.
+        week_total = sum(x.hours for x in sessions if x.sport in ENDURANCE_SPORTS) + carry
+        top_up_days = list(alloc) + ([long_day] if long_day is not None else [])
+        for i in sorted(top_up_days, key=lambda i: (sessions[i].kind == Kind.LONG, i)):
+            if carry < SLOT:
+                break
+            s = sessions[i]
+            if s.kind not in (Kind.EASY, Kind.RECOVERY, Kind.LONG):
+                continue
+            if s.kind == Kind.LONG:
+                limit = min(caps[i], cls._sport_cap(s.sport, level, allowance, Kind.LONG), LONG_MAX_SHARE * week_total)
+            else:
+                limit = min(ceiling(i), cls._sport_cap(s.sport, level, allowance))
+            limit = min(limit, s.hours + allowance[s.sport] - totals[s.sport])
+            extra = _floor_slot(min(carry, limit - s.hours))
+            if extra > 0:
+                sessions[i] = dataclasses.replace(s, hours=s.hours + extra)
+                totals[s.sport] += extra
+                carry -= extra
 
     @staticmethod
     def _cap_load(profile: UserProfile, sessions: List[PlannedSession], max_tss: float) -> List[PlannedSession]:
@@ -505,8 +683,8 @@ class WeekPlanner:
             i = max(easy, key=lambda i: (out[i].hours, i))
             s = out[i]
             hours = _floor_slot(s.hours - SLOT)
-            out[i] = (PlannedSession(s.date, s.kind, s.sport, s.intensity, hours) if hours >= MIN_SESSION_H
-                      else PlannedSession(s.date, Kind.REST))
+            out[i] = (dataclasses.replace(s, hours=hours) if hours >= MIN_SESSION_H
+                      else PlannedSession(s.date, Kind.REST, slot=s.slot))
             per[i] = session_tss(out[i], profile)
         return out
 
@@ -541,7 +719,7 @@ class WeekPlanner:
             if not hard or sum(out[i].hours for i in hard) <= MAX_HARD_SHARE * endurance + 1e-9:
                 return out
             s = out[hard[-1]]
-            out[hard[-1]] = PlannedSession(s.date, Kind.EASY, s.sport, 2, s.hours)
+            out[hard[-1]] = dataclasses.replace(s, kind=Kind.EASY, intensity=2, style=None)
 
     @classmethod
     def _strength_only_week(cls, profile, ctx, days, caps, target):

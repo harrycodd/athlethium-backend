@@ -45,8 +45,10 @@ def load_profiles() -> List[Tuple[str, str, object]]:
 
 
 def generate(profile) -> List[Dict]:
-    return [TrainingScheduler.schedule_day(profile, PLAN_START + datetime.timedelta(days=i), as_of=PLAN_START).to_dict()
-            for i in range(7 * WEEKS)]
+    """Every workout over the plan (two on double days), in date order."""
+    return [doc.to_dict() for i in range(7 * WEEKS)
+            for doc in TrainingScheduler.schedule_day_all(profile, PLAN_START + datetime.timedelta(days=i),
+                                                         as_of=PLAN_START)]
 
 
 def _fmt_dur(seconds: int) -> str:
@@ -89,7 +91,8 @@ def main_set(doc: Dict) -> str:
 def week_rows(docs: List[Dict]) -> List[Dict]:
     rows = []
     for w in range(WEEKS):
-        week = docs[7 * w: 7 * w + 7]
+        start = PLAN_START + datetime.timedelta(weeks=w)
+        week = [d for d in docs if 0 <= (datetime.date.fromisoformat(d["date"]) - start).days < 7]
         endurance = [d for d in week if d["sport"] in ("cycling", "running", "swimming") and d["event_type"] != "Race"]
         hours = sum(d["time"] for d in endurance) / 3600
         hard_h = sum(d["time"] for d in endurance if (d["intensity"] or 0) >= 4) / 3600
@@ -130,21 +133,28 @@ def render(profiles) -> Tuple[str, Dict]:
         "   A week is planned from the athlete's state on its Monday, so it doesn't shift mid-week.",
         "2. Load weeks rise at most 10% in hours *and* TSS vs the last load week; recovery weeks",
         "   (65% volume) every 3-4 weeks; cycles count back from the event, offset per athlete otherwise.",
-        "   Level (and so session caps) grows with fitness: CTL 20/45/65 (cycling) or 15/30/45",
-        "   (running, swimming) unlocks intermediate/advanced/elite.",
-        "3. Hard sessions take ~20% of weekly time (max 25%), are never on Monday or back-to-back,",
+        "   Level (and so session caps) grows with fitness, up to pro: CTL 20/45/65/85 (cycling),",
+        "   18/28/38/52 (running), 18/28/42/65 (swimming) unlocks intermediate/advanced/elite/pro.",
+        "   Weekly ceilings per sport at pro: cycling 30 h, running 14 h, swimming 20 h.",
+        "   Advanced+ athletes get an easy second session on a day when singles can't hold the volume.",
+        "3. Sports: the split follows the athlete's priorities (main focus 3 : other focus 2 : rest 1).",
+        "   Each sport ramps from its *own* recent volume: running +10% or one 30-min session a week,",
+        "   cycling/swimming +30% (overall load is still +10%). A new or switched-to sport starts from",
+        "   transfer credit: bike->run 25%, run->bike 75%, swim<->others 25% (min 2 h). Runs are",
+        "   capped at 40% of the week's running (min 1 h). Switching sport never restarts the athlete.",
+        "4. Hard sessions take ~20% of weekly time (max 25%), are never on Monday or back-to-back,",
         "   need at least 40 min, and the day after one is Zone 1 recovery. No tempo/grey-zone sessions.",
-        "4. Beginners: max one hard session, two rest days. Under ~3.3 h/week: no hard sessions.",
-        "5. One long Zone 2 session on the weekend day with most time (~30% of the week, max 40%).",
-        "6. Session caps by sport and level (running is capped hardest for impact; e.g. beginner runs <= 1 h).",
-        "7. Strength (1-2x) only in load/recovery weeks, never the day before a hard session.",
-        "8. Taper: 60% then 40% volume, intensity kept but shorter; race week = opener 3 days out,",
+        "5. Beginners: max one hard session, two rest days. Under ~3.3 h/week: no hard sessions.",
+        "6. One long Zone 2 session on the weekend day with most time (~30% of the week, max 40%).",
+        "7. Session caps by sport and level (running is capped hardest for impact; e.g. beginner runs <= 1 h).",
+        "8. Strength (1-2x) only in load/recovery weeks, never the day before a hard session.",
+        "9. Taper: 60% then 40% volume, intensity kept but shorter; race week = opener 3 days out,",
         "   rest 2 days out, shake-out the day before, race, rest the day after, easy for 2 more days.",
-        "9. Missed sessions are never made up; the plan re-bases on actual fitness.",
-        "10. 7+ days without training: one aerobic-only week, then one hard session the next week.",
-        "11. Minor illness/injury: half volume, no intensity. Severe: rest until cleared.",
-        "12. Benchmark test after each recovery week, and once for new athletes with no threshold.",
-        "13. Day-of fatigue guardrail (TSB < -25 -> recovery) applies to the coming week only.",
+        "10. Missed sessions are never made up; the plan re-bases on actual fitness.",
+        "11. 7+ days without training: one aerobic-only week, then one hard session the next week.",
+        "12. Minor illness/injury: half volume, no intensity. Severe: rest until cleared.",
+        "13. Benchmark test after each recovery week, and once for new athletes with no threshold.",
+        "14. Day-of fatigue guardrail (TSB < -25 -> recovery) applies to the coming week only.",
         "",
         "**How to read the weekly table**",
         "",
@@ -187,7 +197,8 @@ def render(profiles) -> Tuple[str, Dict]:
             if d["sport"] == "rest":
                 out.append(f"| {day:%a %d %b} | Rest | | | | |")
                 continue
-            out.append(f"| {day:%a %d %b} | {kind} | {d['sport']} | {_fmt_dur(d['time'])} | {d['tss']:.0f} | "
+            label = f"{day:%a %d %b}" + (" (PM)" if d.get("slot") == "pm" else "")
+            out.append(f"| {label} | {kind} | {d['sport']} | {_fmt_dur(d['time'])} | {d['tss']:.0f} | "
                        f"{main_set(d)} |")
         out += ["", "</details>", ""]
     return "\n".join(out) + "\n", summary

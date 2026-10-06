@@ -33,7 +33,7 @@ def athletes(draw, with_goal=None, allow_issues=False):
     sports = draw(st.lists(st.sampled_from(ENDURANCE), min_size=1, max_size=3, unique=True))
     extras = draw(st.lists(st.sampled_from(["strength", "stretching"]), max_size=2, unique=True))
     focus = draw(st.lists(st.sampled_from(sports), min_size=1, max_size=len(sports), unique=True))
-    daily = {d: draw(st.sampled_from([0, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0, 6.0])) for d in DAYS}
+    daily = {d: draw(st.sampled_from([0, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0, 6.0, 8.0])) for d in DAYS}
     ctl = draw(st.floats(min_value=0, max_value=150, allow_nan=False))
     start = draw(st.dates(min_value=datetime.date(2020, 1, 1), max_value=datetime.date(2030, 12, 31)))
     goal = None
@@ -47,11 +47,11 @@ def athletes(draw, with_goal=None, allow_issues=False):
         uid=draw(st.text(alphabet="abcdef0123", min_size=4, max_size=8)),
         sports=sports + extras,
         focused_sports=focus,
-        weekly_hours=draw(st.floats(min_value=1.5, max_value=25)),
+        weekly_hours=draw(st.floats(min_value=1.5, max_value=30)),
         daily_max_hours=daily,
         ctl=ctl,
         atl=ctl * draw(st.floats(min_value=0.5, max_value=1.5)),
-        fitness_level=draw(st.sampled_from(["beginner", "intermediate", "advanced", "elite"])),
+        fitness_level=draw(st.sampled_from(["beginner", "intermediate", "advanced", "elite", "pro"])),
         intensity_weeks=draw(st.integers(1, 5)),
         equipment=draw(st.lists(st.sampled_from(["power_meter", "hr_monitor", "swim_watch", "running_power"]),
                                 unique=True)) + ["bodyweight"],
@@ -69,9 +69,13 @@ def athletes(draw, with_goal=None, allow_issues=False):
     return profile, monday(start)
 
 
+def build_day(profile, day, start):
+    """Every workout that day (two on a double day)."""
+    return [d.to_dict() for d in TrainingScheduler.schedule_day_all(profile, day, as_of=start)]
+
+
 def build_plan(profile, start, weeks=WEEKS):
-    return [TrainingScheduler.schedule_day(profile, start + datetime.timedelta(days=i), as_of=start).to_dict()
-            for i in range(7 * weeks)]
+    return [doc for i in range(7 * weeks) for doc in build_day(profile, start + datetime.timedelta(days=i), start)]
 
 
 def week_plans(profile, start, weeks=WEEKS):
@@ -175,12 +179,13 @@ def test_never_exceeds_available_time(case):
     profile, start = case
     for plan in week_plans(profile, start, weeks=4):
         assert plan.endurance_hours <= profile.weekly_hours + 1e-6
+        per_day = {}
         for s in plan.sessions:
-            if s.kind == "race":
-                continue
-            day = s.date
+            if s.kind != "race":
+                per_day[s.date] = per_day.get(s.date, 0.0) + s.hours
+        for day, hours in per_day.items():  # both sessions of a double day together fit the day
             cap = profile.daily_hours_overrides.get(day.isoformat(), profile.daily_max_hours.get(day.strftime("%A")))
-            assert s.hours <= cap + 1e-6, (s, cap)
+            assert hours <= cap + 1e-6, (day, hours, cap)
 
 
 # ---------------------------------------------------------------- spacing
@@ -284,11 +289,11 @@ def test_same_inputs_same_plan(case):
 @SETTINGS
 @given(athletes(), st.integers(0, 20))
 def test_any_day_can_be_generated_on_its_own(case, offset):
-    """Generating one day alone gives the same session as generating the whole block."""
+    """Generating one day alone gives the same sessions as generating the whole block."""
     profile, start = case
     day = start + datetime.timedelta(days=offset)
-    full = build_plan(profile, start, weeks=3)[offset]
-    assert TrainingScheduler.schedule_day(profile, day, as_of=start).to_dict() == full
+    full = [d for d in build_plan(profile, start, weeks=3) if d["date"] == day.isoformat()]
+    assert build_day(profile, day, start) == full
 
 
 # ---------------------------------------------------------------- health flags
