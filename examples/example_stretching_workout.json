@@ -1,0 +1,171 @@
+{
+  "routineId": "5369fa1f-a168-4bdd-b16d-f712b5d91a42",
+  "type": "stretching",
+  "focus": "full",
+  "difficulty": "Medium",
+  "duration_minutes": 20,
+  "name": "MediumFullBodyRoutine",
+  "steps": [
+    {
+      "muscle_group": "Chest",
+      "name": "Hands Behind Back Chest Opener",
+      "asset_name": "HandsBehindBackChestOpener",
+      "duration_sec": 60,
+      "instruction": "Hold for 60s. Interlace fingers behind back, lift arms slightly.",
+      "difficulty": 2
+    },
+    {
+      "muscle_group": "Neck",
+      "name": "Neck Rotations",
+      "asset_name": "NeckRotations",
+      "duration_sec": 60,
+      "instruction": "Hold for 60s. Slowly look left and right, holding at end range.",
+      "difficulty": 2
+    },
+    {
+      "muscle_group": "Forearms & Wrists",
+      "name": "Wrist Flexor Stretch (Left & Right)",
+      "asset_name": "WristFlexorStretch",
+      "duration_sec": 60,
+      "instruction": "30s each side. Arm straight, palm up, gently pull fingers down.",
+      "difficulty": 1
+    },
+    {
+      "muscle_group": "Quads",
+      "name": "Lying Quad Stretch (Left & Right)",
+      "asset_name": "LyingQuadStretch",
+      "duration_sec": 60,
+      "instruction": "30s each side. Lie on side, hold top foot behind glute.",
+      "difficulty": 2
+    },
+    {
+      "muscle_group": "Hips",
+      "name": "Kneeling Hip Flexor Stretch (Left & Right)",
+      "asset_name": "KneelingHipFlexorStretch",
+      "duration_sec": 60,
+      "instruction": "30s each side. Half kneel, tuck pelvis, lean slightly forward.",
+      "difficulty": 1
+    },
+    {
+      "muscle_group": "Shoulders",
+      "name": "Cross-Body Shoulder Stretch (Left & Right)",
+      "asset_name": "CrossBodyShoulderStretch",
+      "duration_sec": 60,
+      "instruction": "30s each side. Pull one arm across your chest with the other.",
+      "difficulty": 1
+    },
+    {
+      "muscle_group": "Chest",
+      "name": "Doorway Pec Stretch (Left & Right)",
+      "asset_name": "DoorwayPecStretch",
+      "duration_sec": 60,
+      "instruction": "30s each side. Forearm on doorway, gently turn body away.",
+      "difficulty": 1
+    },
+    {
+      "muscle_group": "Glutes",
+      "name": "Seated Figure Four Stretch (Left & Right)",
+      "asset_name": "SeatedFigureFourStretch",
+      "duration_sec": 60,
+      "instruction": "30s each side. Sit, cross ankle over opposite knee, gently press knee down.",
+      "difficulty": 1
+    },
+    {
+      "muscle_group": "Upper Back / Lats",
+      "name": "Child's Pose",
+      "asset_name": "ChildsPose",
+      "duration_sec": 60,
+      "instruction": "Hold for 60s. Kneel, sit back on heels, reach arms forward on floor.",
+      "difficulty": 1
+    },
+    {
+      "muscle_group": "Neck",
+      "name": "Basic Neck Tilt (Left & Right)",
+      "asset_name": "BasicNeckTilt",
+      "duration_sec": 60,
+      "instruction": "30s each side. Gently pull ear to shoulder.",
+      "difficulty": 1
+    },
+    {
+      "muscle_group": "Hamstrings",
+      "name": "Seated Single Leg Hamstring Stretch (Left & Right)",
+      "asset_name": "SeatedSingleLegHamstringStretch",
+      "duration_sec": 60,
+      "instruction": "30s each side. Sit with one leg out, the other tucked in. Reach for toes.",
+      "difficulty": 1
+    },
+    {
+      "muscle_group": "Forearms & Wrists",
+      "name": "Wrist Extensor Stretch (Left & Right)",
+      "asset_name": "WristExtensorStretch",
+      "duration_sec": 60,
+      "instruction": "30s each side. Arm straight, palm down, gently pull fingers towards you.",
+      "difficulty": 2
+    },
+    {
+      "muscle_group": "Calves",
+      "name": "Downward Dog Calf Pumps",
+      "asset_name": "DownwardDogCalfPumps",
+      "duration_sec": 60,
+      "instruction": "Hold for 60s. In downward dog, alternate pressing heels to the floor.",
+      "difficulty": 2
+    },
+    {
+      "muscle_group": "Shoulders",
+      "name": "Overhead Triceps & Shoulder Stretch (Left & Right)",
+      "asset_name": "OverheadTricepsShoulderStretch",
+      "duration_sec": 60,
+      "instruction": "30s each side. Reach hand down your back, gently press elbow with other hand.",
+      "difficulty": 2
+    },
+    {
+      "muscle_group": "Hips",
+      "name": "Butterfly Stretch",
+      "asset_name": "ButterflyStretch",
+      "duration_sec": 60,
+      "instruction": "Hold for 60s. Sit, soles of feet together, gently press knees down.",
+      "difficulty": 2
+    },
+    {
+      "muscle_group": "Glutes",
+      "name": "Lying Glute Stretch (Supine Pigeon) (Left & Right)",
+      "asset_name": "LyingGluteStretchSupinePigeon",
+      "duration_sec": 60,
+      "instruction": "30s each side. Lie on back, cross ankle over knee, pull bottom leg in.",
+      "difficulty": 2
+    },
+    {
+      "muscle_group": "Calves",
+      "name": "Wall Calf Stretch (Left & Right)",
+      "asset_name": "WallCalfStretch",
+      "duration_sec": 60,
+      "instruction": "30s each side. Stand facing a wall, one foot back, press heel down.",
+      "difficulty": 1
+    },
+    {
+      "muscle_group": "Quads",
+      "name": "Standing Quad Stretch (Left & Right)",
+      "asset_name": "StandingQuadStretch",
+      "duration_sec": 60,
+      "instruction": "30s each side. Stand, hold foot behind glute, keep knees together.",
+      "difficulty": 1
+    },
+    {
+      "muscle_group": "Upper Back / Lats",
+      "name": "Cat-Cow Stretch",
+      "asset_name": "CatCowStretch",
+      "duration_sec": 60,
+      "instruction": "Hold for 60s. On all fours, arch back up, then let belly drop.",
+      "difficulty": 2
+    },
+    {
+      "muscle_group": "Hamstrings",
+      "name": "Standing Forward Fold",
+      "asset_name": "StandingForwardFold",
+      "duration_sec": 60,
+      "instruction": "Hold for 60s. Hinge at hips, reaching for the floor with straight legs.",
+      "difficulty": 2
+    }
+  ],
+  "description": "This 20-minute MediumFullBodyRoutine focuses on mobility and recovery.\nStretches included:\n- Hands Behind Back Chest Opener (Chest)\n- Neck Rotations (Neck)\n- Wrist Flexor Stretch (Left & Right) (Forearms & Wrists)\n- Lying Quad Stretch (Left & Right) (Quads)\n- Kneeling Hip Flexor Stretch (Left & Right) (Hips)\n- Cross-Body Shoulder Stretch (Left & Right) (Shoulders)\n- Doorway Pec Stretch (Left & Right) (Chest)\n- Seated Figure Four Stretch (Left & Right) (Glutes)\n- Child's Pose (Upper Back / Lats)\n- Basic Neck Tilt (Left & Right) (Neck)\n- Seated Single Leg Hamstring Stretch (Left & Right) (Hamstrings)\n- Wrist Extensor Stretch (Left & Right) (Forearms & Wrists)\n- Downward Dog Calf Pumps (Calves)\n- Overhead Triceps & Shoulder Stretch (Left & Right) (Shoulders)\n- Butterfly Stretch (Hips)\n- Lying Glute Stretch (Supine Pigeon) (Left & Right) (Glutes)\n- Wall Calf Stretch (Left & Right) (Calves)\n- Standing Quad Stretch (Left & Right) (Quads)\n- Cat-Cow Stretch (Upper Back / Lats)\n- Standing Forward Fold (Hamstrings)"
+}

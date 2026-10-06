@@ -1,0 +1,972 @@
+{
+  "": {
+    "-1": [
+      {
+        "name": "Rest Day",
+        "min_duration": 0,
+        "max_duration": 0,
+        "tss_multiplier": 0,
+        "structured": "Complete rest day. Focus on getting quality sleep and proper nutrition.",
+        "non-structured": "Complete rest day. Focus on getting quality sleep and proper nutrition."
+      }
+    ],
+    "0": [],
+    "1":
+      {
+        "name": "Tempo Progression",
+        "min_duration": 0.75,
+        "max_duration": 1.25,
+        "tss_multiplier": 75,
+        "structured": "After a 10-minute warm-up, complete 3 x 8-minute tempo intervals with 2-minute recovery jogs between. Each interval should be faster than the previous: 1st at marathon pace (75-80% max HR), 2nd at half marathon pace (80-85% max HR), 3rd at 10K pace (85-90% max HR). Focus on smooth, controlled acceleration with each interval while maintaining good running mechanics. Finish with 5-10 minutes easy jogging.",
+        "non-structured": "Complete a series of 3 hard efforts (each about 8 minutes long) that get slightly faster with each repetition. Start with a pace that feels moderately challenging but sustainable for a long time, then make the second effort noticeably harder, and the final effort should feel quite challenging (like 10K race effort). Take 2 minutes of easy jogging between each effort. Focus on smooth, controlled running even as the pace increases."
+      }, 
+    "2": [],
+    "3": [],
+    "4": [],
+    "5": [],
+    "6": [],
+    "7": []
+  },
+  "cycling": {
+    "-1": [
+      {
+        "name": "Rest Day - Cycling",
+        "min_duration": 0,
+        "max_duration": 0,
+        "tss_multiplier": 0,
+        "structured": "Complete rest day from cycling. Focus on recovery, good nutrition, and sleep.",
+        "non-structured": "Complete rest day from cycling. Focus on recovery, good nutrition, and sleep.",
+        "wahoo_format": null,
+        "garmin_format": null
+      }
+    ],
+    "0": [
+      {
+        "name": "Recovery Ride",
+        "min_duration": 0.5,
+        "max_duration": 2.0,
+        "tss_multiplier": 20,
+        "structured": "Easy spinning with cadence between 85-95rpm. Keep power strictly under 55% FTP and heart rate in zone 1 (<68% of max). Include 5x 1-minute high-cadence drills (100-110rpm) throughout the ride to promote circulation without generating fatigue. Focus on completely relaxed upper body and smooth, light pedaling technique.",
+        "non-structured": "Very easy ride at a truly conversational pace (2-3/10 RPE). You should be able to breathe entirely through your nose and maintain full sentences throughout. Include a few short periods of faster spinning but keep everything feeling effortless and focus on recovery."
+      }
+    ],
+    "1": [
+      {
+        "name": "Endurance Ride",
+        "min_duration": 1.0,
+        "max_duration": 5.0,
+        "tss_multiplier": 40,
+        "structured": "Steady riding in Zone 2 (65-75% FTP) for the entire duration. Maintain consistent cadence (85-95rpm) with 5x 3-minute periods of lower cadence work (70rpm) and 5x 2-minute periods of higher cadence work (100-105rpm) distributed throughout to add variety while staying in Zone 2 power. Focus on maintaining proper breathing patterns and relaxed upper body posture throughout.",
+        "non-structured": "Moderate effort ride at a pace where you can still hold a conversation but are definitely doing some work (4-5/10 RPE). Include some periods of slower, more forceful pedaling and some periods of faster, lighter pedaling to add variety while maintaining the same overall effort level."
+      },
+      {
+        "name": "Foundation Ride",
+        "min_duration": 1.5,
+        "max_duration": 4.0,
+        "tss_multiplier": 45,
+        "structured": "Zone 2 ride (65-75% FTP) with structured cadence work: alternate between 5 minutes at 80-85rpm and 5 minutes at 95-100rpm throughout the entire ride. Maintain consistent power output (±5 watts) regardless of cadence changes. Every 30 minutes, include a 3-minute single-leg pedaling drill (30 seconds right leg, 30 seconds left leg, repeated 3 times) at 60-65% FTP.",
+        "non-structured": "Steady, moderate effort ride (4-5/10 RPE) keeping your effort level consistent throughout. Alternate between 5 minutes of normal, comfortable cadence and 5 minutes of slightly faster spinning. Every 30 minutes, practice pedaling with one leg at a time for short periods to improve your pedaling technique."
+      },
+      {
+        "name": "Long Steady Distance",
+        "min_duration": 2.5,
+        "max_duration": 6.0,
+        "tss_multiplier": 42,
+        "structured": "Extended Zone 2 ride (60-75% FTP) focusing on endurance and consistent pacing. Maintain steady power throughout (±10 watts) while staying aerobic. Include nutrition intake of 60-90g carbohydrate per hour depending on intensity and duration. Every 45 minutes, perform a 5-minute 'form check': focus on relaxed shoulders, light grip on bars, engaged core, and smooth pedal stroke at 85-95rpm.",
+        "non-structured": "Long ride at a comfortable, sustainable pace (4/10 RPE). Should feel like you could maintain this effort all day. Focus on consistent fueling (eating something small every 30-45 minutes) and staying well hydrated. Periodically check your form - relaxed upper body, smooth pedaling, and proper position on the bike."
+      }
+    ],
+    "2": [
+      {
+        "name": "Tempo Ride",
+        "min_duration": 1.0,
+        "max_duration": 2.0,
+        "tss_multiplier": 60,
+        "structured": "After 15-minute warmup: 3x 15-minute intervals at 75-85% FTP (upper Zone 3) with 3-minute recoveries at 50-60% FTP. Maintain consistent cadence (85-95rpm) throughout work intervals and focus on controlled breathing patterns (3-second inhale, 3-second exhale). This sustained tempo effort builds aerobic endurance just below threshold intensity.",
+        "non-structured": "Complete 3x 15-minute moderately hard efforts (5-6/10 RPE) where you're working but can still speak in short sentences. Take 3-minute easy spin recoveries between efforts. You should be able to maintain each effort segment for 30+ minutes if required, but they should feel substantial."
+      },
+      {
+        "name": "Progressive Tempo",
+        "min_duration": 1.0,
+        "max_duration": 1.75,
+        "tss_multiplier": 65,
+        "structured": "One continuous progression divided into three 15-minute blocks: first block at 65-70% FTP (Zone 2), second block at 75-80% FTP (lower Zone 3), third block at 80-85% FTP (upper Zone 3). Maintain consistent cadence throughout (85-90rpm) and focus on gradually adapting to the increasing workload without taking breaks between intensity changes.",
+        "non-structured": "Complete a single 45-minute progressive effort: first 15 minutes at moderate endurance pace (4/10 RPE), next 15 minutes at moderately challenging pace (5-6/10 RPE), final 15 minutes at sustained challenging pace (6-7/10 RPE). The progression should be smooth, with the last section feeling distinctly challenging but sustainable."
+      },
+      {
+        "name": "Tempo Cruise Intervals",
+        "min_duration": 1.0,
+        "max_duration": 1.75,
+        "tss_multiplier": 68,
+        "structured": "After 10-minute warmup: 4x 8-minute intervals at 85-90% FTP with 2-minute recoveries at 50% FTP. Focus on maintaining consistent power (±5 watts) throughout each interval despite increasing perceived exertion. Target cadence of 85-95rpm, with the option to include 30-second periods of 100+rpm every 2 minutes to break up the effort.",
+        "non-structured": "Complete 4x 8-minute harder efforts (6-7/10 RPE) at a challenging but controlled pace. Take 2-minute easy spinning recovery periods between each effort. Each interval should require concentration but feel sustainable for the duration. Optional: include short bursts of faster spinning every few minutes to break up the monotony."
+      }
+    ],
+    "3": [
+      {
+        "name": "Threshold Intervals",
+        "min_duration": 1.0,
+        "max_duration": 1.5,
+        "tss_multiplier": 75,
+        "structured": "After 15-minute warmup: 3x 10-minute intervals at 95-100% FTP with 5-minute recoveries at 50% FTP. Maintain consistent cadence (85-95rpm) and steady power output throughout each interval. Focus on controlled breathing, relaxed upper body, and maintaining efficient position even as fatigue builds in the later intervals.",
+        "non-structured": "Complete 3x 10-minute hard, focused efforts where talking becomes difficult (7-8/10 RPE). Take 5-minute easy recoveries between intervals. These efforts should feel challenging but sustainable - right at the edge of what you could maintain for 30-45 minutes in a race situation."
+      },
+      {
+        "name": "Over-Under Intervals",
+        "min_duration": 1.0,
+        "max_duration": 1.5,
+        "tss_multiplier": 85,
+        "structured": "4x 8-minute intervals alternating between 90% FTP (3 minutes at 85-90rpm) and 110% FTP (1 minute at 95-100rpm) with 3-minute recoveries at 50% FTP between intervals. Each interval contains 6 minutes total of 'under' and 2 minutes total of 'over' efforts with no rest between transitions. This trains the body to process lactate during sustained threshold efforts and respond to surges.",
+        "non-structured": "Complete 4x 8-minute blocks where you alternate between hard (3 minutes at 7/10 RPE) and very hard efforts (1 minute at 9/10 RPE) without any recovery between the alternations. Take 3 minutes easy spinning between blocks. Focus on smooth transitions between intensities and maintaining form as fatigue builds."
+      },
+      {
+        "name": "Progressive Threshold Builder",
+        "min_duration": 1.25,
+        "max_duration": 1.75,
+        "tss_multiplier": 85,
+        "structured": "Progressive threshold ladder: 3x 5-minute blocks at 88-92% FTP (cadence 85-90rpm), followed by 3x 5-minute blocks at 93-97% FTP (cadence 90-95rpm), finishing with 1x 10-minute block at 100% FTP (cadence 90-95rpm). Take 3-minute recoveries at 50% FTP between efforts. Heart rate will likely drift upward with each step despite power remaining consistent within each intensity level.",
+        "non-structured": "Complete a progression of 7 efforts that gradually increase in intensity: 3x 5-minute moderately hard efforts (6/10 RPE), followed by 3x 5-minute hard efforts (7/10 RPE), finishing with 1x 10-minute very hard sustainable effort (8/10 RPE). Take 3-minute easy recoveries between each effort. Each stage should feel noticeably more challenging than the previous one."
+      },
+      {
+        "name": "Threshold Pyramids",
+        "min_duration": 1.0,
+        "max_duration": 1.5,
+        "tss_multiplier": 80,
+        "structured": "Pyramid structure: 2min, 4min, 6min, 8min, 6min, 4min, 2min all at 95-100% FTP with 2-3min recovery between intervals. Focus on maintaining control as fatigue builds.",
+        "non-structured": "7x progressive hard efforts that build in duration (2min, 4min, 6min, 8min) then decrease (6min, 4min, 2min). Each effort should feel challenging but controlled at a level you could maintain for 20-30 minutes."
+      },
+      {
+        "name": "Sweet Spot Training",
+        "min_duration": 1.0,
+        "max_duration": 2.0,
+        "tss_multiplier": 75,
+        "structured": "After 15-minute progressive warmup: 3x 12-minute intervals at 88-93% of FTP with 4-minute recoveries at 50% FTP. Maintain steady cadence (85-95rpm) and focus on pedaling technique throughout. This 'sweet spot' training balances intensity and sustainability while providing significant physiological stimulus with manageable fatigue. Focus on steady power output within ±3% of target.",
+        "non-structured": "Complete 3x 12-minute efforts at a hard but controlled pace (6-7/10 RPE). The effort should feel challenging but manageable for these stretches, just below your maximum sustainable pace. You should be able to speak in short phrases but not hold a conversation. Take 4 minutes of easy spinning between intervals."
+      }
+    ],
+    "4": [
+      {
+        "name": "Force Development",
+        "min_duration": 1.0,
+        "max_duration": 1.5,
+        "tss_multiplier": 70,
+        "structured": "5x 4-minute low-cadence (50-60rpm), high-torque intervals at 80-90% FTP with 3-minute recoveries. Target seated climbs or flat sections using a gear 2-3 cogs harder than normal. Maintain upper body stillness and focus on engaging glutes and core throughout each interval.",
+        "non-structured": "Complete 5x 4-minute efforts on a moderate hill or in a heavy gear with low-cadence pedaling (50-60rpm). Take 3 minutes easy spinning between. Each effort should feel like strength training on the bike, focusing on smooth pedal strokes despite the heavy resistance."
+      },
+      {
+        "name": "Hill Repeats",
+        "min_duration": 1.0,
+        "max_duration": 1.5,
+        "tss_multiplier": 75,
+        "structured": "6x 4-minute uphill efforts at 85-92% FTP with descents as recovery (approximately 3-5 minutes). Alternate between seated (3 repeats) and standing (3 repeats). Maintain consistent power output throughout each repeat despite increasing fatigue.",
+        "non-structured": "Find a hill that takes 3-5 minutes to climb and repeat it 6 times with recovery descents in between. Alternate between seated and standing climbing styles. Focus on maintaining good form and consistent effort on each repeat even as fatigue builds."
+      },
+      {
+        "name": "Strength Endurance Blocks",
+        "min_duration": 1.0,
+        "max_duration": 1.5,
+        "tss_multiplier": 80,
+        "structured": "4 sets of: 3 minutes at 85-90% FTP with normal cadence (85-90rpm) followed immediately by 3 minutes at 75-80% FTP with low cadence (55-65rpm). Take 3-minute recoveries at 50% FTP between sets. For low-cadence segments, focus on engaged core, relaxed upper body, and smooth pedaling throughout the full pedal stroke despite the heavy resistance. This workout builds muscular endurance while maintaining aerobic load.",
+        "non-structured": "Complete 4 blocks of challenging riding, where each block alternates 3 minutes at a hard effort with normal cadence, followed by 3 minutes pushing a much bigger gear at slower cadence but slightly lower intensity. Take 3 minutes easy spinning between blocks. Focus on smooth power delivery and maintaining good form through both pedaling styles."
+      },
+      {
+        "name": "Mixed Terrain Power",
+        "min_duration": 1.0,
+        "max_duration": 1.5,
+        "tss_multiplier": 75,
+        "structured": "5 sets of: 3 minutes seated climbing at 85-90% FTP (70-80rpm), 30 seconds standing climb at 100-110% FTP (60-70rpm), 1 minute seated acceleration at 90-95% FTP (90-100rpm), 30 seconds standing sprint at >120% FTP. Take 3-minute recoveries at 50-60% FTP between sets. Focus on smooth transitions between positions and maintaining appropriate power in each segment. This workout simulates varied terrain and improves ability to generate power in all riding positions.",
+        "non-structured": "Complete 5 mixed-terrain intervals that each include: a moderate seated climb, a short standing climb section, a seated acceleration on flatter terrain, and a standing sprint effort. Take 3 minutes easy recovery between each complete interval. Focus on smooth transitions between seated and standing positions while maintaining appropriate power for each type of terrain."
+      },
+      {
+        "name": "Power Surges",
+        "min_duration": 1.0,
+        "max_duration": 1.5,
+        "tss_multiplier": 78,
+        "structured": "After 15-minute warmup: 4x 10-minute blocks at 75-80% FTP baseline with 5x 20-second surges at 150% FTP randomly distributed within each block (approximately every 1-2 minutes). Between surges, return immediately to baseline power. Take 5-minute recoveries at 50% FTP between 10-minute blocks. This trains the ability to make repeated accelerations while already under moderate load and quickly return to threshold-proximate effort.",
+        "non-structured": "Complete 4x 10-minute segments at a moderately hard, sustainable pace (6/10 RPE), but include 5 short, hard accelerations (15-20 seconds at 8-9/10 RPE) randomly spaced throughout each segment. After each surge, return quickly to your baseline effort. Take 5 minutes easy spinning between the 10-minute segments."
+      }
+    ],
+    "5": [
+      {
+        "name": "Sprint Training",
+        "min_duration": 1.0,
+        "max_duration": 1.25,
+        "tss_multiplier": 70,
+        "structured": "After thorough warmup: 8x 15-second maximum sprints (4 from standing start, 4 from rolling start at 20 km/h) with 4-minute complete recovery between each. Focus on explosive acceleration, body position, and maximum power production in different scenarios.",
+        "non-structured": "Include 8 short, all-out sprint efforts during your ride - mix both sprints from a near stop and sprints from an existing speed. Allow 4-5 minutes of very easy spinning for full recovery between each sprint. Focus on your technique and explosive power."
+      },
+      {
+        "name": "Anaerobic Capacity",
+        "min_duration": 0.75,
+        "max_duration": 1.25,
+        "tss_multiplier": 80,
+        "structured": "8x 2-minute intervals at 120-130% FTP with 4-minute recoveries between each. Start each interval from moderate pace (75% FTP) and surge immediately to target power. Hold target power despite rapidly building fatigue through the end of each interval. These sustained high-intensity efforts train your ability to handle severe oxygen debt.",
+        "non-structured": "Complete 8x 2-minute very hard efforts where you're pushing well beyond what feels sustainable (8-9/10 RPE). Take 4-minute full recovery between each effort. These should feel extremely challenging by the final 30 seconds of each interval."
+      },
+      {
+        "name": "VO2max Development",
+        "min_duration": 1.0,
+        "max_duration": 1.5,
+        "tss_multiplier": 85,
+        "structured": "6x 3-minute intervals at 110-120% of FTP with 2-minute recovery periods at 40% FTP. Maintain high cadence (95-105rpm) throughout work intervals. Heart rate should reach 90%+ of maximum by the end of each interval. These high-intensity efforts target maximum oxygen consumption while short recoveries keep oxygen demand high.",
+        "non-structured": "Complete 6x 3-minute very hard efforts (9/10 RPE) with only 2-minute recoveries between each. Use a higher cadence than normal and focus on breathing deeply. These should feel extremely challenging by the end of each interval, with your breathing becoming very labored."
+      },
+      {
+        "name": "30/30 Intervals",
+        "min_duration": 0.75,
+        "max_duration": 1.25,
+        "tss_multiplier": 85,
+        "structured": "3 sets of 10x (30 seconds at 120-130% FTP with 100-110rpm cadence, 30 seconds at 40% FTP with 80-85rpm cadence). Take 5 minutes complete recovery between sets (easy spinning at <50% FTP). Watch for power decay in later repetitions of each set and fight to maintain target power. This microburst pattern targets both aerobic and anaerobic systems.",
+        "non-structured": "Complete 3 blocks of 10 repetitions alternating 30 seconds very hard (9/10 RPE) with 30 seconds very easy (3/10 RPE). Take 5 minutes easy spinning recovery between blocks. The hard portions should be extremely difficult by the end of each set, requiring full concentration to complete."
+      },
+      {
+        "name": "Attack Simulation",
+        "min_duration": 0.75,
+        "max_duration": 1.25,
+        "tss_multiplier": 80,
+        "structured": "5x (15-second sprint at maximum power [>200% FTP] immediately followed by 3 minutes at 90-95% FTP). Take 5-minute recoveries at 50% FTP between sets. Practice both seated and standing attacks. This workout simulates race attacks and the sustained effort required to establish a breakaway.",
+        "non-structured": "Complete 5 race attack simulations: start with a 15-second all-out acceleration (10/10 effort) followed immediately by 3 minutes of sustained hard effort (7-8/10) without any recovery between. Take 5 minutes of easy spinning between each simulation. Mix standing and seated attacks."
+      }
+    ],
+    "6": [
+      {
+        "name": "Race Simulation",
+        "min_duration": 1.0,
+        "max_duration": 1.5,
+        "tss_multiplier": 90,
+        "structured": "After 15-minute warmup, complete 40-60 minutes of highly variable intensity: 3x 10-second all-out sprints, 5x 1-minute efforts at 120% FTP, 2x 5-minute efforts at 95% FTP, and 3x 30-second attacks at 150% FTP. Intersperse these efforts with varying periods (1-5 minutes) at tempo pace (75-85% FTP) and brief recoveries (30 seconds to 2 minutes) at 50-60% FTP. Finish with one final 15-second sprint. This workout mimics the unpredictable nature of racing.",
+        "non-structured": "Simulate a race with constantly changing intensity over 40-60 minutes. Include multiple short sprints (10-15 seconds), several hard 1-minute efforts, a few sustained 5-minute hard efforts, and some random 30-second attacks, with varying periods of moderate riding and brief recoveries between efforts. Make the pattern unpredictable as in a real race."
+      },
+      {
+        "name": "Time Trial Simulation",
+        "min_duration": 0.75,
+        "max_duration": 1.5,
+        "tss_multiplier": 90,
+        "structured": "After thorough 15-minute progressive warmup: 2-minute initial surge at 105% FTP, then 20-30 minutes at 95-98% FTP maintaining aerodynamic position, followed by 2-minute final 'emptying the tank' effort at >105% FTP. Practice race day pacing strategy, hydration, and maintaining mental focus throughout the sustained high-intensity effort.",
+        "non-structured": "Simulate a time trial by starting with a 2-minute strong effort, settling into a 20-30 minute sustained hard pace (7-8/10 RPE) that's just below your maximum sustainable effort, then finishing with a 2-minute all-out effort. Focus on maintaining an aerodynamic position and consistent pacing throughout."
+      },
+      {
+        "name": "Climbing Race Simulation",
+        "min_duration": 1.0,
+        "max_duration": 1.5,
+        "tss_multiplier": 95,
+        "structured": "Complete on rolling/hilly terrain: 3x 4-minute climbs at threshold (95-100% FTP), 2x 2-minute climbs at VO2max intensity (110-120% FTP), and 3x 1-minute steep climbs at maximum sustainable power (120-130% FTP). Take 2-3 minute recoveries on descents. Maintain moderate intensity (70-80% FTP) on flat sections between climbs. This simulates the varied demands of racing on hilly terrain.",
+        "non-structured": "Find a route with multiple hills of different lengths. Push hard up each climb (varying your effort based on length - longer climbs at sustainable hard pace, shorter climbs at maximum effort), recover briefly on descents, and maintain a solid pace on flat sections between hills."
+      },
+      {
+        "name": "Criterium Simulation",
+        "min_duration": 0.75,
+        "max_duration": 1.25,
+        "tss_multiplier": 90,
+        "structured": "6 rounds of: 30-second surge at 150% FTP, 2 minutes at 90-95% FTP, 15-second sprint at maximum power, 1 minute at 85-90% FTP, followed by 2 minutes active recovery at 60% FTP. The final round ends with a 30-second all-out finishing sprint. This workout mimics the repetitive surges, sustained efforts, and sprints characteristic of criterium racing.",
+        "non-structured": "Practice repeated hard accelerations (30 seconds) followed by periods of sustained effort (2-3 minutes), punctuated with short sprints and brief recoveries. Complete 6 rounds of this pattern, finishing with an all-out sprint. This should feel like the constantly changing, surge-heavy nature of a criterium race."
+      },
+      {
+        "name": "Break-away Practice",
+        "min_duration": 1.0,
+        "max_duration": 1.5,
+        "tss_multiplier": 95,
+        "structured": "3 sets of: 1-minute initial attack at 150-175% FTP (high cadence of 100-110rpm), immediately followed by 8 minutes at 95-100% FTP (maintaining 90-95rpm). Take 5-minute recovery at 50% FTP between sets. This workout simulates the intense initial effort needed to break away from a group, followed by the sustained power required to maintain the gap.",
+        "non-structured": "Complete 3 breakaway simulations: start with a hard 1-minute attack effort (9-10/10 RPE with high cadence), then immediately settle into 8 minutes at a hard but sustainable pace (7-8/10 RPE) you could maintain for 10+ minutes. Take 5 minutes of easy recovery between each simulation."
+      }
+    ],
+    "7": [
+      {
+        "name": "Maximum Intensity Race",
+        "min_duration": 0.5,
+        "max_duration": 1.0,
+        "tss_multiplier": 100,
+        "structured": "After thorough 20-minute progressive warmup including 3x 30-second race-pace efforts with full recovery: Complete all-out competitive effort following race-specific pacing strategy. For shorter events (<30 minutes), target slightly above FTP for the duration. For time trials, start at 105% FTP, settle at 100-102% FTP mid-race, and finish with all remaining energy. Only suitable for key races or testing. Follow with 15-minute very easy cooldown.",
+        "non-structured": "After a complete warmup including several short efforts at your target intensity: Race or time-trial at absolute maximum sustainable intensity (9-10/10 RPE), following your specific race strategy and pacing plan. This is an all-out competitive effort that should only be attempted in key events or testing situations."
+      }
+    ]
+  },
+  "running": {
+    "-1": [
+      {
+        "name": "Rest Day - Running",
+        "min_duration": 0,
+        "max_duration": 0,
+        "tss_multiplier": 0,
+        "structured": "Complete rest day from running. Focus on recovery, good nutrition, and sleep.",
+        "non-structured": "Complete rest day from running. Focus on recovery, good nutrition, and sleep."
+      }
+    ],
+    "0": [
+      {
+        "name": "Recovery Run",
+        "min_duration": 0.5,
+        "max_duration": 1.0,
+        "tss_multiplier": 30,
+        "structured": "Very easy running at a conversational pace. Keep heart rate strictly in zone 1 (below 65% of max HR). Include 3-4 walking breaks of 1-minute each to keep intensity low. Maintain a relaxed posture and breathing pattern throughout.",
+        "non-structured": "Very light jog where you could easily hold a conversation the entire time. Walk for 1 minute every 5-7 minutes to ensure you stay in true recovery mode. This should feel ridiculously easy - if you're breathing hard at all, slow down."
+      }
+    ],
+    "1": [
+      {
+        "name": "Easy Run",
+        "min_duration": 0.5,
+        "max_duration": 1.5,
+        "tss_multiplier": 40,
+        "structured": "Steady running at an easy aerobic pace (65-75% of max HR). Include 5 minutes of form drills (high knees, butt kicks, skips) after the first 10 minutes. Every 15 minutes, focus on a different aspect of form: posture, arm swing, foot strike, and breathing pattern. Finish with 5x 15-second gentle accelerations with 45-second easy jog recovery.",
+        "non-structured": "Run at a comfortable pace where conversation is easy and you feel like you could go for much longer. Every 10-15 minutes, do a quick form check - are your shoulders relaxed? Is your cadence quick and light? Is your breathing controlled? Include 4-5 short pickups (15 seconds slightly faster) in the second half of the run to refresh your legs."
+      },
+      {
+        "name": "Long Run",
+        "min_duration": 1.0,
+        "max_duration": 3.0,
+        "tss_multiplier": 45,
+        "structured": "Extended easy-paced run focusing on time on feet and aerobic development. Maintain 65-75% of max HR throughout. For runs over 75 minutes, include nutrition (30-60g carbs per hour) and hydration stops every 20-30 minutes. Every 30 minutes, include 2 minutes at a slightly faster pace (10-15 seconds per mile/km faster) to break up the monotony. Last 10 minutes at a slightly faster pace if feeling good.",
+        "non-structured": "Longer duration run at a comfortable pace. Start slower than you think necessary for the first 15-20 minutes. Focus on covering distance rather than speed. For runs over 75 minutes, plan a route with water access or carry fluids and take in 30-60g of carbs per hour. Keep effort consistent even when encountering hills - slow down on climbs and maintain effort rather than pace."
+      },
+      {
+        "name": "Technical Run",
+        "min_duration": 0.75,
+        "max_duration": 1.5,
+        "tss_multiplier": 45,
+        "structured": "After a 10-minute easy warm-up, perform 5 sets of technique drills (30 seconds each): high knees, butt kicks, skipping, carioca, and running backward. Follow with 6 x 100m strides at 85% effort with 45-second recovery walks, focusing on one form element during each stride (posture, foot strike, arm swing, hip extension, relaxed shoulders, cadence). Finish with 15-20 minutes of easy running, incorporating 30-second form checks every 5 minutes.",
+        "non-structured": "Easy run incorporating form drills and technique work. After warming up for 10 minutes, find a flat area and perform 5 different movement drills (high knees, butt kicks, skipping, side shuffles, backward running) for about 30 seconds each. Include 6 x 100m accelerations where you gradually build speed while focusing on specific aspects of your form. Return to easy running, mentally checking your form every few minutes."
+      }
+    ],
+    "2": [
+      {
+        "name": "Steady State Run",
+        "min_duration": 0.5,
+        "max_duration": 1.5,
+        "tss_multiplier": 60,
+        "structured": "Moderate-intensity run at marathon to half-marathon effort (75-85% of max HR). After a 10-minute warm-up, run 3 x 10 minutes at steady state pace with 2-minute recovery jogs between sets. Focus on maintaining consistent pace within 3-5 seconds per mile/km. Check in on form every 5 minutes and adjust if needed. Cool down for 5-10 minutes with easy jogging.",
+        "non-structured": "After a 10-minute easy warm-up, run at a pace where talking becomes slightly more difficult but still possible in short sentences (think marathon to half-marathon race effort). Try to maintain even effort on varying terrain - this means slowing slightly uphill and picking up the pace slightly on downhills. Take 2 short (1-2 minute) recovery breaks if needed, then finish with 5 minutes easy jogging."
+      },
+      {
+        "name": "Progressive Run",
+        "min_duration": 0.75,
+        "max_duration": 1.5,
+        "tss_multiplier": 65,
+        "structured": "After a 10-minute easy warm-up, divide the remaining run into 4 equal segments of 5-10 minutes each, gradually increasing pace with each segment: 1st segment at easy pace (65-70% max HR), 2nd segment at steady state (75-80% max HR), 3rd segment at moderate effort (80-85% max HR), and final segment at threshold effort (85-90% max HR). Focus on smooth transitions between segments and maintaining good form as pace increases. Finish with 5 minutes very easy cool-down.",
+        "non-structured": "Begin at an easy pace for 10 minutes and gradually pick up the pace throughout the run. Divide the main part of your run into 4 sections, each slightly faster than the previous: start with very comfortable pace, then move to moderate effort where talking is still easy, then to a pace where talking becomes more difficult, finishing with 5-10 minutes at a challenging pace where you can only speak in short phrases. Finish with 5 minutes easy jogging to cool down."
+      },
+      {
+        "name": "Fartlek Run",
+        "min_duration": 0.75,
+        "max_duration": 1.25,
+        "tss_multiplier": 65,
+        "structured": "After a 10-minute easy warm-up, perform 10 x alternating segments of: 2 minutes at threshold pace (85-90% max HR) followed by 1 minute easy jogging recovery. In the middle of the workout, include a set of 5 x 30-second accelerations with 30-second easy jog recoveries. Finish with 5-10 minutes easy cool-down. Total work interval time: approximately 25 minutes.",
+        "non-structured": "Playful run mixing periods of faster running with easy jogging. After warming up for 10 minutes, use landmarks along your route (trees, street signs, etc.) to guide your faster segments - pick a landmark ahead and run hard until you reach it, then jog easily to the next chosen landmark. Include approximately 10-12 faster segments of varying lengths (30 seconds to 2 minutes), making some quite challenging and others moderate. Make the pattern random and fun."
+      }
+    ],
+    "3": [
+      {
+        "name": "Tempo Run",
+        "min_duration": 0.5,
+        "max_duration": 1.25,
+        "tss_multiplier": 75,
+        "structured": "Warm up with 10-minute progressive jog. Main set: 20-minute sustained effort at threshold pace (approximately 10K race pace or 85-90% max HR). Focus on maintaining a steady pace throughout (±5 seconds/km). Every 5 minutes, perform a quick form check: posture, arm carriage, breathing rhythm, foot strike. Practice taking 4-6 controlled breaths (3 steps inhale, 2 steps exhale) during each minute. Last 5 minutes, try to maintain or slightly increase pace while staying relaxed. Cool down with 10-minute easy jog, gradually slowing.",
+        "non-structured": "After warming up for 10 minutes, run 20 minutes at a comfortably hard pace that you could sustain for about 20-30 minutes (think 10K race pace). Breathing should be labored but controlled - you should be able to speak in short phrases but not maintain a conversation. Keep a consistent effort level throughout, even on rolling terrain. Every 5 minutes, do a quick form check and focus on staying relaxed. Finish with 10 minutes of easy running to cool down."
+      },
+      {
+        "name": "Cruise Intervals",
+        "min_duration": 0.75,
+        "max_duration": 1.25,
+        "tss_multiplier": 80,
+        "structured": "Warm up with 10-minute easy jog, plus 4 x 20-second strides with 40-second recovery. Main set: 5 x 5-minute intervals at threshold pace (approximately 10K race pace or 85-90% max HR) with 1-minute active recovery jogs between each. Focus on consistent pacing within 3-5 seconds per interval. Every 2nd interval, focus on running form checklist: tall posture, relaxed shoulders, arm drive, midfoot landing. Finish with 5-10 minutes easy cool-down jogging.",
+        "non-structured": "Complete 5 x 5-minute periods of hard running with 1-minute easy recovery jogs between each. The hard portions should feel challenging but controlled (about 80-85% of maximum effort), like a pace you could maintain for about 20-30 minutes. Focus on maintaining consistent pace across all intervals - the 5th interval should feel more difficult but be completed at the same pace as the 1st."
+      },
+      {
+        "name": "Threshold Development",
+        "min_duration": 0.75,
+        "max_duration": 1.0,
+        "tss_multiplier": 80,
+        "structured": "Warm up with 12-minute progressive jog plus 4 x 15-second accelerations. Main set: Complete progressively longer intervals at threshold pace (85-90% max HR): 3 minutes, 4 minutes, 5 minutes, and 6 minutes with 2-minute active recovery jogs between each interval. Target a consistent pace within 5 seconds/km across all intervals. Focus on maintaining relaxed breathing patterns (3-step inhale, 2-step exhale) and efficient running form as intervals get longer. Finish with 8-minute easy cool-down jog.",
+        "non-structured": "Complete a series of 4 hard efforts that get longer with each repetition (3, 4, 5, and 6 minutes), taking consistent 2-minute recovery periods between each. Each interval should be run at the same challenging pace (threshold effort - where conversation becomes limited to short phrases). Notice how maintaining the same pace feels progressively more difficult as the intervals get longer. Focus on staying relaxed even as fatigue builds."
+      },
+      {
+        "name": "Tempo Progression",
+        "min_duration": 0.75,
+        "max_duration": 1.25,
+        "tss_multiplier": 75,
+        "structured": "After a 10-minute warm-up, complete 3 x 8-minute tempo intervals with 2-minute recovery jogs between. Each interval should be faster than the previous: 1st at marathon pace (75-80% max HR), 2nd at half marathon pace (80-85% max HR), 3rd at 10K pace (85-90% max HR). Focus on smooth, controlled acceleration with each interval while maintaining good running mechanics. Finish with 5-10 minutes easy jogging.",
+        "non-structured": "Complete a series of 3 hard efforts (each about 8 minutes long) that get slightly faster with each repetition. Start with a pace that feels moderately challenging but sustainable for a long time, then make the second effort noticeably harder, and the final effort should feel quite challenging (like 10K race effort). Take 2 minutes of easy jogging between each effort. Focus on smooth, controlled running even as the pace increases."
+      }
+    ],
+    "4": [
+      {
+        "name": "Hill Repeats",
+        "min_duration": 0.75,
+        "max_duration": 1.25,
+        "tss_multiplier": 80,
+        "structured": "Warm up with 10-minute easy jog to a moderate hill (4-8% grade). Main set: 10 x 1-minute hill repeats at high intensity (RPE 8/10 or 85-90% max HR) with jog-down recovery (approximately 2-3 minutes). Focus on different technique aspects for each set of repeats: 1-3 focus on arm drive, 4-6 focus on knee lift and hip extension, 7-10 focus on powerful foot push-off. Maintain high cadence (180+ steps/minute) with shorter strides on the uphill. Finish with 5-minute easy jog on flat terrain plus 4 x 20-second light strides.",
+        "non-structured": "Find a moderate hill that takes 1-2 minutes to climb. After a 10-minute warm-up, complete 8-10 hard uphill efforts, jogging easily back down for recovery. Push hard on the uphill sections (7-8/10 effort) while maintaining good running form - short, quick steps with a slight forward lean and strong arm drive. Each climb should feel challenging but allow you to maintain consistent effort across all repeats. The last 2-3 repeats should feel significantly more difficult while trying to maintain the same pace as the earlier ones."
+      },
+      {
+        "name": "Strength Endurance",
+        "min_duration": 0.75,
+        "max_duration": 1.25,
+        "tss_multiplier": 80,
+        "structured": "Warm up with 10-minute easy jog plus 4 x 15-second gradually accelerating strides. Main set: 6 rounds of [1-minute hill sprint at 85-90% effort (focus on powerful push-off and high knee drive) + immediately transition to 3 minutes hard flat running at threshold pace (85-90% max HR)]. Take 2-minute active recovery jogs between each round. For hill segments, aim for consistent power on a 5-8% grade. For flat segments, maintain a pace 10-15 seconds per km slower than 10K race pace. Finish with 5-minute easy jog and basic light stretching.",
+        "non-structured": "After warming up, find a moderate hill and complete 6 sets of: 1-minute uphill effort (pushing hard but not all-out) followed immediately by 3 minutes of hard running on flat terrain without any rest between the hill and flat portions. Take 2 minutes of easier jogging between each complete set. The combination of hill work immediately followed by sustained hard running builds leg strength and teaches your body to run strongly even after your legs are already fatigued - similar to maintaining pace in the latter stages of a race."
+      },
+      {
+        "name": "Hilly Tempo",
+        "min_duration": 0.5,
+        "max_duration": 1.25,
+        "tss_multiplier": 80,
+        "structured": "Warm up with 10-minute easy jog on flat terrain. Main set: 25-30 minutes of sustained tempo effort (80-85% max HR) over rolling hills. Focus on maintaining consistent effort rather than pace - slow down 10-15 seconds/km on uphills and increase pace by 5-10 seconds/km on downhills. Practice efficient hill techniques: shorter stride and higher cadence (90+ steps/minute) on uphills, relaxed longer stride on downhills. Every 5 minutes, perform a 10-second form check (posture, arm swing, breathing). Finish with 5-minute easy jog on flat terrain.",
+        "non-structured": "Find a rolling route with several moderate hills and maintain a challenging but sustainable pace (6-7/10 effort) regardless of the terrain changes. Expect to slow down on uphills while maintaining effort, then naturally speed up on downhills. The overall intensity should feel similar to a half-marathon race effort - challenging but controlled. Focus on efficiency over the varied terrain, with good uphill form (shorter, quicker steps) and controlled downhill technique."
+      },
+      {
+        "name": "Form Development",
+        "min_duration": 0.5,
+        "max_duration": 1.0,
+        "tss_multiplier": 75,
+        "structured": "Warm up with 10-minute easy jog. Main set: 6 x 90-second uphill runs focusing on form (1 each dedicated to: arm drive, knee lift, hip extension, forward lean, midfoot landing, and relaxed shoulders). Take 90-second walk recovery between each. Follow with 6 x 30-second flat accelerations building to 80% effort, focusing on maintaining perfect form as speed increases. Take 60-second recovery walks. Finish with 10 minutes steady running, performing a mental form scan every 2 minutes (head to toe).",
+        "non-structured": "Focus on technique while pushing moderately hard. Find a hill and complete 6 uphill segments of 90 seconds each, focusing on a different aspect of form each time (arms, knees, hips, posture, foot strike, and upper body relaxation). Then find a flat section and do 6 x 30-second accelerations where you gradually increase speed while maintaining perfect form. Finish with 10 minutes of steady running, mentally checking your form frequently."
+      }
+    ],
+    "5": [
+      {
+        "name": "VO2max Intervals",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 85,
+        "structured": "Warm up with 10-minute progressive jog plus 4 x 15-second strides with 45-second recovery. Main set: 6 x 3-minute intervals at VO2max pace (approximately 3K race pace or 90-95% max HR) with equal 3-minute active recovery jogs between intervals. Target consistent pacing within 2-3 seconds for all intervals. Every 2nd interval, focus on maintaining relaxed upper body and efficient arm swing. Heart rate should reach 90-95% of maximum by the end of each interval. Finish with 8-minute easy cool-down jog and dynamic stretching.",
+        "non-structured": "After a thorough 10-minute warm-up including a few short accelerations, complete 6 x 3-minute very hard running efforts with equal recovery time (3 minutes) of easy jogging between each. These should feel extremely challenging by the end of each interval (8-9/10 effort) - you should only be able to speak a few words at a time. Focus on maintaining the same pace for all intervals despite the increasing fatigue. The last interval should be completed at the same pace as the first, even though it will feel much harder."
+      },
+      {
+        "name": "Speed Development",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 80,
+        "structured": "Warm up with 10-minute easy jog plus dynamic mobility exercises (high knees, butt kicks, leg swings, arm circles). Main set: Part 1 - 8 x 15-second all-out sprints (100% effort) with 45-second walk recoveries. Focus on maximum acceleration and top-end speed. Part 2 - 4 x 1-minute hard efforts at mile race pace (90-95% effort) with 2-minute standing/walking recoveries. Target perfect form: high knees, powerful arm drive, mid-foot landing. Finish with 5-minute easy jog and light stretching. Total high-intensity work: approximately 6 minutes.",
+        "non-structured": "After a thorough warm-up including dynamic stretches and mobility exercises, complete two sets of speed work: First, perform 8 short all-out sprints (15 seconds each) with full walking recovery (45 seconds) between each. These should be maximum effort with explosive acceleration. After completing these, take 3 minutes of very easy recovery, then do 4 slightly longer very hard efforts (1 minute each at approximately mile race pace) with full 2-minute recoveries between each. Focus on maintaining perfect running form throughout all sprints despite the fatigue."
+      },
+      {
+        "name": "Mixed Interval Session",
+        "min_duration": 0.75,
+        "max_duration": 1.0,
+        "tss_multiplier": 85,
+        "structured": "Warm up with 12-minute progressive jog. Main set: Pyramid of intervals with specific intensity targets: 4 x 30-second sprints at 95-100% effort with 30-second walk recoveries, followed by 3 x 2-minute hard efforts at 5K pace (90% effort) with 2-minute jog recoveries, concluding with 2 x 4-minute threshold efforts at 10K pace (85% effort) with 4-minute active recoveries. Target heart rate zones: sprints >95% max HR, 2-minute intervals 90-95% max HR, 4-minute intervals 85-90% max HR. Focus on transitioning between different energy systems. Cool down with 8-10 minutes easy jogging.",
+        "non-structured": "Complete a mixed session with progressively longer intervals but decreasing intensity. Start with 4 x 30-second near-maximal sprints (taking 30-second walk recoveries), then move to 3 x 2-minute hard efforts at about 5K race pace effort (taking 2-minute jog recoveries), and finish with 2 x 4-minute sustained efforts at about 10K race pace (taking recovery equal to the interval duration). The shorter intervals should be at higher intensity than the longer ones. This workout challenges multiple energy systems and teaches your body to handle different types of fatigue."
+      },
+      {
+        "name": "Fast Finish Intervals",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 85,
+        "structured": "Warm up with 10-minute easy jog plus 4 x 20-second accelerations with 40-second recovery. Main set: 5 x 3-minute progressive intervals where each minute gets progressively faster: first minute at threshold pace (80-85% max HR), second minute at 5K pace (85-90% max HR), final minute at 1500m/mile pace (90-95% max HR). Take 2-minute active recovery jogs between intervals. Heart rate should reach near maximum by the end of each interval. Focus on maintaining form even as pace increases within each interval. Cool down with 8-minute easy jog decreasing to walk.",
+        "non-structured": "After warming up thoroughly, complete 5 x 3-minute running segments where you progressively increase speed throughout each segment. Start each 3-minute piece at a challenging but controlled pace (like threshold/tempo effort), increase to 5K race effort for the middle portion, and finish with a strong acceleration to near-maximal effort in the final minute. Take 2-minute easy jog recoveries between efforts. This workout simulates the finishing kick needed in races and teaches your body to continue accelerating even when already fatigued."
+      },
+      {
+        "name": "Critical Power",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 90,
+        "structured": "Warm up with 12-minute progressive jog plus dynamic mobility drills. Main set: 2 sets of 6 x 1-minute intervals at maximum sustainable intensity (RPE 9/10 or 90-95% max HR) with only 30-second active jog recoveries between intervals and 3 minutes easy jogging between sets. Maintain consistent pacing across all 12 intervals (±2-3 seconds). Focus on controlled breathing patterns (2-step inhale, 2-step exhale) despite severe oxygen debt. This workout pushes lactate tolerance to the limit and develops mental toughness. Cool down with 10-minute very easy jog transitioning to walk.",
+        "non-structured": "After a thorough warm-up, complete 2 blocks of 6 x 1-minute very hard efforts (8-9/10 intensity) with deliberately short 30-second recovery jogs between each minute. Take a full 3 minutes of easy recovery between the two blocks. This workout should feel extremely challenging both physically and mentally by the later intervals - the key is maintaining the same pace on all repeats despite the minimal recovery time. The short recovery periods force your body to process lactate while still running, building exceptional fatigue resistance."
+      }
+    ],
+    "6": [
+      {
+        "name": "Race Pace Practice",
+        "min_duration": 0.5,
+        "max_duration": 1.0,
+        "tss_multiplier": 90,
+        "structured": "Warm up with 12-minute progressive jog. Main set: 3 x 1-mile segments at goal race pace with 3-minute active recovery jogs between each. Use GPS/watch to hit exact target pace (±3 seconds/mile). Focus on race-specific effort, rhythm, and mental approach. For each mile, concentrate on different aspects: 1st mile - establishing rhythm and consistent cadence (target 170-180 steps/minute), 2nd mile - relaxed, efficient form (posture, arm swing, foot strike), 3rd mile - mental focus and maintaining pace despite fatigue. Finish with 4 x 30-second accelerations at 5-10 seconds/mile faster than race pace with 60-second jog recoveries. Cool down with 5-minute easy jog.",
+        "non-structured": "After a good warmup, complete 3 x 1-mile efforts at your exact target race pace with 3-minute easy jog recoveries. Use your watch to check your pace and aim to hit your goal pace precisely. For each mile, focus on a different element of your race strategy: first mile on finding rhythm, second mile on maintaining efficiency, third mile on mental toughness. Add 4 x 30-second pickups at the end that are slightly faster than race pace to practice finishing strong. The purpose is to internalize exactly how your goal race pace should feel in your body."
+      },
+      {
+        "name": "Race Simulation",
+        "min_duration": 0.5,
+        "max_duration": 1.0,
+        "tss_multiplier": 95,
+        "structured": "Warm up with 12-minute progressive jog including 3 x 30-second pickups. Main set: Run a workout that mimics race conditions and pacing strategy for your specific event. For 5K-10K: Start with 5 minutes at goal pace, surge for 2 minutes at 10 seconds/mile faster, return to goal pace for 5 minutes, include 3 x 30-second hills or 5% grade increases, finish with 5 minutes at goal pace + final 2-minute acceleration. For half-marathon+: 10 minutes at goal pace, practice 3 x aid station sequences (10-second walk while simulating drinking), 5 minutes at 10-15 seconds/mile faster, 10 minutes at goal pace with 3 x 30-second surges. Incorporate race-specific terrain (hills, trails, etc.) and practice mental strategies during challenging sections. Cool down with 10-minute easy jog.",
+        "non-structured": "Simulate your upcoming race with appropriate pacing, terrain, and intensity changes designed to replicate race day challenges. After warming up, run sections at your exact goal race pace, but include specific race elements you'll face: surges on hills, brief walking breaks for aid stations (if applicable), periods of running on similar terrain to your race course, and practice maintaining race pace even after challenging sections. Also practice your mental race strategies during tough sections - visualization, mantras, focusing techniques. This session should mirror the specific demands of your upcoming event."
+      },
+      {
+        "name": "Final Prep Session",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 85,
+        "structured": "Warm up with 15-minute progressive jog including 4 x 30-second gentle accelerations. Main set: 2 x 800m at goal race pace (exact target pace ±2 seconds per 800m) with 3-minute active recovery jogs, followed by 4 x 200m at 3-5 seconds per 200m faster than race pace with full 2-minute walking recovery, and 4 x 100m form-focused strides at 90-95% effort with 90-second recoveries. For the 800m segments, focus on exact pacing and race rhythm. For 200m repeats, focus on controlled speed without straining. For strides, emphasize perfect form: tall posture, relaxed shoulders, quick cadence (180+ steps/minute), and midfoot striking. Cool down with 10-minute very easy jog. This mixed session sharpens speed without excessive fatigue before competition.",
+        "non-structured": "Complete a pre-race preparation workout starting with a thorough 15-minute warm-up. The main session includes: 2 moderate-length segments (800m each) at your exact goal race pace, 4 shorter efforts (200m each) at slightly faster than race pace (about 5-10 seconds per mile faster), and finishing with 4-6 form-focused accelerations (100m each) where you concentrate on running with perfect technique rather than maximum speed. Take generous recovery between all efforts (2-3 minutes after the longer pieces, 1-2 minutes after the shorter ones). Keep everything controlled and confident - this session should leave you feeling sharp and ready, not depleted."
+      },
+      {
+        "name": "Pacing Practice",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 90,
+        "structured": "Warm up with 12-minute progressive jog plus 4 x 20-second strides. Main set: 3 x 800m at exact goal race pace (±2 seconds per 800m) with 3-minute active recovery jogs between each. Use watch feedback for the first 400m of each repeat, then run the final 400m without looking at your watch, trying to maintain exact pace by feel. Follow with 3 x 400m targeting specific race sections: 1st at starting pace (typically conservative, 5 seconds/mile slower than goal), 2nd at mid-race pace (goal pace), 3rd at finishing pace (5-10 seconds/mile faster than goal) with 2-minute recovery walks. Take splits at 200m during each 400m to check pacing precision. Finish with 2 x 200m practicing surge techniques: accelerate over first 50m, hold for 100m, then relax for final 50m. Cool down with 8-minute easy jog, focusing on relaxed form.",
+        "non-structured": "Complete a series of measured intervals at your precise goal race pace, practicing different sections of your race strategy. Start with 3 x 800m at your exact target race pace with 3-minute recoveries. Look at your watch for the first half of each interval, then try to maintain the exact same pace 'blind' for the second half, developing your internal pace clock. Then do 3 x 400m simulating different parts of your race: first 400m at your starting pace, second at your middle-race pace, third at your finishing pace. Take 2-minute recoveries between these. After checking your splits a few times early in the workout, try to hit your target paces by feel alone, checking afterward to see how accurate you were."
+      },
+      {
+        "name": "Taper Tune-up",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 85,
+        "structured": "Warm up with 10-minute progressive jog including dynamic mobility (high knees, butt kicks, leg swings, arm circles). Main set: 5 x 200m at goal race pace (±2 seconds per 200m) with full 2-minute walking recovery between each. Focus on relaxed, efficient form and precise pacing. Follow with 4 x 30-second relaxed strides at 90% effort (not all-out) with 1-minute walk recovery. For strides, emphasize tall posture, relaxed shoulders, quick cadence (180+ steps/minute), and efficient arm swing. Heart rate should recover to below 65% of maximum before starting each subsequent effort. Cool down with 5-minute very easy jog transitioning to walk. This short, high-quality session maintains neuromuscular sharpness without causing fatigue during race week.",
+        "non-structured": "Complete a brief session designed to keep you sharp before a race without creating fatigue. After a thorough warm-up, run 5 x 200m at your exact goal race pace with very generous recovery periods (full 2-minute recoveries). These should feel controlled and comfortable - focus on rhythm and form rather than pushing hard. Follow with 4-6 short accelerations (30 seconds each) focusing on relaxed, efficient form rather than maximum speed. Take full 1-minute walking recoveries between these. The entire session should be relatively short and leave you feeling energized rather than tired. This workout maintains neuromuscular fitness while allowing your body to fully recover before race day."
+      }
+    ],
+    "7": [
+      {
+        "name": "Maximum Intensity Race",
+        "min_duration": 0.25,
+        "max_duration": 0.75,
+        "tss_multiplier": 100,
+        "structured": "All-out race effort. Only suitable for key races or testing.",
+        "non-structured": "Race at absolute maximum intensity."
+      }
+    ]
+  },
+  "swimming": {
+    "-1": [
+      {
+        "name": "Rest Day - Swimming",
+        "min_duration": 0,
+        "max_duration": 0,
+        "tss_multiplier": 0,
+        "structured": "Complete rest day from swimming. Focus on recovery, good nutrition, and sleep.",
+        "non-structured": "Complete rest day from swimming. Focus on recovery, good nutrition, and sleep."
+      }
+    ],
+    "0": [
+      {
+        "name": "Recovery Swim",
+        "min_duration": 0.25,
+        "max_duration": 0.75,
+        "tss_multiplier": 25,
+        "structured": "Warm up with 200m very easy swimming. Main set: 6 x 100m alternating between free and back/breast stroke, focusing on relaxed technique with 15-20s rest between. Include 4 x 50m drill combinations (25m catch-up drill + 25m fingertip drag or similar) with 15s rest. Finish with 4 x 25m swimming with exaggerated long strokes, focusing on distance per stroke rather than speed.",
+        "non-structured": "Light, easy swimming focusing on technique rather than speed or effort. Alternate 100m of freestyle with 100m of a stroke that feels relaxing (usually backstroke or breaststroke). Include some simple drills like catch-up or fingertip drag every few lengths. Take breaks whenever needed - this swim should feel refreshing rather than tiring."
+      }
+    ],
+    "1": [
+      {
+        "name": "Technique Focus",
+        "min_duration": 0.5,
+        "max_duration": 1.0,
+        "tss_multiplier": 40,
+        "structured": "Warm up with 200m easy swimming. Main set: 12 x 50m rotating through 4 key technique drills (3 rounds): 1) Catch-up drill focusing on extension, 2) Fingertip drag for recovery path, 3) Closed-fist swimming for feel of the water, 4) 6/3/6 drill for body rotation. Use 15s rest between drills. After each round of drills, swim 100m focusing on applying those techniques to normal swimming. Finish with 4 x 25m where you count strokes and try to reduce by 1 each time.",
+        "non-structured": "Easy swim focusing on technique drills and form work. After a 200m warm-up, alternate between 50m of specific drills and 50m of regular swimming where you focus on applying what you practiced in the drill. Try at least 4 different drills, such as catch-up, fingertip drag, closed-fist swimming, and side-lying drill. For each drill, do it 2-3 times before moving to the next one."
+      },
+      {
+        "name": "Endurance Swim",
+        "min_duration": 0.75,
+        "max_duration": 1.5,
+        "tss_multiplier": 50,
+        "structured": "Warm up with 200m mixed strokes and drills. Main set: 5 x 300m freestyle at steady aerobic pace (RPE 4-5/10) with 30s rest between sets. Focus on consistent stroke count (aim for same number of strokes per length). Every 3rd 300, count strokes for one length and try to reduce by 1-2 strokes on the next length. Cool down with 4 x 50m alternating between backstroke and breaststroke.",
+        "non-structured": "Comfortable, steady-paced swimming where you can maintain good technique throughout. After warming up for 200m, swim sets of 200-300m at a pace you could maintain for 30+ minutes. Take 30-second breaks between sets. Focus on consistency rather than speed, and occasionally count your strokes per length to check your efficiency."
+      },
+      {
+        "name": "Mixed Stroke Development",
+        "min_duration": 0.5,
+        "max_duration": 1.0,
+        "tss_multiplier": 45,
+        "structured": "Warm up with 200m freestyle. Main set: 16 x 25m rotating through all strokes (4 of each: freestyle, backstroke, breaststroke, butterfly) with 15s rest. If butterfly is too challenging, substitute with one-arm butterfly drill. Then 4 x 100m IM (25m of each stroke in order) with 30s rest. Finish with 4 x 50m choice of your weakest stroke focusing on one specific aspect of technique (body position, kick timing, arm recovery, or breathing pattern).",
+        "non-structured": "Swimming session incorporating multiple strokes to develop all-around swimming ability. After warming up, alternate 25m of each of the four strokes (freestyle, backstroke, breaststroke, and butterfly or butterfly drill). Complete 3-4 rounds of this rotation. Then do 3-4 x 100m where you swim 25m of each stroke in sequence. Finish with 4-6 lengths of your least comfortable stroke, focusing specifically on improving technique."
+      }
+    ],
+    "2": [
+      {
+        "name": "Pace Development",
+        "min_duration": 0.5,
+        "max_duration": 1.0,
+        "tss_multiplier": 60,
+        "structured": "Warm up with 300m progressive swim (easy to moderate). Main set: 10 x 100m at consistent pace (±2 seconds between repeats) with 20s rest. Focus on even splitting each 100m (aim for second 50m to be ±1 second of first 50m). Every 3rd repeat, count strokes to ensure technique isn't breaking down. Follow with 6 x 50m where you descend pace 1-3 (getting faster) and then repeat, with 15s rest. Cool down with 200m easy swimming emphasizing long strokes and good body position.",
+        "non-structured": "Swimming at a moderate effort where you're working but can maintain consistency. After warming up, swim 8-10 x 100m aiming to hit the same time for each repeat (within 2-3 seconds). Use the pace clock or watch to check your consistency. Then do 6 x 50m getting progressively faster for repeats 1-3, then start over with 4-6 getting faster again. Finish with 200m of easy swimming focusing on technique."
+      },
+      {
+        "name": "Aerobic Build",
+        "min_duration": 0.5,
+        "max_duration": 1.0,
+        "tss_multiplier": 65,
+        "structured": "Warm up with 200m easy swimming plus 4 x 50m drill/swim. Main set: Pyramid of 50-100-150-200-150-100-50m with 15s rest after 50m, 20s after 100m, 25s after 150m, and 30s after 200m. Start at moderate effort (RPE 5/10) and increase by 0.5 RPE with each distance up the pyramid, then decrease by 0.5 RPE on the way down. Finish with 4 x 25m focusing on efficient turns and underwater work. Total distance: approximately 1400m.",
+        "non-structured": "Start with easy swimming and gradually increase effort throughout the session. After warming up, complete a pyramid set of distances (50-100-150-200-150-100-50m), taking slightly longer rest after the longer distances. Start at a comfortable intensity, build to your hardest effort at the peak distance (200m), then gradually decrease intensity as the distances come back down. Focus on maintaining technique even as the effort increases."
+      },
+      {
+        "name": "Threshold Foundation",
+        "min_duration": 0.5,
+        "max_duration": 1.0,
+        "tss_multiplier": 70,
+        "structured": "Warm up with 300m easy to moderate swimming. Main set: 3 rounds of [3 x 100m at moderate-hard effort (RPE 6-7/10) with 20s rest + 1 x 200m at steady effort (RPE 5/10) with 30s rest]. Focus on building comfort at threshold-adjacent intensities and developing smooth transitions between effort levels. Every round, make the 3rd 100m slightly faster than the first two. Cool down with 4 x 25m focusing on technique elements that break down when fatigued. Total: approximately 1600m.",
+        "non-structured": "Mix of easy and moderately hard swimming. After warming up, alternate sets of 3 x 100m at a challenging pace (where breathing becomes more difficult but can be sustained) with a more comfortable 200m. Take short rest periods (15-30 seconds) between each swim. Each round, try to make one of the 100m repeats slightly faster. The harder portions should feel challenging but sustainable for several minutes."
+      }
+    ],
+    "3": [
+      {
+        "name": "Threshold Intervals",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 80,
+        "structured": "Warm up with 300m progressive build (easy to moderate). Main set: 6 x 200m at threshold pace (approximately 1000m race pace, RPE 7-8/10) with 30s rest between intervals. Target consistent splits within 2-3 seconds across all repeats. Every 2nd repeat, count strokes for the middle 50m and try to maintain that count. Finish with 4 x 25m easy with focus on full extension and glide. Total distance: 1600-1800m.",
+        "non-structured": "Hard but controlled swimming efforts where your breathing is labored but you can maintain form. After warming up thoroughly, swim 6 x 200m at a pace that feels challenging but sustainable (about 80-85% of maximum effort). Take 30-second rest periods between each effort. Focus on maintaining the same pace across all repeats - the last one should be at the same speed as the first, not slower."
+      },
+      {
+        "name": "Descending Sets",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 75,
+        "structured": "Warm up with 300m easy swimming. Main set: 3 rounds of descending 4 x 100m (each 100m faster than the previous within each round) with 20-30-40-50s rest progressively increasing. Target times descending from aerobic pace to near-maximum effort (RPE 5/10 to 8/10). Final 100m of each round should be at or slightly above threshold intensity. Include 100m very easy recovery between rounds. Finish with 4 x 25m easy with focus on regaining perfect technique. Total: approximately 1800m.",
+        "non-structured": "Swimming sets where you progressively increase speed with each repeat. After a good warm-up, do 3 rounds of 4 x 100m where each 100m gets faster than the previous one. Start the first 100m at a comfortable pace, then gradually increase to challenging effort by the 4th repeat. Take progressively longer rest as the intensity increases (20s after the first, up to 50s after the fastest). Take a full minute of easy swimming between rounds. Focus on building intensity while maintaining technique."
+      },
+      {
+        "name": "Critical Swim Speed",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 80,
+        "structured": "Warm up with 300m progressive swimming. Main set: 6x 200m intervals at critical swim speed (CSS, roughly 1500m race pace) with precisely 30-second rest periods. Target negative splitting (second 100m 1-2 seconds faster than first 100m). Maintain consistent stroke count (±1 stroke per 50m) and rhythm throughout all repeats. Record splits to establish CSS benchmark. Finish with 200m easy swimming focusing on long, relaxed strokes. Total: approximately 1700m.",
+        "non-structured": "5-6 x 200m swimming intervals at a pace that feels hard but sustainable (about 85% of maximum effort). Use a watch to time yourself and take exactly 30 seconds rest between each interval. The key to this workout is consistency - aim to hit the same time (within 2-3 seconds) for each 200m repeat. Count strokes occasionally to ensure your technique isn't breaking down as you fatigue."
+      },
+      {
+        "name": "Negative Split Sets",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 75,
+        "structured": "3x 400m where the second 200m is faster than the first 200m by 5-8 seconds. Take 45 seconds rest between sets. This teaches pacing and finishing strength.",
+        "non-structured": "Complete 3x 400m swims where you deliberately swim the second half faster than the first half. Take 45 seconds rest between each 400m."
+      },
+      {
+        "name": "Mixed Intensity",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 80,
+        "structured": "Combination of threshold and above-threshold efforts. Challenges different energy systems in one session.",
+        "non-structured": "Swimming session with a mix of hard, sustained efforts and shorter, very intense efforts. Challenge yourself with varied intensities."
+      }
+    ],
+    "4": [
+      {
+        "name": "Power Development",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 80,
+        "structured": "Warm up with 200m easy swimming. Main set: 8 x 25m sprint with paddles and pull buoy (focus on maximum force per stroke) with 30s rest; 8 x 25m sprint with band/drag resistance with 45s rest; 8 x 25m minimum stroke count (aim for 7-9 strokes per 25m) with 20s rest. Finish with 4 x 50m building from easy to fast within each 50, focusing on increasing power while maintaining technique. Total: approximately 1000m plus warm-up/cool-down.",
+        "non-structured": "Focus on generating maximum power with each stroke. After warming up, do 6-8 x 25m sprints using paddles to increase resistance (30s rest between). Then do 6-8 x 25m using a band or drag suit for resistance (45s rest). Finally, do 6-8 x 25m where you count strokes and try to cross the pool in as few strokes as possible (aim for 7-10 strokes per 25m depending on your height and ability)."
+      },
+      {
+        "name": "Race Pace Power",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 85,
+        "structured": "Warm up with 300m progressive swimming. Main set: 10 x 50m at race pace (RPE 8/10) with 20s rest, focusing on maintaining strong, powerful strokes throughout. Count strokes on odd-numbered repeats, aiming for consistent count. Then 5 x 100m alternating between 25m fast (90% effort)/75m moderate (75% effort) with 30s rest. Finish with 4 x 25m all-out effort with 45s rest, focusing on maintaining technique despite fatigue. Total: approximately 1400m.",
+        "non-structured": "Swimming hard efforts at your target race pace. After warming up, complete 10 x 50m at your exact race pace with 20-second recoveries. Count strokes occasionally to ensure efficiency. Then do 5 x 100m where you swim the first 25m fast and the remaining 75m at moderate pace. Finish with 4 x 25m maximum effort sprints with full recovery. Focus on maintaining form and power even as you get tired."
+      },
+      {
+        "name": "Strength Endurance",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 85,
+        "structured": "Warm up with 300m progressive build. Main set: 4 rounds of [3 x 50m with paddles and pull buoy (focus on high elbow catch and strong finish) with 15s rest + 2 x 50m with ankle band/drag resistance with 20s rest + 100m normal swimming at 80-85% effort with 30s rest]. Between rounds, perform 50m very easy recovery. Target consistent stroke count (±1 stroke per 25m) throughout the entire set despite fatigue. For paddle work, focus on applying 20% more force than normal swimming while maintaining technique. Finish with 4 x 25m easy swimming focusing on perfect technique. Total: approximately 1600m.",
+        "non-structured": "Challenging session focusing on building swimming-specific strength. After warming up, complete 4 rounds that each combine: 3 x 50m using paddles to increase resistance (15-second rest), 2 x 50m using ankle band or drag suit for added resistance (20-second rest), followed by 100m normal swimming at a hard effort (30-second rest). Take 50m very easy recovery between each complete round. The paddles help develop upper body strength, while the drag increases core and leg power. The normal swimming immediately after teaches your body to apply power effectively even after muscular fatigue has set in."
+      },
+      {
+        "name": "Form Under Fatigue",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 80,
+        "structured": "Warm up with 300m progressive swimming. Main set: 3 rounds of [4 x 50m at 85-90% effort with 15s rest, followed immediately by 4 x 25m technical focus drills with 10s rest]. For the 50m hard efforts, push to near-threshold intensity (RPE 8/10). For the 25m technical segments, rotate through 4 specific focus areas: 1) high elbow catch, 2) body rotation, 3) head position, and 4) kick timing. Take 100m very easy recovery between rounds. With each round, the technical drills become progressively more challenging as fatigue increases. Finish with 4 x 25m where you alternate between 12.5m fast/12.5m perfect technique. Total: approximately 1500m.",
+        "non-structured": "Hard swimming intervals with specific technique focus during recovery phases. After warming up, complete 3 sets where each set contains: 4 x 50m at a very hard effort (15-second rest), immediately followed by 4 x 25m focusing entirely on different technical elements (10-second rest). The technical elements should rotate through: catch position, body rotation, head alignment, and kick timing. Take 100m easy swimming between each complete set. The purpose is to practice maintaining proper technique even when extremely fatigued - similar to the challenge of maintaining form in the latter stages of a race."
+      },
+      {
+        "name": "Power Intervals",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 85,
+        "structured": "10x 25m sprints at maximum effort with 45-seconds recovery, followed by 5x 50m at 90% effort with 30-seconds recovery. Focus on maximum power output per stroke.",
+        "non-structured": "Complete 10x 25m all-out swimming efforts with full recovery, then 5x 50m at slightly below maximum effort. Focus on generating maximum force with each stroke."
+      }
+    ],
+    "5": [
+      {
+        "name": "VO2max Development",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 85,
+        "structured": "Warm up with 300m progressive swimming plus 4 x 25m build to 90% effort with 15s rest. Main set: 8 x 75m at maximum sustainable intensity (approximately 400m race pace, RPE 9/10) with 45-second complete rest periods. Target consistent pacing (±1-2 seconds) across all intervals and even splitting within each interval (aiming for final 25m to be within 1 second of first 25m). Maintain high stroke rate (90-95% of maximum) throughout each interval. Rest periods should allow heart rate to recover to 60-70% of maximum before starting the next interval. Finish with 4 x 25m easy swimming with emphasis on long, relaxed strokes. Total: approximately 1200m.",
+        "non-structured": "Very intense, short swimming intervals with good recovery between. After warming up thoroughly, complete 8 x 75m at a very hard intensity (8-9/10 effort) - equivalent to the pace you could sustain for about a 400m race. Take 45-second complete rest periods, allowing your heart rate to drop significantly before starting the next interval. These should feel extremely challenging by the end of each interval, with your breathing becoming very labored, but the generous recovery allows you to maintain high quality throughout all repeats."
+      },
+      {
+        "name": "Speed Work",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 80,
+        "structured": "Warm up with 300m easy to moderate swimming plus 4 x 25m progressive builds. Main set: Part 1 - 8 x 25m all-out maximum effort sprints from push-off (aiming for >95% of maximum speed) with 60-second full recovery; Part 2 - 6 x 25m build to sprint from mid-pool (12.5m acceleration + 12.5m maximum speed) with 45-second recovery; Part 3 - 4 x 50m where 1st 25m is at 90% effort and 2nd 25m is at 100% effort, with 90-second full recovery. Focus on explosive power, perfect streamline position off walls (minimum 5m underwater), and maximum stroke rate while maintaining technique. Finish with 200m very easy swimming emphasizing relaxed movement. Total: approximately 1000m.",
+        "non-structured": "Focus on pure speed with short, maximum effort sprints. After warming up thoroughly, complete three different speed sets: First, do 8 x 25m all-out maximum effort sprints with full 60-second recovery periods. Next, do 6 x 25m where you start easy but accelerate to maximum speed by the middle of the length, sprinting the second half. Finally, do 4 x 50m where you swim the first 25m at 90% effort and the final 25m at absolute maximum effort. Take 90-second recoveries after these. Pay special attention to your starts, underwater work, and maintaining good technique despite the explosive effort."
+      },
+      {
+        "name": "Lactate Tolerance",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 90,
+        "structured": "Warm up with 300m progressive swimming plus 4 x 25m builds to 85% effort with 20s rest. Main set: 4 sets of 4 x 50m at maximum sustainable intensity (RPE 9/10, near all-out effort) with deliberately short 10-second recoveries within each set. Take full 2-minute recoveries between sets. Target consistent pacing within 1-2 seconds across all 50m repeats despite increasing fatigue. Heart rate will remain elevated throughout each set, reaching >90% of maximum. Focus on maintaining stroke mechanics and breathing patterns even as severe oxygen debt builds. Every 2nd set, count strokes to ensure technique isn't breaking down excessively. Finish with 200m very easy swimming focusing on long, relaxed strokes and controlled breathing (exhale fully underwater). Total: approximately 1200m.",
+        "non-structured": "After warming up thoroughly, complete 4 groups of 4 x 50m very hard efforts (9/10 intensity - near your maximum sustainable pace) with deliberately short 10-second rest periods between each swim within a set. Take 2 minutes of complete recovery between each group of 4. This workout is extremely challenging both physically and mentally - the short rest periods mean you'll be starting each 50m while still breathing hard from the previous one. Lactate will build up significantly in your muscles, creating a burning sensation. This will build exceptional mental and physical toughness for racing, teaching your body to process lactate while still maintaining effort and technique."
+      },
+      {
+        "name": "Race Pace Intervals",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 85,
+        "structured": "Warm up with 300m progressive swimming plus 4 x 50m build to race pace with 20s rest. Main set: 3 x 300m at exact goal race pace (±3 seconds per 300m) with 45-second recoveries. Target even splitting (aim for each 100m to be within 2 seconds). During the 1st 300m, focus on establishing rhythm and stroke rate; during the 2nd, focus on body position and rotation; during the 3rd, focus on maintaining technique despite fatigue. Follow with 6 x 100m at 2-3 seconds per 100m faster than race pace with 30-second recoveries. Count strokes every 3rd 100m and maintain consistent stroke count (±1 stroke per 50m) despite the higher intensity. Finish with 200m easy swimming emphasizing perfect technique. Total: approximately 1900m.",
+        "non-structured": "After a thorough warm-up, complete 3 x 300m at your exact target race pace with 45-second rest periods. Use a watch or pace clock to check your accuracy - aim to hit your target pace within 1% on each repeat. For each 300m, focus on a different aspect of race execution: first on rhythm and feel, second on technique and efficiency, third on maintaining form despite fatigue. Then complete 6 x 100m at a pace slightly faster than your race pace (2-3 seconds per 100m faster) with 30-second recoveries. These shorter, faster intervals prepare your body for race surges and teach you to maintain technique at speeds slightly above your target race pace. Focus on internalizing exactly how your race pace should feel in your body."
+      },
+      {
+        "name": "Anaerobic Capacity",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 90,
+        "structured": "Warm up with 300m progressive swimming plus 4 x 25m builds to 90% effort with 20s rest. Main set: 3 sets of 6 x 25m at absolute maximum speed (100% effort) with 20-second rest between each effort and 3-minute complete rest between sets. Focus on explosive starts (minimum 5m underwater off each wall), maximum arm turnover rate, and powerful kicks (6-8 dolphin kicks underwater). Target consistent times across all sprints (±0.3 seconds within each set). Heart rate will remain elevated throughout each set of 6, reaching >90% of maximum. Every set, focus on a different technical element while maintaining maximum speed: 1st set - perfect streamline position, 2nd set - maximum stroke rate, 3rd set - powerful finish to each stroke. Finish with 4 x 50m easy swimming with emphasis on long, relaxed strokes (approximately 50% of sprint effort). Total: approximately 1000m.",
+        "non-structured": "After warming up thoroughly, complete 3 blocks of 6 x 25m all-out maximum effort sprints with 20-second recoveries between sprints and full 3-minute recoveries between blocks. These should be absolute maximum effort - like a 100% sprint on land - focusing on generating maximum power and speed for these very brief efforts. Pay special attention to explosive starts off the wall with powerful underwater dolphin kicks. Each sprint should feel like you're giving everything you have for those few seconds. This workout targets your ATP-CP energy system (immediate energy) and develops pure power and speed. Despite the short distance, you'll feel significant fatigue by the later sprints in each set as this energy system becomes depleted."
+      }
+    ],
+    "6": [
+      {
+        "name": "Race Simulation",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 90,
+        "structured": "Complete warmup, then swim a race-specific set: 1x race distance broken into 4 segments - 1st segment at moderate pace, 2nd at race pace, 3rd slightly faster than race pace, 4th at maximum sustainable effort. Practice race starts, turns, and finishes throughout.",
+        "non-structured": "After warming up, simulate your race by swimming your event distance broken into 4 parts with progressive effort. Practice starts, turns, pacing, and race-specific strategies. Focus on executing your race day plan."
+      },
+      {
+        "name": "Technical Preparation",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 85,
+        "structured": "10x race-specific starts with 25m at race pace, 8x turns at race pace (approach + 5m exit), 6x finish practice (last 15m all-out). Between each set, perform 100m of technical drills focusing on race-specific form.",
+        "non-structured": "Practice 10 race starts with short sprints, 8 targeted turn practices, and 6 race finishes. Between each technical element, swim 100m focusing on your form at race pace. Concentrate on perfecting these race-specific skills."
+      },
+      {
+        "name": "Taper Speed",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 85,
+        "structured": "After thorough warmup: 8x 50m at race pace with 60-second full recoveries, followed by 4x 25m at maximum speed with 90-second recoveries. These short, high-quality efforts maintain race-specific speed without excessive fatigue.",
+        "non-structured": "Complete 8x 50m swims at your exact race pace with full 60-second recovery periods, followed by 4x 25m maximum speed efforts with 90-second rest. This session maintains your speed and feel while minimizing fatigue before your race."
+      },
+      {
+        "name": "Race Pace Confidence",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 90,
+        "structured": "After warmup: swim race pace sets with increasing distance - 4x 50m, 3x 100m, 2x 150m, 1x 200m all at exact race pace with 30-45 second recoveries. These progressive distance sets build confidence in race pace sustainability.",
+        "non-structured": "Complete a progressive set of race pace efforts: 4x 50m, 3x 100m, 2x 150m, and 1x 200m - all at your exact target race pace with brief recoveries. This builds confidence in your ability to maintain pace over increasing distances."
+      },
+      {
+        "name": "Final Preparation",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 85,
+        "structured": "Complete 200m warmup, then 4x 25m build to race pace, 2x 100m at race pace with 60s rest, 4x 15m race starts, and 4x 15m race finishes. End with 200m easy swim. This mixed workout combines race-specific elements as final preparation before competition.",
+        "non-structured": "After warming up thoroughly, complete a mix of short race pace segments, practice your starts and finishes, and focus on feeling smooth and confident in the water. This pre-race session boosts confidence without creating fatigue."
+      }
+    ],
+    "7": [
+      {
+        "name": "Maximum Intensity Race",
+        "min_duration": 0.25,
+        "max_duration": 0.5,
+        "tss_multiplier": 100,
+        "structured": "All-out race effort. Only suitable for key races or testing.",
+        "non-structured": "Race at absolute maximum intensity."
+      }
+    ]
+  },
+  "strength_upper": {
+    "-1": [
+      {
+        "name": "Rest Day - Upper Body",
+        "min_duration": 0,
+        "max_duration": 0,
+        "tss_multiplier": 0,
+        "structured": "Complete rest day from upper body training. Focus on recovery, good nutrition, and sleep.",
+        "non-structured": "Complete rest day from upper body training. Focus on recovery, good nutrition, and sleep."
+      }
+    ],
+    "0": [
+      {
+        "name": "Active Recovery - Upper Body",
+        "min_duration": 0.25,
+        "max_duration": 0.5,
+        "tss_multiplier": 20,
+        "structured": "Very light movement focusing on mobility and blood flow. No resistance training, just gentle movement patterns.",
+        "non-structured": "Light stretching and mobility work for upper body. Focus on gentle movement and increased blood flow to aid recovery."
+      }
+    ],
+    "1": [
+      {
+        "name": "Upper Body Mobility",
+        "min_duration": 0.25,
+        "max_duration": 0.5,
+        "tss_multiplier": 30,
+        "structured": "Begin with 5 minutes of gentle arm circles (20 forward, 20 backward, 20 alternating). Perform 3 rounds of shoulder mobility sequence: 10 wall slides, 10 shoulder dislocations with resistance band, and 10 shoulder CARs (Controlled Articular Rotations). Follow with 3 rounds of thoracic mobility: 10 seated rotations each side, 10 cat-cow on all fours, and 10 thread-the-needle each side. Perform 2 rounds of wrist and elbow mobility: 30 seconds of wrist circles in each direction, 10 wrist flexion/extension, and 10 pronation/supination movements. Finish with 3 minutes of controlled breathing with arms overhead (5 seconds in, 5 seconds out).",
+        "non-structured": "Focus on upper body mobility with gentle stretching and movement patterns. Begin with arm circles in different directions. Include specific movements for shoulders (wall slides, band pull-aparts, arm reaches), thoracic spine (seated and quadruped rotations), and wrists/elbows (circles, flexion/extension). Work through full ranges of motion without weight, holding each stretch for 20-30 seconds and making the dynamic movements slow and controlled."
+      },
+      {
+        "name": "Technique Foundation",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 40,
+        "structured": "Warm up with 5 minutes of light cardio and dynamic mobility. Perform 3 rounds of the following with light weights (30-40% of maximum): 10 push-ups with perfect form (modify as needed), 10 dumbbell rows each arm (focusing on scapular retraction), 10 overhead presses (emphasizing full range of motion), and 10 face pulls with band (focusing on external rotation). Rest 30-45 seconds between exercises. Follow with 2 rounds of: 10 bicep curls focusing on eccentric control (3 seconds down), 10 tricep extensions with full elbow extension, and 10 lateral raises with perfect shoulder positioning. Finish with 2 sets of 30-second hollow body holds and 30-second superman holds, focusing on core engagement throughout.",
+        "non-structured": "Practice basic upper body exercises with light weight or bodyweight, focusing entirely on form and technique. Include push-ups, rows, overhead presses, and rotational movements for the shoulders. Use weights that are 30-40% of your maximum to ensure perfect execution. Focus on specific technical elements for each movement: full range of motion, proper joint alignment, controlled tempo (especially during the lowering phase), and proper breathing patterns. For each exercise, perform 8-10 repetitions for 2-3 sets with ample rest between."
+      },
+      {
+        "name": "Basic Movement Patterns",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 45,
+        "structured": "Warm up with 5 minutes of arm circles, band pull-aparts, and wall slides (10 reps each, 3 rounds). Main circuit (3 rounds): 12 push-ups with elevated hands (focus on scapular movement patterns, 2-second lowering phase), 12 bent-over rows with light dumbbells (focus on midline stability and scapular retraction), 12 dumbbell shoulder presses (focus on full range of motion without compensatory movements), and 12 face pulls with resistance band (emphasizing external rotation and proper shoulder positioning). Rest 30 seconds between exercises, 1 minute between rounds. Finisher: 3 sets of 12 tricep extensions and 12 bicep curls with light dumbbells (focusing on isolation and controlled eccentric phase). Cool down with 3 minutes of shoulder and chest stretches, holding each for 30 seconds.",
+        "non-structured": "Work through basic upper body exercises using light resistance (30-40% of maximum), focusing on quality of movement rather than intensity. Include pushing exercises (push-ups, overhead presses), pulling exercises (rows, pull-downs/pull-aparts), and isolation movements for arms (bicep curls, tricep extensions). Perform 10-12 repetitions of each exercise for 2-3 sets, taking 30-60 seconds rest between exercises. For each movement, focus on maintaining perfect form: controlled tempo (especially during the lowering phase), full range of motion, proper joint alignment, and coordinated breathing (exhale during exertion)."
+      }
+    ]
+  },
+  "strength_lower": {
+    "-1": [
+      {
+        "name": "Rest Day - Lower Body",
+        "min_duration": 0,
+        "max_duration": 0,
+        "tss_multiplier": 0,
+        "structured": "Complete rest day from lower body training. Focus on recovery, good nutrition, and sleep.",
+        "non-structured": "Complete rest day from lower body training. Focus on recovery, good nutrition, and sleep."
+      }
+    ],
+    "0": [
+      {
+        "name": "Active Recovery - Lower Body",
+        "min_duration": 0.25,
+        "max_duration": 0.5,
+        "tss_multiplier": 20,
+        "structured": "Very light movement focusing on mobility and blood flow. No resistance training, just gentle movement patterns.",
+        "non-structured": "Light stretching and mobility work for lower body. Focus on gentle movement and increased blood flow to aid recovery."
+      }
+    ],
+    "1": [
+      {
+        "name": "Lower Body Mobility",
+        "min_duration": 0.25,
+        "max_duration": 0.5,
+        "tss_multiplier": 30,
+        "structured": "Begin with 5 minutes of joint warm-up: 30 ankle circles each direction, 20 knee circles each direction, and 20 hip circles each direction. Perform 3 rounds of hip mobility: 10 leg swings (forward/backward) each leg, 10 leg swings (side to side) each leg, and 10 hip CARs (Controlled Articular Rotations) each side. Follow with 3 rounds of squat preparation: 30 seconds in deep squat hold, 10 squats with 5-second hold at bottom, and 10 cossack squats each side. Perform 2 rounds of ankle mobility: 10 reps of knee-to-wall drill each side, holding for 3 seconds, and 10 ankle dorsiflexion/plantarflexion movements against band resistance. Finish with 2 minutes of controlled breathing in butterfly stretch (45 seconds), followed by pigeon pose (45 seconds each side).",
+        "non-structured": "Focus on lower body mobility with gentle stretching and movement patterns targeting hips, knees, and ankles. Begin with circular movements of each joint to increase synovial fluid. Include dynamic movements like leg swings in multiple directions, walking lunges with rotation, and lateral lunges. Perform static stretches for major muscle groups (hamstrings, quadriceps, calves, hip flexors), holding each for 30-45 seconds. Finish with functional mobility exercises like deep squat holds and single-leg balance. Work through full ranges of motion without weight, focusing on quality of movement."
+      },
+      {
+        "name": "Technique Foundation",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 40,
+        "structured": "Warm up with 5 minutes of light cardio (jumping jacks, high knees, butt kicks) and dynamic stretching. Perform 3 rounds of the following with light weights (30-40% of maximum): 10 goblet squats focusing on depth and knee tracking, 10 split squats each leg maintaining vertical shin position, 10 Romanian deadlifts emphasizing hip hinge pattern and neutral spine, and 10 lateral lunges each side focusing on knee alignment. Rest 45-60 seconds between exercises. Follow with 2 rounds of: 15 glute bridges with 2-second hold at top, 10 single-leg balance reaches each leg, and 20 calf raises with 1-second hold at top. Finish with 2 sets of 30-second wall sits and 30-second plank holds, focusing on proper alignment throughout.",
+        "non-structured": "Practice basic lower body exercises with light weight or bodyweight, focusing entirely on form and technique. Include squats, lunges, hip hinges, and calf raises using weights that are 30-40% of your maximum to ensure perfect execution. For each exercise, perform 10-15 repetitions for 2-3 sets with ample rest between. Focus on specific technical elements: proper joint alignment (especially knees tracking over toes), maintaining neutral spine position, controlled tempo (especially during the lowering phase), full range of motion, and proper breathing patterns (exhale during exertion)."
+      },
+      {
+        "name": "Basic Movement Patterns",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 45,
+        "structured": "Warm up with 5 minutes of leg swings, bodyweight squats, and ankle mobility drills (10 reps each, 3 rounds). Main circuit (3 rounds): 15 goblet squats with light dumbbell/kettlebell (focus on depth and proper knee alignment, 2-second lowering phase), 12 Romanian deadlifts with light dumbbells (focus on hip hinge pattern and maintaining neutral spine), 10 reverse lunges each leg (focus on vertical shin position and upright torso), and 15 glute bridges with 1-second hold at top (focus on posterior chain engagement). Rest 30 seconds between exercises, 1 minute between rounds. Finisher: 3 sets of 15 calf raises with 1-second hold at top and 20 banded lateral walks each direction. Cool down with 3 minutes of lower body stretches, holding each for 30 seconds.",
+        "non-structured": "Work through basic lower body exercises using light resistance (30-40% of maximum), focusing on quality of movement rather than intensity. Include squat variations (goblet squats, bodyweight squats), hinge patterns (deadlift variations), lunge variations (forward, reverse, lateral), and isolation exercises (glute bridges, calf raises). Perform 12-15 repetitions of each exercise for 2-3 sets, taking 30-60 seconds rest between exercises. For each movement, focus on maintaining perfect form: controlled tempo (especially during the lowering phase), full range of motion, proper joint alignment, and coordinated breathing (exhale during exertion)."
+      }
+    ]
+  },
+  "strength_full": {
+    "-1": [
+      {
+        "name": "Rest Day - Full Body",
+        "min_duration": 0,
+        "max_duration": 0,
+        "tss_multiplier": 0,
+        "structured": "Complete rest day from strength training. Focus on recovery, good nutrition, and sleep.",
+        "non-structured": "Complete rest day from strength training. Focus on recovery, good nutrition, and sleep."
+      }
+    ],
+    "0": [
+      {
+        "name": "Active Recovery - Full Body",
+        "min_duration": 0.25,
+        "max_duration": 0.5,
+        "tss_multiplier": 25,
+        "structured": "Very light movement focusing on full-body mobility and blood flow. No resistance training, just gentle movement patterns.",
+        "non-structured": "Light stretching and mobility work for the entire body. Focus on gentle movement and increased blood flow to aid recovery."
+      }
+    ],
+    "1": [
+      {
+        "name": "Full Body Mobility",
+        "min_duration": 0.25,
+        "max_duration": 0.5,
+        "tss_multiplier": 35,
+        "structured": "Begin with 5 minutes of total body warm-up: 1 minute jumping jacks, 1 minute arm circles (30 seconds each direction), 1 minute hip circles (30 seconds each direction), 1 minute torso rotations, and 1 minute of neck mobility (circles and side-to-side movements). Perform 2 rounds of upper body mobility: 10 wall slides, 10 scapular push-ups, and 10 shoulder dislocations with band. Follow with 2 rounds of lower body mobility: 10 deep bodyweight squats, 10 walking lunges with rotation each side, and 10 hip hinges. Perform 2 rounds of spine mobility: 10 cat-cows, 10 thoracic rotations each side from quadruped position, and 10 bird-dogs each side. Finish with flowing movement sequence: 5 sun salutations linking all major joint movements together with breath (inhale 4 counts, exhale 4 counts).",
+        "non-structured": "Focus on whole-body mobility with gentle stretching and movement patterns targeting all major joints. Begin with 5 minutes of gentle cardio to increase body temperature. Include dynamic movements for each body segment: shoulder circles and arm reaches for upper body; hip circles, squats, and lunges for lower body; rotations and side bends for the torso. Perform controlled articular rotations (CARs) for major joints. Hold static stretches for major muscle groups for 20-30 seconds each. Work through full ranges of motion without weight, focusing on fluid, controlled movement and proper breathing throughout."
+      },
+      {
+        "name": "Technique Foundation",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 45,
+        "structured": "Warm up with 6 minutes of dynamic movements: 30 seconds each of jumping jacks, high knees, arm circles, torso rotations, hip circles, and bodyweight squats. Perform 3 rounds of the following compound movements with light weights (30-40% of maximum): 10 goblet squats, 10 dumbbell rows each arm, 10 push-ups (modified as needed), and 10 Romanian deadlifts. Rest 45-60 seconds between exercises. Follow with 2 rounds of: 30 seconds plank, 10 shoulder presses, 15 bodyweight split squats each leg, and 10 lateral raises. Finish with core circuit: 3 rounds of 10 bird-dogs each side, 10 glute bridges, and 10 dead bugs each side, focusing on maintaining neutral spine and breathing pattern (inhale 3 counts, exhale 4 counts) throughout all exercises.",
+        "non-structured": "Practice basic full-body exercises with light weight or bodyweight, focusing entirely on form and technique. Begin with a thorough warm-up of all major joints. Include compound movements (squats, hinges, pushes, pulls, rotations) using weights that are 30-40% of your maximum to ensure perfect execution. For each exercise, perform 8-12 repetitions for 2-3 sets with 45-60 seconds rest between. Focus on specific technical elements: joint alignment, neutral spine position, breathing patterns (exhale during exertion), controlled tempo (especially during the lowering phase), and full range of motion. Pay special attention to transitioning between exercises with proper body mechanics."
+      },
+      {
+        "name": "Basic Movement Patterns",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 50,
+        "structured": "Warm up with 6 minutes of dynamic movements: 30 seconds each of jumping jacks, bodyweight squats, arm circles, torso rotations, walking lunges, and high knees. Main circuit (3 rounds): 12 goblet squats with light dumbbell/kettlebell (focus on knee tracking and depth), 10 push-ups (modified as needed, focus on core engagement), 12 dumbbell rows each side (focus on midline stability and scapular retraction), 12 Romanian deadlifts (focus on hip hinge pattern and neutral spine), and 30-second plank hold (focus on maintaining straight line from head to heels). Rest 30 seconds between exercises, 90 seconds between rounds. Finisher circuit (2 rounds): 10 step-ups each leg with light dumbbells, 10 shoulder presses, and 10 lateral lunges each side. Cool down with 3 minutes of full-body stretches, holding each for 30 seconds, focusing on controlled breathing (4 counts in, 4 counts out).",
+        "non-structured": "Work through basic full-body exercises using light resistance (30-40% of maximum), focusing on quality of movement rather than intensity. Begin with a thorough warm-up of all major joints. Include a balanced selection of movement patterns: squats, hinges, pushes, pulls, lunges, carries, and core exercises. Perform 10-12 repetitions of each exercise for 2-3 sets, taking 30-60 seconds rest between exercises. For each movement, focus on maintaining perfect form: controlled tempo (especially during the lowering phase), full range of motion, proper joint alignment, and coordinated breathing (exhale during exertion)."
+      }
+    ]
+  },
+  "yoga": {
+    "-1": [
+      {
+        "name": "Rest Day - No Yoga",
+        "min_duration": 0,
+        "max_duration": 0,
+        "tss_multiplier": 0,
+        "structured": "Complete rest day. Focus on recovery, good nutrition, and sleep.",
+        "non-structured": "Complete rest day. Focus on recovery, good nutrition, and sleep."
+      }
+    ],
+    "0": [
+      {
+        "name": "Gentle Recovery Yoga",
+        "min_duration": 0.25,
+        "max_duration": 0.5,
+        "tss_multiplier": 20,
+        "structured": "4 restorative poses held for 5 minutes each: supported child's pose, legs-up-the-wall, reclined bound angle pose, and supported supine twist. Focus on deep diaphragmatic breathing (6 breaths per minute) and complete muscular relaxation throughout the practice.",
+        "non-structured": "Extremely gentle yoga practice using props (blankets, bolsters, blocks) to fully support your body in 4-5 relaxing poses held for several minutes each. Focus on deep, slow breathing and letting go of physical tension."
+      }
+    ],
+    "1": [
+      {
+        "name": "Basic Yoga Flow",
+        "min_duration": 0.25,
+        "max_duration": 0.75,
+        "tss_multiplier": 30,
+        "structured": "Begin with 5 minutes of seated breathing (4 counts in, 6 counts out). Then complete 3 rounds of Sun Salutation A, holding each pose for 3 breaths. Main sequence: 5 minutes in Warrior I and II variations (each side), 3 minutes of gentle standing balance poses (tree pose, 30 seconds each side, repeated twice), and 5 minutes of seated forward folds. Finish with 3-5 minutes in final relaxation pose (savasana) with body scan meditation.",
+        "non-structured": "Gentle yoga practice focusing on fundamental poses with plenty of time to find proper alignment. Begin with 5 minutes of seated breathing. Practice 2-3 rounds of simple Sun Salutations, followed by 3-4 standing poses (Warriors I and II, Triangle) held for 5-8 breaths each. Include 2-3 gentle seated poses and finish with 5 minutes of final relaxation."
+      },
+      {
+        "name": "Gentle Hatha Yoga",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 35,
+        "structured": "Begin with 3 minutes of alternate nostril breathing (8 complete cycles). Warm-up with 6 rounds of Cat-Cow pose, synchronizing movement with breath. Main sequence includes: 6 standing poses (Mountain, Chair, Warrior I, Warrior II, Triangle, Extended Side Angle) held for 5 breaths each side; 4 seated poses (Staff, Seated Forward Fold, Seated Twist, Butterfly) held for 8 breaths each; and 3 supine poses (Bridge, Knees-to-Chest, Supine Twist) held for 6 breaths each. Finish with 8 minutes in Savasana with progressive muscle relaxation.",
+        "non-structured": "Traditional yoga practice with poses held for 5-8 breaths each. Start with 5 minutes of gentle warm-ups (Cat-Cow, gentle twists). Include 4-5 standing poses (Warriors, Triangle, Tree) holding each for 30-45 seconds per side. Follow with 3-4 floor poses (forward folds, gentle backbends like Bridge), and finish with 5-8 minutes of final relaxation. Focus on steady breathing (4 counts in, 4 counts out) throughout the practice."
+      },
+      {
+        "name": "Mindful Movement",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 35,
+        "structured": "Begin with 5 minutes of seated meditation focusing on breath awareness (observe natural breath for 2 minutes, then practice 4-7-8 breathing for 3 minutes). Transition to 10 minutes of slow Sun Salutation variations (3 rounds), holding each pose for 3-5 breaths and focusing on sensations in the body. Main sequence: 5 minutes of standing poses (Warrior II, Triangle) held for 8-10 breaths each, 5 minutes of seated forward folds with 1-minute holds, and 5 minutes of gentle backbends (Bridge, Sphinx) held for 45 seconds each. End with 10 minutes of restorative poses and body scan meditation.",
+        "non-structured": "Yoga practice emphasizing awareness and presence. Begin with 5 minutes of seated meditation observing your breath. Move through postures very slowly, holding each for 5-10 breaths and paying close attention to physical sensations, alignment, and breath. Include 4-5 standing poses, 3-4 seated poses, and 2-3 gentle backbends. Spend at least 30 seconds in each pose, and finish with 5-10 minutes in a restorative pose or final relaxation with a body scan meditation."
+      },
+      {
+        "name": "Moderate Vinyasa Flow",
+        "min_duration": 0.5,
+        "max_duration": 0.75,
+        "tss_multiplier": 45,
+        "structured": "Begin with 5 minutes of centering and breathing exercises (2-minute seated breathing followed by 3 minutes of 5-5-5 breath: 5 counts inhale, 5 counts hold, 5 counts exhale). Warm-up with 5 rounds of dynamic Sun Salutation A (12 poses, holding each for only 1 breath) to build heat. Main sequence: 15 minutes of standing flow combining Warriors I, II, III, Extended Side Angle, and Triangle (holding each for 3-5 breaths, flowing with 1 breath transitions); 5 minutes of balancing poses (Tree, Eagle, and Dancer's pose, 30 seconds each side, repeated); 10 minutes of floor sequence including 8 poses (Pigeon, Seated Forward Fold, Seated Twist, Boat, Bridge, Happy Baby, Supine Twist, and Shoulderstand) held for 8-10 breaths each. Finish with 5 minutes in Savasana practicing 4-7-8 breathing (4 counts inhale, 7 counts hold, 8 counts exhale).",
+        "non-structured": "Moderately active yoga practice with a continuous flow of movements. Begin with 5 minutes of breathing exercises focusing on full, deep breaths. Move through 5 rounds of Sun Salutations at a moderate pace to warm up the body. Then flow through a 15-minute standing sequence linking poses together with your breath (Warriors, Triangle, Side Angle poses), holding each for 3-5 breaths before transitioning. Include 3 different balance poses, holding for 30 seconds on each side. Finish with 10 minutes of floor poses (hip openers, forward folds, twists, and mild inversions) and 5 minutes of final relaxation with guided breathing."
+      }
+    ]
+  }
+}

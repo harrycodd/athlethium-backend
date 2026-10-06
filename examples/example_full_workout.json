@@ -1,0 +1,324 @@
+{
+  "workoutId": "90bdbb45-397c-4712-b293-2f58f6456ab3",
+  "sport": "cycling",
+  "name": "CyclingVO2MaxMix",
+  "targetType": "power",
+  "steps": [
+    {
+      "type": "warmup",
+      "duration_sec": 600,
+      "target_percent_ftp": 45,
+      "target_max_percent_ftp": 60
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 300,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 300,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "interval",
+      "duration_sec": 40,
+      "target_percent_ftp": 110
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 20,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "recovery",
+      "duration_sec": 300,
+      "target_percent_ftp": 50
+    },
+    {
+      "type": "active",
+      "duration_sec": 1620,
+      "target_percent_ftp": 65
+    },
+    {
+      "type": "cooldown",
+      "duration_sec": 600,
+      "target_percent_ftp": 40
+    }
+  ],
+  "descriptions": {
+    "non_structured": "Punchy, breathless efforts. Find a steep 3-5 minute hill and do several very hard repeats, or attack aggressively on short inclines during a session. Easy spinning otherwise.",
+    "structured": "Warm up for 10 mins. Main Block: Up to 3 blocks of 8-15x (40s on @ 110% FTP / 20s off). Rest 5m between blocks. Cool down for 10 mins. Remaining time (if any) is Z2 endurance.",
+    "mix": "Option 1 (Structured):\nWarm up for 10 mins. Main Block: Up to 3 blocks of 8-15x (40s on @ 110% FTP / 20s off). Rest 5m between blocks. Cool down for 10 mins. Remaining time (if any) is Z2 endurance.\n\nOption 2 (Unstructured):\nPunchy, breathless efforts. Find a steep 3-5 minute hill and do several very hard repeats, or attack aggressively on short inclines during a session. Easy spinning otherwise."
+  }
+}

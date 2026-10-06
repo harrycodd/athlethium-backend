@@ -1,0 +1,4 @@
+firebase_functions~=0.5.0
+firebase-admin>=6.0.0
+fitparse
+requests>=2.31.0
