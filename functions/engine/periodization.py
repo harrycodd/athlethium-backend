@@ -5,7 +5,7 @@ Implements Base, Build, Peak, Taper phases and 3:1 load/deload mesocycles.
 
 import datetime
 from typing import Optional, Tuple
-from core.models import TrainingPhase, Goal, UserProfile
+from core.models import TrainingPhase, Goal
 
 
 class PeriodizationEngine:

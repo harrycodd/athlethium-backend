@@ -16,6 +16,9 @@ fi
 "$VENV/bin/pip" install -q -r requirements-dev.txt
 [ -d node_modules ] || npm ci --no-fund --no-audit
 
+# The Functions emulator needs a value for every declared secret. Use a dummy, never the real one.
+[ -f functions/.secret.local ] || echo "STRAVA_CLIENT_SECRET=emulator-dummy-secret" > functions/.secret.local
+
 PYTEST_ARGS="${*:-}"
 export REQUIRE_EMULATORS=1
 

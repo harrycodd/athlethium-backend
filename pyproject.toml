@@ -2,6 +2,10 @@
 testpaths = ["tests"]
 pythonpath = ["functions", "."]
 addopts = "-ra --strict-markers"
+filterwarnings = [
+    # fitparse (third-party, unmaintained) uses datetime.utcfromtimestamp internally
+    "ignore:datetime.datetime.utcfromtimestamp:DeprecationWarning:fitparse",
+]
 markers = [
     "emulator: needs the Firebase Emulator Suite (Firestore/Auth/Storage) running",
     "functions_emulator: calls Cloud Functions over HTTP on the Functions emulator",
@@ -19,3 +23,19 @@ exclude_also = [
     "if __name__ == .__main__.:",
     "except ImportError:",
 ]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+extend-exclude = [
+    "functions/venv",
+    "node_modules",
+    # Legacy CLI tools that import modules removed before this repo's history began (see README).
+    "scripts/add_custom_workout.py",
+    "scripts/tui_strength.py",
+    "scripts/tui_stretch.py",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B"]
+ignore = ["E501", "B904", "B008"]

@@ -3,11 +3,10 @@ Daily Training Scheduler & Intensity Orchestrator.
 Determines daily workout prescription, sport rotation, and intensity distribution.
 """
 
-import uuid
+import dataclasses
 import datetime
 from typing import Dict, Any, List, Optional
-from core.models import UserProfile, WorkoutDoc, TrainingPhase, TargetType
-from core.config import TSS_MULTIPLIER_MAP
+from core.models import UserProfile, WorkoutDoc, TrainingPhase
 from engine.physiology import PhysiologyEngine
 from engine.periodization import PeriodizationEngine
 from engine.guardrails import GuardrailEngine
@@ -30,6 +29,7 @@ class TrainingScheduler:
     ) -> WorkoutDoc:
         uid = user_id or user_profile.uid
         date_str = target_date.strftime("%Y-%m-%d")
+        user_profile = cls._project_fitness(user_profile, target_date)
         day_name = target_date.strftime("%A")
 
         # 1. Resolve Available Hours for today
@@ -113,10 +113,7 @@ class TrainingScheduler:
         )
 
         session_desc = workout_payload.get("description", "").strip()
-        if session_desc and coaching_notes:
-            full_description = f"{session_desc}\n\n{coaching_notes}"
-        else:
-            full_description = session_desc or coaching_notes
+        full_description = "\n\n".join(part for part in (session_desc, coaching_notes) if part)
 
         is_strength_or_mobility = sport.lower() in ["strength", "stretching", "yoga", "rest"]
         estimated_tss = 0.0 if is_strength_or_mobility else PhysiologyEngine.estimate_session_tss(safe_intensity, safe_duration, sport)
@@ -140,6 +137,20 @@ class TrainingScheduler:
             coach_rationale=coaching_notes,
             execution_tips=exec_tips
         )
+
+    @classmethod
+    def _project_fitness(cls, user_profile: UserProfile, target_date: datetime.date) -> UserProfile:
+        """Decays stored CTL/ATL across idle days up to the eve of target_date."""
+        if not user_profile.metrics_date:
+            return user_profile
+        try:
+            metrics_date = datetime.datetime.strptime(user_profile.metrics_date, "%Y-%m-%d").date()
+        except (TypeError, ValueError):
+            return user_profile
+        ctl, atl = PhysiologyEngine.project_metrics(
+            user_profile.ctl, user_profile.atl, metrics_date, target_date - datetime.timedelta(days=1)
+        )
+        return dataclasses.replace(user_profile, ctl=ctl, atl=atl)
 
     @classmethod
     def _resolve_daily_hours(cls, user_profile: UserProfile, target_date: datetime.date) -> float:
@@ -372,7 +383,7 @@ class TrainingScheduler:
             return f"Adaptive Guardrail: {clamp_reason}"
 
         if is_benchmark:
-            return f"Post-Deload Benchmark Assessment: Re-test your threshold and power/pace zones following your recovery week to calibrate upcoming training blocks."
+            return "Post-Deload Benchmark Assessment: Re-test your threshold and power/pace zones following your recovery week to calibrate upcoming training blocks."
 
         phase_names = {
             TrainingPhase.BASE: "Endurance Block",

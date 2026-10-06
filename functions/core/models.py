@@ -5,7 +5,6 @@ Core Data Models and Type Definitions for Athlethium Backend.
 from dataclasses import dataclass, field
 from typing import List, Dict, Any, Optional
 from enum import Enum
-import datetime
 
 
 class TrainingPhase(str, Enum):
@@ -54,7 +53,7 @@ class UserProfile:
     illness: int = 0  # 0=None, 1=Minor, 2=Severe
     recovery_metric: int = 3  # 1 (quick) to 3 (standard)
     interval_type: str = "structured"  # structured, mix, non-structured
-    
+
     # Setup wizard & UI preferences
     display_name: Optional[str] = None
     units: str = "Metric"  # Metric or Imperial
@@ -66,7 +65,7 @@ class UserProfile:
     sport_percentages: Dict[str, float] = field(default_factory=dict)
     sport_sessions_per_week: Dict[str, int] = field(default_factory=dict)
     wizard_completed: bool = False
-    
+
     # Threshold metrics
     ftp: float = 200.0
     ftp_cycling: float = 200.0
@@ -74,7 +73,7 @@ class UserProfile:
     ftp_pace_running: float = 330.0  # sec/km
     ftp_pace_swimming: float = 110.0  # sec/100m
     fthr: float = 170.0
-    
+
     # Day-of-week hour limits & overrides
     daily_max_hours: Dict[str, float] = field(default_factory=lambda: {
         "Monday": 1.5,
@@ -86,7 +85,12 @@ class UserProfile:
         "Sunday": 2.5
     })
     daily_hours_overrides: Dict[str, float] = field(default_factory=dict)
-    
+
+    # Date (YYYY-MM-DD) whose end-of-day state `ctl`/`atl` describe; None = unknown
+    metrics_date: Optional[str] = None
+    # IANA time zone (e.g. "Europe/London") used to decide which calendar day "today" is
+    timezone: Optional[str] = None
+
     # Goal and history
     goal: Optional[Goal] = None
     history: Dict[str, Dict[str, List[float]]] = field(default_factory=dict)

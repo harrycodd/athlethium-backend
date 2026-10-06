@@ -1,13 +1,16 @@
-import requests
 import json
+import os
+
+import requests
 
 # Your Strava API credentials
-CLIENT_ID = "157155" # Assuming this is your real Client ID based on our previous step
-CLIENT_SECRET = input("Enter your Strava Client Secret: ").strip()
+CLIENT_ID = os.environ.get("STRAVA_CLIENT_ID", "157155")  # public OAuth client id
+CLIENT_SECRET = os.environ.get("STRAVA_CLIENT_SECRET") or input("Enter your Strava Client Secret: ").strip()
 
 # Your Webhook Callback URL and Verify Token
 CALLBACK_URL = "https://europe-west2-athlethium-app.cloudfunctions.net/strava_webhook"
-VERIFY_TOKEN = "REDACTED_VERIFY_TOKEN"
+# Never commit this value; supply it at run time.
+VERIFY_TOKEN = os.environ.get("STRAVA_VERIFY_TOKEN") or input("Enter the webhook verify token: ").strip()
 
 def view_subscriptions():
     print("Fetching current subscriptions...")
@@ -16,7 +19,8 @@ def view_subscriptions():
         params={
             "client_id": CLIENT_ID,
             "client_secret": CLIENT_SECRET
-        }
+        },
+        timeout=15
     )
     if res.ok:
         data = res.json()
@@ -45,12 +49,12 @@ def create_subscription():
         print(res.text)
 
 if __name__ == "__main__":
-    if not CLIENT_SECRET:
-        print("Error: Client Secret is required.")
+    if not CLIENT_SECRET or not VERIFY_TOKEN:
+        print("Error: Client Secret and verify token are required.")
         exit(1)
-        
+
     subs = view_subscriptions()
-    
+
     if len(subs) > 0:
         print("\nIt looks like you already have active subscriptions.")
         print("Strava only allows ONE active webhook subscription per application.")

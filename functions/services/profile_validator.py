@@ -5,8 +5,27 @@ Enforces strict server-side validation rules matching the frontend setup wizard.
 
 import re
 import datetime
-from typing import Dict, Any, List, Tuple, Optional
+from typing import Dict, Any, List, Tuple
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 from core.config import SUPPORTED_SPORTS, SUPPORTED_UNITS, DAYS_OF_WEEK, EQUIPMENT_MAPPING
+
+# key -> (min, max, is_integer)
+NUMERIC_FIELDS = {
+    "ctl": (0, 250, False),
+    "atl": (0, 400, False),
+    "ftp": (30, 700, False),
+    "ftpCycling": (30, 700, False),
+    "ftpRunning": (30, 700, False),
+    "ftpPaceRunning": (120, 900, False),   # sec/km
+    "ftpPaceSwimming": (50, 300, False),   # sec/100m
+    "fthr": (80, 230, False),
+    "injury": (0, 2, True),
+    "illness": (0, 2, True),
+    "recovery_metric": (1, 3, True),
+    "intensity_weeks": (1, 6, True),
+}
+INTERVAL_TYPES = {"structured", "mix", "non_structured", "non-structured"}
+FITNESS_LEVELS = {"beginner", "intermediate", "advanced", "elite"}
 
 
 class ProfileValidator:
@@ -220,7 +239,7 @@ class ProfileValidator:
         raw_eq_toggles = data.get("equipmentToggles")
         if raw_eq_toggles is not None and isinstance(raw_eq_toggles, dict):
             normalized["equipmentToggles"] = {k: bool(v) for k, v in raw_eq_toggles.items()}
-            
+
             # Normalize to backend equipment array
             normalized_eq = ["bodyweight"]
             for eq_k, enabled in raw_eq_toggles.items():
@@ -239,14 +258,61 @@ class ProfileValidator:
         elif not is_partial:
             normalized["wizardCompleted"] = True
 
-        # Copy any other valid top-level fields safely
-        for passthrough_key in [
-            "ctl", "atl", "ftp", "ftpCycling", "ftpRunning", "ftpPaceRunning",
-            "ftpPaceSwimming", "fthr", "injury", "illness", "recovery_metric",
-            "intensity_weeks", "intervalType", "dailyHoursOverrides", "history"
-        ]:
-            if passthrough_key in data:
-                normalized[passthrough_key] = data[passthrough_key]
+        # Typed, range-checked optional fields (previously copied through unchecked)
+        for key, (low, high, as_int) in NUMERIC_FIELDS.items():
+            if key in data:
+                value = data[key]
+                if isinstance(value, bool) or not isinstance(value, (int, float)):
+                    errors.append(f"{key} must be a number")
+                elif not (low <= value <= high) or value != value:
+                    errors.append(f"{key} must be between {low} and {high}")
+                else:
+                    normalized[key] = int(value) if as_int else float(value)
+
+        if "intervalType" in data:
+            if data["intervalType"] not in INTERVAL_TYPES:
+                errors.append(f"intervalType must be one of {sorted(INTERVAL_TYPES)}")
+            else:
+                normalized["intervalType"] = data["intervalType"]
+
+        if "fitness_level" in data:
+            if data["fitness_level"] not in FITNESS_LEVELS:
+                errors.append(f"fitness_level must be one of {sorted(FITNESS_LEVELS)}")
+            else:
+                normalized["fitness_level"] = data["fitness_level"]
+
+        if "timezone" in data:
+            tz = data["timezone"]
+            try:
+                if not isinstance(tz, str) or not tz:
+                    raise ValueError
+                ZoneInfo(tz)
+                normalized["timezone"] = tz
+            except (ValueError, ZoneInfoNotFoundError):
+                errors.append("timezone must be a valid IANA time zone, e.g. 'Europe/London'")
+
+        if "dailyHoursOverrides" in data:
+            overrides = data["dailyHoursOverrides"]
+            if not isinstance(overrides, dict):
+                errors.append("dailyHoursOverrides must be a map of YYYY-MM-DD to hours")
+            else:
+                clean: Dict[str, float] = {}
+                for date_key, hours in overrides.items():
+                    try:
+                        datetime.datetime.strptime(str(date_key), "%Y-%m-%d")
+                        h = float(hours)
+                        if not 0.0 <= h <= 8.0:
+                            raise ValueError
+                        clean[str(date_key)] = h
+                    except (TypeError, ValueError):
+                        errors.append(f"Invalid daily hours override '{date_key}'")
+                normalized["dailyHoursOverrides"] = clean
+
+        if "history" in data:
+            if not isinstance(data["history"], dict):
+                errors.append("history must be an object")
+            else:
+                normalized["history"] = data["history"]
 
         return len(errors) == 0, errors, normalized
 
@@ -268,7 +334,7 @@ class ProfileValidator:
             errors.append("Goal date is required (YYYY-MM-DD)")
         else:
             try:
-                parsed_date = datetime.datetime.strptime(date_str, "%Y-%m-%d").date()
+                datetime.datetime.strptime(date_str, "%Y-%m-%d")
                 normalized_goal["date"] = date_str
             except ValueError:
                 errors.append("Goal date must be in YYYY-MM-DD format")

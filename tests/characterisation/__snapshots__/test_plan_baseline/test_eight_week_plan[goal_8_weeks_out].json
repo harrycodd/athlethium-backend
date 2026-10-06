@@ -3146,6 +3146,105 @@
   },
   {
     "date": "2026-11-29",
-    "error": "NameError: name 'cls' is not defined"
+    "intensity": 7,
+    "minutes": 120.0,
+    "name": "Cycling Neuromuscular Sprint Power",
+    "rationale": "Deload Week (Race Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        720,
+        50,
+        80,
+        "power"
+      ],
+      [
+        "interval",
+        15,
+        160,
+        220,
+        "power"
+      ],
+      [
+        "recovery",
+        180,
+        40,
+        50,
+        "power"
+      ],
+      [
+        "interval",
+        15,
+        160,
+        220,
+        "power"
+      ],
+      [
+        "recovery",
+        180,
+        40,
+        50,
+        "power"
+      ],
+      [
+        "interval",
+        15,
+        160,
+        220,
+        "power"
+      ],
+      [
+        "recovery",
+        180,
+        40,
+        50,
+        "power"
+      ],
+      [
+        "interval",
+        15,
+        160,
+        220,
+        "power"
+      ],
+      [
+        "recovery",
+        180,
+        40,
+        50,
+        "power"
+      ],
+      [
+        "interval",
+        15,
+        160,
+        220,
+        "power"
+      ],
+      [
+        "recovery",
+        180,
+        40,
+        50,
+        "power"
+      ],
+      [
+        "interval",
+        15,
+        160,
+        220,
+        "power"
+      ],
+      [
+        "cooldown",
+        5490,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 240.0
   }
 ]

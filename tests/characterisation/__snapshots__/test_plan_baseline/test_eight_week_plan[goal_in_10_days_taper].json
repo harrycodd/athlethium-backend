@@ -716,7 +716,106 @@
   },
   {
     "date": "2026-10-15",
-    "error": "NameError: name 'cls' is not defined"
+    "intensity": 7,
+    "minutes": 90.0,
+    "name": "Cycling Neuromuscular Sprint Power",
+    "rationale": "Active Recovery (Race Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        720,
+        50,
+        80,
+        "power"
+      ],
+      [
+        "interval",
+        15,
+        160,
+        220,
+        "power"
+      ],
+      [
+        "recovery",
+        180,
+        40,
+        50,
+        "power"
+      ],
+      [
+        "interval",
+        15,
+        160,
+        220,
+        "power"
+      ],
+      [
+        "recovery",
+        180,
+        40,
+        50,
+        "power"
+      ],
+      [
+        "interval",
+        15,
+        160,
+        220,
+        "power"
+      ],
+      [
+        "recovery",
+        180,
+        40,
+        50,
+        "power"
+      ],
+      [
+        "interval",
+        15,
+        160,
+        220,
+        "power"
+      ],
+      [
+        "recovery",
+        180,
+        40,
+        50,
+        "power"
+      ],
+      [
+        "interval",
+        15,
+        160,
+        220,
+        "power"
+      ],
+      [
+        "recovery",
+        180,
+        40,
+        50,
+        "power"
+      ],
+      [
+        "interval",
+        15,
+        160,
+        220,
+        "power"
+      ],
+      [
+        "cooldown",
+        3690,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 180.0
   },
   {
     "date": "2026-10-16",

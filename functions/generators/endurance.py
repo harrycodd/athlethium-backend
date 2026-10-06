@@ -65,7 +65,7 @@ class EnduranceGenerator:
             title = f"{sport.capitalize()} Aerobic Base Building"
             steps = cls._build_endurance_base_steps(total_sec, target_type)
             descriptions = {
-                "structured": f"Steady Zone 2 aerobic base building at 65-72% FTP. Keep pedal pressure / running cadence consistent.",
+                "structured": "Steady Zone 2 aerobic base building at 65-72% FTP. Keep pedal pressure / running cadence consistent.",
                 "mix": f"Steady endurance {sport} with continuous pressure and steady breathing.",
                 "non_structured": "Long steady distance. Keep continuous pressure and stay conversational."
             }
@@ -162,7 +162,7 @@ class EnduranceGenerator:
         warmup = min(600, int(total_sec * 0.2))
         cooldown = min(600, int(total_sec * 0.15))
         available_work = total_sec - warmup - cooldown
-        
+
         # Decide interval block: 2x15m, 3x10m, or 2x20m
         if available_work >= 2400:
             work_dur = 900  # 15 min
@@ -178,7 +178,7 @@ class EnduranceGenerator:
             steps.append(WorkoutStep("interval", work_dur, f"Sweet Spot Block {i+1}", 85, 88, target_type.value))
             if i < reps - 1:
                 steps.append(WorkoutStep("recovery", rest_dur, "Recovery Spin", 50, 60, target_type.value))
-        
+
         current_sum = sum(s.duration for s in steps)
         steps.append(WorkoutStep("cooldown", max(300, total_sec - current_sum), "Cool Down", 45, 55, target_type.value))
         return steps
@@ -243,7 +243,6 @@ class EnduranceGenerator:
     @staticmethod
     def _build_anaerobic_steps(total_sec: int, target_type: TargetType) -> List[WorkoutStep]:
         warmup = min(720, int(total_sec * 0.25))
-        cooldown = min(600, int(total_sec * 0.2))
         steps = [WorkoutStep("warmup", warmup, "Dynamic Warmup", 50, 80, target_type.value)]
 
         reps = 6
@@ -268,7 +267,7 @@ class EnduranceGenerator:
                 steps.append(WorkoutStep("recovery", 180, "Full Recovery Spin", 40, 50, target_type.value))
 
         current_sum = sum(s.duration for s in steps)
-        cls._normalize_step_durations(steps, total_sec)
+        steps.append(WorkoutStep("cooldown", max(300, total_sec - current_sum), "Cool Down", 40, 50, target_type.value))
         return steps
 
     @classmethod
@@ -322,7 +321,7 @@ class EnduranceGenerator:
 
         else:
             title = f"{sport.capitalize()} Baseline Fitness Benchmark"
-            desc = f"Standardized post-deload fitness benchmark test to evaluate current fitness levels."
+            desc = "Standardized post-deload fitness benchmark test to evaluate current fitness levels."
             steps.append(WorkoutStep("warmup", 600, "Progressive Warm-up", 50, 70, target_type.value))
             steps.append(WorkoutStep("interval", 1200, "Main Benchmark Assessment Effort", 95, 105, target_type.value))
             rem = max(300, total_sec - sum(s.duration for s in steps))

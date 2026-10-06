@@ -3,7 +3,8 @@ Physiological Modeling & Fitness/Fatigue Calculations.
 Implements the Banister Impulse-Response model (CTL, ATL, TSB).
 """
 
-from typing import Dict, Any, Tuple
+import datetime
+from typing import List, Optional, Tuple
 from core.config import TSS_MULTIPLIER_MAP
 
 
@@ -31,6 +32,70 @@ class PhysiologyEngine:
         new_atl = current_atl + (daily_tss - current_atl) / cls.ATL_TIME_CONSTANT
         new_tsb = new_ctl - new_atl
         return round(new_ctl, 2), round(new_atl, 2), round(new_tsb, 2)
+
+    @classmethod
+    def project_metrics(
+        cls,
+        ctl: float,
+        atl: float,
+        metrics_date: Optional[datetime.date],
+        as_of: datetime.date
+    ) -> Tuple[float, float]:
+        """
+        Decays CTL/ATL (zero load) from the end of `metrics_date` to the end of `as_of`.
+        Without this, an athlete who stops training keeps yesterday's fatigue forever.
+        """
+        if metrics_date is None or as_of <= metrics_date:
+            return ctl, atl
+        idle_days = (as_of - metrics_date).days
+        ctl = ctl * (1 - 1 / cls.CTL_TIME_CONSTANT) ** idle_days
+        atl = atl * (1 - 1 / cls.ATL_TIME_CONSTANT) ** idle_days
+        return round(ctl, 2), round(atl, 2)
+
+    @classmethod
+    def apply_session_load(
+        cls,
+        ctl: float,
+        atl: float,
+        metrics_date: Optional[datetime.date],
+        session_date: datetime.date,
+        tss: float
+    ) -> Tuple[float, float, datetime.date]:
+        """
+        Adds one session's TSS to CTL/ATL, which describe the athlete at the end of `metrics_date`.
+
+        - Later day: decay through the idle days, then apply the session day.
+        - Same day (second session) or back-filled earlier day: the EWMA is linear in daily TSS,
+          so the session contributes tss/k, decayed by the days since it happened.
+        Returns (ctl, atl, new_metrics_date).
+        """
+        if metrics_date is None:
+            metrics_date = session_date - datetime.timedelta(days=1)
+
+        if session_date > metrics_date:
+            ctl, atl = cls.project_metrics(ctl, atl, metrics_date, session_date - datetime.timedelta(days=1))
+            new_ctl, new_atl, _ = cls.calculate_next_day_metrics(ctl, atl, tss)
+            return new_ctl, new_atl, session_date
+
+        age = (metrics_date - session_date).days
+        new_ctl = ctl + (tss / cls.CTL_TIME_CONSTANT) * (1 - 1 / cls.CTL_TIME_CONSTANT) ** age
+        new_atl = atl + (tss / cls.ATL_TIME_CONSTANT) * (1 - 1 / cls.ATL_TIME_CONSTANT) ** age
+        return round(new_ctl, 2), round(new_atl, 2), metrics_date
+
+    @staticmethod
+    def normalized_power(power_samples: List[float]) -> float:
+        """Coggan NP from 1 Hz samples: 30 s rolling mean, 4th-power mean, 4th root."""
+        if not power_samples:
+            return 0.0
+        window = 30
+        if len(power_samples) < window:
+            return sum(power_samples) / len(power_samples)
+        rolling_sum = sum(power_samples[:window])
+        fourth_powers = [(rolling_sum / window) ** 4]
+        for i in range(window, len(power_samples)):
+            rolling_sum += power_samples[i] - power_samples[i - window]
+            fourth_powers.append((rolling_sum / window) ** 4)
+        return (sum(fourth_powers) / len(fourth_powers)) ** 0.25
 
     @classmethod
     def estimate_session_tss(cls, intensity: int, duration_hours: float, sport: str = "cycling") -> float:
