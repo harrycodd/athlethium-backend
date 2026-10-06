@@ -279,10 +279,14 @@ def test_severe_issue_is_full_rest():
 # ------------------------------------------------------------------ helpers
 
 def test_level_and_capacity_helpers():
-    assert athlete_level(make_profile(fitness_level="weird", ctl=50)) == 1
-    assert athlete_level(make_profile(fitness_level="beginner", ctl=95)) == 3
-    assert athlete_level(make_profile(fitness_level="beginner", ctl=70)) == 2
+    assert athlete_level(make_profile(fitness_level="weird", ctl=30)) == 1
+    # fitness unlocks levels: cycling 20/45/65, running & swimming 15/30/45
+    assert athlete_level(make_profile(fitness_level="beginner", ctl=50)) == 2
+    assert athlete_level(make_profile(fitness_level="beginner", ctl=70)) == 3
+    run = dict(sports=["running"], focused_sports=["running"], fitness_level="beginner")
+    assert [athlete_level(make_profile(ctl=c, **run)) for c in (10, 16, 31, 46)] == [0, 1, 2, 3]
     assert athlete_level(make_profile(fitness_level="intermediate", ctl=5)) == 0
+    assert athlete_level(make_profile(sports=["strength"], focused_sports=["strength"], ctl=25)) == 1
     p = make_profile(daily_hours_overrides={"2026-10-05": 12}, daily_max_hours={"Tuesday": "x"},
                      daily_available_hours=0.75)
     assert day_capacity(p, MON) == 8.0
@@ -318,3 +322,58 @@ def test_load_cap_drops_sessions_that_get_too_short():
     from engine.planner import PlannedSession
     easy = [PlannedSession(MON, Kind.EASY, "cycling", 2, 0.5)]
     assert WeekPlanner._cap_load(make_profile(), easy, max_tss=1.0)[0].kind == Kind.REST
+
+
+def test_week_is_planned_from_its_start_so_it_does_not_change_mid_week():
+    """Completing Monday's session must not change the rest of the week's plan."""
+    from engine.physiology import PhysiologyEngine
+    base = make_profile(ctl=44.5, atl=44.5, metrics_date="2026-10-04", daily_max_hours=ROOMY, weekly_hours=20,
+                        recent_weeks={"2026-09-28": [6.0, 280.0]})
+    monday_plan = WeekPlanner.plan_week(base, MON, as_of=MON)
+    ctl, atl, _ = PhysiologyEngine.apply_session_load(44.5, 44.5, datetime.date(2026, 10, 4), MON, 60.0)
+    after = make_profile(ctl=ctl, atl=atl, metrics_date="2026-10-05", daily_max_hours=ROOMY, weekly_hours=20,
+                         recent_weeks={"2026-09-28": [6.0, 280.0]}, week_to_date=[["2026-10-05", 60.0]])
+    tue = MON + datetime.timedelta(days=1)
+    assert WeekPlanner.plan_week(after, tue, as_of=tue).sessions == monday_plan.sessions
+
+
+def test_ramp_baseline_is_last_completed_load_week():
+    hist = {"2026-09-14": [9.0, 400.0], "2026-09-21": [6.0, 270.0], "2026-09-28": [3.0, 130.0]}
+    p = make_profile(ctl=40, atl=40, metrics_date="2026-10-04", daily_max_hours=ROOMY, weekly_hours=25,
+                     recent_weeks=hist, uid="hist")
+    plan = WeekPlanner.plan_week(p, MON, as_of=MON)
+    if plan.context.week_type == "load":
+        assert plan.endurance_hours <= 1.10 * max(
+            h for k, (h, _) in hist.items()) + 1e-6
+
+
+def test_fit_athlete_with_no_recent_history_restarts_as_comeback():
+    p = make_profile(ctl=60, atl=60, metrics_date="2026-10-05", daily_max_hours=ROOMY, recent_weeks={})
+    assert WeekPlanner.plan_week(p, MON + datetime.timedelta(days=1), as_of=MON + datetime.timedelta(days=1)).comeback
+
+
+def test_history_two_weeks_back_means_a_one_week_gap():
+    p = make_profile(ctl=60, atl=60, metrics_date="2026-10-05", daily_max_hours=ROOMY,
+                     recent_weeks={"2026-09-21": [5.0, 220.0], "bad-key": [1, 1], "2026-09-28": "x",
+                                   "2026-09-14": ["a", 1]})
+    assert WeekPlanner.plan_week(p, MON, as_of=MON).comeback
+
+
+def test_week_start_state_ignores_bad_or_out_of_week_sessions():
+    clean = make_profile(ctl=50, atl=50, metrics_date="2026-10-06", recent_weeks={"2026-09-28": [5.0, 230.0]})
+    noisy = make_profile(ctl=50, atl=50, metrics_date="2026-10-06", recent_weeks={"2026-09-28": [5.0, 230.0]},
+                         week_to_date=[["2026-09-30", 80.0], ["junk"], ["2026-10-09", 80.0], "x"])
+    assert WeekPlanner._state_at_week_start(noisy, MON) == WeekPlanner._state_at_week_start(clean, MON)
+
+
+def test_history_outside_the_window_is_ignored():
+    p = make_profile(recent_weeks={"2026-08-03": [20.0, 900.0], "2026-09-28": [5.0, 230.0]})
+    assert [w[0] for w in WeekPlanner._completed_weeks(p, MON)] == [datetime.date(2026, 9, 28)]
+
+
+def test_strength_never_starves_endurance_when_time_is_tiny():
+    """Found by Hypothesis: 45 min/week + strength used to give completely empty load weeks."""
+    p = make_profile(sports=["cycling", "strength"], weekly_hours=2, fitness_level="beginner", ctl=0, atl=0,
+                     daily_max_hours={d: (0.75 if d == "Sunday" else 0) for d in DAYS})
+    for w in weeks(p, 4):
+        assert w.endurance_hours >= 0.5

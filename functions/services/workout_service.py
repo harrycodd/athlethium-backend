@@ -3,13 +3,16 @@ Workout Persistence and Query Service.
 Handles saving generated workouts and querying workouts by date in Firestore.
 """
 
-from typing import Optional, Dict, Any
+import datetime
+from typing import Optional, Dict, Any, List, Tuple
 try:
     from firebase_admin import firestore
     from google.cloud.firestore_v1.base_query import FieldFilter
 except ImportError:
     firestore = None
 from core.models import WorkoutDoc
+
+ENDURANCE_SPORTS = ("cycling", "running", "swimming")
 
 
 def _is_completed(data: Dict[str, Any]) -> bool:
@@ -72,3 +75,40 @@ class WorkoutService:
         """Retrieves a workout document by its ID."""
         doc_snap = firestore.client().collection("workouts").document(workout_id).get()
         return doc_snap.to_dict() if doc_snap.exists else None
+
+    @classmethod
+    def recent_load(cls, user_id: str, today: datetime.date,
+                    weeks: int = 3) -> Tuple[Dict[str, List[float]], List[List[Any]]]:
+        """
+        Completed endurance load for the planner:
+        - per Monday-Sunday week for the `weeks` full weeks before today's week: {Monday: [hours, tss]}
+        - this week's completed sessions so far: [[date, tss], ...]
+        """
+        this_monday = today - datetime.timedelta(days=today.weekday())
+        start = this_monday - datetime.timedelta(weeks=weeks)
+        snaps = firestore.client().collection("workouts") \
+                                  .where(filter=FieldFilter("userId", "==", user_id)) \
+                                  .where(filter=FieldFilter("date", ">=", start.isoformat())) \
+                                  .get()
+        load: Dict[str, List[float]] = {}
+        week_to_date: List[List[Any]] = []
+        for snap in snaps:
+            data = snap.to_dict() or {}
+            if not _is_completed(data) or data.get("sport") not in ENDURANCE_SPORTS:
+                continue
+            try:
+                day = datetime.date.fromisoformat(str(data.get("date")))
+                hours = float(data.get("actual_time") or data.get("time") or 0) / 3600
+                tss = float(data.get("actual_tss") or 0)
+            except (TypeError, ValueError):
+                continue
+            if day >= this_monday:
+                if day <= today:
+                    week_to_date.append([day.isoformat(), round(tss, 1)])
+                continue
+            key = (day - datetime.timedelta(days=day.weekday())).isoformat()
+            week = load.setdefault(key, [0.0, 0.0])
+            week[0] += hours
+            week[1] += tss
+        return ({k: [round(h, 3), round(t, 1)] for k, (h, t) in load.items()},
+                sorted(week_to_date))

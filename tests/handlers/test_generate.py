@@ -105,3 +105,42 @@ def test_save_removes_uncompleted_duplicates_but_keeps_events(main_module, athle
     assert ids == {"done", "event", doc.workout_id}
     assert main_module.WorkoutService.get_workout_by_id("dup") is None
     assert main_module.WorkoutService.get_workout_by_id("done")["completed"] is True
+
+
+def test_recent_load_summarises_completed_weeks(main_module, athlete, seed):
+    import datetime
+    seed({
+        "workouts/a": make_workout_doc(athlete.uid, "2026-09-22", completed=True, status="completed",
+                                       actual_time=3600, actual_tss=50.0),
+        "workouts/b": make_workout_doc(athlete.uid, "2026-09-24", completed=True, actual_time=1800, actual_tss=40.0),
+        "workouts/c": make_workout_doc(athlete.uid, "2026-09-29", completed=True, actual_time=7200, actual_tss=90.0),
+        "workouts/planned": make_workout_doc(athlete.uid, "2026-09-30"),
+        "workouts/strength": make_workout_doc(athlete.uid, "2026-09-30", sport="strength", completed=True),
+        "workouts/today": make_workout_doc(athlete.uid, "2026-10-06", completed=True, actual_time=3600, actual_tss=70.0),
+        "workouts/future": make_workout_doc(athlete.uid, "2026-10-08", completed=True, actual_tss=99.0),
+        "workouts/old": make_workout_doc(athlete.uid, "2026-09-01", completed=True, actual_tss=99.0),
+        "workouts/bad": make_workout_doc(athlete.uid, "not-a-date", completed=True),
+        "workouts/other": make_workout_doc("someone-else", "2026-09-29", completed=True, actual_tss=99.0),
+    })
+    weeks, week_to_date = main_module.WorkoutService.recent_load(athlete.uid, datetime.date(2026, 10, 7))
+    assert weeks == {"2026-09-21": [1.5, 90.0], "2026-09-28": [2.0, 90.0]}
+    assert week_to_date == [["2026-10-06", 70.0]]
+
+
+def test_generation_ramps_from_completed_history(main_module, call, make_user, seed, db, monkeypatch):
+    """A big completed block lets this week's plan grow; nothing completed keeps it at entry level."""
+    user = make_user()
+    seed({f"users/{user.uid}": make_profile_doc(ctl=30, atl=30, metricsDate="2026-10-04", weekly_hours=25,
+                                                dailyMaxHours={d: 4 for d in ["Monday", "Tuesday", "Wednesday",
+                                                               "Thursday", "Friday", "Saturday", "Sunday"]})})
+    for i, day in enumerate(["2026-09-29", "2026-09-30", "2026-10-02", "2026-10-03", "2026-10-04"]):
+        seed({f"workouts/h{i}": make_workout_doc(user.uid, day, completed=True, actual_time=2 * 3600, actual_tss=100.0)})
+    # pin "today" without freezing the clock (frozen time stalls the Firestore client's retries)
+    import datetime
+    monkeypatch.setattr(main_module.UserService, "today_for", staticmethod(lambda p: datetime.date(2026, 10, 5)))
+    r = call(main_module.generate_training_session, json={"days": 7}, user=user)
+    assert r.status == 200 and len(r.json["generated_dates"]) == 7
+    planned = [d.to_dict() for d in db.collection("workouts").where(filter=FieldFilter("userId", "==", user.uid)).get()
+               if not d.to_dict().get("completed")]
+    hours = sum(d["time"] for d in planned if d["sport"] in ("cycling", "running")) / 3600
+    assert 8 <= hours <= 10 * 1.10 + 1e-6  # ramps from last week's 10 h, by at most 10%

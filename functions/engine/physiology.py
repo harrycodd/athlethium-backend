@@ -53,6 +53,19 @@ class PhysiologyEngine:
         return round(ctl, 2), round(atl, 2)
 
     @classmethod
+    def rewind_metrics(
+        cls,
+        ctl: float,
+        atl: float,
+        from_date: datetime.date,
+        to_date: datetime.date
+    ) -> Tuple[float, float]:
+        """Inverse of project_metrics: CTL/ATL at the end of an earlier day, assuming no load between."""
+        days = max(0, (from_date - to_date).days)
+        return (round(ctl / (1 - 1 / cls.CTL_TIME_CONSTANT) ** days, 2),
+                round(atl / (1 - 1 / cls.ATL_TIME_CONSTANT) ** days, 2))
+
+    @classmethod
     def apply_session_load(
         cls,
         ctl: float,

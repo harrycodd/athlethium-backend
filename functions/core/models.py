@@ -93,6 +93,12 @@ class UserProfile:
     # Which thresholds the athlete has actually provided (None = treat all as known).
     # Keys: cycling_power, running_power, running_pace, swim_pace, hr
     known_thresholds: Optional[List[str]] = None
+    # Completed endurance load per week, keyed by the week's Monday (YYYY-MM-DD): [hours, tss].
+    # Loaded from workout history at request time (not stored on the profile).
+    recent_weeks: Dict[str, List[float]] = field(default_factory=dict)
+    # Sessions completed so far in the current week: [[YYYY-MM-DD, tss], ...] (also request-time only).
+    # Lets the planner work from the athlete's state at the start of the week.
+    week_to_date: List[List[Any]] = field(default_factory=list)
 
     # Goal and history
     goal: Optional[Goal] = None

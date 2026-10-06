@@ -6,6 +6,7 @@ user is always the token's uid. `strava_callback` is the only unauthenticated en
 protected by a single-use, server-issued OAuth state nonce.
 """
 
+import dataclasses
 import datetime
 import json
 import os
@@ -184,6 +185,8 @@ def generate_training_session(req: https_fn.Request) -> https_fn.Response:
             }, 400)
 
         today = UserService.today_for(user_profile)  # the athlete's local calendar day
+        recent_weeks, week_to_date = WorkoutService.recent_load(uid, today)
+        user_profile = dataclasses.replace(user_profile, recent_weeks=recent_weeks, week_to_date=week_to_date)
         if start_date is None:
             start_date = today
 

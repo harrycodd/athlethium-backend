@@ -107,7 +107,7 @@ class TestDocument:
 
 class TestGuardrailsOnTheDay:
     def test_deep_fatigue_downgrades_a_hard_day(self):
-        p = make_profile(ctl=40, atl=80, metrics_date="2026-10-05", daily_max_hours=ROOMY)
+        p = make_profile(ctl=40, atl=80, metrics_date="2026-10-04", daily_max_hours=ROOMY)
         tue = MON + datetime.timedelta(days=1)
         planned = WeekPlanner.plan_week(p, tue, as_of=MON).session_on(tue)
         assert planned.kind in (Kind.HARD, Kind.BENCHMARK)

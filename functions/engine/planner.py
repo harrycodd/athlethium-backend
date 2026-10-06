@@ -14,6 +14,7 @@ a workout. Planning the week as a unit is what makes the weekly guarantees possi
 The plan is a pure function of (profile, week, as_of): same inputs, same plan.
 """
 
+import dataclasses
 import datetime
 import math
 from dataclasses import dataclass
@@ -51,6 +52,11 @@ SHAKEOUT_H = 25 / 60
 OPENER_H = 0.75
 SLOT = 1 / 12                # durations are rounded down to 5 minutes
 
+# CTL that unlocks intermediate / advanced / elite caps, per primary sport. Each threshold sits
+# below what the previous level's caps can sustain, so a compliant athlete always progresses
+# (checked by tests/property/test_career.py). Running/swimming caps are tighter, so lower CTL.
+CTL_LEVEL_THRESHOLDS = {"cycling": (20, 45, 65), "running": (15, 30, 45), "swimming": (15, 30, 45)}
+HISTORY_WEEKS = 3                    # completed weeks used as the ramp baseline
 START_HOURS = (2.5, 4.0, 6.0, 8.0)  # first week for athletes with no training history, by level
 MAX_HARD_H = (1.0, 1.25, 1.5, 1.75)
 MAX_RECOVERY_H = (0.75, 1.0, 1.5, 2.0)  # day after a hard or long session
@@ -113,14 +119,17 @@ def _floor_slot(hours: float) -> float:
 
 
 def athlete_level(profile: UserProfile) -> int:
+    """
+    The athlete's level grows with their fitness: the stated level is a floor, and CTL unlocks the
+    next level's session caps. (Each level's caps allow enough volume to reach the next CTL tier,
+    so a compliant athlete can progress from beginner to elite.)
+    """
     level = LEVELS.index(profile.fitness_level) if profile.fitness_level in LEVELS else 1
-    if profile.ctl >= 90:
-        level = max(level, 3)
-    elif profile.ctl >= 65:
-        level = max(level, 2)
-    elif profile.ctl < 15 and level == 1:
+    if profile.ctl < 15 and level == 1:
         level = 0
-    return level
+    _, focus = endurance_sports(profile)
+    thresholds = CTL_LEVEL_THRESHOLDS[focus[0]] if focus else CTL_LEVEL_THRESHOLDS["cycling"]
+    return max(level, sum(profile.ctl >= t for t in thresholds))
 
 
 def day_capacity(profile: UserProfile, day: datetime.date) -> float:
@@ -174,29 +183,38 @@ class WeekPlanner:
         if anchor > week_start:
             anchor = week_start
 
-        metrics_date = _parse_date(profile.metrics_date)
-        ctl = profile.ctl
-        if metrics_date is not None and metrics_date < anchor:
-            ctl, _ = PhysiologyEngine.project_metrics(profile.ctl, profile.atl, metrics_date,
-                                                      anchor - datetime.timedelta(days=1))
-        comeback = (metrics_date is not None and as_of is not None
-                    and (as_of - metrics_date).days - 1 >= COMEBACK_IDLE_DAYS)
+        # Everything below is evaluated as of the start of the anchor week, so the week's plan
+        # doesn't change mid-week as sessions are completed (that broke the 10% rule in practice).
+        ctl, idle_days = cls._state_at_week_start(profile, anchor)
+        history = cls._completed_weeks(profile, anchor)
+        comeback = as_of is not None and idle_days is not None and idle_days >= COMEBACK_IDLE_DAYS
+        first_ever_week = not history and idle_days is None and ctl <= 5
 
-        level = athlete_level(profile)
+        level = athlete_level(dataclasses.replace(profile, ctl=ctl))
         chronic_hours = ctl * 7 / TSS_PER_HOUR
         # Entry volume: athletes with no training data start at their level's entry volume; anyone
         # with data starts from what they actually do (floored at the beginner entry volume), so a
         # returning "advanced" athlete doesn't jump straight back to their old volume.
-        entry = START_HOURS[level] if profile.ctl <= 5 else START_HOURS[0]
+        entry = START_HOURS[level] if ctl <= 5 else START_HOURS[0]
         reference = max(chronic_hours, entry / RAMP, 1.0)
+        reference_tss: Optional[float] = None
+
+        # What the athlete actually completed recently is the true baseline for the 10% rule (CTL
+        # lags weeks behind, which would stall progression). Not after a gap: then fitness rules.
+        if history and not comeback:
+            # baseline = the most recent completed *load* week (recovery weeks don't reset the ramp)
+            loads = [w for w in history if week_context(profile.goal, w[0], profile.intensity_weeks,
+                                                        profile.uid).week_type == WeekType.LOAD]
+            _, base_h, base_tss = max(loads or history)
+            reference = max(base_h, entry / RAMP, 1.0)
+            reference_tss = base_tss if base_tss > 0 else None
 
         current = anchor
-        reference_tss: Optional[float] = None
         while True:
             plan = cls._plan_single_week(profile, current, reference, level, comeback=comeback and current == anchor,
                                          reintroduce=comeback and current == anchor + datetime.timedelta(days=7),
                                          reference_tss=reference_tss,
-                                         first_week=metrics_date is None and current == anchor)
+                                         first_week=first_ever_week and current == anchor)
             if current >= week_start:
                 return plan
             if plan.context.week_type == WeekType.LOAD or plan.comeback:
@@ -204,6 +222,52 @@ class WeekPlanner:
                 # an aerobic-only comeback week is not a fair TSS baseline for the first week back
                 reference_tss = None if plan.comeback else plan.tss
             current += datetime.timedelta(days=7)
+
+    @classmethod
+    def _state_at_week_start(cls, profile: UserProfile, anchor: datetime.date) -> Tuple[float, Optional[int]]:
+        """
+        (CTL at the end of the day before `anchor`, idle days before `anchor` or None if unknown/never).
+        This week's completed sessions are taken back out of CTL/ATL (the model is linear) and the
+        result rewound to Sunday, so the week is planned from where it started.
+        """
+        metrics_date = _parse_date(profile.metrics_date)
+        eve = anchor - datetime.timedelta(days=1)
+        if metrics_date is None:
+            return profile.ctl, None
+        if metrics_date < anchor:
+            ctl, _ = PhysiologyEngine.project_metrics(profile.ctl, profile.atl, metrics_date, eve)
+            return ctl, (anchor - metrics_date).days - 1
+        ctl, atl = profile.ctl, profile.atl
+        for entry in profile.week_to_date or []:
+            day = _parse_date(entry[0]) if isinstance(entry, (list, tuple)) and len(entry) == 2 else None
+            if day is not None and anchor <= day <= metrics_date:
+                ctl, atl, _ = PhysiologyEngine.apply_session_load(ctl, atl, metrics_date, day, -float(entry[1]))
+        ctl, _ = PhysiologyEngine.rewind_metrics(max(ctl, 0.0), max(atl, 0.0), metrics_date, eve)
+        # Last session before this week isn't stored; the completed-weeks history tells us.
+        idle = None
+        trained = {start for start, hours, _ in cls._completed_weeks(profile, anchor) if hours > 0}
+        for weeks_back in range(1, HISTORY_WEEKS + 1):
+            if anchor - datetime.timedelta(weeks=weeks_back) in trained:
+                idle = 0 if weeks_back == 1 else 7 * (weeks_back - 1)
+                break
+        if idle is None and ctl > 5:
+            idle = COMEBACK_IDLE_DAYS  # fit athlete with no training in the last 3 weeks: a gap
+        return ctl, idle
+
+    @staticmethod
+    def _completed_weeks(profile: UserProfile, anchor: datetime.date) -> List[Tuple[datetime.date, float, float]]:
+        out = []
+        for key, value in (profile.recent_weeks or {}).items():
+            start = _parse_date(key)
+            if start is None or not isinstance(value, (list, tuple)) or len(value) != 2:
+                continue
+            try:
+                hours, tss = float(value[0]), float(value[1])
+            except (TypeError, ValueError):
+                continue
+            if anchor - datetime.timedelta(weeks=HISTORY_WEEKS) <= start < anchor:
+                out.append((start, hours, tss))
+        return out
 
     # ------------------------------------------------------------------ one week
 
@@ -224,7 +288,13 @@ class WeekPlanner:
 
         minor_issue = profile.injury == 1 or profile.illness == 1
         strength_sessions = cls._strength_sessions(profile, ctx, level) if not minor_issue else 0
-        capacity = max(0.0, min(float(profile.weekly_hours), sum(caps)) - strength_sessions * STRENGTH_H)
+        raw_capacity = min(float(profile.weekly_hours), sum(caps))
+        if sports:
+            # strength never squeezes out endurance: keep at least one training day and one session's time
+            usable_days = sum(1 for c in caps if c >= MIN_SESSION_H)
+            strength_sessions = min(strength_sessions, max(0, usable_days - 1),
+                                    max(0, int((raw_capacity - MIN_SESSION_H) / STRENGTH_H + 1e-9)))
+        capacity = max(0.0, raw_capacity - strength_sessions * STRENGTH_H)
         if ctx.week_type == WeekType.LOAD and not comeback:
             target = min(capacity, RAMP * reference)
         elif ctx.week_type == WeekType.LOAD:
