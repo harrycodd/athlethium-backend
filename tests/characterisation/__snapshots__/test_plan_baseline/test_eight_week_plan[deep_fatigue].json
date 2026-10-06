@@ -1,0 +1,1948 @@
+[
+  {
+    "date": "2026-10-05",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Active Recovery (Endurance Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-10-06",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-10-07",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Running Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-10-08",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-10-09",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Running Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-10-10",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-10-11",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-10-12",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Active Recovery (Endurance Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-10-13",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling 20-Min FTP Benchmark Test",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        900,
+        50,
+        75,
+        "power"
+      ],
+      [
+        "interval",
+        60,
+        100,
+        105,
+        "power"
+      ],
+      [
+        "recovery",
+        60,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        60,
+        100,
+        105,
+        "power"
+      ],
+      [
+        "recovery",
+        60,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        60,
+        100,
+        105,
+        "power"
+      ],
+      [
+        "recovery",
+        60,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "recovery",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        1200,
+        100,
+        115,
+        "power"
+      ],
+      [
+        "cooldown",
+        840,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-10-14",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Running Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-10-15",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-10-16",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Running Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-10-17",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-10-18",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-10-19",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Active Recovery (Endurance Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-10-20",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-10-21",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Running Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-10-22",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-10-23",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Running Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-10-24",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-10-25",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-10-26",
+    "intensity": 1,
+    "minutes": 45.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        2100,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 26.2
+  },
+  {
+    "date": "2026-10-27",
+    "intensity": 1,
+    "minutes": 54.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        2640,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 31.5
+  },
+  {
+    "date": "2026-10-28",
+    "intensity": 1,
+    "minutes": 54.0,
+    "name": "Running Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        2640,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 31.5
+  },
+  {
+    "date": "2026-10-29",
+    "intensity": 1,
+    "minutes": 54.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        2640,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 31.5
+  },
+  {
+    "date": "2026-10-30",
+    "intensity": 1,
+    "minutes": 45.0,
+    "name": "Running Active Recovery",
+    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        2100,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 26.2
+  },
+  {
+    "date": "2026-10-31",
+    "intensity": 1,
+    "minutes": 54.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        2640,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 31.5
+  },
+  {
+    "date": "2026-11-01",
+    "intensity": 1,
+    "minutes": 54.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        2640,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 31.5
+  },
+  {
+    "date": "2026-11-02",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Active Recovery (Endurance Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-11-03",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-11-04",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Running Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-11-05",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-11-06",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Running Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-11-07",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-11-08",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-11-09",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Active Recovery (Endurance Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-11-10",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling 20-Min FTP Benchmark Test",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        900,
+        50,
+        75,
+        "power"
+      ],
+      [
+        "interval",
+        60,
+        100,
+        105,
+        "power"
+      ],
+      [
+        "recovery",
+        60,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        60,
+        100,
+        105,
+        "power"
+      ],
+      [
+        "recovery",
+        60,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        60,
+        100,
+        105,
+        "power"
+      ],
+      [
+        "recovery",
+        60,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "recovery",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        1200,
+        100,
+        115,
+        "power"
+      ],
+      [
+        "cooldown",
+        840,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-11-11",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Running Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-11-12",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-11-13",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Running Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-11-14",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-11-15",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-11-16",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Active Recovery (Endurance Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-11-17",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-11-18",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Running Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-11-19",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-11-20",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Running Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-11-21",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-11-22",
+    "intensity": 1,
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 35.0
+  },
+  {
+    "date": "2026-11-23",
+    "intensity": 1,
+    "minutes": 45.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        2100,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 26.2
+  },
+  {
+    "date": "2026-11-24",
+    "intensity": 1,
+    "minutes": 54.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        2640,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 31.5
+  },
+  {
+    "date": "2026-11-25",
+    "intensity": 1,
+    "minutes": 54.0,
+    "name": "Running Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        2640,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 31.5
+  },
+  {
+    "date": "2026-11-26",
+    "intensity": 1,
+    "minutes": 54.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        2640,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 31.5
+  },
+  {
+    "date": "2026-11-27",
+    "intensity": 1,
+    "minutes": 45.0,
+    "name": "Running Active Recovery",
+    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        2100,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 26.2
+  },
+  {
+    "date": "2026-11-28",
+    "intensity": 1,
+    "minutes": 54.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        2640,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 31.5
+  },
+  {
+    "date": "2026-11-29",
+    "intensity": 1,
+    "minutes": 54.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        2640,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "tss": 31.5
+  }
+]

@@ -1,0 +1,8 @@
+-r functions/requirements.txt
+pytest==9.1.1
+pytest-cov==7.1.0
+hypothesis==6.168.5
+syrupy==6.1.1
+requests-mock==1.12.1
+time-machine==3.5.1
+ruff==0.14.0

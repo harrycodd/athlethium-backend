@@ -1,0 +1,21 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["functions", "."]
+addopts = "-ra --strict-markers"
+markers = [
+    "emulator: needs the Firebase Emulator Suite (Firestore/Auth/Storage) running",
+    "functions_emulator: calls Cloud Functions over HTTP on the Functions emulator",
+]
+
+[tool.coverage.run]
+source = ["functions"]
+branch = true
+omit = ["functions/venv/*"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+exclude_also = [
+    "if __name__ == .__main__.:",
+    "except ImportError:",
+]
