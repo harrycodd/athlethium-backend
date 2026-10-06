@@ -42,6 +42,29 @@ def _hours_map(raw: Any) -> Dict[str, float]:
     return out
 
 
+_THRESHOLD_FIELDS = {
+    "cycling_power": ("ftpCycling", "ftp"),
+    "running_power": ("ftpRunning",),
+    "running_pace": ("ftpPaceRunning",),
+    "swim_pace": ("ftpPaceSwimming",),
+    "hr": ("fthr",),
+}
+
+
+def _known_thresholds(raw: Dict[str, Any]) -> List[str]:
+    """Thresholds the athlete actually has; defaults must never be passed off as their numbers."""
+    known = []
+    for key, fields in _THRESHOLD_FIELDS.items():
+        for f in fields:
+            try:
+                if raw.get(f) is not None and float(raw[f]) > 0:
+                    known.append(key)
+                    break
+            except (TypeError, ValueError):
+                continue
+    return known
+
+
 class UserService:
     """
     Handles Firestore user document retrieval and fitness state persistence.
@@ -168,6 +191,7 @@ class UserService:
             fitness_level=str(raw_data.get("fitness_level") or raw_data.get("fitnessLevel") or "intermediate"),
             metrics_date=raw_data.get("metricsDate"),
             timezone=raw_data.get("timezone"),
+            known_thresholds=_known_thresholds(raw_data),
             history=raw_data.get("history", {}),
             raw_data=raw_data
         )

@@ -1,43 +1,25 @@
 [
   {
     "date": "2026-10-05",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Active Recovery (Endurance Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
-    "sport": "cycling",
-    "steps": [
-      [
-        "warmup",
-        300,
-        45,
-        55,
-        "power"
-      ],
-      [
-        "interval",
-        3000,
-        50,
-        55,
-        "power"
-      ],
-      [
-        "cooldown",
-        300,
-        40,
-        50,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "tss": 35.0
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
   },
   {
     "date": "2026-10-06",
     "intensity": 1,
+    "kind": "recovery",
     "minutes": 60.0,
     "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "rationale": "Load week (Base phase). Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
     "sport": "cycling",
     "steps": [
       [
@@ -63,14 +45,28 @@
       ]
     ],
     "targetType": "power",
-    "tss": 35.0
+    "targets": [
+      [
+        "W",
+        100,
+        125
+      ],
+      [
+        "W",
+        112,
+        138
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
   },
   {
     "date": "2026-10-07",
     "intensity": 1,
+    "kind": "recovery",
     "minutes": 60.0,
     "name": "Running Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
       [
@@ -78,32 +74,46 @@
         300,
         45,
         55,
-        "power"
+        "pace"
       ],
       [
         "interval",
         3000,
         50,
         55,
-        "power"
+        "pace"
       ],
       [
         "cooldown",
         300,
         40,
         50,
-        "power"
+        "pace"
       ]
     ],
-    "targetType": "power",
-    "tss": 35.0
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        423,
+        438
+      ],
+      [
+        "s/km",
+        423,
+        454
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
   },
   {
     "date": "2026-10-08",
     "intensity": 1,
-    "minutes": 60.0,
+    "kind": "recovery",
+    "minutes": 40.0,
     "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "rationale": "Load week (Base phase). Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
     "sport": "cycling",
     "steps": [
       [
@@ -115,7 +125,7 @@
       ],
       [
         "interval",
-        3000,
+        1800,
         50,
         55,
         "power"
@@ -129,15 +139,29 @@
       ]
     ],
     "targetType": "power",
-    "tss": 35.0
+    "targets": [
+      [
+        "W",
+        100,
+        125
+      ],
+      [
+        "W",
+        112,
+        138
+      ]
+    ],
+    "tss": 17.6,
+    "week": "load"
   },
   {
     "date": "2026-10-09",
     "intensity": 1,
+    "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
-    "sport": "running",
+    "name": "Cycling Active Recovery",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
+    "sport": "cycling",
     "steps": [
       [
         "warmup",
@@ -162,14 +186,28 @@
       ]
     ],
     "targetType": "power",
-    "tss": 35.0
+    "targets": [
+      [
+        "W",
+        100,
+        125
+      ],
+      [
+        "W",
+        112,
+        138
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
   },
   {
     "date": "2026-10-10",
     "intensity": 1,
+    "kind": "recovery",
     "minutes": 60.0,
     "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "rationale": "Load week (Base phase). Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
     "sport": "cycling",
     "steps": [
       [
@@ -195,85 +233,94 @@
       ]
     ],
     "targetType": "power",
-    "tss": 35.0
+    "targets": [
+      [
+        "W",
+        100,
+        125
+      ],
+      [
+        "W",
+        112,
+        138
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
   },
   {
     "date": "2026-10-11",
     "intensity": 1,
+    "kind": "recovery",
     "minutes": 60.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
-    "sport": "cycling",
+    "name": "Running Active Recovery",
+    "rationale": "Load week (Base phase). Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "sport": "running",
     "steps": [
       [
         "warmup",
         300,
         45,
         55,
-        "power"
+        "pace"
       ],
       [
         "interval",
         3000,
         50,
         55,
-        "power"
+        "pace"
       ],
       [
         "cooldown",
         300,
         40,
         50,
-        "power"
+        "pace"
       ]
     ],
-    "targetType": "power",
-    "tss": 35.0
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        423,
+        438
+      ],
+      [
+        "s/km",
+        423,
+        454
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
   },
   {
     "date": "2026-10-12",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Active Recovery (Endurance Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
-    "sport": "cycling",
-    "steps": [
-      [
-        "warmup",
-        300,
-        45,
-        55,
-        "power"
-      ],
-      [
-        "interval",
-        3000,
-        50,
-        55,
-        "power"
-      ],
-      [
-        "cooldown",
-        300,
-        40,
-        50,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "tss": 35.0
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
   },
   {
     "date": "2026-10-13",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Cycling 20-Min FTP Benchmark Test",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 45.0,
+    "name": "Cycling Threshold Intervals",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        900,
+        420,
         50,
         75,
         "power"
@@ -281,76 +328,76 @@
       [
         "interval",
         60,
+        95,
         100,
-        105,
         "power"
       ],
       [
         "recovery",
         60,
-        45,
-        55,
+        50,
+        60,
         "power"
       ],
       [
         "interval",
-        60,
-        100,
-        105,
+        480,
+        96,
+        102,
         "power"
       ],
       [
         "recovery",
+        240,
+        50,
         60,
-        45,
-        55,
         "power"
       ],
       [
         "interval",
-        60,
-        100,
-        105,
-        "power"
-      ],
-      [
-        "recovery",
-        60,
-        45,
-        55,
-        "power"
-      ],
-      [
-        "recovery",
-        300,
-        45,
-        55,
+        480,
+        96,
+        102,
         "power"
       ],
       [
         "interval",
-        1200,
-        100,
-        115,
+        660,
+        65,
+        72,
         "power"
       ],
       [
         "cooldown",
-        840,
-        40,
-        50,
+        300,
+        45,
+        55,
         "power"
       ]
     ],
     "targetType": "power",
-    "tss": 35.0
+    "targets": [
+      [
+        "W",
+        112,
+        138
+      ],
+      [
+        "W",
+        125,
+        150
+      ]
+    ],
+    "tss": 45.5,
+    "week": "load"
   },
   {
     "date": "2026-10-14",
     "intensity": 1,
+    "kind": "recovery",
     "minutes": 60.0,
     "name": "Running Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
       [
@@ -358,65 +405,128 @@
         300,
         45,
         55,
-        "power"
+        "pace"
       ],
       [
         "interval",
         3000,
         50,
         55,
-        "power"
+        "pace"
       ],
       [
         "cooldown",
         300,
         40,
         50,
-        "power"
+        "pace"
       ]
     ],
-    "targetType": "power",
-    "tss": 35.0
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        423,
+        438
+      ],
+      [
+        "s/km",
+        423,
+        454
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
   },
   {
     "date": "2026-10-15",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 45.0,
+    "name": "Cycling Threshold Intervals",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        300,
-        45,
-        55,
+        420,
+        50,
+        75,
         "power"
       ],
       [
         "interval",
-        3000,
+        60,
+        95,
+        100,
+        "power"
+      ],
+      [
+        "recovery",
+        60,
         50,
-        55,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "interval",
+        660,
+        65,
+        72,
         "power"
       ],
       [
         "cooldown",
         300,
-        40,
-        50,
+        45,
+        55,
         "power"
       ]
     ],
     "targetType": "power",
-    "tss": 35.0
+    "targets": [
+      [
+        "W",
+        112,
+        138
+      ],
+      [
+        "W",
+        125,
+        150
+      ]
+    ],
+    "tss": 45.5,
+    "week": "load"
   },
   {
     "date": "2026-10-16",
     "intensity": 1,
+    "kind": "recovery",
     "minutes": 60.0,
     "name": "Running Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
       [
@@ -424,164 +534,243 @@
         300,
         45,
         55,
-        "power"
+        "pace"
       ],
       [
         "interval",
         3000,
         50,
         55,
-        "power"
+        "pace"
       ],
       [
         "cooldown",
         300,
         40,
         50,
-        "power"
+        "pace"
       ]
     ],
-    "targetType": "power",
-    "tss": 35.0
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        423,
+        438
+      ],
+      [
+        "s/km",
+        423,
+        454
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
   },
   {
     "date": "2026-10-17",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "intensity": 2,
+    "kind": "long",
+    "minutes": 135.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        300,
-        45,
-        55,
+        600,
+        50,
+        65,
         "power"
       ],
       [
         "interval",
-        3000,
-        50,
-        55,
+        6900,
+        65,
+        72,
         "power"
       ],
       [
         "cooldown",
-        300,
-        40,
+        600,
         50,
+        58,
         "power"
       ]
     ],
     "targetType": "power",
-    "tss": 35.0
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 100.3,
+    "week": "load"
   },
   {
     "date": "2026-10-18",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 115.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        300,
-        45,
-        55,
+        600,
+        50,
+        65,
         "power"
       ],
       [
         "interval",
-        3000,
-        50,
-        55,
+        5700,
+        65,
+        72,
         "power"
       ],
       [
         "cooldown",
-        300,
-        40,
+        600,
         50,
+        58,
         "power"
       ]
     ],
     "targetType": "power",
-    "tss": 35.0
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 84.7,
+    "week": "load"
   },
   {
     "date": "2026-10-19",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Active Recovery (Endurance Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
-    "sport": "cycling",
-    "steps": [
-      [
-        "warmup",
-        300,
-        45,
-        55,
-        "power"
-      ],
-      [
-        "interval",
-        3000,
-        50,
-        55,
-        "power"
-      ],
-      [
-        "cooldown",
-        300,
-        40,
-        50,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "tss": 35.0
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
   },
   {
     "date": "2026-10-20",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 50.0,
+    "name": "Cycling Threshold Intervals",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        300,
-        45,
-        55,
+        480,
+        50,
+        75,
         "power"
       ],
       [
         "interval",
-        3000,
+        60,
+        95,
+        100,
+        "power"
+      ],
+      [
+        "recovery",
+        60,
         50,
-        55,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
         "power"
       ],
       [
         "cooldown",
-        300,
-        40,
-        50,
+        480,
+        45,
+        55,
         "power"
       ]
     ],
     "targetType": "power",
-    "tss": 35.0
+    "targets": [
+      [
+        "W",
+        112,
+        138
+      ],
+      [
+        "W",
+        125,
+        150
+      ]
+    ],
+    "tss": 53.9,
+    "week": "load"
   },
   {
     "date": "2026-10-21",
     "intensity": 1,
+    "kind": "recovery",
     "minutes": 60.0,
     "name": "Running Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
       [
@@ -589,65 +778,135 @@
         300,
         45,
         55,
-        "power"
+        "pace"
       ],
       [
         "interval",
         3000,
         50,
         55,
-        "power"
+        "pace"
       ],
       [
         "cooldown",
         300,
         40,
         50,
-        "power"
+        "pace"
       ]
     ],
-    "targetType": "power",
-    "tss": 35.0
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        423,
+        438
+      ],
+      [
+        "s/km",
+        423,
+        454
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
   },
   {
     "date": "2026-10-22",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 50.0,
+    "name": "Cycling Threshold Intervals",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        300,
-        45,
-        55,
+        480,
+        50,
+        75,
         "power"
       ],
       [
         "interval",
-        3000,
+        60,
+        95,
+        100,
+        "power"
+      ],
+      [
+        "recovery",
+        60,
         50,
-        55,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
         "power"
       ],
       [
         "cooldown",
-        300,
-        40,
-        50,
+        480,
+        45,
+        55,
         "power"
       ]
     ],
     "targetType": "power",
-    "tss": 35.0
+    "targets": [
+      [
+        "W",
+        112,
+        138
+      ],
+      [
+        "W",
+        125,
+        150
+      ]
+    ],
+    "tss": 53.9,
+    "week": "load"
   },
   {
     "date": "2026-10-23",
     "intensity": 1,
+    "kind": "recovery",
     "minutes": 60.0,
     "name": "Running Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
       [
@@ -655,165 +914,251 @@
         300,
         45,
         55,
-        "power"
+        "pace"
       ],
       [
         "interval",
         3000,
         50,
         55,
-        "power"
+        "pace"
       ],
       [
         "cooldown",
         300,
         40,
         50,
-        "power"
+        "pace"
       ]
     ],
-    "targetType": "power",
-    "tss": 35.0
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        423,
+        438
+      ],
+      [
+        "s/km",
+        423,
+        454
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
   },
   {
     "date": "2026-10-24",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "intensity": 2,
+    "kind": "long",
+    "minutes": 150.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        300,
-        45,
-        55,
+        600,
+        50,
+        65,
         "power"
       ],
       [
         "interval",
-        3000,
-        50,
-        55,
+        7800,
+        65,
+        72,
         "power"
       ],
       [
         "cooldown",
-        300,
-        40,
+        600,
         50,
+        58,
         "power"
       ]
     ],
     "targetType": "power",
-    "tss": 35.0
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 112.0,
+    "week": "load"
   },
   {
     "date": "2026-10-25",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 120.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        300,
-        45,
-        55,
+        600,
+        50,
+        65,
         "power"
       ],
       [
         "interval",
-        3000,
-        50,
-        55,
+        6000,
+        65,
+        72,
         "power"
       ],
       [
         "cooldown",
-        300,
-        40,
+        600,
         50,
+        58,
         "power"
       ]
     ],
     "targetType": "power",
-    "tss": 35.0
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 88.6,
+    "week": "load"
   },
   {
     "date": "2026-10-26",
-    "intensity": 1,
-    "minutes": 45.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
-    "sport": "cycling",
-    "steps": [
-      [
-        "warmup",
-        300,
-        45,
-        55,
-        "power"
-      ],
-      [
-        "interval",
-        2100,
-        50,
-        55,
-        "power"
-      ],
-      [
-        "cooldown",
-        300,
-        40,
-        50,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "tss": 26.2
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "recovery"
   },
   {
     "date": "2026-10-27",
-    "intensity": 1,
-    "minutes": 54.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 60.0,
+    "name": "Cycling Threshold Intervals",
+    "rationale": "Recovery week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        300,
-        45,
-        55,
+        600,
+        50,
+        75,
         "power"
       ],
       [
         "interval",
-        2640,
+        60,
+        95,
+        100,
+        "power"
+      ],
+      [
+        "recovery",
+        60,
         50,
-        55,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "interval",
+        360,
+        65,
+        72,
         "power"
       ],
       [
         "cooldown",
-        300,
-        40,
-        50,
+        600,
+        45,
+        55,
         "power"
       ]
     ],
     "targetType": "power",
-    "tss": 31.5
+    "targets": [
+      [
+        "W",
+        112,
+        138
+      ],
+      [
+        "W",
+        125,
+        150
+      ]
+    ],
+    "tss": 60.7,
+    "week": "recovery"
   },
   {
     "date": "2026-10-28",
     "intensity": 1,
-    "minutes": 54.0,
-    "name": "Running Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
-    "sport": "running",
+    "kind": "recovery",
+    "minutes": 40.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Recovery week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
+    "sport": "cycling",
     "steps": [
       [
         "warmup",
@@ -824,7 +1169,7 @@
       ],
       [
         "interval",
-        2640,
+        1800,
         50,
         55,
         "power"
@@ -838,410 +1183,230 @@
       ]
     ],
     "targetType": "power",
-    "tss": 31.5
+    "targets": [
+      [
+        "W",
+        100,
+        125
+      ],
+      [
+        "W",
+        112,
+        138
+      ]
+    ],
+    "tss": 17.6,
+    "week": "recovery"
   },
   {
     "date": "2026-10-29",
-    "intensity": 1,
-    "minutes": 54.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
-    "sport": "cycling",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 40.0,
+    "name": "Running Aerobic Base Building",
+    "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "running",
     "steps": [
       [
         "warmup",
-        300,
-        45,
-        55,
-        "power"
+        360,
+        50,
+        65,
+        "pace"
       ],
       [
         "interval",
-        2640,
-        50,
-        55,
-        "power"
+        1680,
+        65,
+        72,
+        "pace"
       ],
       [
         "cooldown",
-        300,
-        40,
+        360,
         50,
-        "power"
+        58,
+        "pace"
       ]
     ],
-    "targetType": "power",
-    "tss": 31.5
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        382,
+        399
+      ],
+      [
+        "s/km",
+        399,
+        438
+      ]
+    ],
+    "tss": 28.1,
+    "week": "recovery"
   },
   {
     "date": "2026-10-30",
-    "intensity": 1,
-    "minutes": 45.0,
-    "name": "Running Active Recovery",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
-    "sport": "running",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 40.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "cycling",
     "steps": [
       [
         "warmup",
-        300,
-        45,
-        55,
+        360,
+        50,
+        65,
         "power"
       ],
       [
         "interval",
-        2100,
-        50,
-        55,
+        1680,
+        65,
+        72,
         "power"
       ],
       [
         "cooldown",
-        300,
-        40,
+        360,
         50,
+        58,
         "power"
       ]
     ],
     "targetType": "power",
-    "tss": 26.2
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 28.1,
+    "week": "recovery"
   },
   {
     "date": "2026-10-31",
-    "intensity": 1,
-    "minutes": 54.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "intensity": 2,
+    "kind": "long",
+    "minutes": 90.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Recovery week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        300,
-        45,
-        55,
+        600,
+        50,
+        65,
         "power"
       ],
       [
         "interval",
-        2640,
-        50,
-        55,
+        4200,
+        65,
+        72,
         "power"
       ],
       [
         "cooldown",
-        300,
-        40,
+        600,
         50,
+        58,
         "power"
       ]
     ],
     "targetType": "power",
-    "tss": 31.5
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 65.1,
+    "week": "recovery"
   },
   {
     "date": "2026-11-01",
-    "intensity": 1,
-    "minutes": 54.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
-    "sport": "cycling",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 45.0,
+    "name": "Running Aerobic Base Building",
+    "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "running",
     "steps": [
       [
         "warmup",
-        300,
-        45,
-        55,
-        "power"
+        405,
+        50,
+        65,
+        "pace"
       ],
       [
         "interval",
-        2640,
-        50,
-        55,
-        "power"
+        1890,
+        65,
+        72,
+        "pace"
       ],
       [
         "cooldown",
-        300,
-        40,
+        405,
         50,
-        "power"
+        58,
+        "pace"
       ]
     ],
-    "targetType": "power",
-    "tss": 31.5
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        382,
+        399
+      ],
+      [
+        "s/km",
+        399,
+        438
+      ]
+    ],
+    "tss": 31.6,
+    "week": "recovery"
   },
   {
     "date": "2026-11-02",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Active Recovery (Endurance Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
-    "sport": "cycling",
-    "steps": [
-      [
-        "warmup",
-        300,
-        45,
-        55,
-        "power"
-      ],
-      [
-        "interval",
-        3000,
-        50,
-        55,
-        "power"
-      ],
-      [
-        "cooldown",
-        300,
-        40,
-        50,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "tss": 35.0
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
   },
   {
     "date": "2026-11-03",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
-    "sport": "cycling",
-    "steps": [
-      [
-        "warmup",
-        300,
-        45,
-        55,
-        "power"
-      ],
-      [
-        "interval",
-        3000,
-        50,
-        55,
-        "power"
-      ],
-      [
-        "cooldown",
-        300,
-        40,
-        50,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "tss": 35.0
-  },
-  {
-    "date": "2026-11-04",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Running Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        300,
-        45,
-        55,
-        "power"
-      ],
-      [
-        "interval",
-        3000,
-        50,
-        55,
-        "power"
-      ],
-      [
-        "cooldown",
-        300,
-        40,
-        50,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "tss": 35.0
-  },
-  {
-    "date": "2026-11-05",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
-    "sport": "cycling",
-    "steps": [
-      [
-        "warmup",
-        300,
-        45,
-        55,
-        "power"
-      ],
-      [
-        "interval",
-        3000,
-        50,
-        55,
-        "power"
-      ],
-      [
-        "cooldown",
-        300,
-        40,
-        50,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "tss": 35.0
-  },
-  {
-    "date": "2026-11-06",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Running Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        300,
-        45,
-        55,
-        "power"
-      ],
-      [
-        "interval",
-        3000,
-        50,
-        55,
-        "power"
-      ],
-      [
-        "cooldown",
-        300,
-        40,
-        50,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "tss": 35.0
-  },
-  {
-    "date": "2026-11-07",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
-    "sport": "cycling",
-    "steps": [
-      [
-        "warmup",
-        300,
-        45,
-        55,
-        "power"
-      ],
-      [
-        "interval",
-        3000,
-        50,
-        55,
-        "power"
-      ],
-      [
-        "cooldown",
-        300,
-        40,
-        50,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "tss": 35.0
-  },
-  {
-    "date": "2026-11-08",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
-    "sport": "cycling",
-    "steps": [
-      [
-        "warmup",
-        300,
-        45,
-        55,
-        "power"
-      ],
-      [
-        "interval",
-        3000,
-        50,
-        55,
-        "power"
-      ],
-      [
-        "cooldown",
-        300,
-        40,
-        50,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "tss": 35.0
-  },
-  {
-    "date": "2026-11-09",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Active Recovery (Endurance Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
-    "sport": "cycling",
-    "steps": [
-      [
-        "warmup",
-        300,
-        45,
-        55,
-        "power"
-      ],
-      [
-        "interval",
-        3000,
-        50,
-        55,
-        "power"
-      ],
-      [
-        "cooldown",
-        300,
-        40,
-        50,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "tss": 35.0
-  },
-  {
-    "date": "2026-11-10",
-    "intensity": 1,
+    "intensity": 5,
+    "kind": "benchmark",
     "minutes": 60.0,
     "name": "Cycling 20-Min FTP Benchmark Test",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "rationale": "Load week (Base phase). Benchmark test: re-measures your threshold so every target stays personal to you.",
     "sport": "cycling",
     "steps": [
       [
@@ -1316,14 +1481,415 @@
       ]
     ],
     "targetType": "power",
-    "tss": 35.0
+    "targets": [
+      [
+        "W",
+        100,
+        125
+      ],
+      [
+        "W",
+        112,
+        138
+      ]
+    ],
+    "tss": 61.6,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-04",
+    "intensity": 1,
+    "kind": "recovery",
+    "minutes": 60.0,
+    "name": "Running Active Recovery",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "pace"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "pace"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "pace"
+      ]
+    ],
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        423,
+        438
+      ],
+      [
+        "s/km",
+        423,
+        454
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-05",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 50.0,
+    "name": "Cycling Threshold Intervals",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        480,
+        50,
+        75,
+        "power"
+      ],
+      [
+        "interval",
+        60,
+        95,
+        100,
+        "power"
+      ],
+      [
+        "recovery",
+        60,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "cooldown",
+        480,
+        45,
+        55,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        112,
+        138
+      ],
+      [
+        "W",
+        125,
+        150
+      ]
+    ],
+    "tss": 53.9,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-06",
+    "intensity": 1,
+    "kind": "recovery",
+    "minutes": 60.0,
+    "name": "Running Active Recovery",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "pace"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "pace"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "pace"
+      ]
+    ],
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        423,
+        438
+      ],
+      [
+        "s/km",
+        423,
+        454
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-07",
+    "intensity": 2,
+    "kind": "long",
+    "minutes": 180.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        600,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        9600,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        600,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 135.5,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-08",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 120.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        600,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        6000,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        600,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 88.6,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-09",
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-10",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 55.0,
+    "name": "Cycling Threshold Intervals",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        540,
+        50,
+        75,
+        "power"
+      ],
+      [
+        "interval",
+        60,
+        95,
+        100,
+        "power"
+      ],
+      [
+        "recovery",
+        60,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "interval",
+        420,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        45,
+        55,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        112,
+        138
+      ],
+      [
+        "W",
+        125,
+        150
+      ]
+    ],
+    "tss": 58.7,
+    "week": "load"
   },
   {
     "date": "2026-11-11",
     "intensity": 1,
+    "kind": "recovery",
     "minutes": 60.0,
     "name": "Running Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
       [
@@ -1331,65 +1897,142 @@
         300,
         45,
         55,
-        "power"
+        "pace"
       ],
       [
         "interval",
         3000,
         50,
         55,
-        "power"
+        "pace"
       ],
       [
         "cooldown",
         300,
         40,
         50,
-        "power"
+        "pace"
       ]
     ],
-    "targetType": "power",
-    "tss": 35.0
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        423,
+        438
+      ],
+      [
+        "s/km",
+        423,
+        454
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
   },
   {
     "date": "2026-11-12",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 55.0,
+    "name": "Cycling Threshold Intervals",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        300,
-        45,
-        55,
+        540,
+        50,
+        75,
         "power"
       ],
       [
         "interval",
-        3000,
+        60,
+        95,
+        100,
+        "power"
+      ],
+      [
+        "recovery",
+        60,
         50,
-        55,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "interval",
+        420,
+        65,
+        72,
         "power"
       ],
       [
         "cooldown",
         300,
-        40,
-        50,
+        45,
+        55,
         "power"
       ]
     ],
     "targetType": "power",
-    "tss": 35.0
+    "targets": [
+      [
+        "W",
+        112,
+        138
+      ],
+      [
+        "W",
+        125,
+        150
+      ]
+    ],
+    "tss": 58.7,
+    "week": "load"
   },
   {
     "date": "2026-11-13",
     "intensity": 1,
+    "kind": "recovery",
     "minutes": 60.0,
     "name": "Running Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
       [
@@ -1397,164 +2040,250 @@
         300,
         45,
         55,
-        "power"
+        "pace"
       ],
       [
         "interval",
         3000,
         50,
         55,
-        "power"
+        "pace"
       ],
       [
         "cooldown",
         300,
         40,
         50,
-        "power"
+        "pace"
       ]
     ],
-    "targetType": "power",
-    "tss": 35.0
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        423,
+        438
+      ],
+      [
+        "s/km",
+        423,
+        454
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
   },
   {
     "date": "2026-11-14",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "intensity": 2,
+    "kind": "long",
+    "minutes": 180.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        300,
-        45,
-        55,
+        600,
+        50,
+        65,
         "power"
       ],
       [
         "interval",
-        3000,
-        50,
-        55,
+        9600,
+        65,
+        72,
         "power"
       ],
       [
         "cooldown",
-        300,
-        40,
+        600,
         50,
+        58,
         "power"
       ]
     ],
     "targetType": "power",
-    "tss": 35.0
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 135.5,
+    "week": "load"
   },
   {
     "date": "2026-11-15",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 120.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        300,
-        45,
-        55,
+        600,
+        50,
+        65,
         "power"
       ],
       [
         "interval",
-        3000,
-        50,
-        55,
+        6000,
+        65,
+        72,
         "power"
       ],
       [
         "cooldown",
-        300,
-        40,
+        600,
         50,
+        58,
         "power"
       ]
     ],
     "targetType": "power",
-    "tss": 35.0
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 88.6,
+    "week": "load"
   },
   {
     "date": "2026-11-16",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Active Recovery (Endurance Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
-    "sport": "cycling",
-    "steps": [
-      [
-        "warmup",
-        300,
-        45,
-        55,
-        "power"
-      ],
-      [
-        "interval",
-        3000,
-        50,
-        55,
-        "power"
-      ],
-      [
-        "cooldown",
-        300,
-        40,
-        50,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "tss": 35.0
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
   },
   {
     "date": "2026-11-17",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 55.0,
+    "name": "Cycling Threshold Intervals",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        300,
-        45,
-        55,
+        540,
+        50,
+        75,
         "power"
       ],
       [
         "interval",
-        3000,
+        60,
+        95,
+        100,
+        "power"
+      ],
+      [
+        "recovery",
+        60,
         50,
-        55,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "interval",
+        420,
+        65,
+        72,
         "power"
       ],
       [
         "cooldown",
         300,
-        40,
-        50,
+        45,
+        55,
         "power"
       ]
     ],
     "targetType": "power",
-    "tss": 35.0
+    "targets": [
+      [
+        "W",
+        112,
+        138
+      ],
+      [
+        "W",
+        125,
+        150
+      ]
+    ],
+    "tss": 58.7,
+    "week": "load"
   },
   {
     "date": "2026-11-18",
     "intensity": 1,
+    "kind": "recovery",
     "minutes": 60.0,
     "name": "Running Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
       [
@@ -1562,65 +2291,142 @@
         300,
         45,
         55,
-        "power"
+        "pace"
       ],
       [
         "interval",
         3000,
         50,
         55,
-        "power"
+        "pace"
       ],
       [
         "cooldown",
         300,
         40,
         50,
-        "power"
+        "pace"
       ]
     ],
-    "targetType": "power",
-    "tss": 35.0
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        423,
+        438
+      ],
+      [
+        "s/km",
+        423,
+        454
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
   },
   {
     "date": "2026-11-19",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 55.0,
+    "name": "Cycling Threshold Intervals",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        300,
-        45,
-        55,
+        540,
+        50,
+        75,
         "power"
       ],
       [
         "interval",
-        3000,
+        60,
+        95,
+        100,
+        "power"
+      ],
+      [
+        "recovery",
+        60,
         50,
-        55,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "interval",
+        420,
+        65,
+        72,
         "power"
       ],
       [
         "cooldown",
         300,
-        40,
-        50,
+        45,
+        55,
         "power"
       ]
     ],
     "targetType": "power",
-    "tss": 35.0
+    "targets": [
+      [
+        "W",
+        112,
+        138
+      ],
+      [
+        "W",
+        125,
+        150
+      ]
+    ],
+    "tss": 58.7,
+    "week": "load"
   },
   {
     "date": "2026-11-20",
     "intensity": 1,
+    "kind": "recovery",
     "minutes": 60.0,
     "name": "Running Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
       [
@@ -1628,164 +2434,250 @@
         300,
         45,
         55,
-        "power"
+        "pace"
       ],
       [
         "interval",
         3000,
         50,
         55,
-        "power"
+        "pace"
       ],
       [
         "cooldown",
         300,
         40,
         50,
-        "power"
+        "pace"
       ]
     ],
-    "targetType": "power",
-    "tss": 35.0
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        423,
+        438
+      ],
+      [
+        "s/km",
+        423,
+        454
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
   },
   {
     "date": "2026-11-21",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "intensity": 2,
+    "kind": "long",
+    "minutes": 180.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        300,
-        45,
-        55,
+        600,
+        50,
+        65,
         "power"
       ],
       [
         "interval",
-        3000,
-        50,
-        55,
+        9600,
+        65,
+        72,
         "power"
       ],
       [
         "cooldown",
-        300,
-        40,
+        600,
         50,
+        58,
         "power"
       ]
     ],
     "targetType": "power",
-    "tss": 35.0
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 135.5,
+    "week": "load"
   },
   {
     "date": "2026-11-22",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 120.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        300,
-        45,
-        55,
+        600,
+        50,
+        65,
         "power"
       ],
       [
         "interval",
-        3000,
-        50,
-        55,
+        6000,
+        65,
+        72,
         "power"
       ],
       [
         "cooldown",
-        300,
-        40,
+        600,
         50,
+        58,
         "power"
       ]
     ],
     "targetType": "power",
-    "tss": 35.0
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 88.6,
+    "week": "load"
   },
   {
     "date": "2026-11-23",
-    "intensity": 1,
-    "minutes": 45.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
-    "sport": "cycling",
-    "steps": [
-      [
-        "warmup",
-        300,
-        45,
-        55,
-        "power"
-      ],
-      [
-        "interval",
-        2100,
-        50,
-        55,
-        "power"
-      ],
-      [
-        "cooldown",
-        300,
-        40,
-        50,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "tss": 26.2
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "recovery"
   },
   {
     "date": "2026-11-24",
-    "intensity": 1,
-    "minutes": 54.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 65.0,
+    "name": "Cycling Threshold Intervals",
+    "rationale": "Recovery week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        300,
-        45,
-        55,
+        600,
+        50,
+        75,
         "power"
       ],
       [
         "interval",
-        2640,
+        60,
+        95,
+        100,
+        "power"
+      ],
+      [
+        "recovery",
+        60,
         50,
-        55,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "interval",
+        660,
+        65,
+        72,
         "power"
       ],
       [
         "cooldown",
-        300,
-        40,
-        50,
+        600,
+        45,
+        55,
         "power"
       ]
     ],
     "targetType": "power",
-    "tss": 31.5
+    "targets": [
+      [
+        "W",
+        112,
+        138
+      ],
+      [
+        "W",
+        125,
+        150
+      ]
+    ],
+    "tss": 64.6,
+    "week": "recovery"
   },
   {
     "date": "2026-11-25",
     "intensity": 1,
-    "minutes": 54.0,
+    "kind": "recovery",
+    "minutes": 40.0,
     "name": "Running Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "rationale": "Recovery week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
       [
@@ -1793,156 +2685,225 @@
         300,
         45,
         55,
-        "power"
+        "pace"
       ],
       [
         "interval",
-        2640,
+        1800,
         50,
         55,
-        "power"
+        "pace"
       ],
       [
         "cooldown",
         300,
         40,
         50,
-        "power"
+        "pace"
       ]
     ],
-    "targetType": "power",
-    "tss": 31.5
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        423,
+        438
+      ],
+      [
+        "s/km",
+        423,
+        454
+      ]
+    ],
+    "tss": 17.6,
+    "week": "recovery"
   },
   {
     "date": "2026-11-26",
-    "intensity": 1,
-    "minutes": 54.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
-    "sport": "cycling",
-    "steps": [
-      [
-        "warmup",
-        300,
-        45,
-        55,
-        "power"
-      ],
-      [
-        "interval",
-        2640,
-        50,
-        55,
-        "power"
-      ],
-      [
-        "cooldown",
-        300,
-        40,
-        50,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "tss": 31.5
-  },
-  {
-    "date": "2026-11-27",
-    "intensity": 1,
+    "intensity": 2,
+    "kind": "easy",
     "minutes": 45.0,
-    "name": "Running Active Recovery",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
+    "name": "Running Aerobic Base Building",
+    "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        300,
-        45,
-        55,
-        "power"
+        405,
+        50,
+        65,
+        "pace"
       ],
       [
         "interval",
-        2100,
-        50,
-        55,
-        "power"
+        1890,
+        65,
+        72,
+        "pace"
       ],
       [
         "cooldown",
-        300,
-        40,
+        405,
         50,
-        "power"
+        58,
+        "pace"
       ]
     ],
-    "targetType": "power",
-    "tss": 26.2
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        382,
+        399
+      ],
+      [
+        "s/km",
+        399,
+        438
+      ]
+    ],
+    "tss": 31.6,
+    "week": "recovery"
+  },
+  {
+    "date": "2026-11-27",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 45.0,
+    "name": "Running Aerobic Base Building",
+    "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        405,
+        50,
+        65,
+        "pace"
+      ],
+      [
+        "interval",
+        1890,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "cooldown",
+        405,
+        50,
+        58,
+        "pace"
+      ]
+    ],
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        382,
+        399
+      ],
+      [
+        "s/km",
+        399,
+        438
+      ]
+    ],
+    "tss": 31.6,
+    "week": "recovery"
   },
   {
     "date": "2026-11-28",
-    "intensity": 1,
-    "minutes": 54.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "intensity": 2,
+    "kind": "long",
+    "minutes": 100.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Recovery week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        300,
-        45,
-        55,
+        600,
+        50,
+        65,
         "power"
       ],
       [
         "interval",
-        2640,
-        50,
-        55,
+        4800,
+        65,
+        72,
         "power"
       ],
       [
         "cooldown",
-        300,
-        40,
+        600,
         50,
+        58,
         "power"
       ]
     ],
     "targetType": "power",
-    "tss": 31.5
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 72.9,
+    "week": "recovery"
   },
   {
     "date": "2026-11-29",
-    "intensity": 1,
-    "minutes": 54.0,
-    "name": "Cycling Active Recovery",
-    "rationale": "Adaptive Guardrail: Active recovery forced: Deep fatigue detected (TSB < -25).",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 45.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        300,
-        45,
-        55,
+        405,
+        50,
+        65,
         "power"
       ],
       [
         "interval",
-        2640,
-        50,
-        55,
+        1890,
+        65,
+        72,
         "power"
       ],
       [
         "cooldown",
-        300,
-        40,
+        405,
         50,
+        58,
         "power"
       ]
     ],
     "targetType": "power",
-    "tss": 31.5
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 31.6,
+    "week": "recovery"
   }
 ]

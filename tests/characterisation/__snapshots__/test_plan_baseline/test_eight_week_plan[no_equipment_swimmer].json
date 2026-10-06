@@ -1,10 +1,75 @@
 [
   {
     "date": "2026-10-05",
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
+  },
+  {
+    "date": "2026-10-06",
+    "intensity": 5,
+    "kind": "benchmark",
+    "minutes": 60.0,
+    "name": "Swimming CSS (Critical Swim Speed) Test",
+    "rationale": "Load week (Base phase). Benchmark test: re-measures your threshold so every target stays personal to you. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
+    "sport": "swimming",
+    "steps": [
+      [
+        "warmup",
+        600,
+        50,
+        65,
+        "time"
+      ],
+      [
+        "interval",
+        420,
+        95,
+        105,
+        "time"
+      ],
+      [
+        "recovery",
+        360,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        210,
+        105,
+        115,
+        "time"
+      ],
+      [
+        "cooldown",
+        2010,
+        40,
+        50,
+        "time"
+      ]
+    ],
+    "targetType": "time",
+    "targets": [],
+    "tss": 95.0,
+    "week": "load"
+  },
+  {
+    "date": "2026-10-07",
     "intensity": 1,
+    "kind": "recovery",
     "minutes": 60.0,
     "name": "Swimming Active Recovery",
-    "rationale": "Active Recovery (Endurance Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
@@ -30,258 +95,89 @@
       ]
     ],
     "targetType": "time",
-    "tss": 35.0
-  },
-  {
-    "date": "2026-10-06",
-    "intensity": 4,
-    "minutes": 81.0,
-    "name": "Swimming Threshold Intervals",
-    "rationale": "Threshold Development (Endurance Block): Sustained efforts right at lactate threshold to elevate sustainable race pace.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        600,
-        50,
-        75,
-        "time"
-      ],
-      [
-        "interval",
-        60,
-        95,
-        100,
-        "time"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "cooldown",
-        1500,
-        45,
-        55,
-        "time"
-      ]
-    ],
-    "targetType": "time",
-    "tss": 108.0
-  },
-  {
-    "date": "2026-10-07",
-    "intensity": 2,
-    "minutes": 60.0,
-    "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        65,
-        "time"
-      ],
-      [
-        "interval",
-        2520,
-        65,
-        72,
-        "time"
-      ],
-      [
-        "cooldown",
-        540,
-        50,
-        58,
-        "time"
-      ]
-    ],
-    "targetType": "time",
-    "tss": 50.0
+    "targets": [],
+    "tss": 35.0,
+    "week": "load"
   },
   {
     "date": "2026-10-08",
-    "intensity": 4,
-    "minutes": 81.0,
-    "name": "Swimming Threshold Intervals",
-    "rationale": "Threshold Development (Endurance Block): Sustained efforts right at lactate threshold to elevate sustainable race pace.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        600,
-        50,
-        75,
-        "time"
-      ],
-      [
-        "interval",
-        60,
-        95,
-        100,
-        "time"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "cooldown",
-        1500,
-        45,
-        55,
-        "time"
-      ]
-    ],
-    "targetType": "time",
-    "tss": 108.0
-  },
-  {
-    "date": "2026-10-09",
     "intensity": 2,
-    "minutes": 60.0,
+    "kind": "easy",
+    "minutes": 40.0,
     "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        540,
+        360,
         50,
         65,
         "time"
       ],
       [
         "interval",
-        2520,
+        1680,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        540,
+        360,
         50,
         58,
         "time"
       ]
     ],
     "targetType": "time",
-    "tss": 50.0
+    "targets": [],
+    "tss": 33.3,
+    "week": "load"
+  },
+  {
+    "date": "2026-10-09",
+    "intensity": 1,
+    "kind": "recovery",
+    "minutes": 60.0,
+    "name": "Swimming Active Recovery",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
+    "sport": "swimming",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "time"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "time"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "time"
+      ]
+    ],
+    "targetType": "time",
+    "targets": [],
+    "tss": 35.0,
+    "week": "load"
   },
   {
     "date": "2026-10-10",
     "intensity": 2,
-    "minutes": 162.0,
+    "kind": "long",
+    "minutes": 75.0,
     "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
+    "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
@@ -293,7 +189,7 @@
       ],
       [
         "interval",
-        8520,
+        3300,
         65,
         72,
         "time"
@@ -307,14 +203,17 @@
       ]
     ],
     "targetType": "time",
-    "tss": 135.0
+    "targets": [],
+    "tss": 62.5,
+    "week": "load"
   },
   {
     "date": "2026-10-11",
     "intensity": 2,
-    "minutes": 108.0,
+    "kind": "easy",
+    "minutes": 75.0,
     "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
@@ -326,7 +225,7 @@
       ],
       [
         "interval",
-        5280,
+        3300,
         65,
         72,
         "time"
@@ -340,14 +239,102 @@
       ]
     ],
     "targetType": "time",
-    "tss": 90.0
+    "targets": [],
+    "tss": 62.5,
+    "week": "load"
   },
   {
     "date": "2026-10-12",
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
+  },
+  {
+    "date": "2026-10-13",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 40.0,
+    "name": "Swimming Threshold Intervals",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
+    "sport": "swimming",
+    "steps": [
+      [
+        "warmup",
+        360,
+        50,
+        75,
+        "time"
+      ],
+      [
+        "interval",
+        60,
+        95,
+        100,
+        "time"
+      ],
+      [
+        "recovery",
+        60,
+        50,
+        60,
+        "time"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "time"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "interval",
+        420,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "cooldown",
+        300,
+        45,
+        55,
+        "time"
+      ]
+    ],
+    "targetType": "time",
+    "targets": [],
+    "tss": 53.3,
+    "week": "load"
+  },
+  {
+    "date": "2026-10-14",
     "intensity": 1,
+    "kind": "recovery",
     "minutes": 60.0,
     "name": "Swimming Active Recovery",
-    "rationale": "Active Recovery (Endurance Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
@@ -373,99 +360,22 @@
       ]
     ],
     "targetType": "time",
-    "tss": 35.0
-  },
-  {
-    "date": "2026-10-13",
-    "intensity": 5,
-    "minutes": 75.0,
-    "name": "Swimming CSS (Critical Swim Speed) Test",
-    "rationale": "Post-Deload Benchmark Assessment: Re-test your threshold and power/pace zones following your recovery week to calibrate upcoming training blocks.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        600,
-        50,
-        65,
-        "power"
-      ],
-      [
-        "interval",
-        420,
-        95,
-        105,
-        "power"
-      ],
-      [
-        "recovery",
-        360,
-        40,
-        50,
-        "power"
-      ],
-      [
-        "interval",
-        210,
-        105,
-        115,
-        "power"
-      ],
-      [
-        "cooldown",
-        2910,
-        40,
-        50,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "tss": 118.8
-  },
-  {
-    "date": "2026-10-14",
-    "intensity": 2,
-    "minutes": 60.0,
-    "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        65,
-        "time"
-      ],
-      [
-        "interval",
-        2520,
-        65,
-        72,
-        "time"
-      ],
-      [
-        "cooldown",
-        540,
-        50,
-        58,
-        "time"
-      ]
-    ],
-    "targetType": "time",
-    "tss": 50.0
+    "targets": [],
+    "tss": 35.0,
+    "week": "load"
   },
   {
     "date": "2026-10-15",
     "intensity": 4,
-    "minutes": 90.0,
+    "kind": "hard",
+    "minutes": 40.0,
     "name": "Swimming Threshold Intervals",
-    "rationale": "Threshold Development (Endurance Block): Sustained efforts right at lactate threshold to elevate sustainable race pace.",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
+        360,
         50,
         75,
         "time"
@@ -506,83 +416,68 @@
         "time"
       ],
       [
-        "recovery",
-        240,
-        50,
-        60,
-        "time"
-      ],
-      [
         "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "cooldown",
-        2040,
-        45,
-        55,
-        "time"
-      ]
-    ],
-    "targetType": "time",
-    "tss": 120.0
-  },
-  {
-    "date": "2026-10-16",
-    "intensity": 2,
-    "minutes": 60.0,
-    "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        65,
-        "time"
-      ],
-      [
-        "interval",
-        2520,
+        420,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        540,
-        50,
-        58,
+        300,
+        45,
+        55,
         "time"
       ]
     ],
     "targetType": "time",
-    "tss": 50.0
+    "targets": [],
+    "tss": 53.3,
+    "week": "load"
+  },
+  {
+    "date": "2026-10-16",
+    "intensity": 1,
+    "kind": "recovery",
+    "minutes": 60.0,
+    "name": "Swimming Active Recovery",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
+    "sport": "swimming",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "time"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "time"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "time"
+      ]
+    ],
+    "targetType": "time",
+    "targets": [],
+    "tss": 35.0,
+    "week": "load"
   },
   {
     "date": "2026-10-17",
     "intensity": 2,
-    "minutes": 180.0,
+    "kind": "long",
+    "minutes": 75.0,
     "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
+    "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
@@ -594,7 +489,7 @@
       ],
       [
         "interval",
-        9600,
+        3300,
         65,
         72,
         "time"
@@ -608,14 +503,17 @@
       ]
     ],
     "targetType": "time",
-    "tss": 150.0
+    "targets": [],
+    "tss": 62.5,
+    "week": "load"
   },
   {
     "date": "2026-10-18",
     "intensity": 2,
-    "minutes": 120.0,
+    "kind": "easy",
+    "minutes": 75.0,
     "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
@@ -627,7 +525,7 @@
       ],
       [
         "interval",
-        6000,
+        3300,
         65,
         72,
         "time"
@@ -641,47 +539,31 @@
       ]
     ],
     "targetType": "time",
-    "tss": 100.0
+    "targets": [],
+    "tss": 62.5,
+    "week": "load"
   },
   {
     "date": "2026-10-19",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Swimming Active Recovery",
-    "rationale": "Active Recovery (Endurance Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        300,
-        45,
-        55,
-        "time"
-      ],
-      [
-        "interval",
-        3000,
-        50,
-        55,
-        "time"
-      ],
-      [
-        "cooldown",
-        300,
-        40,
-        50,
-        "time"
-      ]
-    ],
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
     "targetType": "time",
-    "tss": 35.0
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
   },
   {
     "date": "2026-10-20",
     "intensity": 4,
-    "minutes": 90.0,
+    "kind": "hard",
+    "minutes": 75.0,
     "name": "Swimming Threshold Intervals",
-    "rationale": "Threshold Development (Endurance Block): Sustained efforts right at lactate threshold to elevate sustainable race pace.",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
@@ -755,22 +637,68 @@
         "time"
       ],
       [
+        "interval",
+        540,
+        65,
+        72,
+        "time"
+      ],
+      [
         "cooldown",
-        2040,
+        600,
         45,
         55,
         "time"
       ]
     ],
     "targetType": "time",
-    "tss": 120.0
+    "targets": [],
+    "tss": 100.0,
+    "week": "load"
   },
   {
     "date": "2026-10-21",
+    "intensity": 1,
+    "kind": "recovery",
+    "minutes": 55.0,
+    "name": "Swimming Active Recovery",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
+    "sport": "swimming",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "time"
+      ],
+      [
+        "interval",
+        2700,
+        50,
+        55,
+        "time"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "time"
+      ]
+    ],
+    "targetType": "time",
+    "targets": [],
+    "tss": 32.1,
+    "week": "load"
+  },
+  {
+    "date": "2026-10-22",
     "intensity": 2,
+    "kind": "easy",
     "minutes": 60.0,
     "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
@@ -796,362 +724,210 @@
       ]
     ],
     "targetType": "time",
-    "tss": 50.0
-  },
-  {
-    "date": "2026-10-22",
-    "intensity": 4,
-    "minutes": 90.0,
-    "name": "Swimming Threshold Intervals",
-    "rationale": "Threshold Development (Endurance Block): Sustained efforts right at lactate threshold to elevate sustainable race pace.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        600,
-        50,
-        75,
-        "time"
-      ],
-      [
-        "interval",
-        60,
-        95,
-        100,
-        "time"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "cooldown",
-        2040,
-        45,
-        55,
-        "time"
-      ]
-    ],
-    "targetType": "time",
-    "tss": 120.0
+    "targets": [],
+    "tss": 50.0,
+    "week": "load"
   },
   {
     "date": "2026-10-23",
     "intensity": 2,
-    "minutes": 60.0,
+    "kind": "easy",
+    "minutes": 55.0,
     "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        540,
+        495,
         50,
         65,
         "time"
       ],
       [
         "interval",
-        2520,
+        2310,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        540,
+        495,
         50,
         58,
         "time"
       ]
     ],
     "targetType": "time",
-    "tss": 50.0
+    "targets": [],
+    "tss": 45.8,
+    "week": "load"
   },
   {
     "date": "2026-10-24",
     "intensity": 2,
-    "minutes": 180.0,
+    "kind": "long",
+    "minutes": 60.0,
     "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
+    "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
+        540,
         50,
         65,
         "time"
       ],
       [
         "interval",
-        9600,
+        2520,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        600,
+        540,
         50,
         58,
         "time"
       ]
     ],
     "targetType": "time",
-    "tss": 150.0
+    "targets": [],
+    "tss": 50.0,
+    "week": "load"
   },
   {
     "date": "2026-10-25",
     "intensity": 2,
-    "minutes": 120.0,
+    "kind": "easy",
+    "minutes": 60.0,
     "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
+        540,
         50,
         65,
         "time"
       ],
       [
         "interval",
-        6000,
+        2520,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        600,
+        540,
         50,
         58,
         "time"
       ]
     ],
     "targetType": "time",
-    "tss": 100.0
+    "targets": [],
+    "tss": 50.0,
+    "week": "load"
   },
   {
     "date": "2026-10-26",
-    "intensity": 1,
-    "minutes": 45.0,
-    "name": "Swimming Active Recovery",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        300,
-        45,
-        55,
-        "time"
-      ],
-      [
-        "interval",
-        2100,
-        50,
-        55,
-        "time"
-      ],
-      [
-        "cooldown",
-        300,
-        40,
-        50,
-        "time"
-      ]
-    ],
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
     "targetType": "time",
-    "tss": 26.2
+    "targets": [],
+    "tss": 0.0,
+    "week": "recovery"
   },
   {
     "date": "2026-10-27",
-    "intensity": 3,
+    "intensity": 4,
+    "kind": "hard",
     "minutes": 45.0,
-    "name": "Swimming Sweet Spot / Tempo Blocks",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
+    "name": "Swimming Threshold Intervals",
+    "rationale": "Recovery week (Base phase). Key session: threshold intervals to lift your sustainable pace. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        540,
+        420,
         50,
-        70,
+        75,
         "time"
       ],
       [
         "interval",
-        600,
-        85,
-        88,
+        60,
+        95,
+        100,
         "time"
       ],
       [
         "recovery",
-        180,
+        60,
         50,
         60,
         "time"
       ],
       [
         "interval",
-        600,
-        85,
-        88,
+        480,
+        96,
+        102,
         "time"
       ],
       [
-        "cooldown",
-        780,
-        45,
-        55,
-        "time"
-      ]
-    ],
-    "targetType": "time",
-    "tss": 48.8
-  },
-  {
-    "date": "2026-10-28",
-    "intensity": 2,
-    "minutes": 54.0,
-    "name": "Swimming Aerobic Base Building",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        486,
+        "recovery",
+        240,
         50,
-        65,
+        60,
         "time"
       ],
       [
         "interval",
-        2268,
+        480,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "interval",
+        660,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        486,
-        50,
-        58,
-        "time"
-      ]
-    ],
-    "targetType": "time",
-    "tss": 45.0
-  },
-  {
-    "date": "2026-10-29",
-    "intensity": 3,
-    "minutes": 45.0,
-    "name": "Swimming Sweet Spot / Tempo Blocks",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        70,
-        "time"
-      ],
-      [
-        "interval",
-        600,
-        85,
-        88,
-        "time"
-      ],
-      [
-        "recovery",
-        180,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        600,
-        85,
-        88,
-        "time"
-      ],
-      [
-        "cooldown",
-        780,
+        300,
         45,
         55,
         "time"
       ]
     ],
     "targetType": "time",
-    "tss": 48.8
+    "targets": [],
+    "tss": 60.0,
+    "week": "recovery"
   },
   {
-    "date": "2026-10-30",
+    "date": "2026-10-28",
     "intensity": 1,
-    "minutes": 45.0,
+    "kind": "recovery",
+    "minutes": 40.0,
     "name": "Swimming Active Recovery",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
+    "rationale": "Recovery week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
@@ -1163,7 +939,7 @@
       ],
       [
         "interval",
-        2100,
+        1800,
         50,
         55,
         "time"
@@ -1177,456 +953,153 @@
       ]
     ],
     "targetType": "time",
-    "tss": 26.2
+    "targets": [],
+    "tss": 23.3,
+    "week": "recovery"
+  },
+  {
+    "date": "2026-10-29",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 40.0,
+    "name": "Swimming Aerobic Base Building",
+    "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
+    "sport": "swimming",
+    "steps": [
+      [
+        "warmup",
+        360,
+        50,
+        65,
+        "time"
+      ],
+      [
+        "interval",
+        1680,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "cooldown",
+        360,
+        50,
+        58,
+        "time"
+      ]
+    ],
+    "targetType": "time",
+    "targets": [],
+    "tss": 33.3,
+    "week": "recovery"
+  },
+  {
+    "date": "2026-10-30",
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "recovery"
   },
   {
     "date": "2026-10-31",
     "intensity": 2,
-    "minutes": 54.0,
+    "kind": "long",
+    "minutes": 70.0,
     "name": "Swimming Aerobic Base Building",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
+    "rationale": "Recovery week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        486,
+        600,
         50,
         65,
         "time"
       ],
       [
         "interval",
-        2268,
+        3000,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        486,
+        600,
         50,
         58,
         "time"
       ]
     ],
     "targetType": "time",
-    "tss": 45.0
+    "targets": [],
+    "tss": 58.3,
+    "week": "recovery"
   },
   {
     "date": "2026-11-01",
     "intensity": 2,
-    "minutes": 54.0,
+    "kind": "easy",
+    "minutes": 40.0,
     "name": "Swimming Aerobic Base Building",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
+    "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        486,
+        360,
         50,
         65,
         "time"
       ],
       [
         "interval",
-        2268,
+        1680,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        486,
+        360,
         50,
         58,
         "time"
       ]
     ],
     "targetType": "time",
-    "tss": 45.0
+    "targets": [],
+    "tss": 33.3,
+    "week": "recovery"
   },
   {
     "date": "2026-11-02",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Swimming Active Recovery",
-    "rationale": "Active Recovery (Endurance Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        300,
-        45,
-        55,
-        "time"
-      ],
-      [
-        "interval",
-        3000,
-        50,
-        55,
-        "time"
-      ],
-      [
-        "cooldown",
-        300,
-        40,
-        50,
-        "time"
-      ]
-    ],
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
     "targetType": "time",
-    "tss": 35.0
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
   },
   {
     "date": "2026-11-03",
-    "intensity": 4,
-    "minutes": 81.0,
-    "name": "Swimming Threshold Intervals",
-    "rationale": "Threshold Development (Endurance Block): Sustained efforts right at lactate threshold to elevate sustainable race pace.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        600,
-        50,
-        75,
-        "time"
-      ],
-      [
-        "interval",
-        60,
-        95,
-        100,
-        "time"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "cooldown",
-        1500,
-        45,
-        55,
-        "time"
-      ]
-    ],
-    "targetType": "time",
-    "tss": 108.0
-  },
-  {
-    "date": "2026-11-04",
-    "intensity": 2,
-    "minutes": 60.0,
-    "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        65,
-        "time"
-      ],
-      [
-        "interval",
-        2520,
-        65,
-        72,
-        "time"
-      ],
-      [
-        "cooldown",
-        540,
-        50,
-        58,
-        "time"
-      ]
-    ],
-    "targetType": "time",
-    "tss": 50.0
-  },
-  {
-    "date": "2026-11-05",
-    "intensity": 4,
-    "minutes": 81.0,
-    "name": "Swimming Threshold Intervals",
-    "rationale": "Threshold Development (Endurance Block): Sustained efforts right at lactate threshold to elevate sustainable race pace.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        600,
-        50,
-        75,
-        "time"
-      ],
-      [
-        "interval",
-        60,
-        95,
-        100,
-        "time"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "cooldown",
-        1500,
-        45,
-        55,
-        "time"
-      ]
-    ],
-    "targetType": "time",
-    "tss": 108.0
-  },
-  {
-    "date": "2026-11-06",
-    "intensity": 2,
-    "minutes": 60.0,
-    "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        65,
-        "time"
-      ],
-      [
-        "interval",
-        2520,
-        65,
-        72,
-        "time"
-      ],
-      [
-        "cooldown",
-        540,
-        50,
-        58,
-        "time"
-      ]
-    ],
-    "targetType": "time",
-    "tss": 50.0
-  },
-  {
-    "date": "2026-11-07",
-    "intensity": 2,
-    "minutes": 162.0,
-    "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        600,
-        50,
-        65,
-        "time"
-      ],
-      [
-        "interval",
-        8520,
-        65,
-        72,
-        "time"
-      ],
-      [
-        "cooldown",
-        600,
-        50,
-        58,
-        "time"
-      ]
-    ],
-    "targetType": "time",
-    "tss": 135.0
-  },
-  {
-    "date": "2026-11-08",
-    "intensity": 2,
-    "minutes": 108.0,
-    "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        600,
-        50,
-        65,
-        "time"
-      ],
-      [
-        "interval",
-        5280,
-        65,
-        72,
-        "time"
-      ],
-      [
-        "cooldown",
-        600,
-        50,
-        58,
-        "time"
-      ]
-    ],
-    "targetType": "time",
-    "tss": 90.0
-  },
-  {
-    "date": "2026-11-09",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Swimming Active Recovery",
-    "rationale": "Active Recovery (Endurance Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        300,
-        45,
-        55,
-        "time"
-      ],
-      [
-        "interval",
-        3000,
-        50,
-        55,
-        "time"
-      ],
-      [
-        "cooldown",
-        300,
-        40,
-        50,
-        "time"
-      ]
-    ],
-    "targetType": "time",
-    "tss": 35.0
-  },
-  {
-    "date": "2026-11-10",
     "intensity": 5,
-    "minutes": 75.0,
+    "kind": "benchmark",
+    "minutes": 60.0,
     "name": "Swimming CSS (Critical Swim Speed) Test",
-    "rationale": "Post-Deload Benchmark Assessment: Re-test your threshold and power/pace zones following your recovery week to calibrate upcoming training blocks.",
+    "rationale": "Load week (Base phase). Benchmark test: re-measures your threshold so every target stays personal to you. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
@@ -1634,267 +1107,49 @@
         600,
         50,
         65,
-        "power"
+        "time"
       ],
       [
         "interval",
         420,
         95,
         105,
-        "power"
+        "time"
       ],
       [
         "recovery",
         360,
         40,
         50,
-        "power"
+        "time"
       ],
       [
         "interval",
         210,
         105,
         115,
-        "power"
+        "time"
       ],
       [
         "cooldown",
-        2910,
+        2010,
         40,
         50,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "tss": 118.8
-  },
-  {
-    "date": "2026-11-11",
-    "intensity": 2,
-    "minutes": 60.0,
-    "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        65,
-        "time"
-      ],
-      [
-        "interval",
-        2520,
-        65,
-        72,
-        "time"
-      ],
-      [
-        "cooldown",
-        540,
-        50,
-        58,
         "time"
       ]
     ],
     "targetType": "time",
-    "tss": 50.0
+    "targets": [],
+    "tss": 95.0,
+    "week": "load"
   },
   {
-    "date": "2026-11-12",
-    "intensity": 4,
-    "minutes": 90.0,
-    "name": "Swimming Threshold Intervals",
-    "rationale": "Threshold Development (Endurance Block): Sustained efforts right at lactate threshold to elevate sustainable race pace.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        600,
-        50,
-        75,
-        "time"
-      ],
-      [
-        "interval",
-        60,
-        95,
-        100,
-        "time"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "cooldown",
-        2040,
-        45,
-        55,
-        "time"
-      ]
-    ],
-    "targetType": "time",
-    "tss": 120.0
-  },
-  {
-    "date": "2026-11-13",
-    "intensity": 2,
-    "minutes": 60.0,
-    "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        65,
-        "time"
-      ],
-      [
-        "interval",
-        2520,
-        65,
-        72,
-        "time"
-      ],
-      [
-        "cooldown",
-        540,
-        50,
-        58,
-        "time"
-      ]
-    ],
-    "targetType": "time",
-    "tss": 50.0
-  },
-  {
-    "date": "2026-11-14",
-    "intensity": 2,
-    "minutes": 180.0,
-    "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        600,
-        50,
-        65,
-        "time"
-      ],
-      [
-        "interval",
-        9600,
-        65,
-        72,
-        "time"
-      ],
-      [
-        "cooldown",
-        600,
-        50,
-        58,
-        "time"
-      ]
-    ],
-    "targetType": "time",
-    "tss": 150.0
-  },
-  {
-    "date": "2026-11-15",
-    "intensity": 2,
-    "minutes": 120.0,
-    "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        600,
-        50,
-        65,
-        "time"
-      ],
-      [
-        "interval",
-        6000,
-        65,
-        72,
-        "time"
-      ],
-      [
-        "cooldown",
-        600,
-        50,
-        58,
-        "time"
-      ]
-    ],
-    "targetType": "time",
-    "tss": 100.0
-  },
-  {
-    "date": "2026-11-16",
+    "date": "2026-11-04",
     "intensity": 1,
+    "kind": "recovery",
     "minutes": 60.0,
     "name": "Swimming Active Recovery",
-    "rationale": "Active Recovery (Endurance Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
@@ -1920,14 +1175,475 @@
       ]
     ],
     "targetType": "time",
-    "tss": 35.0
+    "targets": [],
+    "tss": 35.0,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-05",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 40.0,
+    "name": "Swimming Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
+    "sport": "swimming",
+    "steps": [
+      [
+        "warmup",
+        360,
+        50,
+        65,
+        "time"
+      ],
+      [
+        "interval",
+        1680,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "cooldown",
+        360,
+        50,
+        58,
+        "time"
+      ]
+    ],
+    "targetType": "time",
+    "targets": [],
+    "tss": 33.3,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-06",
+    "intensity": 1,
+    "kind": "recovery",
+    "minutes": 60.0,
+    "name": "Swimming Active Recovery",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
+    "sport": "swimming",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "time"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "time"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "time"
+      ]
+    ],
+    "targetType": "time",
+    "targets": [],
+    "tss": 35.0,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-07",
+    "intensity": 2,
+    "kind": "long",
+    "minutes": 75.0,
+    "name": "Swimming Aerobic Base Building",
+    "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
+    "sport": "swimming",
+    "steps": [
+      [
+        "warmup",
+        600,
+        50,
+        65,
+        "time"
+      ],
+      [
+        "interval",
+        3300,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "cooldown",
+        600,
+        50,
+        58,
+        "time"
+      ]
+    ],
+    "targetType": "time",
+    "targets": [],
+    "tss": 62.5,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-08",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 75.0,
+    "name": "Swimming Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
+    "sport": "swimming",
+    "steps": [
+      [
+        "warmup",
+        600,
+        50,
+        65,
+        "time"
+      ],
+      [
+        "interval",
+        3300,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "cooldown",
+        600,
+        50,
+        58,
+        "time"
+      ]
+    ],
+    "targetType": "time",
+    "targets": [],
+    "tss": 62.5,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-09",
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-10",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 40.0,
+    "name": "Swimming Threshold Intervals",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
+    "sport": "swimming",
+    "steps": [
+      [
+        "warmup",
+        360,
+        50,
+        75,
+        "time"
+      ],
+      [
+        "interval",
+        60,
+        95,
+        100,
+        "time"
+      ],
+      [
+        "recovery",
+        60,
+        50,
+        60,
+        "time"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "time"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "interval",
+        420,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "cooldown",
+        300,
+        45,
+        55,
+        "time"
+      ]
+    ],
+    "targetType": "time",
+    "targets": [],
+    "tss": 53.3,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-11",
+    "intensity": 1,
+    "kind": "recovery",
+    "minutes": 60.0,
+    "name": "Swimming Active Recovery",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
+    "sport": "swimming",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "time"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "time"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "time"
+      ]
+    ],
+    "targetType": "time",
+    "targets": [],
+    "tss": 35.0,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-12",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 40.0,
+    "name": "Swimming Threshold Intervals",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
+    "sport": "swimming",
+    "steps": [
+      [
+        "warmup",
+        360,
+        50,
+        75,
+        "time"
+      ],
+      [
+        "interval",
+        60,
+        95,
+        100,
+        "time"
+      ],
+      [
+        "recovery",
+        60,
+        50,
+        60,
+        "time"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "time"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "interval",
+        420,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "cooldown",
+        300,
+        45,
+        55,
+        "time"
+      ]
+    ],
+    "targetType": "time",
+    "targets": [],
+    "tss": 53.3,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-13",
+    "intensity": 1,
+    "kind": "recovery",
+    "minutes": 60.0,
+    "name": "Swimming Active Recovery",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
+    "sport": "swimming",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "time"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "time"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "time"
+      ]
+    ],
+    "targetType": "time",
+    "targets": [],
+    "tss": 35.0,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-14",
+    "intensity": 2,
+    "kind": "long",
+    "minutes": 75.0,
+    "name": "Swimming Aerobic Base Building",
+    "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
+    "sport": "swimming",
+    "steps": [
+      [
+        "warmup",
+        600,
+        50,
+        65,
+        "time"
+      ],
+      [
+        "interval",
+        3300,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "cooldown",
+        600,
+        50,
+        58,
+        "time"
+      ]
+    ],
+    "targetType": "time",
+    "targets": [],
+    "tss": 62.5,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-15",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 75.0,
+    "name": "Swimming Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
+    "sport": "swimming",
+    "steps": [
+      [
+        "warmup",
+        600,
+        50,
+        65,
+        "time"
+      ],
+      [
+        "interval",
+        3300,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "cooldown",
+        600,
+        50,
+        58,
+        "time"
+      ]
+    ],
+    "targetType": "time",
+    "targets": [],
+    "tss": 62.5,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-16",
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
   },
   {
     "date": "2026-11-17",
     "intensity": 4,
-    "minutes": 90.0,
+    "kind": "hard",
+    "minutes": 75.0,
     "name": "Swimming Threshold Intervals",
-    "rationale": "Threshold Development (Endurance Block): Sustained efforts right at lactate threshold to elevate sustainable race pace.",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
@@ -2001,22 +1717,68 @@
         "time"
       ],
       [
+        "interval",
+        540,
+        65,
+        72,
+        "time"
+      ],
+      [
         "cooldown",
-        2040,
+        600,
         45,
         55,
         "time"
       ]
     ],
     "targetType": "time",
-    "tss": 120.0
+    "targets": [],
+    "tss": 100.0,
+    "week": "load"
   },
   {
     "date": "2026-11-18",
+    "intensity": 1,
+    "kind": "recovery",
+    "minutes": 55.0,
+    "name": "Swimming Active Recovery",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
+    "sport": "swimming",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "time"
+      ],
+      [
+        "interval",
+        2700,
+        50,
+        55,
+        "time"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "time"
+      ]
+    ],
+    "targetType": "time",
+    "targets": [],
+    "tss": 32.1,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-19",
     "intensity": 2,
+    "kind": "easy",
     "minutes": 60.0,
     "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
@@ -2042,103 +1804,53 @@
       ]
     ],
     "targetType": "time",
-    "tss": 50.0
-  },
-  {
-    "date": "2026-11-19",
-    "intensity": 4,
-    "minutes": 90.0,
-    "name": "Swimming Threshold Intervals",
-    "rationale": "Threshold Development (Endurance Block): Sustained efforts right at lactate threshold to elevate sustainable race pace.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        600,
-        50,
-        75,
-        "time"
-      ],
-      [
-        "interval",
-        60,
-        95,
-        100,
-        "time"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "time"
-      ],
-      [
-        "cooldown",
-        2040,
-        45,
-        55,
-        "time"
-      ]
-    ],
-    "targetType": "time",
-    "tss": 120.0
+    "targets": [],
+    "tss": 50.0,
+    "week": "load"
   },
   {
     "date": "2026-11-20",
     "intensity": 2,
+    "kind": "easy",
+    "minutes": 55.0,
+    "name": "Swimming Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
+    "sport": "swimming",
+    "steps": [
+      [
+        "warmup",
+        495,
+        50,
+        65,
+        "time"
+      ],
+      [
+        "interval",
+        2310,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "cooldown",
+        495,
+        50,
+        58,
+        "time"
+      ]
+    ],
+    "targetType": "time",
+    "targets": [],
+    "tss": 45.8,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-21",
+    "intensity": 2,
+    "kind": "long",
     "minutes": 60.0,
     "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
+    "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
@@ -2164,240 +1876,138 @@
       ]
     ],
     "targetType": "time",
-    "tss": 50.0
-  },
-  {
-    "date": "2026-11-21",
-    "intensity": 2,
-    "minutes": 180.0,
-    "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        600,
-        50,
-        65,
-        "time"
-      ],
-      [
-        "interval",
-        9600,
-        65,
-        72,
-        "time"
-      ],
-      [
-        "cooldown",
-        600,
-        50,
-        58,
-        "time"
-      ]
-    ],
-    "targetType": "time",
-    "tss": 150.0
+    "targets": [],
+    "tss": 50.0,
+    "week": "load"
   },
   {
     "date": "2026-11-22",
     "intensity": 2,
-    "minutes": 120.0,
+    "kind": "easy",
+    "minutes": 60.0,
     "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
+        540,
         50,
         65,
         "time"
       ],
       [
         "interval",
-        6000,
+        2520,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        600,
+        540,
         50,
         58,
         "time"
       ]
     ],
     "targetType": "time",
-    "tss": 100.0
+    "targets": [],
+    "tss": 50.0,
+    "week": "load"
   },
   {
     "date": "2026-11-23",
-    "intensity": 1,
-    "minutes": 45.0,
-    "name": "Swimming Active Recovery",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        300,
-        45,
-        55,
-        "time"
-      ],
-      [
-        "interval",
-        2100,
-        50,
-        55,
-        "time"
-      ],
-      [
-        "cooldown",
-        300,
-        40,
-        50,
-        "time"
-      ]
-    ],
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
     "targetType": "time",
-    "tss": 26.2
+    "targets": [],
+    "tss": 0.0,
+    "week": "recovery"
   },
   {
     "date": "2026-11-24",
-    "intensity": 3,
+    "intensity": 4,
+    "kind": "hard",
     "minutes": 45.0,
-    "name": "Swimming Sweet Spot / Tempo Blocks",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
+    "name": "Swimming Threshold Intervals",
+    "rationale": "Recovery week (Base phase). Key session: threshold intervals to lift your sustainable pace. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        540,
+        420,
         50,
-        70,
+        75,
         "time"
       ],
       [
         "interval",
-        600,
-        85,
-        88,
+        60,
+        95,
+        100,
         "time"
       ],
       [
         "recovery",
-        180,
+        60,
         50,
         60,
         "time"
       ],
       [
         "interval",
-        600,
-        85,
-        88,
+        480,
+        96,
+        102,
         "time"
       ],
       [
-        "cooldown",
-        780,
-        45,
-        55,
-        "time"
-      ]
-    ],
-    "targetType": "time",
-    "tss": 48.8
-  },
-  {
-    "date": "2026-11-25",
-    "intensity": 2,
-    "minutes": 54.0,
-    "name": "Swimming Aerobic Base Building",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        486,
+        "recovery",
+        240,
         50,
-        65,
+        60,
         "time"
       ],
       [
         "interval",
-        2268,
+        480,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "interval",
+        660,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        486,
-        50,
-        58,
-        "time"
-      ]
-    ],
-    "targetType": "time",
-    "tss": 45.0
-  },
-  {
-    "date": "2026-11-26",
-    "intensity": 3,
-    "minutes": 45.0,
-    "name": "Swimming Sweet Spot / Tempo Blocks",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        70,
-        "time"
-      ],
-      [
-        "interval",
-        600,
-        85,
-        88,
-        "time"
-      ],
-      [
-        "recovery",
-        180,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        600,
-        85,
-        88,
-        "time"
-      ],
-      [
-        "cooldown",
-        780,
+        300,
         45,
         55,
         "time"
       ]
     ],
     "targetType": "time",
-    "tss": 48.8
+    "targets": [],
+    "tss": 60.0,
+    "week": "recovery"
   },
   {
-    "date": "2026-11-27",
+    "date": "2026-11-25",
     "intensity": 1,
-    "minutes": 45.0,
+    "kind": "recovery",
+    "minutes": 40.0,
     "name": "Swimming Active Recovery",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
+    "rationale": "Recovery week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
@@ -2409,7 +2019,7 @@
       ],
       [
         "interval",
-        2100,
+        1800,
         50,
         55,
         "time"
@@ -2423,72 +2033,130 @@
       ]
     ],
     "targetType": "time",
-    "tss": 26.2
+    "targets": [],
+    "tss": 23.3,
+    "week": "recovery"
+  },
+  {
+    "date": "2026-11-26",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 40.0,
+    "name": "Swimming Aerobic Base Building",
+    "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
+    "sport": "swimming",
+    "steps": [
+      [
+        "warmup",
+        360,
+        50,
+        65,
+        "time"
+      ],
+      [
+        "interval",
+        1680,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "cooldown",
+        360,
+        50,
+        58,
+        "time"
+      ]
+    ],
+    "targetType": "time",
+    "targets": [],
+    "tss": 33.3,
+    "week": "recovery"
+  },
+  {
+    "date": "2026-11-27",
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "recovery"
   },
   {
     "date": "2026-11-28",
     "intensity": 2,
-    "minutes": 54.0,
+    "kind": "long",
+    "minutes": 70.0,
     "name": "Swimming Aerobic Base Building",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
+    "rationale": "Recovery week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        486,
+        600,
         50,
         65,
         "time"
       ],
       [
         "interval",
-        2268,
+        3000,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        486,
+        600,
         50,
         58,
         "time"
       ]
     ],
     "targetType": "time",
-    "tss": 45.0
+    "targets": [],
+    "tss": 58.3,
+    "week": "recovery"
   },
   {
     "date": "2026-11-29",
     "intensity": 2,
-    "minutes": 54.0,
+    "kind": "easy",
+    "minutes": 40.0,
     "name": "Swimming Aerobic Base Building",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
+    "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        486,
+        360,
         50,
         65,
         "time"
       ],
       [
         "interval",
-        2268,
+        1680,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        486,
+        360,
         50,
         58,
         "time"
       ]
     ],
     "targetType": "time",
-    "tss": 45.0
+    "targets": [],
+    "tss": 33.3,
+    "week": "recovery"
   }
 ]

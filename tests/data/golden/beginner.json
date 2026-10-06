@@ -1,0 +1,14 @@
+{
+  "_about": "Sam: new to cycling, 4 h/week, heart-rate strap only, no FTP yet. Building towards a first 60 km sportive.",
+  "displayName": "Sam (beginner)",
+  "fitness_level": "beginner",
+  "sports": ["cycling", "stretching"],
+  "focused_sports": ["cycling"],
+  "equipment": ["hr_monitor"],
+  "weekly_hours": 4,
+  "dailyMaxHours": {"Monday": 0.5, "Tuesday": 1, "Wednesday": 0.75, "Thursday": 1, "Friday": 0, "Saturday": 2.5, "Sunday": 1.5},
+  "ctl": 8, "atl": 8, "metricsDate": "2026-10-04",
+  "fthr": 168,
+  "goal": {"name": "First 60 km Sportive", "date": "2026-12-13", "sports": ["cycling"]},
+  "wizardCompleted": true
+}

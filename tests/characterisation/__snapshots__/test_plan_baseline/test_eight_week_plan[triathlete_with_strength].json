@@ -2,9 +2,10 @@
   {
     "date": "2026-10-05",
     "intensity": null,
-    "minutes": 60.0,
+    "kind": "mobility",
+    "minutes": 20.0,
     "name": "Core Mobility & Recovery Flow",
-    "rationale": "Active Recovery (Threshold Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
+    "rationale": "Load week (Build phase), 10 weeks to your event. Mobility on a rest day.",
     "sport": "stretching",
     "steps": [
       [
@@ -37,478 +38,393 @@
       ],
       [
         "exercise",
-        2940,
+        540,
         null,
         null,
         "time"
       ]
     ],
     "targetType": "time",
-    "tss": 0.0
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
   },
   {
     "date": "2026-10-06",
     "intensity": 5,
-    "minutes": 81.0,
+    "kind": "hard",
+    "minutes": 40.0,
     "name": "Swimming VO2 Max Power Intervals",
-    "rationale": "High-Intensity Stimulus (Threshold Block): Targeted VO2 Max power intervals to raise maximum aerobic ceiling and cardiac stroke volume.",
+    "rationale": "Load week (Build phase), 10 weeks to your event. Key session: VO2max intervals to raise your aerobic ceiling.",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        720,
+        528,
         50,
-        80,
+        75,
         "pace"
       ],
       [
         "interval",
-        30,
-        115,
-        125,
+        180,
+        110,
+        118,
         "pace"
       ],
       [
         "recovery",
-        15,
-        40,
-        50,
+        180,
+        45,
+        55,
         "pace"
       ],
       [
         "interval",
-        30,
-        115,
-        125,
+        180,
+        110,
+        118,
         "pace"
       ],
       [
         "recovery",
-        15,
-        40,
-        50,
+        180,
+        45,
+        55,
         "pace"
       ],
       [
         "interval",
-        30,
-        115,
-        125,
+        180,
+        110,
+        118,
         "pace"
       ],
       [
         "recovery",
-        15,
-        40,
-        50,
+        180,
+        45,
+        55,
         "pace"
       ],
       [
         "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
+        180,
+        110,
+        118,
         "pace"
       ],
       [
         "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
+        312,
+        65,
+        72,
         "pace"
       ],
       [
         "cooldown",
-        3360,
+        300,
         45,
         55,
         "pace"
       ]
     ],
     "targetType": "pace",
-    "tss": 128.2
+    "targets": [
+      [
+        "s/100m",
+        101,
+        105
+      ],
+      [
+        "s/100m",
+        125,
+        146
+      ]
+    ],
+    "tss": 41.6,
+    "week": "load"
   },
   {
     "date": "2026-10-07",
-    "intensity": 2,
+    "intensity": 1,
+    "kind": "recovery",
     "minutes": 60.0,
-    "name": "Cycling Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Threshold Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "cycling",
+    "name": "Running Active Recovery",
+    "rationale": "Load week (Build phase), 10 weeks to your event. Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
+    "sport": "running",
     "steps": [
       [
         "warmup",
-        540,
-        50,
-        65,
-        "power"
+        300,
+        45,
+        55,
+        "pace"
       ],
       [
         "interval",
-        2520,
-        65,
-        72,
-        "power"
+        3000,
+        50,
+        55,
+        "pace"
       ],
       [
         "cooldown",
-        540,
+        300,
+        40,
         50,
-        58,
-        "power"
+        "pace"
       ]
     ],
-    "targetType": "power",
-    "tss": 50.0
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        423,
+        438
+      ],
+      [
+        "s/km",
+        423,
+        454
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
   },
   {
     "date": "2026-10-08",
     "intensity": 4,
-    "minutes": 81.0,
-    "name": "Swimming Threshold Intervals",
-    "rationale": "Threshold Development (Threshold Block): Sustained efforts right at lactate threshold to elevate sustainable race pace.",
-    "sport": "swimming",
+    "kind": "hard",
+    "minutes": 40.0,
+    "name": "Cycling Threshold Intervals",
+    "rationale": "Load week (Build phase), 10 weeks to your event. Key session: threshold intervals to lift your sustainable pace.",
+    "sport": "cycling",
     "steps": [
       [
         "warmup",
-        600,
+        360,
         50,
         75,
-        "pace"
+        "power"
       ],
       [
         "interval",
         60,
         95,
         100,
-        "pace"
+        "power"
       ],
       [
         "recovery",
         60,
         50,
         60,
-        "pace"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "pace"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "pace"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "pace"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "pace"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "pace"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "pace"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "pace"
-      ],
-      [
-        "cooldown",
-        1500,
-        45,
-        55,
-        "pace"
-      ]
-    ],
-    "targetType": "pace",
-    "tss": 108.0
-  },
-  {
-    "date": "2026-10-09",
-    "intensity": 2,
-    "minutes": 60.0,
-    "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Threshold Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        65,
         "power"
       ],
       [
         "interval",
-        2520,
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "interval",
+        420,
         65,
         72,
         "power"
       ],
       [
         "cooldown",
-        540,
-        50,
-        58,
+        300,
+        45,
+        55,
         "power"
       ]
     ],
     "targetType": "power",
-    "tss": 50.0
+    "targets": [
+      [
+        "W",
+        112,
+        138
+      ],
+      [
+        "W",
+        125,
+        150
+      ]
+    ],
+    "tss": 41.7,
+    "week": "load"
+  },
+  {
+    "date": "2026-10-09",
+    "intensity": null,
+    "kind": "strength",
+    "minutes": 30.0,
+    "name": "Core Body Functional Strength",
+    "rationale": "Load week (Build phase), 10 weeks to your event. Strength: supports injury resistance and power transfer. Kept away from the day before a hard session.",
+    "sport": "strength",
+    "steps": [
+      [
+        "warmup",
+        300,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        400,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        400,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        400,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "cooldown",
+        300,
+        null,
+        null,
+        "time"
+      ]
+    ],
+    "targetType": "reps",
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
   },
   {
     "date": "2026-10-10",
     "intensity": 2,
-    "minutes": 162.0,
-    "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Threshold Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "swimming",
+    "kind": "long",
+    "minutes": 160.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Build phase), 10 weeks to your event. Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
+    "sport": "cycling",
     "steps": [
       [
         "warmup",
         600,
         50,
         65,
-        "pace"
+        "power"
       ],
       [
         "interval",
-        8520,
+        8400,
         65,
         72,
-        "pace"
+        "power"
       ],
       [
         "cooldown",
         600,
         50,
         58,
-        "pace"
+        "power"
       ]
     ],
-    "targetType": "pace",
-    "tss": 135.0
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 119.9,
+    "week": "load"
   },
   {
     "date": "2026-10-11",
-    "intensity": null,
-    "minutes": 60.0,
-    "name": "Core Body Functional Strength",
-    "rationale": "Aerobic Base Building (Threshold Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "strength",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 120.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Build phase), 10 weeks to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "cycling",
     "steps": [
       [
         "warmup",
-        300,
-        null,
-        null,
-        "time"
+        600,
+        50,
+        65,
+        "power"
       ],
       [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
+        "interval",
+        6000,
+        65,
+        72,
+        "power"
       ],
       [
         "cooldown",
-        300,
-        null,
-        null,
-        "time"
+        600,
+        50,
+        58,
+        "power"
       ]
     ],
-    "targetType": "reps",
-    "tss": 0.0
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 88.6,
+    "week": "load"
   },
   {
     "date": "2026-10-12",
     "intensity": null,
-    "minutes": 60.0,
+    "kind": "mobility",
+    "minutes": 20.0,
     "name": "Core Mobility & Recovery Flow",
-    "rationale": "Active Recovery (Threshold Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
+    "rationale": "Recovery week (Build phase), 9 weeks to your event. Mobility on a rest day.",
     "sport": "stretching",
     "steps": [
       [
@@ -541,1192 +457,351 @@
       ],
       [
         "exercise",
-        2940,
+        540,
         null,
         null,
         "time"
       ]
     ],
     "targetType": "time",
-    "tss": 0.0
+    "targets": [],
+    "tss": 0.0,
+    "week": "recovery"
   },
   {
     "date": "2026-10-13",
-    "intensity": 5,
-    "minutes": 75.0,
-    "name": "Swimming CSS (Critical Swim Speed) Test",
-    "rationale": "Post-Deload Benchmark Assessment: Re-test your threshold and power/pace zones following your recovery week to calibrate upcoming training blocks.",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 50.0,
+    "name": "Swimming Threshold Intervals",
+    "rationale": "Recovery week (Build phase), 9 weeks to your event. Key session: threshold intervals to lift your sustainable pace.",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
+        480,
         50,
-        65,
-        "power"
+        75,
+        "pace"
       ],
       [
         "interval",
-        420,
+        60,
         95,
-        105,
-        "power"
+        100,
+        "pace"
       ],
       [
         "recovery",
-        360,
-        40,
+        60,
         50,
-        "power"
+        60,
+        "pace"
       ],
       [
         "interval",
-        210,
-        105,
-        115,
-        "power"
+        480,
+        96,
+        102,
+        "pace"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "pace"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "pace"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "pace"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "pace"
       ],
       [
         "cooldown",
-        2910,
-        40,
-        50,
-        "power"
+        480,
+        45,
+        55,
+        "pace"
       ]
     ],
-    "targetType": "power",
-    "tss": 118.8
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/100m",
+        109,
+        113
+      ],
+      [
+        "s/100m",
+        111,
+        113
+      ]
+    ],
+    "tss": 53.9,
+    "week": "recovery"
   },
   {
     "date": "2026-10-14",
-    "intensity": 2,
-    "minutes": 60.0,
-    "name": "Cycling Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Threshold Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "cycling",
+    "intensity": null,
+    "kind": "strength",
+    "minutes": 30.0,
+    "name": "Core Body Functional Strength",
+    "rationale": "Recovery week (Build phase), 9 weeks to your event. Strength: supports injury resistance and power transfer. Kept away from the day before a hard session.",
+    "sport": "strength",
     "steps": [
       [
         "warmup",
-        540,
-        50,
-        65,
-        "power"
+        300,
+        null,
+        null,
+        "time"
       ],
       [
-        "interval",
-        2520,
-        65,
-        72,
-        "power"
+        "exercise",
+        400,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        400,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        400,
+        null,
+        null,
+        "reps"
       ],
       [
         "cooldown",
-        540,
-        50,
-        58,
-        "power"
+        300,
+        null,
+        null,
+        "time"
       ]
     ],
-    "targetType": "power",
-    "tss": 50.0
+    "targetType": "reps",
+    "targets": [],
+    "tss": 0.0,
+    "week": "recovery"
   },
   {
     "date": "2026-10-15",
-    "intensity": 5,
-    "minutes": 75.0,
-    "name": "Running 5K / Threshold Pace Benchmark",
-    "rationale": "Post-Deload Benchmark Assessment: Re-test your threshold and power/pace zones following your recovery week to calibrate upcoming training blocks.",
-    "sport": "running",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 45.0,
+    "name": "Swimming Aerobic Base Building",
+    "rationale": "Recovery week (Build phase), 9 weeks to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "swimming",
     "steps": [
       [
         "warmup",
-        900,
+        405,
         50,
         65,
-        "power"
+        "pace"
       ],
       [
         "interval",
-        25,
-        105,
-        120,
-        "power"
-      ],
-      [
-        "recovery",
-        35,
-        40,
-        50,
-        "power"
-      ],
-      [
-        "interval",
-        25,
-        105,
-        120,
-        "power"
-      ],
-      [
-        "recovery",
-        35,
-        40,
-        50,
-        "power"
-      ],
-      [
-        "interval",
-        25,
-        105,
-        120,
-        "power"
-      ],
-      [
-        "recovery",
-        35,
-        40,
-        50,
-        "power"
-      ],
-      [
-        "interval",
-        25,
-        105,
-        120,
-        "power"
-      ],
-      [
-        "recovery",
-        35,
-        40,
-        50,
-        "power"
-      ],
-      [
-        "recovery",
-        180,
-        40,
-        50,
-        "power"
-      ],
-      [
-        "interval",
-        1200,
-        98,
-        105,
-        "power"
+        1890,
+        65,
+        72,
+        "pace"
       ],
       [
         "cooldown",
-        1980,
-        40,
+        405,
         50,
-        "power"
+        58,
+        "pace"
       ]
     ],
-    "targetType": "power",
-    "tss": 118.8
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/100m",
+        127,
+        133
+      ],
+      [
+        "s/100m",
+        133,
+        146
+      ]
+    ],
+    "tss": 31.6,
+    "week": "recovery"
   },
   {
     "date": "2026-10-16",
     "intensity": 2,
-    "minutes": 60.0,
+    "kind": "easy",
+    "minutes": 45.0,
     "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Threshold Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
+    "rationale": "Recovery week (Build phase), 9 weeks to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        540,
+        405,
         50,
         65,
-        "power"
+        "pace"
       ],
       [
         "interval",
-        2520,
+        1890,
         65,
         72,
-        "power"
+        "pace"
       ],
       [
         "cooldown",
-        540,
+        405,
         50,
         58,
-        "power"
+        "pace"
       ]
     ],
-    "targetType": "power",
-    "tss": 50.0
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        382,
+        399
+      ],
+      [
+        "s/km",
+        399,
+        438
+      ]
+    ],
+    "tss": 31.6,
+    "week": "recovery"
   },
   {
     "date": "2026-10-17",
-    "intensity": 5,
-    "minutes": 75.0,
-    "name": "Cycling 20-Min FTP Benchmark Test",
-    "rationale": "Post-Deload Benchmark Assessment: Re-test your threshold and power/pace zones following your recovery week to calibrate upcoming training blocks.",
+    "intensity": 2,
+    "kind": "long",
+    "minutes": 80.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Recovery week (Build phase), 9 weeks to your event. Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        900,
+        600,
         50,
-        75,
+        65,
         "power"
       ],
       [
         "interval",
-        60,
-        100,
-        105,
-        "power"
-      ],
-      [
-        "recovery",
-        60,
-        45,
-        55,
-        "power"
-      ],
-      [
-        "interval",
-        60,
-        100,
-        105,
-        "power"
-      ],
-      [
-        "recovery",
-        60,
-        45,
-        55,
-        "power"
-      ],
-      [
-        "interval",
-        60,
-        100,
-        105,
-        "power"
-      ],
-      [
-        "recovery",
-        60,
-        45,
-        55,
-        "power"
-      ],
-      [
-        "recovery",
-        300,
-        45,
-        55,
-        "power"
-      ],
-      [
-        "interval",
-        1200,
-        100,
-        115,
+        3600,
+        65,
+        72,
         "power"
       ],
       [
         "cooldown",
-        1740,
-        40,
+        600,
         50,
+        58,
         "power"
       ]
     ],
     "targetType": "power",
-    "tss": 118.8
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 57.3,
+    "week": "recovery"
   },
   {
     "date": "2026-10-18",
-    "intensity": null,
-    "minutes": 60.0,
-    "name": "Core Body Functional Strength",
-    "rationale": "Aerobic Base Building (Threshold Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "strength",
-    "steps": [
-      [
-        "warmup",
-        300,
-        null,
-        null,
-        "time"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "cooldown",
-        300,
-        null,
-        null,
-        "time"
-      ]
-    ],
-    "targetType": "reps",
-    "tss": 0.0
-  },
-  {
-    "date": "2026-10-19",
-    "intensity": null,
-    "minutes": 60.0,
-    "name": "Core Mobility & Recovery Flow",
-    "rationale": "Active Recovery (Threshold Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
-    "sport": "stretching",
-    "steps": [
-      [
-        "exercise",
-        120,
-        null,
-        null,
-        "time"
-      ],
-      [
-        "exercise",
-        180,
-        null,
-        null,
-        "time"
-      ],
-      [
-        "exercise",
-        180,
-        null,
-        null,
-        "time"
-      ],
-      [
-        "exercise",
-        180,
-        null,
-        null,
-        "time"
-      ],
-      [
-        "exercise",
-        2940,
-        null,
-        null,
-        "time"
-      ]
-    ],
-    "targetType": "time",
-    "tss": 0.0
-  },
-  {
-    "date": "2026-10-20",
-    "intensity": 5,
-    "minutes": 90.0,
-    "name": "Swimming VO2 Max Power Intervals",
-    "rationale": "High-Intensity Stimulus (Threshold Block): Targeted VO2 Max power intervals to raise maximum aerobic ceiling and cardiac stroke volume.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        720,
-        50,
-        80,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "cooldown",
-        3900,
-        45,
-        55,
-        "pace"
-      ]
-    ],
-    "targetType": "pace",
-    "tss": 142.5
-  },
-  {
-    "date": "2026-10-21",
     "intensity": 2,
-    "minutes": 60.0,
-    "name": "Cycling Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Threshold Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "cycling",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        65,
-        "power"
-      ],
-      [
-        "interval",
-        2520,
-        65,
-        72,
-        "power"
-      ],
-      [
-        "cooldown",
-        540,
-        50,
-        58,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "tss": 50.0
-  },
-  {
-    "date": "2026-10-22",
-    "intensity": 4,
-    "minutes": 90.0,
-    "name": "Swimming Threshold Intervals",
-    "rationale": "Threshold Development (Threshold Block): Sustained efforts right at lactate threshold to elevate sustainable race pace.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        600,
-        50,
-        75,
-        "pace"
-      ],
-      [
-        "interval",
-        60,
-        95,
-        100,
-        "pace"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "pace"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "pace"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "pace"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "pace"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "pace"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "pace"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "pace"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "pace"
-      ],
-      [
-        "cooldown",
-        2040,
-        45,
-        55,
-        "pace"
-      ]
-    ],
-    "targetType": "pace",
-    "tss": 120.0
-  },
-  {
-    "date": "2026-10-23",
-    "intensity": 2,
-    "minutes": 60.0,
+    "kind": "easy",
+    "minutes": 50.0,
     "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Threshold Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
+    "rationale": "Recovery week (Build phase), 9 weeks to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        540,
-        50,
-        65,
-        "power"
-      ],
-      [
-        "interval",
-        2520,
-        65,
-        72,
-        "power"
-      ],
-      [
-        "cooldown",
-        540,
-        50,
-        58,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "tss": 50.0
-  },
-  {
-    "date": "2026-10-24",
-    "intensity": 2,
-    "minutes": 180.0,
-    "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Threshold Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        600,
+        450,
         50,
         65,
         "pace"
-      ],
-      [
-        "interval",
-        9600,
-        65,
-        72,
-        "pace"
-      ],
-      [
-        "cooldown",
-        600,
-        50,
-        58,
-        "pace"
-      ]
-    ],
-    "targetType": "pace",
-    "tss": 150.0
-  },
-  {
-    "date": "2026-10-25",
-    "intensity": null,
-    "minutes": 60.0,
-    "name": "Core Body Functional Strength",
-    "rationale": "Aerobic Base Building (Threshold Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "strength",
-    "steps": [
-      [
-        "warmup",
-        300,
-        null,
-        null,
-        "time"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "cooldown",
-        300,
-        null,
-        null,
-        "time"
-      ]
-    ],
-    "targetType": "reps",
-    "tss": 0.0
-  },
-  {
-    "date": "2026-10-26",
-    "intensity": null,
-    "minutes": 60.0,
-    "name": "Core Mobility & Recovery Flow",
-    "rationale": "Deload Week (Threshold Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
-    "sport": "stretching",
-    "steps": [
-      [
-        "exercise",
-        120,
-        null,
-        null,
-        "time"
-      ],
-      [
-        "exercise",
-        180,
-        null,
-        null,
-        "time"
-      ],
-      [
-        "exercise",
-        180,
-        null,
-        null,
-        "time"
-      ],
-      [
-        "exercise",
-        180,
-        null,
-        null,
-        "time"
-      ],
-      [
-        "exercise",
-        2940,
-        null,
-        null,
-        "time"
-      ]
-    ],
-    "targetType": "time",
-    "tss": 0.0
-  },
-  {
-    "date": "2026-10-27",
-    "intensity": 3,
-    "minutes": 45.0,
-    "name": "Swimming Sweet Spot / Tempo Blocks",
-    "rationale": "Deload Week (Threshold Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        70,
-        "pace"
-      ],
-      [
-        "interval",
-        600,
-        85,
-        88,
-        "pace"
-      ],
-      [
-        "recovery",
-        180,
-        50,
-        60,
-        "pace"
-      ],
-      [
-        "interval",
-        600,
-        85,
-        88,
-        "pace"
-      ],
-      [
-        "cooldown",
-        780,
-        45,
-        55,
-        "pace"
-      ]
-    ],
-    "targetType": "pace",
-    "tss": 48.8
-  },
-  {
-    "date": "2026-10-28",
-    "intensity": 2,
-    "minutes": 54.0,
-    "name": "Cycling Aerobic Base Building",
-    "rationale": "Deload Week (Threshold Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
-    "sport": "cycling",
-    "steps": [
-      [
-        "warmup",
-        486,
-        50,
-        65,
-        "power"
-      ],
-      [
-        "interval",
-        2268,
-        65,
-        72,
-        "power"
-      ],
-      [
-        "cooldown",
-        486,
-        50,
-        58,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "tss": 45.0
-  },
-  {
-    "date": "2026-10-29",
-    "intensity": 3,
-    "minutes": 45.0,
-    "name": "Swimming Sweet Spot / Tempo Blocks",
-    "rationale": "Deload Week (Threshold Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        70,
-        "pace"
-      ],
-      [
-        "interval",
-        600,
-        85,
-        88,
-        "pace"
-      ],
-      [
-        "recovery",
-        180,
-        50,
-        60,
-        "pace"
-      ],
-      [
-        "interval",
-        600,
-        85,
-        88,
-        "pace"
-      ],
-      [
-        "cooldown",
-        780,
-        45,
-        55,
-        "pace"
-      ]
-    ],
-    "targetType": "pace",
-    "tss": 48.8
-  },
-  {
-    "date": "2026-10-30",
-    "intensity": 1,
-    "minutes": 45.0,
-    "name": "Running Active Recovery",
-    "rationale": "Deload Week (Threshold Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        300,
-        45,
-        55,
-        "power"
       ],
       [
         "interval",
         2100,
-        50,
-        55,
-        "power"
-      ],
-      [
-        "cooldown",
-        300,
-        40,
-        50,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "tss": 26.2
-  },
-  {
-    "date": "2026-10-31",
-    "intensity": 2,
-    "minutes": 54.0,
-    "name": "Swimming Aerobic Base Building",
-    "rationale": "Deload Week (Threshold Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        486,
-        50,
-        65,
-        "pace"
-      ],
-      [
-        "interval",
-        2268,
         65,
         72,
         "pace"
       ],
       [
         "cooldown",
-        486,
+        450,
         50,
         58,
         "pace"
       ]
     ],
     "targetType": "pace",
-    "tss": 45.0
-  },
-  {
-    "date": "2026-11-01",
-    "intensity": null,
-    "minutes": 60.0,
-    "name": "Core Body Functional Strength",
-    "rationale": "Deload Week (Threshold Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
-    "sport": "strength",
-    "steps": [
+    "targets": [
       [
-        "warmup",
-        300,
-        null,
-        null,
-        "time"
+        "s/km",
+        382,
+        399
       ],
       [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "cooldown",
-        300,
-        null,
-        null,
-        "time"
+        "s/km",
+        399,
+        438
       ]
     ],
-    "targetType": "reps",
-    "tss": 0.0
+    "tss": 35.1,
+    "week": "recovery"
   },
   {
-    "date": "2026-11-02",
+    "date": "2026-10-19",
     "intensity": null,
-    "minutes": 60.0,
+    "kind": "mobility",
+    "minutes": 20.0,
     "name": "Core Mobility & Recovery Flow",
-    "rationale": "Active Recovery (Threshold Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
+    "rationale": "Load week (Build phase), 8 weeks to your event. Mobility on a rest day.",
     "sport": "stretching",
     "steps": [
       [
@@ -1759,525 +834,24 @@
       ],
       [
         "exercise",
-        2940,
+        540,
         null,
         null,
         "time"
       ]
     ],
     "targetType": "time",
-    "tss": 0.0
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
   },
   {
-    "date": "2026-11-03",
+    "date": "2026-10-20",
     "intensity": 5,
-    "minutes": 81.0,
-    "name": "Swimming VO2 Max Power Intervals",
-    "rationale": "High-Intensity Stimulus (Threshold Block): Targeted VO2 Max power intervals to raise maximum aerobic ceiling and cardiac stroke volume.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        720,
-        50,
-        80,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "cooldown",
-        3360,
-        45,
-        55,
-        "pace"
-      ]
-    ],
-    "targetType": "pace",
-    "tss": 128.2
-  },
-  {
-    "date": "2026-11-04",
-    "intensity": 2,
+    "kind": "benchmark",
     "minutes": 60.0,
-    "name": "Cycling Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Threshold Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "cycling",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        65,
-        "power"
-      ],
-      [
-        "interval",
-        2520,
-        65,
-        72,
-        "power"
-      ],
-      [
-        "cooldown",
-        540,
-        50,
-        58,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "tss": 50.0
-  },
-  {
-    "date": "2026-11-05",
-    "intensity": 4,
-    "minutes": 81.0,
-    "name": "Swimming Threshold Intervals",
-    "rationale": "Threshold Development (Threshold Block): Sustained efforts right at lactate threshold to elevate sustainable race pace.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        600,
-        50,
-        75,
-        "pace"
-      ],
-      [
-        "interval",
-        60,
-        95,
-        100,
-        "pace"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "pace"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "pace"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "pace"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "pace"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "pace"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "pace"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "pace"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "pace"
-      ],
-      [
-        "cooldown",
-        1500,
-        45,
-        55,
-        "pace"
-      ]
-    ],
-    "targetType": "pace",
-    "tss": 108.0
-  },
-  {
-    "date": "2026-11-06",
-    "intensity": 2,
-    "minutes": 60.0,
-    "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Threshold Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        65,
-        "power"
-      ],
-      [
-        "interval",
-        2520,
-        65,
-        72,
-        "power"
-      ],
-      [
-        "cooldown",
-        540,
-        50,
-        58,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "tss": 50.0
-  },
-  {
-    "date": "2026-11-07",
-    "intensity": 2,
-    "minutes": 162.0,
-    "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Threshold Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        600,
-        50,
-        65,
-        "pace"
-      ],
-      [
-        "interval",
-        8520,
-        65,
-        72,
-        "pace"
-      ],
-      [
-        "cooldown",
-        600,
-        50,
-        58,
-        "pace"
-      ]
-    ],
-    "targetType": "pace",
-    "tss": 135.0
-  },
-  {
-    "date": "2026-11-08",
-    "intensity": null,
-    "minutes": 60.0,
-    "name": "Core Body Functional Strength",
-    "rationale": "Aerobic Base Building (Threshold Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "strength",
-    "steps": [
-      [
-        "warmup",
-        300,
-        null,
-        null,
-        "time"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "cooldown",
-        300,
-        null,
-        null,
-        "time"
-      ]
-    ],
-    "targetType": "reps",
-    "tss": 0.0
-  },
-  {
-    "date": "2026-11-09",
-    "intensity": null,
-    "minutes": 60.0,
-    "name": "Core Mobility & Recovery Flow",
-    "rationale": "Active Recovery (Threshold Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
-    "sport": "stretching",
-    "steps": [
-      [
-        "exercise",
-        120,
-        null,
-        null,
-        "time"
-      ],
-      [
-        "exercise",
-        180,
-        null,
-        null,
-        "time"
-      ],
-      [
-        "exercise",
-        180,
-        null,
-        null,
-        "time"
-      ],
-      [
-        "exercise",
-        180,
-        null,
-        null,
-        "time"
-      ],
-      [
-        "exercise",
-        2940,
-        null,
-        null,
-        "time"
-      ]
-    ],
-    "targetType": "time",
-    "tss": 0.0
-  },
-  {
-    "date": "2026-11-10",
-    "intensity": 5,
-    "minutes": 75.0,
     "name": "Swimming CSS (Critical Swim Speed) Test",
-    "rationale": "Post-Deload Benchmark Assessment: Re-test your threshold and power/pace zones following your recovery week to calibrate upcoming training blocks.",
+    "rationale": "Load week (Build phase), 8 weeks to your event. Benchmark test: re-measures your threshold so every target stays personal to you.",
     "sport": "swimming",
     "steps": [
       [
@@ -2285,213 +859,112 @@
         600,
         50,
         65,
-        "power"
+        "pace"
       ],
       [
         "interval",
         420,
         95,
         105,
-        "power"
+        "pace"
       ],
       [
         "recovery",
         360,
         40,
         50,
-        "power"
+        "pace"
       ],
       [
         "interval",
         210,
         105,
         115,
-        "power"
+        "pace"
       ],
       [
         "cooldown",
-        2910,
+        2010,
         40,
         50,
-        "power"
+        "pace"
       ]
     ],
-    "targetType": "power",
-    "tss": 118.8
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/100m",
+        103,
+        108
+      ],
+      [
+        "s/100m",
+        108,
+        113
+      ]
+    ],
+    "tss": 37.6,
+    "week": "load"
   },
   {
-    "date": "2026-11-11",
-    "intensity": 2,
+    "date": "2026-10-21",
+    "intensity": 1,
+    "kind": "recovery",
     "minutes": 60.0,
-    "name": "Cycling Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Threshold Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "cycling",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        65,
-        "power"
-      ],
-      [
-        "interval",
-        2520,
-        65,
-        72,
-        "power"
-      ],
-      [
-        "cooldown",
-        540,
-        50,
-        58,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "tss": 50.0
-  },
-  {
-    "date": "2026-11-12",
-    "intensity": 5,
-    "minutes": 75.0,
-    "name": "Running 5K / Threshold Pace Benchmark",
-    "rationale": "Post-Deload Benchmark Assessment: Re-test your threshold and power/pace zones following your recovery week to calibrate upcoming training blocks.",
+    "name": "Running Active Recovery",
+    "rationale": "Load week (Build phase), 8 weeks to your event. Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        900,
-        50,
-        65,
-        "power"
+        300,
+        45,
+        55,
+        "pace"
       ],
       [
         "interval",
-        25,
-        105,
-        120,
-        "power"
-      ],
-      [
-        "recovery",
-        35,
-        40,
+        3000,
         50,
-        "power"
-      ],
-      [
-        "interval",
-        25,
-        105,
-        120,
-        "power"
-      ],
-      [
-        "recovery",
-        35,
-        40,
-        50,
-        "power"
-      ],
-      [
-        "interval",
-        25,
-        105,
-        120,
-        "power"
-      ],
-      [
-        "recovery",
-        35,
-        40,
-        50,
-        "power"
-      ],
-      [
-        "interval",
-        25,
-        105,
-        120,
-        "power"
-      ],
-      [
-        "recovery",
-        35,
-        40,
-        50,
-        "power"
-      ],
-      [
-        "recovery",
-        180,
-        40,
-        50,
-        "power"
-      ],
-      [
-        "interval",
-        1200,
-        98,
-        105,
-        "power"
+        55,
+        "pace"
       ],
       [
         "cooldown",
-        1980,
+        300,
         40,
         50,
-        "power"
+        "pace"
       ]
     ],
-    "targetType": "power",
-    "tss": 118.8
-  },
-  {
-    "date": "2026-11-13",
-    "intensity": 2,
-    "minutes": 60.0,
-    "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Threshold Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "running",
-    "steps": [
+    "targetType": "pace",
+    "targets": [
       [
-        "warmup",
-        540,
-        50,
-        65,
-        "power"
+        "s/km",
+        423,
+        438
       ],
       [
-        "interval",
-        2520,
-        65,
-        72,
-        "power"
-      ],
-      [
-        "cooldown",
-        540,
-        50,
-        58,
-        "power"
+        "s/km",
+        423,
+        454
       ]
     ],
-    "targetType": "power",
-    "tss": 50.0
+    "tss": 26.7,
+    "week": "load"
   },
   {
-    "date": "2026-11-14",
-    "intensity": 5,
-    "minutes": 75.0,
-    "name": "Cycling 20-Min FTP Benchmark Test",
-    "rationale": "Post-Deload Benchmark Assessment: Re-test your threshold and power/pace zones following your recovery week to calibrate upcoming training blocks.",
+    "date": "2026-10-22",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 45.0,
+    "name": "Cycling Threshold Intervals",
+    "rationale": "Load week (Build phase), 8 weeks to your event. Key session: threshold intervals to lift your sustainable pace.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        900,
+        420,
         50,
         75,
         "power"
@@ -2499,76 +972,76 @@
       [
         "interval",
         60,
+        95,
         100,
-        105,
         "power"
       ],
       [
         "recovery",
         60,
-        45,
-        55,
+        50,
+        60,
         "power"
       ],
       [
         "interval",
-        60,
-        100,
-        105,
+        480,
+        96,
+        102,
         "power"
       ],
       [
         "recovery",
+        240,
+        50,
         60,
-        45,
-        55,
         "power"
       ],
       [
         "interval",
-        60,
-        100,
-        105,
-        "power"
-      ],
-      [
-        "recovery",
-        60,
-        45,
-        55,
-        "power"
-      ],
-      [
-        "recovery",
-        300,
-        45,
-        55,
+        480,
+        96,
+        102,
         "power"
       ],
       [
         "interval",
-        1200,
-        100,
-        115,
+        660,
+        65,
+        72,
         "power"
       ],
       [
         "cooldown",
-        1740,
-        40,
-        50,
+        300,
+        45,
+        55,
         "power"
       ]
     ],
     "targetType": "power",
-    "tss": 118.8
+    "targets": [
+      [
+        "W",
+        112,
+        138
+      ],
+      [
+        "W",
+        125,
+        150
+      ]
+    ],
+    "tss": 45.5,
+    "week": "load"
   },
   {
-    "date": "2026-11-15",
+    "date": "2026-10-23",
     "intensity": null,
-    "minutes": 60.0,
+    "kind": "strength",
+    "minutes": 30.0,
     "name": "Core Body Functional Strength",
-    "rationale": "Aerobic Base Building (Threshold Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
+    "rationale": "Load week (Build phase), 8 weeks to your event. Strength: supports injury resistance and power transfer. Kept away from the day before a hard session.",
     "sport": "strength",
     "steps": [
       [
@@ -2580,42 +1053,21 @@
       ],
       [
         "exercise",
-        500,
+        400,
         null,
         null,
         "reps"
       ],
       [
         "exercise",
-        500,
+        400,
         null,
         null,
         "reps"
       ],
       [
         "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
+        400,
         null,
         null,
         "reps"
@@ -2629,14 +1081,111 @@
       ]
     ],
     "targetType": "reps",
-    "tss": 0.0
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
   },
   {
-    "date": "2026-11-16",
+    "date": "2026-10-24",
+    "intensity": 2,
+    "kind": "long",
+    "minutes": 175.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Build phase), 8 weeks to your event. Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        600,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        9300,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        600,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 131.6,
+    "week": "load"
+  },
+  {
+    "date": "2026-10-25",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 120.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Build phase), 8 weeks to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        600,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        6000,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        600,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 88.6,
+    "week": "load"
+  },
+  {
+    "date": "2026-10-26",
     "intensity": null,
-    "minutes": 60.0,
+    "kind": "mobility",
+    "minutes": 20.0,
     "name": "Core Mobility & Recovery Flow",
-    "rationale": "Active Recovery (Threshold Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
+    "rationale": "Load week (Build phase), 7 weeks to your event. Mobility on a rest day.",
     "sport": "stretching",
     "steps": [
       [
@@ -2669,260 +1218,923 @@
       ],
       [
         "exercise",
-        2940,
+        540,
         null,
         null,
         "time"
       ]
     ],
     "targetType": "time",
-    "tss": 0.0
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
   },
   {
-    "date": "2026-11-17",
+    "date": "2026-10-27",
     "intensity": 5,
-    "minutes": 90.0,
+    "kind": "hard",
+    "minutes": 50.0,
     "name": "Swimming VO2 Max Power Intervals",
-    "rationale": "High-Intensity Stimulus (Threshold Block): Targeted VO2 Max power intervals to raise maximum aerobic ceiling and cardiac stroke volume.",
+    "rationale": "Load week (Build phase), 7 weeks to your event. Key session: VO2max intervals to raise your aerobic ceiling.",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        720,
+        660,
         50,
-        80,
+        75,
         "pace"
       ],
       [
         "interval",
-        30,
-        115,
-        125,
+        180,
+        110,
+        118,
         "pace"
       ],
       [
         "recovery",
-        15,
-        40,
-        50,
+        180,
+        45,
+        55,
         "pace"
       ],
       [
         "interval",
-        30,
-        115,
-        125,
+        180,
+        110,
+        118,
         "pace"
       ],
       [
         "recovery",
-        15,
-        40,
-        50,
+        180,
+        45,
+        55,
         "pace"
       ],
       [
         "interval",
-        30,
-        115,
-        125,
+        180,
+        110,
+        118,
         "pace"
       ],
       [
         "recovery",
-        15,
-        40,
-        50,
+        180,
+        45,
+        55,
         "pace"
       ],
       [
         "interval",
-        30,
-        115,
-        125,
+        180,
+        110,
+        118,
         "pace"
       ],
       [
         "recovery",
-        15,
-        40,
-        50,
+        180,
+        45,
+        55,
         "pace"
       ],
       [
         "interval",
-        30,
-        115,
-        125,
+        180,
+        110,
+        118,
         "pace"
       ],
       [
         "recovery",
-        15,
-        40,
-        50,
+        180,
+        45,
+        55,
         "pace"
       ],
       [
         "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
-        "pace"
-      ],
-      [
-        "interval",
-        30,
-        115,
-        125,
-        "pace"
-      ],
-      [
-        "recovery",
-        15,
-        40,
-        50,
+        180,
+        110,
+        118,
         "pace"
       ],
       [
         "cooldown",
-        3900,
+        360,
         45,
         55,
         "pace"
       ]
     ],
     "targetType": "pace",
-    "tss": 142.5
+    "targets": [
+      [
+        "s/100m",
+        101,
+        105
+      ],
+      [
+        "s/100m",
+        125,
+        146
+      ]
+    ],
+    "tss": 54.9,
+    "week": "load"
   },
   {
-    "date": "2026-11-18",
-    "intensity": 2,
+    "date": "2026-10-28",
+    "intensity": 1,
+    "kind": "recovery",
     "minutes": 60.0,
-    "name": "Cycling Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Threshold Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
+    "name": "Running Active Recovery",
+    "rationale": "Load week (Build phase), 7 weeks to your event. Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "pace"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "pace"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "pace"
+      ]
+    ],
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        423,
+        438
+      ],
+      [
+        "s/km",
+        423,
+        454
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
+  },
+  {
+    "date": "2026-10-29",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 50.0,
+    "name": "Cycling Threshold Intervals",
+    "rationale": "Load week (Build phase), 7 weeks to your event. Key session: threshold intervals to lift your sustainable pace.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        540,
+        480,
+        50,
+        75,
+        "power"
+      ],
+      [
+        "interval",
+        60,
+        95,
+        100,
+        "power"
+      ],
+      [
+        "recovery",
+        60,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "cooldown",
+        480,
+        45,
+        55,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        112,
+        138
+      ],
+      [
+        "W",
+        125,
+        150
+      ]
+    ],
+    "tss": 53.9,
+    "week": "load"
+  },
+  {
+    "date": "2026-10-30",
+    "intensity": null,
+    "kind": "strength",
+    "minutes": 30.0,
+    "name": "Core Body Functional Strength",
+    "rationale": "Load week (Build phase), 7 weeks to your event. Strength: supports injury resistance and power transfer. Kept away from the day before a hard session.",
+    "sport": "strength",
+    "steps": [
+      [
+        "warmup",
+        300,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        400,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        400,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        400,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "cooldown",
+        300,
+        null,
+        null,
+        "time"
+      ]
+    ],
+    "targetType": "reps",
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
+  },
+  {
+    "date": "2026-10-31",
+    "intensity": 2,
+    "kind": "long",
+    "minutes": 180.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Build phase), 7 weeks to your event. Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        600,
         50,
         65,
         "power"
       ],
       [
         "interval",
-        2520,
+        9600,
         65,
         72,
         "power"
       ],
       [
         "cooldown",
-        540,
+        600,
         50,
         58,
         "power"
       ]
     ],
     "targetType": "power",
-    "tss": 50.0
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 135.5,
+    "week": "load"
   },
   {
-    "date": "2026-11-19",
-    "intensity": 4,
-    "minutes": 90.0,
-    "name": "Swimming Threshold Intervals",
-    "rationale": "Threshold Development (Threshold Block): Sustained efforts right at lactate threshold to elevate sustainable race pace.",
-    "sport": "swimming",
+    "date": "2026-11-01",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 120.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Build phase), 7 weeks to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "cycling",
     "steps": [
       [
         "warmup",
         600,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        6000,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        600,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 88.6,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-02",
+    "intensity": null,
+    "kind": "mobility",
+    "minutes": 20.0,
+    "name": "Core Mobility & Recovery Flow",
+    "rationale": "Load week (Build phase), 6 weeks to your event. Mobility on a rest day.",
+    "sport": "stretching",
+    "steps": [
+      [
+        "exercise",
+        120,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        180,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        180,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        180,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        540,
+        null,
+        null,
+        "time"
+      ]
+    ],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-03",
+    "intensity": 5,
+    "kind": "hard",
+    "minutes": 50.0,
+    "name": "Swimming VO2 Max Power Intervals",
+    "rationale": "Load week (Build phase), 6 weeks to your event. Key session: VO2max intervals to raise your aerobic ceiling.",
+    "sport": "swimming",
+    "steps": [
+      [
+        "warmup",
+        660,
+        50,
+        75,
+        "pace"
+      ],
+      [
+        "interval",
+        180,
+        110,
+        118,
+        "pace"
+      ],
+      [
+        "recovery",
+        180,
+        45,
+        55,
+        "pace"
+      ],
+      [
+        "interval",
+        180,
+        110,
+        118,
+        "pace"
+      ],
+      [
+        "recovery",
+        180,
+        45,
+        55,
+        "pace"
+      ],
+      [
+        "interval",
+        180,
+        110,
+        118,
+        "pace"
+      ],
+      [
+        "recovery",
+        180,
+        45,
+        55,
+        "pace"
+      ],
+      [
+        "interval",
+        180,
+        110,
+        118,
+        "pace"
+      ],
+      [
+        "recovery",
+        180,
+        45,
+        55,
+        "pace"
+      ],
+      [
+        "interval",
+        180,
+        110,
+        118,
+        "pace"
+      ],
+      [
+        "recovery",
+        180,
+        45,
+        55,
+        "pace"
+      ],
+      [
+        "interval",
+        180,
+        110,
+        118,
+        "pace"
+      ],
+      [
+        "cooldown",
+        360,
+        45,
+        55,
+        "pace"
+      ]
+    ],
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/100m",
+        101,
+        105
+      ],
+      [
+        "s/100m",
+        125,
+        146
+      ]
+    ],
+    "tss": 54.9,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-04",
+    "intensity": 1,
+    "kind": "recovery",
+    "minutes": 60.0,
+    "name": "Running Active Recovery",
+    "rationale": "Load week (Build phase), 6 weeks to your event. Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "pace"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "pace"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "pace"
+      ]
+    ],
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        423,
+        438
+      ],
+      [
+        "s/km",
+        423,
+        454
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-05",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 50.0,
+    "name": "Cycling Threshold Intervals",
+    "rationale": "Load week (Build phase), 6 weeks to your event. Key session: threshold intervals to lift your sustainable pace.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        480,
+        50,
+        75,
+        "power"
+      ],
+      [
+        "interval",
+        60,
+        95,
+        100,
+        "power"
+      ],
+      [
+        "recovery",
+        60,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "cooldown",
+        480,
+        45,
+        55,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        112,
+        138
+      ],
+      [
+        "W",
+        125,
+        150
+      ]
+    ],
+    "tss": 53.9,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-06",
+    "intensity": null,
+    "kind": "strength",
+    "minutes": 30.0,
+    "name": "Core Body Functional Strength",
+    "rationale": "Load week (Build phase), 6 weeks to your event. Strength: supports injury resistance and power transfer. Kept away from the day before a hard session.",
+    "sport": "strength",
+    "steps": [
+      [
+        "warmup",
+        300,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        400,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        400,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        400,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "cooldown",
+        300,
+        null,
+        null,
+        "time"
+      ]
+    ],
+    "targetType": "reps",
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-07",
+    "intensity": 2,
+    "kind": "long",
+    "minutes": 180.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Build phase), 6 weeks to your event. Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        600,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        9600,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        600,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 135.5,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-08",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 120.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Build phase), 6 weeks to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        600,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        6000,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        600,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 88.6,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-09",
+    "intensity": null,
+    "kind": "mobility",
+    "minutes": 20.0,
+    "name": "Core Mobility & Recovery Flow",
+    "rationale": "Recovery week (Build phase), 5 weeks to your event. Mobility on a rest day.",
+    "sport": "stretching",
+    "steps": [
+      [
+        "exercise",
+        120,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        180,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        180,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        180,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        540,
+        null,
+        null,
+        "time"
+      ]
+    ],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "recovery"
+  },
+  {
+    "date": "2026-11-10",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 55.0,
+    "name": "Swimming Threshold Intervals",
+    "rationale": "Recovery week (Build phase), 5 weeks to your event. Key session: threshold intervals to lift your sustainable pace.",
+    "sport": "swimming",
+    "steps": [
+      [
+        "warmup",
+        540,
         50,
         75,
         "pace"
@@ -2977,102 +2189,43 @@
         "pace"
       ],
       [
-        "recovery",
-        240,
-        50,
-        60,
-        "pace"
-      ],
-      [
         "interval",
-        480,
-        96,
-        102,
+        420,
+        65,
+        72,
         "pace"
       ],
       [
         "cooldown",
-        2040,
+        300,
         45,
         55,
         "pace"
       ]
     ],
     "targetType": "pace",
-    "tss": 120.0
-  },
-  {
-    "date": "2026-11-20",
-    "intensity": 2,
-    "minutes": 60.0,
-    "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Threshold Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "running",
-    "steps": [
+    "targets": [
       [
-        "warmup",
-        540,
-        50,
-        65,
-        "power"
+        "s/100m",
+        109,
+        113
       ],
       [
-        "interval",
-        2520,
-        65,
-        72,
-        "power"
-      ],
-      [
-        "cooldown",
-        540,
-        50,
-        58,
-        "power"
+        "s/100m",
+        111,
+        113
       ]
     ],
-    "targetType": "power",
-    "tss": 50.0
+    "tss": 58.7,
+    "week": "recovery"
   },
   {
-    "date": "2026-11-21",
-    "intensity": 2,
-    "minutes": 180.0,
-    "name": "Swimming Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Threshold Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        600,
-        50,
-        65,
-        "pace"
-      ],
-      [
-        "interval",
-        9600,
-        65,
-        72,
-        "pace"
-      ],
-      [
-        "cooldown",
-        600,
-        50,
-        58,
-        "pace"
-      ]
-    ],
-    "targetType": "pace",
-    "tss": 150.0
-  },
-  {
-    "date": "2026-11-22",
+    "date": "2026-11-11",
     "intensity": null,
-    "minutes": 60.0,
+    "kind": "strength",
+    "minutes": 30.0,
     "name": "Core Body Functional Strength",
-    "rationale": "Aerobic Base Building (Peak Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
+    "rationale": "Recovery week (Build phase), 5 weeks to your event. Strength: supports injury resistance and power transfer. Kept away from the day before a hard session.",
     "sport": "strength",
     "steps": [
       [
@@ -3084,42 +2237,21 @@
       ],
       [
         "exercise",
-        500,
+        400,
         null,
         null,
         "reps"
       ],
       [
         "exercise",
-        500,
+        400,
         null,
         null,
         "reps"
       ],
       [
         "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
+        400,
         null,
         null,
         "reps"
@@ -3133,14 +2265,205 @@
       ]
     ],
     "targetType": "reps",
-    "tss": 0.0
+    "targets": [],
+    "tss": 0.0,
+    "week": "recovery"
   },
   {
-    "date": "2026-11-23",
+    "date": "2026-11-12",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 50.0,
+    "name": "Swimming Aerobic Base Building",
+    "rationale": "Recovery week (Build phase), 5 weeks to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "swimming",
+    "steps": [
+      [
+        "warmup",
+        450,
+        50,
+        65,
+        "pace"
+      ],
+      [
+        "interval",
+        2100,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "cooldown",
+        450,
+        50,
+        58,
+        "pace"
+      ]
+    ],
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/100m",
+        127,
+        133
+      ],
+      [
+        "s/100m",
+        133,
+        146
+      ]
+    ],
+    "tss": 35.1,
+    "week": "recovery"
+  },
+  {
+    "date": "2026-11-13",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 50.0,
+    "name": "Running Aerobic Base Building",
+    "rationale": "Recovery week (Build phase), 5 weeks to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        450,
+        50,
+        65,
+        "pace"
+      ],
+      [
+        "interval",
+        2100,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "cooldown",
+        450,
+        50,
+        58,
+        "pace"
+      ]
+    ],
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        382,
+        399
+      ],
+      [
+        "s/km",
+        399,
+        438
+      ]
+    ],
+    "tss": 35.1,
+    "week": "recovery"
+  },
+  {
+    "date": "2026-11-14",
+    "intensity": 2,
+    "kind": "long",
+    "minutes": 85.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Recovery week (Build phase), 5 weeks to your event. Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        600,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        3900,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        600,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 61.2,
+    "week": "recovery"
+  },
+  {
+    "date": "2026-11-15",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 55.0,
+    "name": "Running Aerobic Base Building",
+    "rationale": "Recovery week (Build phase), 5 weeks to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        495,
+        50,
+        65,
+        "pace"
+      ],
+      [
+        "interval",
+        2310,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "cooldown",
+        495,
+        50,
+        58,
+        "pace"
+      ]
+    ],
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        382,
+        399
+      ],
+      [
+        "s/km",
+        399,
+        438
+      ]
+    ],
+    "tss": 38.7,
+    "week": "recovery"
+  },
+  {
+    "date": "2026-11-16",
     "intensity": null,
-    "minutes": 60.0,
+    "kind": "mobility",
+    "minutes": 20.0,
     "name": "Core Mobility & Recovery Flow",
-    "rationale": "Deload Week (Peak Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
+    "rationale": "Load week (Peak phase), 4 weeks to your event. Mobility on a rest day.",
     "sport": "stretching",
     "steps": [
       [
@@ -3173,148 +2496,141 @@
       ],
       [
         "exercise",
-        2940,
+        540,
         null,
         null,
         "time"
       ]
     ],
     "targetType": "time",
-    "tss": 0.0
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
   },
   {
-    "date": "2026-11-24",
-    "intensity": 3,
-    "minutes": 45.0,
-    "name": "Swimming Sweet Spot / Tempo Blocks",
-    "rationale": "Deload Week (Peak Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
+    "date": "2026-11-17",
+    "intensity": 5,
+    "kind": "hard",
+    "minutes": 50.0,
+    "name": "Swimming VO2 Max Power Intervals",
+    "rationale": "Load week (Peak phase), 4 weeks to your event. Key session: VO2max intervals to raise your aerobic ceiling.",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        540,
+        660,
         50,
-        70,
+        75,
         "pace"
       ],
       [
         "interval",
-        600,
-        85,
-        88,
+        180,
+        110,
+        118,
         "pace"
       ],
       [
         "recovery",
         180,
-        50,
-        60,
+        45,
+        55,
         "pace"
       ],
       [
         "interval",
-        600,
-        85,
-        88,
+        180,
+        110,
+        118,
+        "pace"
+      ],
+      [
+        "recovery",
+        180,
+        45,
+        55,
+        "pace"
+      ],
+      [
+        "interval",
+        180,
+        110,
+        118,
+        "pace"
+      ],
+      [
+        "recovery",
+        180,
+        45,
+        55,
+        "pace"
+      ],
+      [
+        "interval",
+        180,
+        110,
+        118,
+        "pace"
+      ],
+      [
+        "recovery",
+        180,
+        45,
+        55,
+        "pace"
+      ],
+      [
+        "interval",
+        180,
+        110,
+        118,
+        "pace"
+      ],
+      [
+        "recovery",
+        180,
+        45,
+        55,
+        "pace"
+      ],
+      [
+        "interval",
+        180,
+        110,
+        118,
         "pace"
       ],
       [
         "cooldown",
-        780,
+        360,
         45,
         55,
         "pace"
       ]
     ],
     "targetType": "pace",
-    "tss": 48.8
-  },
-  {
-    "date": "2026-11-25",
-    "intensity": 2,
-    "minutes": 54.0,
-    "name": "Cycling Aerobic Base Building",
-    "rationale": "Deload Week (Peak Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
-    "sport": "cycling",
-    "steps": [
+    "targets": [
       [
-        "warmup",
-        486,
-        50,
-        65,
-        "power"
+        "s/100m",
+        101,
+        105
       ],
       [
-        "interval",
-        2268,
-        65,
-        72,
-        "power"
-      ],
-      [
-        "cooldown",
-        486,
-        50,
-        58,
-        "power"
+        "s/100m",
+        125,
+        146
       ]
     ],
-    "targetType": "power",
-    "tss": 45.0
+    "tss": 54.9,
+    "week": "load"
   },
   {
-    "date": "2026-11-26",
-    "intensity": 3,
-    "minutes": 45.0,
-    "name": "Swimming Sweet Spot / Tempo Blocks",
-    "rationale": "Deload Week (Peak Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        70,
-        "pace"
-      ],
-      [
-        "interval",
-        600,
-        85,
-        88,
-        "pace"
-      ],
-      [
-        "recovery",
-        180,
-        50,
-        60,
-        "pace"
-      ],
-      [
-        "interval",
-        600,
-        85,
-        88,
-        "pace"
-      ],
-      [
-        "cooldown",
-        780,
-        45,
-        55,
-        "pace"
-      ]
-    ],
-    "targetType": "pace",
-    "tss": 48.8
-  },
-  {
-    "date": "2026-11-27",
+    "date": "2026-11-18",
     "intensity": 1,
-    "minutes": 45.0,
+    "kind": "recovery",
+    "minutes": 60.0,
     "name": "Running Active Recovery",
-    "rationale": "Deload Week (Peak Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
+    "rationale": "Load week (Peak phase), 4 weeks to your event. Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
       [
@@ -3322,65 +2638,135 @@
         300,
         45,
         55,
-        "power"
+        "pace"
       ],
       [
         "interval",
-        2100,
+        3000,
         50,
         55,
-        "power"
+        "pace"
       ],
       [
         "cooldown",
         300,
         40,
         50,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "tss": 26.2
-  },
-  {
-    "date": "2026-11-28",
-    "intensity": 2,
-    "minutes": 54.0,
-    "name": "Swimming Aerobic Base Building",
-    "rationale": "Deload Week (Peak Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
-    "sport": "swimming",
-    "steps": [
-      [
-        "warmup",
-        486,
-        50,
-        65,
-        "pace"
-      ],
-      [
-        "interval",
-        2268,
-        65,
-        72,
-        "pace"
-      ],
-      [
-        "cooldown",
-        486,
-        50,
-        58,
         "pace"
       ]
     ],
     "targetType": "pace",
-    "tss": 45.0
+    "targets": [
+      [
+        "s/km",
+        423,
+        438
+      ],
+      [
+        "s/km",
+        423,
+        454
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
   },
   {
-    "date": "2026-11-29",
+    "date": "2026-11-19",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 50.0,
+    "name": "Cycling Threshold Intervals",
+    "rationale": "Load week (Peak phase), 4 weeks to your event. Key session: threshold intervals to lift your sustainable pace.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        480,
+        50,
+        75,
+        "power"
+      ],
+      [
+        "interval",
+        60,
+        95,
+        100,
+        "power"
+      ],
+      [
+        "recovery",
+        60,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "cooldown",
+        480,
+        45,
+        55,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        112,
+        138
+      ],
+      [
+        "W",
+        125,
+        150
+      ]
+    ],
+    "tss": 53.9,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-20",
     "intensity": null,
-    "minutes": 60.0,
+    "kind": "strength",
+    "minutes": 30.0,
     "name": "Core Body Functional Strength",
-    "rationale": "Deload Week (Peak Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
+    "rationale": "Load week (Peak phase), 4 weeks to your event. Strength: supports injury resistance and power transfer. Kept away from the day before a hard session.",
     "sport": "strength",
     "steps": [
       [
@@ -3392,42 +2778,21 @@
       ],
       [
         "exercise",
-        500,
+        400,
         null,
         null,
         "reps"
       ],
       [
         "exercise",
-        500,
+        400,
         null,
         null,
         "reps"
       ],
       [
         "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
-        null,
-        null,
-        "reps"
-      ],
-      [
-        "exercise",
-        500,
+        400,
         null,
         null,
         "reps"
@@ -3441,6 +2806,549 @@
       ]
     ],
     "targetType": "reps",
-    "tss": 0.0
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-21",
+    "intensity": 2,
+    "kind": "long",
+    "minutes": 180.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Peak phase), 4 weeks to your event. Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        600,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        9600,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        600,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 135.5,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-22",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 120.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Peak phase), 4 weeks to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        600,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        6000,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        600,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 88.6,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-23",
+    "intensity": null,
+    "kind": "mobility",
+    "minutes": 20.0,
+    "name": "Core Mobility & Recovery Flow",
+    "rationale": "Load week (Peak phase), 3 weeks to your event. Mobility on a rest day.",
+    "sport": "stretching",
+    "steps": [
+      [
+        "exercise",
+        120,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        180,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        180,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        180,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        540,
+        null,
+        null,
+        "time"
+      ]
+    ],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-24",
+    "intensity": 5,
+    "kind": "hard",
+    "minutes": 50.0,
+    "name": "Swimming VO2 Max Power Intervals",
+    "rationale": "Load week (Peak phase), 3 weeks to your event. Key session: VO2max intervals to raise your aerobic ceiling.",
+    "sport": "swimming",
+    "steps": [
+      [
+        "warmup",
+        660,
+        50,
+        75,
+        "pace"
+      ],
+      [
+        "interval",
+        180,
+        110,
+        118,
+        "pace"
+      ],
+      [
+        "recovery",
+        180,
+        45,
+        55,
+        "pace"
+      ],
+      [
+        "interval",
+        180,
+        110,
+        118,
+        "pace"
+      ],
+      [
+        "recovery",
+        180,
+        45,
+        55,
+        "pace"
+      ],
+      [
+        "interval",
+        180,
+        110,
+        118,
+        "pace"
+      ],
+      [
+        "recovery",
+        180,
+        45,
+        55,
+        "pace"
+      ],
+      [
+        "interval",
+        180,
+        110,
+        118,
+        "pace"
+      ],
+      [
+        "recovery",
+        180,
+        45,
+        55,
+        "pace"
+      ],
+      [
+        "interval",
+        180,
+        110,
+        118,
+        "pace"
+      ],
+      [
+        "recovery",
+        180,
+        45,
+        55,
+        "pace"
+      ],
+      [
+        "interval",
+        180,
+        110,
+        118,
+        "pace"
+      ],
+      [
+        "cooldown",
+        360,
+        45,
+        55,
+        "pace"
+      ]
+    ],
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/100m",
+        101,
+        105
+      ],
+      [
+        "s/100m",
+        125,
+        146
+      ]
+    ],
+    "tss": 54.9,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-25",
+    "intensity": 1,
+    "kind": "recovery",
+    "minutes": 60.0,
+    "name": "Running Active Recovery",
+    "rationale": "Load week (Peak phase), 3 weeks to your event. Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "pace"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "pace"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "pace"
+      ]
+    ],
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        423,
+        438
+      ],
+      [
+        "s/km",
+        423,
+        454
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-26",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 50.0,
+    "name": "Cycling Threshold Intervals",
+    "rationale": "Load week (Peak phase), 3 weeks to your event. Key session: threshold intervals to lift your sustainable pace.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        480,
+        50,
+        75,
+        "power"
+      ],
+      [
+        "interval",
+        60,
+        95,
+        100,
+        "power"
+      ],
+      [
+        "recovery",
+        60,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "cooldown",
+        480,
+        45,
+        55,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        112,
+        138
+      ],
+      [
+        "W",
+        125,
+        150
+      ]
+    ],
+    "tss": 53.9,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-27",
+    "intensity": null,
+    "kind": "strength",
+    "minutes": 30.0,
+    "name": "Core Body Functional Strength",
+    "rationale": "Load week (Peak phase), 3 weeks to your event. Strength: supports injury resistance and power transfer. Kept away from the day before a hard session.",
+    "sport": "strength",
+    "steps": [
+      [
+        "warmup",
+        300,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        400,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        400,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        400,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "cooldown",
+        300,
+        null,
+        null,
+        "time"
+      ]
+    ],
+    "targetType": "reps",
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-28",
+    "intensity": 2,
+    "kind": "long",
+    "minutes": 180.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Peak phase), 3 weeks to your event. Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        600,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        9600,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        600,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 135.5,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-29",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 120.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Peak phase), 3 weeks to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        600,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        6000,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        600,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 88.6,
+    "week": "load"
   }
 ]

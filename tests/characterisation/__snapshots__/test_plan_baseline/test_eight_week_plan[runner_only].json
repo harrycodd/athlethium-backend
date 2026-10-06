@@ -1,10 +1,135 @@
 [
   {
     "date": "2026-10-05",
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
+  },
+  {
+    "date": "2026-10-06",
+    "intensity": 5,
+    "kind": "benchmark",
+    "minutes": 60.0,
+    "name": "Running 5K / Threshold Pace Benchmark",
+    "rationale": "Load week (Base phase). Benchmark test: re-measures your threshold so every target stays personal to you.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        900,
+        50,
+        65,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        25,
+        105,
+        120,
+        "heart_rate"
+      ],
+      [
+        "recovery",
+        35,
+        40,
+        50,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        25,
+        105,
+        120,
+        "heart_rate"
+      ],
+      [
+        "recovery",
+        35,
+        40,
+        50,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        25,
+        105,
+        120,
+        "heart_rate"
+      ],
+      [
+        "recovery",
+        35,
+        40,
+        50,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        25,
+        105,
+        120,
+        "heart_rate"
+      ],
+      [
+        "recovery",
+        35,
+        40,
+        50,
+        "heart_rate"
+      ],
+      [
+        "recovery",
+        180,
+        40,
+        50,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        1200,
+        98,
+        105,
+        "heart_rate"
+      ],
+      [
+        "cooldown",
+        1080,
+        40,
+        50,
+        "heart_rate"
+      ]
+    ],
+    "targetType": "heart_rate",
+    "targets": [
+      [
+        "bpm",
+        82,
+        102
+      ],
+      [
+        "bpm",
+        102,
+        125
+      ]
+    ],
+    "tss": 54.0,
+    "week": "load"
+  },
+  {
+    "date": "2026-10-07",
     "intensity": 1,
+    "kind": "recovery",
     "minutes": 60.0,
     "name": "Running Active Recovery",
-    "rationale": "Active Recovery (Endurance Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
       [
@@ -30,141 +155,33 @@
       ]
     ],
     "targetType": "heart_rate",
-    "tss": 35.0
-  },
-  {
-    "date": "2026-10-06",
-    "intensity": 4,
-    "minutes": 81.0,
-    "name": "Running Threshold Intervals",
-    "rationale": "Threshold Development (Endurance Block): Sustained efforts right at lactate threshold to elevate sustainable race pace.",
-    "sport": "running",
-    "steps": [
+    "targets": [
       [
-        "warmup",
-        600,
-        50,
-        75,
-        "heart_rate"
+        "bpm",
+        82,
+        102
       ],
       [
-        "interval",
-        60,
-        95,
-        100,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "cooldown",
-        1500,
-        45,
-        55,
-        "heart_rate"
+        "bpm",
+        92,
+        112
       ]
     ],
-    "targetType": "heart_rate",
-    "tss": 108.0
-  },
-  {
-    "date": "2026-10-07",
-    "intensity": 2,
-    "minutes": 60.0,
-    "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        65,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        2520,
-        65,
-        72,
-        "heart_rate"
-      ],
-      [
-        "cooldown",
-        540,
-        50,
-        58,
-        "heart_rate"
-      ]
-    ],
-    "targetType": "heart_rate",
-    "tss": 50.0
+    "tss": 26.7,
+    "week": "load"
   },
   {
     "date": "2026-10-08",
     "intensity": 4,
-    "minutes": 81.0,
+    "kind": "hard",
+    "minutes": 40.0,
     "name": "Running Threshold Intervals",
-    "rationale": "Threshold Development (Endurance Block): Sustained efforts right at lactate threshold to elevate sustainable race pace.",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        600,
+        360,
         50,
         75,
         "heart_rate"
@@ -205,83 +222,90 @@
         "heart_rate"
       ],
       [
-        "recovery",
-        240,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
         "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "cooldown",
-        1500,
-        45,
-        55,
-        "heart_rate"
-      ]
-    ],
-    "targetType": "heart_rate",
-    "tss": 108.0
-  },
-  {
-    "date": "2026-10-09",
-    "intensity": 2,
-    "minutes": 60.0,
-    "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        65,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        2520,
+        420,
         65,
         72,
         "heart_rate"
       ],
       [
         "cooldown",
-        540,
-        50,
-        58,
+        300,
+        45,
+        55,
         "heart_rate"
       ]
     ],
     "targetType": "heart_rate",
-    "tss": 50.0
+    "targets": [
+      [
+        "bpm",
+        92,
+        112
+      ],
+      [
+        "bpm",
+        102,
+        119
+      ]
+    ],
+    "tss": 41.7,
+    "week": "load"
+  },
+  {
+    "date": "2026-10-09",
+    "intensity": 1,
+    "kind": "recovery",
+    "minutes": 60.0,
+    "name": "Running Active Recovery",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "heart_rate"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "heart_rate"
+      ]
+    ],
+    "targetType": "heart_rate",
+    "targets": [
+      [
+        "bpm",
+        82,
+        102
+      ],
+      [
+        "bpm",
+        92,
+        112
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
   },
   {
     "date": "2026-10-10",
     "intensity": 2,
-    "minutes": 162.0,
+    "kind": "long",
+    "minutes": 105.0,
     "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
+    "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "running",
     "steps": [
       [
@@ -293,7 +317,7 @@
       ],
       [
         "interval",
-        8520,
+        5100,
         65,
         72,
         "heart_rate"
@@ -307,14 +331,28 @@
       ]
     ],
     "targetType": "heart_rate",
-    "tss": 135.0
+    "targets": [
+      [
+        "bpm",
+        102,
+        116
+      ],
+      [
+        "bpm",
+        102,
+        125
+      ]
+    ],
+    "tss": 76.8,
+    "week": "load"
   },
   {
     "date": "2026-10-11",
     "intensity": 2,
-    "minutes": 108.0,
+    "kind": "easy",
+    "minutes": 75.0,
     "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
       [
@@ -326,7 +364,7 @@
       ],
       [
         "interval",
-        5280,
+        3300,
         65,
         72,
         "heart_rate"
@@ -340,14 +378,124 @@
       ]
     ],
     "targetType": "heart_rate",
-    "tss": 90.0
+    "targets": [
+      [
+        "bpm",
+        102,
+        116
+      ],
+      [
+        "bpm",
+        102,
+        125
+      ]
+    ],
+    "tss": 53.4,
+    "week": "load"
   },
   {
     "date": "2026-10-12",
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
+  },
+  {
+    "date": "2026-10-13",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 40.0,
+    "name": "Running Threshold Intervals",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        360,
+        50,
+        75,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        60,
+        95,
+        100,
+        "heart_rate"
+      ],
+      [
+        "recovery",
+        60,
+        50,
+        60,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "heart_rate"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        420,
+        65,
+        72,
+        "heart_rate"
+      ],
+      [
+        "cooldown",
+        300,
+        45,
+        55,
+        "heart_rate"
+      ]
+    ],
+    "targetType": "heart_rate",
+    "targets": [
+      [
+        "bpm",
+        92,
+        112
+      ],
+      [
+        "bpm",
+        102,
+        119
+      ]
+    ],
+    "tss": 41.7,
+    "week": "load"
+  },
+  {
+    "date": "2026-10-14",
     "intensity": 1,
+    "kind": "recovery",
     "minutes": 60.0,
     "name": "Running Active Recovery",
-    "rationale": "Active Recovery (Endurance Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
       [
@@ -373,148 +521,33 @@
       ]
     ],
     "targetType": "heart_rate",
-    "tss": 35.0
-  },
-  {
-    "date": "2026-10-13",
-    "intensity": 5,
-    "minutes": 75.0,
-    "name": "Running 5K / Threshold Pace Benchmark",
-    "rationale": "Post-Deload Benchmark Assessment: Re-test your threshold and power/pace zones following your recovery week to calibrate upcoming training blocks.",
-    "sport": "running",
-    "steps": [
+    "targets": [
       [
-        "warmup",
-        900,
-        50,
-        65,
-        "power"
+        "bpm",
+        82,
+        102
       ],
       [
-        "interval",
-        25,
-        105,
-        120,
-        "power"
-      ],
-      [
-        "recovery",
-        35,
-        40,
-        50,
-        "power"
-      ],
-      [
-        "interval",
-        25,
-        105,
-        120,
-        "power"
-      ],
-      [
-        "recovery",
-        35,
-        40,
-        50,
-        "power"
-      ],
-      [
-        "interval",
-        25,
-        105,
-        120,
-        "power"
-      ],
-      [
-        "recovery",
-        35,
-        40,
-        50,
-        "power"
-      ],
-      [
-        "interval",
-        25,
-        105,
-        120,
-        "power"
-      ],
-      [
-        "recovery",
-        35,
-        40,
-        50,
-        "power"
-      ],
-      [
-        "recovery",
-        180,
-        40,
-        50,
-        "power"
-      ],
-      [
-        "interval",
-        1200,
-        98,
-        105,
-        "power"
-      ],
-      [
-        "cooldown",
-        1980,
-        40,
-        50,
-        "power"
+        "bpm",
+        92,
+        112
       ]
     ],
-    "targetType": "power",
-    "tss": 118.8
-  },
-  {
-    "date": "2026-10-14",
-    "intensity": 2,
-    "minutes": 60.0,
-    "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        65,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        2520,
-        65,
-        72,
-        "heart_rate"
-      ],
-      [
-        "cooldown",
-        540,
-        50,
-        58,
-        "heart_rate"
-      ]
-    ],
-    "targetType": "heart_rate",
-    "tss": 50.0
+    "tss": 26.7,
+    "week": "load"
   },
   {
     "date": "2026-10-15",
     "intensity": 4,
-    "minutes": 90.0,
+    "kind": "hard",
+    "minutes": 40.0,
     "name": "Running Threshold Intervals",
-    "rationale": "Threshold Development (Endurance Block): Sustained efforts right at lactate threshold to elevate sustainable race pace.",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        600,
+        360,
         50,
         75,
         "heart_rate"
@@ -555,83 +588,90 @@
         "heart_rate"
       ],
       [
-        "recovery",
-        240,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
         "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "cooldown",
-        2040,
-        45,
-        55,
-        "heart_rate"
-      ]
-    ],
-    "targetType": "heart_rate",
-    "tss": 120.0
-  },
-  {
-    "date": "2026-10-16",
-    "intensity": 2,
-    "minutes": 60.0,
-    "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        65,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        2520,
+        420,
         65,
         72,
         "heart_rate"
       ],
       [
         "cooldown",
-        540,
-        50,
-        58,
+        300,
+        45,
+        55,
         "heart_rate"
       ]
     ],
     "targetType": "heart_rate",
-    "tss": 50.0
+    "targets": [
+      [
+        "bpm",
+        92,
+        112
+      ],
+      [
+        "bpm",
+        102,
+        119
+      ]
+    ],
+    "tss": 41.7,
+    "week": "load"
+  },
+  {
+    "date": "2026-10-16",
+    "intensity": 1,
+    "kind": "recovery",
+    "minutes": 60.0,
+    "name": "Running Active Recovery",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "heart_rate"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "heart_rate"
+      ]
+    ],
+    "targetType": "heart_rate",
+    "targets": [
+      [
+        "bpm",
+        82,
+        102
+      ],
+      [
+        "bpm",
+        92,
+        112
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
   },
   {
     "date": "2026-10-17",
     "intensity": 2,
-    "minutes": 180.0,
+    "kind": "long",
+    "minutes": 105.0,
     "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
+    "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "running",
     "steps": [
       [
@@ -643,7 +683,7 @@
       ],
       [
         "interval",
-        9600,
+        5100,
         65,
         72,
         "heart_rate"
@@ -657,14 +697,28 @@
       ]
     ],
     "targetType": "heart_rate",
-    "tss": 150.0
+    "targets": [
+      [
+        "bpm",
+        102,
+        116
+      ],
+      [
+        "bpm",
+        102,
+        125
+      ]
+    ],
+    "tss": 76.8,
+    "week": "load"
   },
   {
     "date": "2026-10-18",
     "intensity": 2,
-    "minutes": 120.0,
+    "kind": "easy",
+    "minutes": 75.0,
     "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
       [
@@ -676,7 +730,7 @@
       ],
       [
         "interval",
-        6000,
+        3300,
         65,
         72,
         "heart_rate"
@@ -690,52 +744,47 @@
       ]
     ],
     "targetType": "heart_rate",
-    "tss": 100.0
+    "targets": [
+      [
+        "bpm",
+        102,
+        116
+      ],
+      [
+        "bpm",
+        102,
+        125
+      ]
+    ],
+    "tss": 53.4,
+    "week": "load"
   },
   {
     "date": "2026-10-19",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Running Active Recovery",
-    "rationale": "Active Recovery (Endurance Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        300,
-        45,
-        55,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        3000,
-        50,
-        55,
-        "heart_rate"
-      ],
-      [
-        "cooldown",
-        300,
-        40,
-        50,
-        "heart_rate"
-      ]
-    ],
-    "targetType": "heart_rate",
-    "tss": 35.0
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
   },
   {
     "date": "2026-10-20",
     "intensity": 4,
-    "minutes": 90.0,
+    "kind": "hard",
+    "minutes": 40.0,
     "name": "Running Threshold Intervals",
-    "rationale": "Threshold Development (Endurance Block): Sustained efforts right at lactate threshold to elevate sustainable race pace.",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        600,
+        360,
         50,
         75,
         "heart_rate"
@@ -776,88 +825,95 @@
         "heart_rate"
       ],
       [
-        "recovery",
-        240,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
         "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "cooldown",
-        2040,
-        45,
-        55,
-        "heart_rate"
-      ]
-    ],
-    "targetType": "heart_rate",
-    "tss": 120.0
-  },
-  {
-    "date": "2026-10-21",
-    "intensity": 2,
-    "minutes": 60.0,
-    "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        65,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        2520,
+        420,
         65,
         72,
         "heart_rate"
       ],
       [
         "cooldown",
-        540,
-        50,
-        58,
+        300,
+        45,
+        55,
         "heart_rate"
       ]
     ],
     "targetType": "heart_rate",
-    "tss": 50.0
+    "targets": [
+      [
+        "bpm",
+        92,
+        112
+      ],
+      [
+        "bpm",
+        102,
+        119
+      ]
+    ],
+    "tss": 41.7,
+    "week": "load"
+  },
+  {
+    "date": "2026-10-21",
+    "intensity": 1,
+    "kind": "recovery",
+    "minutes": 60.0,
+    "name": "Running Active Recovery",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "heart_rate"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "heart_rate"
+      ]
+    ],
+    "targetType": "heart_rate",
+    "targets": [
+      [
+        "bpm",
+        82,
+        102
+      ],
+      [
+        "bpm",
+        92,
+        112
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
   },
   {
     "date": "2026-10-22",
     "intensity": 4,
-    "minutes": 90.0,
+    "kind": "hard",
+    "minutes": 40.0,
     "name": "Running Threshold Intervals",
-    "rationale": "Threshold Development (Endurance Block): Sustained efforts right at lactate threshold to elevate sustainable race pace.",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        600,
+        360,
         50,
         75,
         "heart_rate"
@@ -898,83 +954,90 @@
         "heart_rate"
       ],
       [
-        "recovery",
-        240,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
         "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "cooldown",
-        2040,
-        45,
-        55,
-        "heart_rate"
-      ]
-    ],
-    "targetType": "heart_rate",
-    "tss": 120.0
-  },
-  {
-    "date": "2026-10-23",
-    "intensity": 2,
-    "minutes": 60.0,
-    "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        65,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        2520,
+        420,
         65,
         72,
         "heart_rate"
       ],
       [
         "cooldown",
-        540,
-        50,
-        58,
+        300,
+        45,
+        55,
         "heart_rate"
       ]
     ],
     "targetType": "heart_rate",
-    "tss": 50.0
+    "targets": [
+      [
+        "bpm",
+        92,
+        112
+      ],
+      [
+        "bpm",
+        102,
+        119
+      ]
+    ],
+    "tss": 41.7,
+    "week": "load"
+  },
+  {
+    "date": "2026-10-23",
+    "intensity": 1,
+    "kind": "recovery",
+    "minutes": 60.0,
+    "name": "Running Active Recovery",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "heart_rate"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "heart_rate"
+      ]
+    ],
+    "targetType": "heart_rate",
+    "targets": [
+      [
+        "bpm",
+        82,
+        102
+      ],
+      [
+        "bpm",
+        92,
+        112
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
   },
   {
     "date": "2026-10-24",
     "intensity": 2,
-    "minutes": 180.0,
+    "kind": "long",
+    "minutes": 105.0,
     "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
+    "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "running",
     "steps": [
       [
@@ -986,7 +1049,7 @@
       ],
       [
         "interval",
-        9600,
+        5100,
         65,
         72,
         "heart_rate"
@@ -1000,14 +1063,28 @@
       ]
     ],
     "targetType": "heart_rate",
-    "tss": 150.0
+    "targets": [
+      [
+        "bpm",
+        102,
+        116
+      ],
+      [
+        "bpm",
+        102,
+        125
+      ]
+    ],
+    "tss": 76.8,
+    "week": "load"
   },
   {
     "date": "2026-10-25",
     "intensity": 2,
-    "minutes": 120.0,
+    "kind": "easy",
+    "minutes": 75.0,
     "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
       [
@@ -1019,7 +1096,7 @@
       ],
       [
         "interval",
-        6000,
+        3300,
         65,
         72,
         "heart_rate"
@@ -1033,649 +1110,373 @@
       ]
     ],
     "targetType": "heart_rate",
-    "tss": 100.0
+    "targets": [
+      [
+        "bpm",
+        102,
+        116
+      ],
+      [
+        "bpm",
+        102,
+        125
+      ]
+    ],
+    "tss": 53.4,
+    "week": "load"
   },
   {
     "date": "2026-10-26",
-    "intensity": 1,
-    "minutes": 45.0,
-    "name": "Running Active Recovery",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        300,
-        45,
-        55,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        2100,
-        50,
-        55,
-        "heart_rate"
-      ],
-      [
-        "cooldown",
-        300,
-        40,
-        50,
-        "heart_rate"
-      ]
-    ],
-    "targetType": "heart_rate",
-    "tss": 26.2
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "recovery"
   },
   {
     "date": "2026-10-27",
-    "intensity": 3,
+    "intensity": 4,
+    "kind": "hard",
     "minutes": 45.0,
-    "name": "Running Sweet Spot / Tempo Blocks",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
+    "name": "Running Threshold Intervals",
+    "rationale": "Recovery week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        540,
+        420,
         50,
-        70,
+        75,
         "heart_rate"
       ],
       [
         "interval",
-        600,
-        85,
-        88,
+        60,
+        95,
+        100,
         "heart_rate"
       ],
       [
         "recovery",
-        180,
+        60,
         50,
         60,
         "heart_rate"
       ],
       [
         "interval",
-        600,
-        85,
-        88,
+        480,
+        96,
+        102,
         "heart_rate"
       ],
       [
-        "cooldown",
-        780,
-        45,
-        55,
-        "heart_rate"
-      ]
-    ],
-    "targetType": "heart_rate",
-    "tss": 48.8
-  },
-  {
-    "date": "2026-10-28",
-    "intensity": 2,
-    "minutes": 54.0,
-    "name": "Running Aerobic Base Building",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        486,
+        "recovery",
+        240,
         50,
-        65,
+        60,
         "heart_rate"
       ],
       [
         "interval",
-        2268,
+        480,
+        96,
+        102,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        660,
         65,
         72,
         "heart_rate"
       ],
       [
         "cooldown",
-        486,
-        50,
-        58,
-        "heart_rate"
-      ]
-    ],
-    "targetType": "heart_rate",
-    "tss": 45.0
-  },
-  {
-    "date": "2026-10-29",
-    "intensity": 3,
-    "minutes": 45.0,
-    "name": "Running Sweet Spot / Tempo Blocks",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        70,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        600,
-        85,
-        88,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        180,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        600,
-        85,
-        88,
-        "heart_rate"
-      ],
-      [
-        "cooldown",
-        780,
+        300,
         45,
         55,
         "heart_rate"
       ]
     ],
     "targetType": "heart_rate",
-    "tss": 48.8
+    "targets": [
+      [
+        "bpm",
+        92,
+        112
+      ],
+      [
+        "bpm",
+        102,
+        119
+      ]
+    ],
+    "tss": 45.5,
+    "week": "recovery"
   },
   {
-    "date": "2026-10-30",
+    "date": "2026-10-28",
     "intensity": 1,
-    "minutes": 45.0,
+    "kind": "recovery",
+    "minutes": 30.0,
     "name": "Running Active Recovery",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
+    "rationale": "Recovery week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        300,
+        270,
         45,
         55,
         "heart_rate"
       ],
       [
         "interval",
-        2100,
+        1260,
         50,
         55,
         "heart_rate"
       ],
       [
         "cooldown",
-        300,
+        270,
         40,
         50,
         "heart_rate"
       ]
     ],
     "targetType": "heart_rate",
-    "tss": 26.2
+    "targets": [
+      [
+        "bpm",
+        82,
+        102
+      ],
+      [
+        "bpm",
+        92,
+        112
+      ]
+    ],
+    "tss": 13.0,
+    "week": "recovery"
+  },
+  {
+    "date": "2026-10-29",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 35.0,
+    "name": "Running Aerobic Base Building",
+    "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        315,
+        50,
+        65,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        1470,
+        65,
+        72,
+        "heart_rate"
+      ],
+      [
+        "cooldown",
+        315,
+        50,
+        58,
+        "heart_rate"
+      ]
+    ],
+    "targetType": "heart_rate",
+    "targets": [
+      [
+        "bpm",
+        102,
+        116
+      ],
+      [
+        "bpm",
+        102,
+        125
+      ]
+    ],
+    "tss": 24.6,
+    "week": "recovery"
+  },
+  {
+    "date": "2026-10-30",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 30.0,
+    "name": "Running Aerobic Base Building",
+    "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        270,
+        50,
+        65,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        1260,
+        65,
+        72,
+        "heart_rate"
+      ],
+      [
+        "cooldown",
+        270,
+        50,
+        58,
+        "heart_rate"
+      ]
+    ],
+    "targetType": "heart_rate",
+    "targets": [
+      [
+        "bpm",
+        102,
+        116
+      ],
+      [
+        "bpm",
+        102,
+        125
+      ]
+    ],
+    "tss": 21.1,
+    "week": "recovery"
   },
   {
     "date": "2026-10-31",
     "intensity": 2,
-    "minutes": 54.0,
+    "kind": "long",
+    "minutes": 70.0,
     "name": "Running Aerobic Base Building",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
+    "rationale": "Recovery week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        486,
+        600,
         50,
         65,
         "heart_rate"
       ],
       [
         "interval",
-        2268,
+        3000,
         65,
         72,
         "heart_rate"
       ],
       [
         "cooldown",
-        486,
+        600,
         50,
         58,
         "heart_rate"
       ]
     ],
     "targetType": "heart_rate",
-    "tss": 45.0
+    "targets": [
+      [
+        "bpm",
+        102,
+        116
+      ],
+      [
+        "bpm",
+        102,
+        125
+      ]
+    ],
+    "tss": 49.5,
+    "week": "recovery"
   },
   {
     "date": "2026-11-01",
     "intensity": 2,
-    "minutes": 54.0,
+    "kind": "easy",
+    "minutes": 35.0,
     "name": "Running Aerobic Base Building",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
+    "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        486,
+        315,
         50,
         65,
         "heart_rate"
       ],
       [
         "interval",
-        2268,
+        1470,
         65,
         72,
         "heart_rate"
       ],
       [
         "cooldown",
-        486,
+        315,
         50,
         58,
         "heart_rate"
       ]
     ],
     "targetType": "heart_rate",
-    "tss": 45.0
+    "targets": [
+      [
+        "bpm",
+        102,
+        116
+      ],
+      [
+        "bpm",
+        102,
+        125
+      ]
+    ],
+    "tss": 24.6,
+    "week": "recovery"
   },
   {
     "date": "2026-11-02",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Running Active Recovery",
-    "rationale": "Active Recovery (Endurance Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        300,
-        45,
-        55,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        3000,
-        50,
-        55,
-        "heart_rate"
-      ],
-      [
-        "cooldown",
-        300,
-        40,
-        50,
-        "heart_rate"
-      ]
-    ],
-    "targetType": "heart_rate",
-    "tss": 35.0
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
   },
   {
     "date": "2026-11-03",
-    "intensity": 4,
-    "minutes": 81.0,
-    "name": "Running Threshold Intervals",
-    "rationale": "Threshold Development (Endurance Block): Sustained efforts right at lactate threshold to elevate sustainable race pace.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        600,
-        50,
-        75,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        60,
-        95,
-        100,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "cooldown",
-        1500,
-        45,
-        55,
-        "heart_rate"
-      ]
-    ],
-    "targetType": "heart_rate",
-    "tss": 108.0
-  },
-  {
-    "date": "2026-11-04",
-    "intensity": 2,
-    "minutes": 60.0,
-    "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        65,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        2520,
-        65,
-        72,
-        "heart_rate"
-      ],
-      [
-        "cooldown",
-        540,
-        50,
-        58,
-        "heart_rate"
-      ]
-    ],
-    "targetType": "heart_rate",
-    "tss": 50.0
-  },
-  {
-    "date": "2026-11-05",
-    "intensity": 4,
-    "minutes": 81.0,
-    "name": "Running Threshold Intervals",
-    "rationale": "Threshold Development (Endurance Block): Sustained efforts right at lactate threshold to elevate sustainable race pace.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        600,
-        50,
-        75,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        60,
-        95,
-        100,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "cooldown",
-        1500,
-        45,
-        55,
-        "heart_rate"
-      ]
-    ],
-    "targetType": "heart_rate",
-    "tss": 108.0
-  },
-  {
-    "date": "2026-11-06",
-    "intensity": 2,
-    "minutes": 60.0,
-    "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        65,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        2520,
-        65,
-        72,
-        "heart_rate"
-      ],
-      [
-        "cooldown",
-        540,
-        50,
-        58,
-        "heart_rate"
-      ]
-    ],
-    "targetType": "heart_rate",
-    "tss": 50.0
-  },
-  {
-    "date": "2026-11-07",
-    "intensity": 2,
-    "minutes": 162.0,
-    "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        600,
-        50,
-        65,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        8520,
-        65,
-        72,
-        "heart_rate"
-      ],
-      [
-        "cooldown",
-        600,
-        50,
-        58,
-        "heart_rate"
-      ]
-    ],
-    "targetType": "heart_rate",
-    "tss": 135.0
-  },
-  {
-    "date": "2026-11-08",
-    "intensity": 2,
-    "minutes": 108.0,
-    "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        600,
-        50,
-        65,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        5280,
-        65,
-        72,
-        "heart_rate"
-      ],
-      [
-        "cooldown",
-        600,
-        50,
-        58,
-        "heart_rate"
-      ]
-    ],
-    "targetType": "heart_rate",
-    "tss": 90.0
-  },
-  {
-    "date": "2026-11-09",
-    "intensity": 1,
-    "minutes": 60.0,
-    "name": "Running Active Recovery",
-    "rationale": "Active Recovery (Endurance Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        300,
-        45,
-        55,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        3000,
-        50,
-        55,
-        "heart_rate"
-      ],
-      [
-        "cooldown",
-        300,
-        40,
-        50,
-        "heart_rate"
-      ]
-    ],
-    "targetType": "heart_rate",
-    "tss": 35.0
-  },
-  {
-    "date": "2026-11-10",
     "intensity": 5,
-    "minutes": 75.0,
+    "kind": "benchmark",
+    "minutes": 60.0,
     "name": "Running 5K / Threshold Pace Benchmark",
-    "rationale": "Post-Deload Benchmark Assessment: Re-test your threshold and power/pace zones following your recovery week to calibrate upcoming training blocks.",
+    "rationale": "Load week (Base phase). Benchmark test: re-measures your threshold so every target stays personal to you.",
     "sport": "running",
     "steps": [
       [
@@ -1683,316 +1484,109 @@
         900,
         50,
         65,
-        "power"
+        "heart_rate"
       ],
       [
         "interval",
         25,
         105,
         120,
-        "power"
+        "heart_rate"
       ],
       [
         "recovery",
         35,
         40,
         50,
-        "power"
+        "heart_rate"
       ],
       [
         "interval",
         25,
         105,
         120,
-        "power"
+        "heart_rate"
       ],
       [
         "recovery",
         35,
         40,
         50,
-        "power"
+        "heart_rate"
       ],
       [
         "interval",
         25,
         105,
         120,
-        "power"
+        "heart_rate"
       ],
       [
         "recovery",
         35,
         40,
         50,
-        "power"
+        "heart_rate"
       ],
       [
         "interval",
         25,
         105,
         120,
-        "power"
+        "heart_rate"
       ],
       [
         "recovery",
         35,
         40,
         50,
-        "power"
+        "heart_rate"
       ],
       [
         "recovery",
         180,
         40,
         50,
-        "power"
+        "heart_rate"
       ],
       [
         "interval",
         1200,
         98,
         105,
-        "power"
+        "heart_rate"
       ],
       [
         "cooldown",
-        1980,
+        1080,
         40,
         50,
-        "power"
-      ]
-    ],
-    "targetType": "power",
-    "tss": 118.8
-  },
-  {
-    "date": "2026-11-11",
-    "intensity": 2,
-    "minutes": 60.0,
-    "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        65,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        2520,
-        65,
-        72,
-        "heart_rate"
-      ],
-      [
-        "cooldown",
-        540,
-        50,
-        58,
         "heart_rate"
       ]
     ],
     "targetType": "heart_rate",
-    "tss": 50.0
-  },
-  {
-    "date": "2026-11-12",
-    "intensity": 4,
-    "minutes": 90.0,
-    "name": "Running Threshold Intervals",
-    "rationale": "Threshold Development (Endurance Block): Sustained efforts right at lactate threshold to elevate sustainable race pace.",
-    "sport": "running",
-    "steps": [
+    "targets": [
       [
-        "warmup",
-        600,
-        50,
-        75,
-        "heart_rate"
+        "bpm",
+        82,
+        102
       ],
       [
-        "interval",
-        60,
-        95,
-        100,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
-        96,
+        "bpm",
         102,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "cooldown",
-        2040,
-        45,
-        55,
-        "heart_rate"
+        125
       ]
     ],
-    "targetType": "heart_rate",
-    "tss": 120.0
+    "tss": 54.0,
+    "week": "load"
   },
   {
-    "date": "2026-11-13",
-    "intensity": 2,
-    "minutes": 60.0,
-    "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        65,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        2520,
-        65,
-        72,
-        "heart_rate"
-      ],
-      [
-        "cooldown",
-        540,
-        50,
-        58,
-        "heart_rate"
-      ]
-    ],
-    "targetType": "heart_rate",
-    "tss": 50.0
-  },
-  {
-    "date": "2026-11-14",
-    "intensity": 2,
-    "minutes": 180.0,
-    "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        600,
-        50,
-        65,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        9600,
-        65,
-        72,
-        "heart_rate"
-      ],
-      [
-        "cooldown",
-        600,
-        50,
-        58,
-        "heart_rate"
-      ]
-    ],
-    "targetType": "heart_rate",
-    "tss": 150.0
-  },
-  {
-    "date": "2026-11-15",
-    "intensity": 2,
-    "minutes": 120.0,
-    "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        600,
-        50,
-        65,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        6000,
-        65,
-        72,
-        "heart_rate"
-      ],
-      [
-        "cooldown",
-        600,
-        50,
-        58,
-        "heart_rate"
-      ]
-    ],
-    "targetType": "heart_rate",
-    "tss": 100.0
-  },
-  {
-    "date": "2026-11-16",
+    "date": "2026-11-04",
     "intensity": 1,
+    "kind": "recovery",
     "minutes": 60.0,
     "name": "Running Active Recovery",
-    "rationale": "Active Recovery (Endurance Block): Light regenerative effort to increase systemic blood circulation without adding fatigue.",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
       [
@@ -2018,19 +1612,636 @@
       ]
     ],
     "targetType": "heart_rate",
-    "tss": 35.0
+    "targets": [
+      [
+        "bpm",
+        82,
+        102
+      ],
+      [
+        "bpm",
+        92,
+        112
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-05",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 40.0,
+    "name": "Running Threshold Intervals",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        360,
+        50,
+        75,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        60,
+        95,
+        100,
+        "heart_rate"
+      ],
+      [
+        "recovery",
+        60,
+        50,
+        60,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "heart_rate"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        420,
+        65,
+        72,
+        "heart_rate"
+      ],
+      [
+        "cooldown",
+        300,
+        45,
+        55,
+        "heart_rate"
+      ]
+    ],
+    "targetType": "heart_rate",
+    "targets": [
+      [
+        "bpm",
+        92,
+        112
+      ],
+      [
+        "bpm",
+        102,
+        119
+      ]
+    ],
+    "tss": 41.7,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-06",
+    "intensity": 1,
+    "kind": "recovery",
+    "minutes": 60.0,
+    "name": "Running Active Recovery",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "heart_rate"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "heart_rate"
+      ]
+    ],
+    "targetType": "heart_rate",
+    "targets": [
+      [
+        "bpm",
+        82,
+        102
+      ],
+      [
+        "bpm",
+        92,
+        112
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-07",
+    "intensity": 2,
+    "kind": "long",
+    "minutes": 105.0,
+    "name": "Running Aerobic Base Building",
+    "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        600,
+        50,
+        65,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        5100,
+        65,
+        72,
+        "heart_rate"
+      ],
+      [
+        "cooldown",
+        600,
+        50,
+        58,
+        "heart_rate"
+      ]
+    ],
+    "targetType": "heart_rate",
+    "targets": [
+      [
+        "bpm",
+        102,
+        116
+      ],
+      [
+        "bpm",
+        102,
+        125
+      ]
+    ],
+    "tss": 76.8,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-08",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 75.0,
+    "name": "Running Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        600,
+        50,
+        65,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        3300,
+        65,
+        72,
+        "heart_rate"
+      ],
+      [
+        "cooldown",
+        600,
+        50,
+        58,
+        "heart_rate"
+      ]
+    ],
+    "targetType": "heart_rate",
+    "targets": [
+      [
+        "bpm",
+        102,
+        116
+      ],
+      [
+        "bpm",
+        102,
+        125
+      ]
+    ],
+    "tss": 53.4,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-09",
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-10",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 40.0,
+    "name": "Running Threshold Intervals",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        360,
+        50,
+        75,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        60,
+        95,
+        100,
+        "heart_rate"
+      ],
+      [
+        "recovery",
+        60,
+        50,
+        60,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "heart_rate"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        420,
+        65,
+        72,
+        "heart_rate"
+      ],
+      [
+        "cooldown",
+        300,
+        45,
+        55,
+        "heart_rate"
+      ]
+    ],
+    "targetType": "heart_rate",
+    "targets": [
+      [
+        "bpm",
+        92,
+        112
+      ],
+      [
+        "bpm",
+        102,
+        119
+      ]
+    ],
+    "tss": 41.7,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-11",
+    "intensity": 1,
+    "kind": "recovery",
+    "minutes": 60.0,
+    "name": "Running Active Recovery",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "heart_rate"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "heart_rate"
+      ]
+    ],
+    "targetType": "heart_rate",
+    "targets": [
+      [
+        "bpm",
+        82,
+        102
+      ],
+      [
+        "bpm",
+        92,
+        112
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-12",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 40.0,
+    "name": "Running Threshold Intervals",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        360,
+        50,
+        75,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        60,
+        95,
+        100,
+        "heart_rate"
+      ],
+      [
+        "recovery",
+        60,
+        50,
+        60,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "heart_rate"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        420,
+        65,
+        72,
+        "heart_rate"
+      ],
+      [
+        "cooldown",
+        300,
+        45,
+        55,
+        "heart_rate"
+      ]
+    ],
+    "targetType": "heart_rate",
+    "targets": [
+      [
+        "bpm",
+        92,
+        112
+      ],
+      [
+        "bpm",
+        102,
+        119
+      ]
+    ],
+    "tss": 41.7,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-13",
+    "intensity": 1,
+    "kind": "recovery",
+    "minutes": 60.0,
+    "name": "Running Active Recovery",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "heart_rate"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "heart_rate"
+      ]
+    ],
+    "targetType": "heart_rate",
+    "targets": [
+      [
+        "bpm",
+        82,
+        102
+      ],
+      [
+        "bpm",
+        92,
+        112
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-14",
+    "intensity": 2,
+    "kind": "long",
+    "minutes": 105.0,
+    "name": "Running Aerobic Base Building",
+    "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        600,
+        50,
+        65,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        5100,
+        65,
+        72,
+        "heart_rate"
+      ],
+      [
+        "cooldown",
+        600,
+        50,
+        58,
+        "heart_rate"
+      ]
+    ],
+    "targetType": "heart_rate",
+    "targets": [
+      [
+        "bpm",
+        102,
+        116
+      ],
+      [
+        "bpm",
+        102,
+        125
+      ]
+    ],
+    "tss": 76.8,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-15",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 75.0,
+    "name": "Running Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        600,
+        50,
+        65,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        3300,
+        65,
+        72,
+        "heart_rate"
+      ],
+      [
+        "cooldown",
+        600,
+        50,
+        58,
+        "heart_rate"
+      ]
+    ],
+    "targetType": "heart_rate",
+    "targets": [
+      [
+        "bpm",
+        102,
+        116
+      ],
+      [
+        "bpm",
+        102,
+        125
+      ]
+    ],
+    "tss": 53.4,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-16",
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
   },
   {
     "date": "2026-11-17",
     "intensity": 4,
-    "minutes": 90.0,
+    "kind": "hard",
+    "minutes": 40.0,
     "name": "Running Threshold Intervals",
-    "rationale": "Threshold Development (Endurance Block): Sustained efforts right at lactate threshold to elevate sustainable race pace.",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        600,
+        360,
         50,
         75,
         "heart_rate"
@@ -2071,88 +2282,95 @@
         "heart_rate"
       ],
       [
-        "recovery",
-        240,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
         "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "cooldown",
-        2040,
-        45,
-        55,
-        "heart_rate"
-      ]
-    ],
-    "targetType": "heart_rate",
-    "tss": 120.0
-  },
-  {
-    "date": "2026-11-18",
-    "intensity": 2,
-    "minutes": 60.0,
-    "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        65,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        2520,
+        420,
         65,
         72,
         "heart_rate"
       ],
       [
         "cooldown",
-        540,
-        50,
-        58,
+        300,
+        45,
+        55,
         "heart_rate"
       ]
     ],
     "targetType": "heart_rate",
-    "tss": 50.0
+    "targets": [
+      [
+        "bpm",
+        92,
+        112
+      ],
+      [
+        "bpm",
+        102,
+        119
+      ]
+    ],
+    "tss": 41.7,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-18",
+    "intensity": 1,
+    "kind": "recovery",
+    "minutes": 60.0,
+    "name": "Running Active Recovery",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "heart_rate"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "heart_rate"
+      ]
+    ],
+    "targetType": "heart_rate",
+    "targets": [
+      [
+        "bpm",
+        82,
+        102
+      ],
+      [
+        "bpm",
+        92,
+        112
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
   },
   {
     "date": "2026-11-19",
     "intensity": 4,
-    "minutes": 90.0,
+    "kind": "hard",
+    "minutes": 40.0,
     "name": "Running Threshold Intervals",
-    "rationale": "Threshold Development (Endurance Block): Sustained efforts right at lactate threshold to elevate sustainable race pace.",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        600,
+        360,
         50,
         75,
         "heart_rate"
@@ -2193,83 +2411,90 @@
         "heart_rate"
       ],
       [
-        "recovery",
-        240,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
         "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "cooldown",
-        2040,
-        45,
-        55,
-        "heart_rate"
-      ]
-    ],
-    "targetType": "heart_rate",
-    "tss": 120.0
-  },
-  {
-    "date": "2026-11-20",
-    "intensity": 2,
-    "minutes": 60.0,
-    "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        65,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        2520,
+        420,
         65,
         72,
         "heart_rate"
       ],
       [
         "cooldown",
-        540,
-        50,
-        58,
+        300,
+        45,
+        55,
         "heart_rate"
       ]
     ],
     "targetType": "heart_rate",
-    "tss": 50.0
+    "targets": [
+      [
+        "bpm",
+        92,
+        112
+      ],
+      [
+        "bpm",
+        102,
+        119
+      ]
+    ],
+    "tss": 41.7,
+    "week": "load"
+  },
+  {
+    "date": "2026-11-20",
+    "intensity": 1,
+    "kind": "recovery",
+    "minutes": 60.0,
+    "name": "Running Active Recovery",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "heart_rate"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "heart_rate"
+      ]
+    ],
+    "targetType": "heart_rate",
+    "targets": [
+      [
+        "bpm",
+        82,
+        102
+      ],
+      [
+        "bpm",
+        92,
+        112
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
   },
   {
     "date": "2026-11-21",
     "intensity": 2,
-    "minutes": 180.0,
+    "kind": "long",
+    "minutes": 105.0,
     "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
+    "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "running",
     "steps": [
       [
@@ -2281,7 +2506,7 @@
       ],
       [
         "interval",
-        9600,
+        5100,
         65,
         72,
         "heart_rate"
@@ -2295,14 +2520,28 @@
       ]
     ],
     "targetType": "heart_rate",
-    "tss": 150.0
+    "targets": [
+      [
+        "bpm",
+        102,
+        116
+      ],
+      [
+        "bpm",
+        102,
+        125
+      ]
+    ],
+    "tss": 76.8,
+    "week": "load"
   },
   {
     "date": "2026-11-22",
     "intensity": 2,
-    "minutes": 120.0,
+    "kind": "easy",
+    "minutes": 75.0,
     "name": "Running Aerobic Base Building",
-    "rationale": "Aerobic Base Building (Endurance Block): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism.",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
       [
@@ -2314,7 +2553,7 @@
       ],
       [
         "interval",
-        6000,
+        3300,
         65,
         72,
         "heart_rate"
@@ -2328,265 +2567,350 @@
       ]
     ],
     "targetType": "heart_rate",
-    "tss": 100.0
+    "targets": [
+      [
+        "bpm",
+        102,
+        116
+      ],
+      [
+        "bpm",
+        102,
+        125
+      ]
+    ],
+    "tss": 53.4,
+    "week": "load"
   },
   {
     "date": "2026-11-23",
-    "intensity": 1,
-    "minutes": 45.0,
-    "name": "Running Active Recovery",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        300,
-        45,
-        55,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        2100,
-        50,
-        55,
-        "heart_rate"
-      ],
-      [
-        "cooldown",
-        300,
-        40,
-        50,
-        "heart_rate"
-      ]
-    ],
-    "targetType": "heart_rate",
-    "tss": 26.2
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "recovery"
   },
   {
     "date": "2026-11-24",
-    "intensity": 3,
+    "intensity": 4,
+    "kind": "hard",
     "minutes": 45.0,
-    "name": "Running Sweet Spot / Tempo Blocks",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
+    "name": "Running Threshold Intervals",
+    "rationale": "Recovery week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        540,
+        420,
         50,
-        70,
+        75,
         "heart_rate"
       ],
       [
         "interval",
-        600,
-        85,
-        88,
+        60,
+        95,
+        100,
         "heart_rate"
       ],
       [
         "recovery",
-        180,
+        60,
         50,
         60,
         "heart_rate"
       ],
       [
         "interval",
-        600,
-        85,
-        88,
+        480,
+        96,
+        102,
         "heart_rate"
       ],
       [
-        "cooldown",
-        780,
-        45,
-        55,
-        "heart_rate"
-      ]
-    ],
-    "targetType": "heart_rate",
-    "tss": 48.8
-  },
-  {
-    "date": "2026-11-25",
-    "intensity": 2,
-    "minutes": 54.0,
-    "name": "Running Aerobic Base Building",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        486,
+        "recovery",
+        240,
         50,
-        65,
+        60,
         "heart_rate"
       ],
       [
         "interval",
-        2268,
+        480,
+        96,
+        102,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        660,
         65,
         72,
         "heart_rate"
       ],
       [
         "cooldown",
-        486,
-        50,
-        58,
-        "heart_rate"
-      ]
-    ],
-    "targetType": "heart_rate",
-    "tss": 45.0
-  },
-  {
-    "date": "2026-11-26",
-    "intensity": 3,
-    "minutes": 45.0,
-    "name": "Running Sweet Spot / Tempo Blocks",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
-    "sport": "running",
-    "steps": [
-      [
-        "warmup",
-        540,
-        50,
-        70,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        600,
-        85,
-        88,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        180,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        600,
-        85,
-        88,
-        "heart_rate"
-      ],
-      [
-        "cooldown",
-        780,
+        300,
         45,
         55,
         "heart_rate"
       ]
     ],
     "targetType": "heart_rate",
-    "tss": 48.8
+    "targets": [
+      [
+        "bpm",
+        92,
+        112
+      ],
+      [
+        "bpm",
+        102,
+        119
+      ]
+    ],
+    "tss": 45.5,
+    "week": "recovery"
   },
   {
-    "date": "2026-11-27",
+    "date": "2026-11-25",
     "intensity": 1,
-    "minutes": 45.0,
+    "kind": "recovery",
+    "minutes": 30.0,
     "name": "Running Active Recovery",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
+    "rationale": "Recovery week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        300,
+        270,
         45,
         55,
         "heart_rate"
       ],
       [
         "interval",
-        2100,
+        1260,
         50,
         55,
         "heart_rate"
       ],
       [
         "cooldown",
-        300,
+        270,
         40,
         50,
         "heart_rate"
       ]
     ],
     "targetType": "heart_rate",
-    "tss": 26.2
+    "targets": [
+      [
+        "bpm",
+        82,
+        102
+      ],
+      [
+        "bpm",
+        92,
+        112
+      ]
+    ],
+    "tss": 13.0,
+    "week": "recovery"
+  },
+  {
+    "date": "2026-11-26",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 35.0,
+    "name": "Running Aerobic Base Building",
+    "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        315,
+        50,
+        65,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        1470,
+        65,
+        72,
+        "heart_rate"
+      ],
+      [
+        "cooldown",
+        315,
+        50,
+        58,
+        "heart_rate"
+      ]
+    ],
+    "targetType": "heart_rate",
+    "targets": [
+      [
+        "bpm",
+        102,
+        116
+      ],
+      [
+        "bpm",
+        102,
+        125
+      ]
+    ],
+    "tss": 24.6,
+    "week": "recovery"
+  },
+  {
+    "date": "2026-11-27",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 30.0,
+    "name": "Running Aerobic Base Building",
+    "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        270,
+        50,
+        65,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        1260,
+        65,
+        72,
+        "heart_rate"
+      ],
+      [
+        "cooldown",
+        270,
+        50,
+        58,
+        "heart_rate"
+      ]
+    ],
+    "targetType": "heart_rate",
+    "targets": [
+      [
+        "bpm",
+        102,
+        116
+      ],
+      [
+        "bpm",
+        102,
+        125
+      ]
+    ],
+    "tss": 21.1,
+    "week": "recovery"
   },
   {
     "date": "2026-11-28",
     "intensity": 2,
-    "minutes": 54.0,
+    "kind": "long",
+    "minutes": 70.0,
     "name": "Running Aerobic Base Building",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
+    "rationale": "Recovery week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        486,
+        600,
         50,
         65,
         "heart_rate"
       ],
       [
         "interval",
-        2268,
+        3000,
         65,
         72,
         "heart_rate"
       ],
       [
         "cooldown",
-        486,
+        600,
         50,
         58,
         "heart_rate"
       ]
     ],
     "targetType": "heart_rate",
-    "tss": 45.0
+    "targets": [
+      [
+        "bpm",
+        102,
+        116
+      ],
+      [
+        "bpm",
+        102,
+        125
+      ]
+    ],
+    "tss": 49.5,
+    "week": "recovery"
   },
   {
     "date": "2026-11-29",
     "intensity": 2,
-    "minutes": 54.0,
+    "kind": "easy",
+    "minutes": 35.0,
     "name": "Running Aerobic Base Building",
-    "rationale": "Deload Week (Endurance Block): Reduced volume to assimilate previous training stress and restore neuromuscular freshness.",
+    "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        486,
+        315,
         50,
         65,
         "heart_rate"
       ],
       [
         "interval",
-        2268,
+        1470,
         65,
         72,
         "heart_rate"
       ],
       [
         "cooldown",
-        486,
+        315,
         50,
         58,
         "heart_rate"
       ]
     ],
     "targetType": "heart_rate",
-    "tss": 45.0
+    "targets": [
+      [
+        "bpm",
+        102,
+        116
+      ],
+      [
+        "bpm",
+        102,
+        125
+      ]
+    ],
+    "tss": 24.6,
+    "week": "recovery"
   }
 ]

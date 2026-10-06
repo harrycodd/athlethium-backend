@@ -2,7 +2,11 @@
 Characterisation ("golden master") tests for the plan-generation engine.
 
 These record what the algorithm *does*, not what it *should* do. Any change to plan output
-shows up as a snapshot diff, so behaviour changes are always deliberate:
+shows up as a snapshot diff, so behaviour changes are always deliberate.
+
+History: the first baseline (commit "test: add emulator-backed test foundation...") recorded the
+original weekday-template algorithm; Phase 3 replaced it with the week planner and the snapshots
+were re-recorded deliberately in that commit.
 
     pytest tests/characterisation --snapshot-update   # only after reviewing the diff
 """
@@ -12,7 +16,7 @@ import datetime
 import pytest
 from syrupy.extensions.json import JSONSnapshotExtension
 
-from engine.periodization import PeriodizationEngine
+from engine.periodization import week_context
 from engine.physiology import PhysiologyEngine
 from engine.scheduler import TrainingScheduler
 from generators.endurance import EnduranceGenerator
@@ -41,6 +45,9 @@ def _summarise(doc):
             [s["type"], s["duration"], s.get("target_low"), s.get("target_high"), s["targetType"]]
             for s in doc.steps
         ],
+        "kind": doc.session_kind,
+        "week": doc.week_type,
+        "targets": sorted({tuple(s["target_range"].values()) for s in doc.steps if "target_range" in s})[:2],
         "rationale": doc.coach_rationale,
     }
 
@@ -50,7 +57,7 @@ def _plan(profile, start, days):
     for i in range(days):
         d = start + datetime.timedelta(days=i)
         try:
-            out.append(_summarise(TrainingScheduler.schedule_day(profile, d)))
+            out.append(_summarise(TrainingScheduler.schedule_day(profile, d, as_of=start)))
         except Exception as exc:  # the crash *is* the current behaviour we are recording
             out.append({"date": d.isoformat(), "error": f"{type(exc).__name__}: {exc}"})
     return out
@@ -129,10 +136,9 @@ def test_physiology_and_periodisation(snapshot_json):
             PhysiologyEngine.calculate_actual_tss("cycling", 3600),
             PhysiologyEngine.calculate_actual_tss("cycling", 0),
         ],
-        "phase": [
-            PeriodizationEngine.resolve_training_phase(make_goal(g), MONDAY)
-            for g in [None, "2026-10-05", "2026-10-01", "2026-10-15", "2026-10-30", "2026-12-01", "2027-03-01", "bad"]
+        "weeks": [
+            [week_context(make_goal(g), MONDAY + datetime.timedelta(weeks=w), 3, "u1").week_type for w in range(10)]
+            for g in [None, "2026-10-05", "2026-11-29", "2027-03-01", "bad"]
         ],
-        "meso": [PeriodizationEngine.resolve_mesocycle_week(MONDAY + datetime.timedelta(weeks=w), 3) for w in range(8)],
     }
     assert out == snapshot_json

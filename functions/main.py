@@ -183,8 +183,9 @@ def generate_training_session(req: https_fn.Request) -> https_fn.Response:
                 "details": validation_errors
             }, 400)
 
+        today = UserService.today_for(user_profile)  # the athlete's local calendar day
         if start_date is None:
-            start_date = UserService.today_for(user_profile)
+            start_date = today
 
         generated_dates, skipped_dates = [], []
         for i in range(num_days):
@@ -193,7 +194,8 @@ def generate_training_session(req: https_fn.Request) -> https_fn.Response:
             if WorkoutService.has_workout_for_date(uid, current_date_str):
                 skipped_dates.append(current_date_str)
                 continue
-            workout_doc = TrainingScheduler.schedule_day(user_profile=user_profile, target_date=current_date, user_id=uid)
+            workout_doc = TrainingScheduler.schedule_day(user_profile=user_profile, target_date=current_date,
+                                                         user_id=uid, as_of=today)
             if WorkoutService.save_workout(workout_doc):
                 generated_dates.append(current_date_str)
             else:

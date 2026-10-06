@@ -90,6 +90,9 @@ class UserProfile:
     metrics_date: Optional[str] = None
     # IANA time zone (e.g. "Europe/London") used to decide which calendar day "today" is
     timezone: Optional[str] = None
+    # Which thresholds the athlete has actually provided (None = treat all as known).
+    # Keys: cycling_power, running_power, running_pace, swim_pace, hr
+    known_thresholds: Optional[List[str]] = None
 
     # Goal and history
     goal: Optional[Goal] = None
@@ -165,6 +168,8 @@ class WorkoutDoc:
     tss_type: str = "estimated"
     coach_rationale: Optional[str] = None
     execution_tips: Optional[str] = None
+    session_kind: Optional[str] = None
+    week_type: Optional[str] = None
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -187,4 +192,6 @@ class WorkoutDoc:
             "tss_type": self.tss_type,
             "coach_rationale": self.coach_rationale,
             "execution_tips": self.execution_tips,
+            "session_kind": self.session_kind,
+            "week_type": self.week_type,
         }

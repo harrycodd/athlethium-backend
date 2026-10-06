@@ -1,0 +1,14 @@
+{
+  "_about": "Alex: former club runner (sub-40 10k) back after two years off; jogging 2-3x/week again. Half marathon in 12 weeks.",
+  "displayName": "Alex (returning athlete)",
+  "fitness_level": "advanced",
+  "sports": ["running", "strength"],
+  "focused_sports": ["running"],
+  "equipment": ["hr_monitor", "dumbbells"],
+  "weekly_hours": 7,
+  "dailyMaxHours": {"Monday": 1, "Tuesday": 1, "Wednesday": 1, "Thursday": 1, "Friday": 0.75, "Saturday": 2, "Sunday": 1.5},
+  "ctl": 20, "atl": 22, "metricsDate": "2026-10-04",
+  "ftpPaceRunning": 270, "fthr": 176,
+  "goal": {"name": "City Half Marathon", "date": "2026-12-27", "sports": ["running"], "targetTime": 5700},
+  "wizardCompleted": true
+}

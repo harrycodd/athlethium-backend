@@ -33,7 +33,9 @@ class TestEndurance:
         ("running", ["running_power"], "power"),
         ("running", ["hr_monitor"], "heart_rate"),
         ("cycling", ["heart_rate"], "heart_rate"),
-        ("running", ["bodyweight"], "power"),
+        ("running", ["bodyweight"], "pace"),
+        ("running", ["power_meter"], "pace"),
+        ("cycling", ["running_power"], "power"),
         ("swimming", ["swim_watch"], "pace"),
         ("swimming", [], "time"),
         ("rowing", [], "power"),
@@ -53,11 +55,34 @@ class TestEndurance:
         assert {s["duration"] for s in long_blocks} == {900}
         assert {s["duration"] for s in short_blocks} == {600}
 
-    def test_vo2_microbursts_vs_repeats(self):
-        long_w = [s for s in E.generate("cycling", 1.5, 5)["steps"] if s["type"] == "interval"]
-        short_w = [s for s in E.generate("cycling", 0.75, 5)["steps"] if s["type"] == "interval"]
-        assert len(long_w) == 12 and {s["duration"] for s in long_w} == {30}
-        assert len(short_w) == 4 and {s["duration"] for s in short_w} == {150}
+    @pytest.mark.parametrize("hours,reps", [(0.5, 3), (0.75, 5), (1.5, 6), (3.0, 6)])
+    def test_vo2_three_minute_repeats_scale_with_time(self, hours, reps):
+        work = [s for s in E.generate("cycling", hours, 5)["steps"] if s["name"].startswith("VO2 Max Repeat")]
+        assert len(work) == reps and {s["duration"] for s in work} == {180}
+
+    @pytest.mark.parametrize("hours,reps", [(0.5, 2), (1.0, 3), (1.5, 4), (3.0, 4)])
+    def test_threshold_reps_scale_with_time(self, hours, reps):
+        work = [s for s in E.generate("cycling", hours, 4)["steps"] if s["name"].startswith("Threshold Interval")]
+        assert len(work) == reps and {s["duration"] for s in work} == {480}
+
+    @pytest.mark.parametrize("intensity", [4, 5])
+    def test_spare_time_in_long_hard_sessions_is_zone2_not_cooldown(self, intensity):
+        steps = E.generate("cycling", 2.5, intensity)["steps"]
+        assert steps[-2]["name"] == "Steady Aerobic Z2" and steps[-2]["duration"] > 1800
+        assert steps[-1]["type"] == "cooldown" and steps[-1]["duration"] <= 600
+
+    @pytest.mark.parametrize("kind,marker,max_high_s", [("opener", "Opener", 180), ("shakeout", "Shake-Out", 60)])
+    def test_race_week_sessions_are_light(self, kind, marker, max_high_s):
+        w = E.generate_race_week_session(kind, "running", 0.75 if kind == "opener" else 0.42, ["hr_monitor"])
+        assert marker in w["name"] and w["targetType"] == "heart_rate"
+        high = sum(s["duration"] for s in w["steps"] if (s["target_low"] + s["target_high"]) / 2 > 90)
+        assert high <= max_high_s
+        assert total(w) == w["total_duration_sec"]
+
+    def test_race_session(self):
+        w = E.generate_race_week_session("race", "cycling", 3.0, race_name="Gran Fondo")
+        assert w["name"] == "Race Day: Gran Fondo" and w["total_duration_sec"] == 10800
+        assert E.generate_race_week_session("race", "running", 0.1)["total_duration_sec"] == 900
 
     @pytest.mark.parametrize("sport,marker", [
         ("cycling", "FTP"), ("running", "Threshold Pace"), ("swimming", "CSS"), ("rowing", "Baseline"),

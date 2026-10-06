@@ -1,141 +1,124 @@
 """
-Daily Training Scheduler & Intensity Orchestrator.
-Determines daily workout prescription, sport rotation, and intensity distribution.
+Daily Training Scheduler.
+
+Turns one day of the week plan (engine.planner) into a structured, athlete-specific workout:
+steps from the generators, targets in the athlete's own watts / bpm / pace, TSS from the steps,
+and day-of safety guardrails (injury, illness, deep fatigue).
 """
 
 import dataclasses
 import datetime
-from typing import Dict, Any, List, Optional
-from core.models import UserProfile, WorkoutDoc, TrainingPhase
-from engine.physiology import PhysiologyEngine
-from engine.periodization import PeriodizationEngine
+from typing import Optional
+
+from core.models import TargetType, TrainingPhase, UserProfile, WorkoutDoc
 from engine.guardrails import GuardrailEngine
-from generators.endurance import EnduranceGenerator
-from generators.strength import StrengthGenerator
-from generators.mobility import MobilityGenerator
+from engine.periodization import WeekType
+from engine.physiology import PhysiologyEngine
+from engine.planner import Kind, PlannedSession, WeekPlan, WeekPlanner
+from engine.sessions import build_payload, payload_tss
+from engine.zones import apply_athlete_targets
+
+ENDURANCE = ("cycling", "running", "swimming")
+GUARDRAIL_HORIZON_DAYS = 7
+
+WEEK_LABELS = {
+    WeekType.LOAD: "Load week",
+    WeekType.RECOVERY: "Recovery week",
+    WeekType.TAPER: "Taper week",
+    WeekType.RACE: "Race week",
+    WeekType.POST_RACE: "Post-race recovery week",
+}
+PHASE_LABELS = {
+    TrainingPhase.BASE: "Base",
+    TrainingPhase.BUILD: "Build",
+    TrainingPhase.PEAK: "Peak",
+    TrainingPhase.TAPER: "Taper",
+    TrainingPhase.RACE: "Race",
+    TrainingPhase.RECOVERY: "Recovery",
+}
+SESSION_PURPOSE = {
+    Kind.EASY: "Aerobic base: conversational Zone 2. Most of your training lives here.",
+    Kind.LONG: "Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
+    Kind.RECOVERY: "Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
+    Kind.STRENGTH: "Strength: supports injury resistance and power transfer. Kept away from the day before a hard session.",
+    Kind.MOBILITY: "Mobility on a rest day.",
+    Kind.BENCHMARK: "Benchmark test: re-measures your threshold so every target stays personal to you.",
+    Kind.OPENER: "Race opener three days out: short race-pace efforts to stay sharp without fatigue.",
+    Kind.SHAKEOUT: "Pre-race shake-out: short and easy with a few strides.",
+    Kind.RACE: "Race day.",
+}
 
 
 class TrainingScheduler:
-    """
-    Master scheduler implementing Polarized 80/20 periodization.
-    """
 
     @classmethod
     def schedule_day(
         cls,
         user_profile: UserProfile,
         target_date: datetime.date,
-        user_id: Optional[str] = None
+        user_id: Optional[str] = None,
+        as_of: Optional[datetime.date] = None,
     ) -> WorkoutDoc:
+        """
+        `as_of` is the athlete's "today" (plans ramp from there). Defaults to target_date, which
+        plans the week stand-alone from the athlete's current fitness.
+        """
         uid = user_id or user_profile.uid
         date_str = target_date.strftime("%Y-%m-%d")
-        user_profile = cls._project_fitness(user_profile, target_date)
-        day_name = target_date.strftime("%A")
+        week = WeekPlanner.plan_week(user_profile, target_date, as_of=as_of)
+        session = week.session_on(target_date)
 
-        # 1. Resolve Available Hours for today
-        available_hours = cls._resolve_daily_hours(user_profile, target_date)
-        if available_hours < 0.4:
-            return cls._create_rest_workout(uid, date_str, "Rest Day (Zero/Minimal Time Available)")
+        if session.kind == Kind.REST:
+            return cls._rest(uid, date_str, session.reason or "Planned rest day", week)
 
-        # 4. Resolve Periodization Phase & Mesocycle Week
-        phase, days_to_goal = PeriodizationEngine.resolve_training_phase(user_profile.goal, target_date)
-        rel_week, is_recovery_week, vol_mult = PeriodizationEngine.resolve_mesocycle_week(
-            target_date, user_profile.intensity_weeks
-        )
-
-        # 5. Check for Post-Deload Benchmark Testing
-        is_benchmark, benchmark_sport = cls._resolve_benchmark_test(
-            user_profile=user_profile,
-            target_date=target_date,
-            rel_week=rel_week,
-            is_recovery_week=is_recovery_week,
-            day_name=day_name
-        )
-
-        # 6. Analyze Recent History
-        recent_intensities = cls._get_recent_intensities(user_profile)
-        num_hard_days_recent = sum(1 for i in recent_intensities[-6:] if i >= 4)
-
-        # 7. Resolve Sport
-        sport = benchmark_sport if is_benchmark and benchmark_sport else cls._select_sport_for_day(user_profile, day_name)
-
-        # 8. Determine Intensity & Duration based on Periodization and Athlete State
-        tsb = user_profile.ctl - user_profile.atl
-        if is_benchmark:
-            raw_intensity = 5
-            raw_duration = min(available_hours, 1.25)
-        else:
-            raw_intensity, raw_duration = cls._determine_intensity_and_duration(
-                sport=sport,
-                day_name=day_name,
-                available_hours=available_hours,
-                phase=phase,
-                is_recovery_week=is_recovery_week,
-                tsb=tsb,
-                num_hard_days_recent=num_hard_days_recent,
-                vol_mult=vol_mult
+        intensity, hours, clamp_reason = session.intensity, session.hours, None
+        # Day-of guardrails use today's fatigue, so they only apply to the coming week; later weeks
+        # are planned on the assumption the athlete follows the plan (and get re-checked then).
+        near_term = as_of is None or (target_date - as_of).days < GUARDRAIL_HORIZON_DAYS
+        if session.sport in ENDURANCE and session.kind != Kind.RACE and near_term:
+            projected = cls._project_fitness(user_profile, target_date)
+            intensity, hours, clamp_reason = GuardrailEngine.apply_safety_clamps(
+                user_profile=projected, requested_intensity=session.intensity,
+                requested_duration=session.hours, recent_intensities=[],
             )
+            if intensity <= 0:
+                return cls._rest(uid, date_str, clamp_reason or "Rest & recovery", week)
+            if clamp_reason:
+                session = dataclasses.replace(session, kind=Kind.RECOVERY if intensity == 1 else Kind.EASY,
+                                              intensity=intensity, hours=hours, style=None)
 
-        # 9. Apply Physiological Safety Guardrails
-        safe_intensity, safe_duration, clamp_reason = GuardrailEngine.apply_safety_clamps(
-            user_profile=user_profile,
-            requested_intensity=raw_intensity,
-            requested_duration=raw_duration,
-            recent_intensities=recent_intensities
-        )
+        payload = build_payload(session, user_profile)
+        steps = payload.get("steps", [])
+        has_targets = False
+        if session.sport in ENDURANCE:
+            has_targets = apply_athlete_targets(steps, session.sport, payload.get("targetType", "time"), user_profile)
+        tss = payload_tss(session, payload)
 
-        if safe_intensity <= 0:
-            return cls._create_rest_workout(uid, date_str, clamp_reason or "Rest & Physiological Recovery")
-
-        # 10. Generate Structured Steps via Domain Generators
-        if is_benchmark and sport in ["cycling", "running", "swimming"]:
-            workout_payload = EnduranceGenerator.generate_benchmark_workout(
-                sport=sport,
-                duration_hours=safe_duration,
-                interval_style=user_profile.interval_type
-            )
-        else:
-            workout_payload = cls._generate_steps_for_sport(
-                sport=sport,
-                intensity=safe_intensity,
-                duration_hours=safe_duration,
-                user_profile=user_profile
-            )
-
-        # 11. Build Rich Scientific Coaching Description
-        coaching_notes = cls._build_coaching_notes(
-            sport=sport,
-            intensity=safe_intensity,
-            phase=phase,
-            is_recovery_week=is_recovery_week,
-            clamp_reason=clamp_reason,
-            is_benchmark=is_benchmark
-        )
-
-        session_desc = workout_payload.get("description", "").strip()
-        full_description = "\n\n".join(part for part in (session_desc, coaching_notes) if part)
-
-        is_strength_or_mobility = sport.lower() in ["strength", "stretching", "yoga", "rest"]
-        estimated_tss = 0.0 if is_strength_or_mobility else PhysiologyEngine.estimate_session_tss(safe_intensity, safe_duration, sport)
-        total_time_sec = int(round(safe_duration * 3600))
-        exec_tips = "Focus on form, controlled eccentric tempo, and full range of motion." if is_strength_or_mobility else f"Focus on consistent execution. Target intensity: Zone {safe_intensity}."
+        notes = cls._coaching_notes(session, week, clamp_reason, has_targets)
+        description = "\n\n".join(p for p in (payload.get("description", "").strip(), notes) if p)
+        total_time_sec = sum(st["duration"] for st in steps) if steps else int(round(session.hours * 3600))
+        is_endurance = session.sport in ENDURANCE
 
         return WorkoutDoc(
             workout_id=f"plan_{uid}_{date_str}",
             user_id=uid,
             date=date_str,
-            name=workout_payload.get("name", f"{sport.capitalize()} Session"),
-            sport=sport,
-            intensity=None if is_strength_or_mobility else safe_intensity,
+            name=payload.get("name", f"{session.sport.capitalize()} Session"),
+            sport=session.sport,
+            intensity=session.intensity if is_endurance else None,
             time=total_time_sec,
             planned_time=total_time_sec,
-            tss=estimated_tss,
-            planned_tss=estimated_tss,
-            target_type=workout_payload.get("targetType", "time"),
-            description=full_description,
-            steps=workout_payload.get("steps", []),
-            coach_rationale=coaching_notes,
-            execution_tips=exec_tips
+            tss=tss,
+            planned_tss=tss,
+            target_type=payload.get("targetType", "time"),
+            description=description,
+            steps=steps,
+            event_type="Race" if session.kind == Kind.RACE else "Training",
+            coach_rationale=notes,
+            execution_tips=("Focus on form, controlled tempo and full range of motion." if not is_endurance
+                            else cls._execution_tip(session, has_targets)),
+            session_kind=session.kind,
+            week_type=week.context.week_type,
         )
 
     @classmethod
@@ -152,274 +135,35 @@ class TrainingScheduler:
         )
         return dataclasses.replace(user_profile, ctl=ctl, atl=atl)
 
-    @classmethod
-    def _resolve_daily_hours(cls, user_profile: UserProfile, target_date: datetime.date) -> float:
-        date_str = target_date.strftime("%Y-%m-%d")
-        day_name = target_date.strftime("%A")
-
-        # 1. Date override
-        if date_str in user_profile.daily_hours_overrides:
-            return float(user_profile.daily_hours_overrides[date_str])
-
-        # 2. Day-of-week max hours
-        if day_name in user_profile.daily_max_hours:
-            return float(user_profile.daily_max_hours[day_name])
-
-        # 3. Default fallback
-        return float(user_profile.daily_available_hours)
-
-    @classmethod
-    def _select_sport_for_day(cls, user_profile: UserProfile, day_name: str) -> str:
-        focused = user_profile.focused_sports or ["cycling"]
-        all_sports = user_profile.sports or focused
-
-        # If only one sport active
-        if len(all_sports) == 1:
-            return all_sports[0]
-
-        # Monday is typically Mobility / Strength / Active Recovery
-        if day_name == "Monday":
-            if "stretching" in all_sports:
-                return "stretching"
-            elif "strength" in all_sports:
-                return "strength"
-            return focused[0]
-
-        # Wednesday / Friday: Alternate focused sports or cross-training
-        if day_name in ["Wednesday", "Friday"]:
-            if len(focused) > 1:
-                secondary = focused[1] if day_name == "Wednesday" else (focused[2] if len(focused) > 2 else focused[0])
-                return secondary
-            secondary_sports = [s for s in all_sports if s not in focused]
-            if secondary_sports:
-                idx = 0 if day_name == "Wednesday" else min(1, len(secondary_sports) - 1)
-                return secondary_sports[idx]
-
-        # Sunday: Strength, Mobility or secondary endurance
-        if day_name == "Sunday":
-            if "strength" in all_sports and "strength" not in focused:
-                return "strength"
-            if len(focused) > 1:
-                return focused[-1]
-
-        # Primary quality interval days (Tuesday, Thursday, Saturday)
-        return focused[0]
-
-    @classmethod
-    def _determine_intensity_and_duration(
-        cls,
-        sport: str,
-        day_name: str,
-        available_hours: float,
-        phase: TrainingPhase,
-        is_recovery_week: bool,
-        tsb: float,
-        num_hard_days_recent: int,
-        vol_mult: float
-    ) -> (int, float):
-        """
-        Determines intensity zone (1-7) and duration based on weekly rhythm and form.
-        """
-        if sport in ["strength", "yoga", "stretching"]:
-            duration = min(available_hours, 1.0)
-            return (2 if sport == "strength" else 1), duration
-
-        # Race Day
-        if phase == TrainingPhase.RACE:
-            return 7, min(available_hours, 2.0)
-
-        # Taper Phase (High intensity sharpness, reduced volume)
-        if phase == TrainingPhase.TAPER:
-            if day_name in ["Tuesday", "Thursday"] and num_hard_days_recent < 2:
-                return 5, min(available_hours, 1.0 * vol_mult)  # Short VO2 Max sharpness
-            elif day_name in ["Monday", "Friday"]:
-                return 1, min(available_hours, 0.75)  # Active Recovery
-            else:
-                return 2, min(available_hours, 1.25 * vol_mult)  # Easy Aerobic
-
-        # Deload / Recovery Week
-        if is_recovery_week:
-            if day_name in ["Tuesday", "Thursday"] and tsb >= 0:
-                return 3, min(available_hours, 1.25 * vol_mult)  # Light Tempo
-            elif day_name in ["Monday", "Friday"]:
-                return 1, min(available_hours, 0.75)  # Easy Recovery
-            else:
-                return 2, min(available_hours, 1.5 * vol_mult)  # Aerobic Base
-
-        # Regular Loading Week (Standard Polarized Rhythm):
-        # - Tuesday: High Intensity Interval Day (Zone 5 VO2 Max or Zone 4 Threshold)
-        # - Thursday: Tempo / Threshold (Zone 3/4)
-        # - Saturday: Long Aerobic Endurance (Zone 2)
-        # - Sunday: Moderate Aerobic Base (Zone 2) or Strength
-        # - Wednesday / Friday: Steady Base (Zone 2)
-        # - Monday: Active Recovery (Zone 1) or Rest
-
-        if day_name == "Tuesday":
-            if tsb >= -15 and num_hard_days_recent < 2:
-                intensity = 5 if phase in [TrainingPhase.BUILD, TrainingPhase.PEAK] else 4
-                duration = min(available_hours, 1.5 * vol_mult)
-                return intensity, duration
-            else:
-                return 2, min(available_hours, 1.5 * vol_mult)
-
-        elif day_name == "Thursday":
-            if tsb >= -10 and num_hard_days_recent < 2:
-                return 4, min(available_hours, 1.5 * vol_mult)
-            else:
-                return 3, min(available_hours, 1.5 * vol_mult)
-
-        elif day_name == "Saturday":
-            # Weekend long endurance session
-            return 2, min(available_hours, 3.0 * vol_mult)
-
-        elif day_name == "Sunday":
-            return 2, min(available_hours, 2.0 * vol_mult)
-
-        elif day_name == "Monday":
-            return 1, min(available_hours, 1.0)
-
-        else:  # Wednesday / Friday
-            return 2, min(available_hours, 1.5 * vol_mult)
-
-    @classmethod
-    def _generate_steps_for_sport(
-        cls,
-        sport: str,
-        intensity: int,
-        duration_hours: float,
-        user_profile: UserProfile
-    ) -> Dict[str, Any]:
-        # Extract target anatomical focus from goal notes if present
-        anatomical_focus = "full"
-        if user_profile.goal and user_profile.goal.notes:
-            notes_lower = user_profile.goal.notes.lower()
-            if "target area: core" in notes_lower or "core" in notes_lower:
-                anatomical_focus = "core"
-            elif "target area: lower" in notes_lower or "legs" in notes_lower or "lower body" in notes_lower:
-                anatomical_focus = "lower"
-            elif "target area: upper" in notes_lower or "upper body" in notes_lower:
-                anatomical_focus = "upper"
-
-        if sport == "strength":
-            dur_mins = int(duration_hours * 60)
-            return StrengthGenerator.generate(
-                focus=anatomical_focus,
-                duration_minutes=dur_mins,
-                difficulty=min(3, max(1, intensity)),
-                user_equipment=user_profile.equipment
-            )
-        elif sport in ["yoga", "stretching"]:
-            dur_mins = int(duration_hours * 60)
-            return MobilityGenerator.generate(
-                focus=anatomical_focus,
-                duration_minutes=dur_mins
-            )
-        else:
-            # Cycling, running, swimming
-            return EnduranceGenerator.generate(
-                sport=sport,
-                duration_hours=duration_hours,
-                intensity=intensity,
-                user_equipment=user_profile.equipment,
-                interval_style=user_profile.interval_type
-            )
-
-
-    @classmethod
-    def _resolve_benchmark_test(
-        cls,
-        user_profile: UserProfile,
-        target_date: datetime.date,
-        rel_week: int,
-        is_recovery_week: bool,
-        day_name: str
-    ) -> (bool, Optional[str]):
-        """
-        Determines whether today should be a benchmark assessment session.
-        Scheduled on the first key training day(s) immediately following a deload week (Week 1 of mesocycle).
-        Supports testing up to 3 main focused sports distributed based on athlete fitness level (CTL).
-        """
-        # Benchmark testing occurs on Week 1 of a loading mesocycle (first week after deload)
-        if is_recovery_week or rel_week != 1:
-            return False, None
-
-        focused = [s for s in (user_profile.focused_sports or ["cycling"]) if s in ["cycling", "running", "swimming"]][:3]
-        if not focused:
-            return False, None
-
-        num_focuses = len(focused)
-        is_high_fitness = user_profile.ctl >= 70 or (user_profile.fitness_level in ["advanced", "elite"])
-
-        if is_high_fitness:
-            # High capacity athlete: Can test primary on Tuesday, secondary on Thursday, tertiary on Saturday
-            if day_name == "Tuesday":
-                return True, focused[0]
-            elif day_name == "Thursday" and num_focuses >= 2:
-                return True, focused[1]
-            elif day_name == "Saturday" and num_focuses >= 3:
-                return True, focused[2]
-        else:
-            # Intermediate / Beginner: Separate tests with full recovery in between
-            if day_name == "Tuesday":
-                return True, focused[0]
-            elif day_name == "Saturday" and num_focuses >= 2:
-                return True, focused[1]
-            elif day_name == "Thursday" and num_focuses >= 3 and user_profile.ctl >= 45:
-                return True, focused[2]
-
-        return False, None
-
-    @classmethod
-    def _build_coaching_notes(
-        cls,
-        sport: str,
-        intensity: int,
-        phase: TrainingPhase,
-        is_recovery_week: bool,
-        clamp_reason: Optional[str],
-        is_benchmark: bool = False
-    ) -> str:
+    @staticmethod
+    def _coaching_notes(session: PlannedSession, week: WeekPlan, clamp_reason: Optional[str], has_targets: bool) -> str:
+        ctx = week.context
+        header = f"{WEEK_LABELS.get(ctx.week_type, 'Training week')} ({PHASE_LABELS.get(ctx.phase, 'Base')} phase)"
+        if week.comeback:
+            header += ": easing back in after time off, aerobic only this week"
+        if ctx.weeks_to_goal:
+            header += f", {ctx.weeks_to_goal} week{'s' if ctx.weeks_to_goal != 1 else ''} to your event"
         if clamp_reason:
-            return f"Adaptive Guardrail: {clamp_reason}"
-
-        if is_benchmark:
-            return "Post-Deload Benchmark Assessment: Re-test your threshold and power/pace zones following your recovery week to calibrate upcoming training blocks."
-
-        phase_names = {
-            TrainingPhase.BASE: "Endurance Block",
-            TrainingPhase.BUILD: "Threshold Block",
-            TrainingPhase.PEAK: "Peak Block",
-            TrainingPhase.TAPER: "Taper Block",
-            TrainingPhase.RECOVERY: "Recovery Block",
-            TrainingPhase.RACE: "Race Block"
-        }
-        phase_label = phase_names.get(phase, "Endurance Block")
-
-        if is_recovery_week:
-            return f"Deload Week ({phase_label}): Reduced volume to assimilate previous training stress and restore neuromuscular freshness."
-
-        if intensity == 5:
-            return f"High-Intensity Stimulus ({phase_label}): Targeted VO2 Max power intervals to raise maximum aerobic ceiling and cardiac stroke volume."
-        elif intensity == 4:
-            return f"Threshold Development ({phase_label}): Sustained efforts right at lactate threshold to elevate sustainable race pace."
-        elif intensity == 3:
-            return f"Sweet Spot Progression ({phase_label}): High training density stimulus balancing aerobic stimulus with rapid recovery."
-        elif intensity == 2:
-            return f"Aerobic Base Building ({phase_label}): Zone 2 mitochondrial stimulus developing endurance efficiency and lipid metabolism."
+            body = f"Adaptive Guardrail: {clamp_reason}"
+        elif session.kind == Kind.HARD:
+            body = ("Key session: VO2max intervals to raise your aerobic ceiling." if session.style == "vo2"
+                    else "Key session: threshold intervals to lift your sustainable pace.")
         else:
-            return f"Active Recovery ({phase_label}): Light regenerative effort to increase systemic blood circulation without adding fatigue."
+            body = SESSION_PURPOSE.get(session.kind, "")
+        if session.sport in ENDURANCE and not has_targets and session.kind != Kind.RACE:
+            body += " No threshold on file for this sport yet, so targets are % of threshold / feel (RPE)."
+        return f"{header}. {body}".strip()
+
+    @staticmethod
+    def _execution_tip(session: PlannedSession, has_targets: bool) -> str:
+        if session.kind in (Kind.EASY, Kind.LONG, Kind.RECOVERY):
+            return "Stay easy enough to talk in full sentences. Resist the urge to push."
+        if session.kind == Kind.HARD:
+            return "Hit the targets on every rep; stop the set if form or pace falls apart."
+        return "Follow the step targets." if has_targets else "Go by feel (RPE)."
 
     @classmethod
-    def _get_recent_intensities(cls, user_profile: UserProfile) -> List[int]:
-        # Extract recent intensities from history if available
-        intensities = []
-        for sport_data in user_profile.history.values():
-            if "focus" in sport_data:
-                intensities.extend([f for f in sport_data["focus"] if f > 0])
-        return intensities[-7:] if intensities else []
-
-    @classmethod
-    def _create_rest_workout(cls, user_id: str, date_str: str, reason: str) -> WorkoutDoc:
+    def _rest(cls, user_id: str, date_str: str, reason: str, week: Optional[WeekPlan] = None) -> WorkoutDoc:
         return WorkoutDoc(
             workout_id=f"plan_{user_id}_{date_str}",
             user_id=user_id,
@@ -431,8 +175,10 @@ class TrainingScheduler:
             planned_time=0,
             tss=0.0,
             planned_tss=0.0,
-            target_type="time",
+            target_type=TargetType.TIME.value,
             description=f"Complete Rest Day: {reason}. Allow physiological adaptations to take place.",
             steps=[],
-            coach_rationale=reason
+            coach_rationale=reason,
+            session_kind=Kind.REST,
+            week_type=week.context.week_type if week else None,
         )
