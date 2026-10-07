@@ -10,6 +10,7 @@ failure modes are covered in tests/handlers/test_strava.py.
 import datetime
 import os
 import socket
+import time
 
 import pytest
 import requests
@@ -126,3 +127,25 @@ def test_cors_preflight_allows_bearer_auth(emulators):
     })
     assert r.status_code in (200, 204)
     assert r.headers.get("Access-Control-Allow-Origin") in ("*", "http://localhost:8081")
+
+
+def _emulator_secret(name: str) -> str:
+    path = os.path.join(os.path.dirname(__file__), "..", "..", "functions", ".secret.local")
+    with open(path) as fh:
+        return next(line.split("=", 1)[1].strip() for line in fh if line.startswith(f"{name}="))
+
+
+def test_strava_webhook_handshake_queue_and_trigger(db):
+    """Strava -> strava_webhook -> stravaEvents -> process_strava_event, through the real emulators."""
+    r = requests.get(f"{BASE}/strava_webhook", timeout=30, params={
+        "hub.mode": "subscribe", "hub.verify_token": _emulator_secret("STRAVA_VERIFY_TOKEN"), "hub.challenge": "c-1"})
+    assert r.status_code == 200 and r.json() == {"hub.challenge": "c-1"}
+
+    event = {"object_type": "activity", "aspect_type": "create", "object_id": 1, "owner_id": 999_123,
+             "subscription_id": 1, "event_time": 1_790_000_000, "updates": {}}
+    assert post("strava_webhook", json=event).status_code == 200
+    ref = db.document("stravaEvents/activity_1_create_999123_1790000000")
+    deadline = datetime.datetime.now() + datetime.timedelta(seconds=60)
+    while datetime.datetime.now() < deadline and (ref.get().to_dict() or {}).get("status") in (None, "queued"):
+        time.sleep(0.5)  # the trigger runs asynchronously
+    assert ref.get().to_dict()["status"] == "ignored:unknown_athlete"  # no athlete linked: nothing else touched

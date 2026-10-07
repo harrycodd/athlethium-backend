@@ -141,6 +141,54 @@ It then redirects to `returnUrl` with one of:
 Revokes the grant with Strava (best effort) and deletes the stored tokens.
 Response: `{"message": "Strava disconnected", "data": {...}}`.
 
+### `strava_webhook` (called by Strava)
+
+The endpoint for Strava's push subscription. It takes no Firebase token.
+
+- **`GET`:** the subscription handshake. When `hub.mode=subscribe` and `hub.verify_token` matches
+  the `STRAVA_VERIFY_TOKEN` secret, it returns `{"hub.challenge": "<challenge>"}`. Otherwise it
+  returns `403`.
+- **`POST`:** an event such as `{"object_type": "activity" | "athlete", "aspect_type": "create" |
+  "update" | "delete", "object_id", "owner_id", "subscription_id", "event_time", "updates"}`.
+  - The event is validated (`400` if malformed) and queued as `stravaEvents/{type_id_aspect_owner_time}`.
+  - The response is `200` straight away. Strava's retries land on the same document, so they
+    are queued once.
+  - When `STRAVA_SUBSCRIPTION_ID` is set, events for other subscriptions are acknowledged and
+    dropped.
+
+### `process_strava_event` (Firestore trigger on `stravaEvents/{id}`)
+
+Handles each queued event for every account linked to the Strava athlete (`stravaAthleteId`).
+Nothing in the event is trusted:
+
+- **Activity created or updated:**
+  - The activity is fetched from Strava with the athlete's token, refreshing the token if it
+    expires within 5 minutes. It must belong to `owner_id`.
+  - Supported types are rides, runs, swims, strength (no TSS) and yoga/pilates (no TSS). Other
+    types are ignored.
+  - TSS comes from measured power (vs FTP) or heart rate (vs threshold HR).
+- **Which workout it lands on**, on the activity's local date and for the same sport:
+  1. A session already logged by FIT upload or by ticking it off, with duration within 25%, is
+     **linked**. A FIT upload keeps its own numbers; a ticked-off session takes Strava's.
+  2. Otherwise the first open planned session (morning first) is **completed**.
+  3. Otherwise a new completed workout `strava_{activityId}` is **imported**.
+- **Counting:** each activity is linked through `stravaLinks/{uid}_{activityId}`. Retries and
+  updates re-sync the same workout and apply only the TSS change, so nothing is counted twice.
+- **Activity deleted:** acted on only if Strava returns 404 for it.
+  - An imported workout is removed.
+  - A completed planned session is reopened.
+  - A FIT upload is just unlinked.
+  - The activity's TSS is taken back off fitness.
+- **Athlete revoked access** (`updates.authorized == "false"`): acted on only if Strava rejects the
+  athlete's refresh token. The tokens are then deleted and `stravaConnected` is set to `false`.
+
+The outcome is written to the event document's `status`:
+- `completed_planned`, `imported`, `updated`, `linked`, `unchanged`;
+- `removed`, `reopened`, `unlinked`, `disconnected`;
+- `ignored:<reason>` or `failed:<strava error code>`.
+
+Transient Strava errors are retried once.
+
 ---
 
 ## Firestore data
@@ -151,6 +199,7 @@ Response: `{"message": "Strava disconnected", "data": {...}}`.
 | `users/{uid}/private/*` | server only |
 | `workouts/{id}` | the owner (`userId == uid`) |
 | `oauthStates/{state}` | server only |
+| `stravaEvents/{id}`, `stravaLinks/{id}` | server only |
 
 The planner queries `workouts` by `userId` and `date`. This needs the composite index in
 `firestore.indexes.json`.

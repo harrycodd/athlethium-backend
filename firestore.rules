@@ -59,5 +59,13 @@ service cloud.firestore {
     match /oauthStates/{state} {
       allow read, write: if false;
     }
+
+    // Strava webhook queue and activity links: Cloud Functions only.
+    match /stravaEvents/{eventId} {
+      allow read, write: if false;
+    }
+    match /stravaLinks/{linkId} {
+      allow read, write: if false;
+    }
   }
 }

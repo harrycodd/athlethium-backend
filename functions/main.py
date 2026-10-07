@@ -2,18 +2,20 @@
 Firebase Cloud Functions Entry Points for Athlethium Backend.
 
 Every app-facing endpoint requires `Authorization: Bearer <Firebase ID token>`; the acting
-user is always the token's uid. `strava_callback` is the only unauthenticated endpoint and is
-protected by a single-use, server-issued OAuth state nonce.
+user is always the token's uid. Two endpoints are called by Strava instead:
+- `strava_callback` is protected by a single-use, server-issued OAuth state nonce;
+- `strava_webhook` only queues events; nothing in them is trusted (see services/strava_webhook.py).
 """
 
 import dataclasses
 import datetime
+import hmac
 import json
 import os
 import tempfile
 from typing import Any, Dict, Optional, Tuple
 
-from firebase_functions import https_fn, options
+from firebase_functions import firestore_fn, https_fn, options
 from firebase_admin import initialize_app, firestore, storage
 import firebase_admin
 
@@ -23,6 +25,7 @@ from services.profile_validator import ProfileValidator
 from services.workout_service import WorkoutService
 from services.workout_completer import WorkoutCompleterService, WorkoutNotFound, FitFileError
 from services.strava_service import StravaService, complete_authorization
+from services.strava_webhook import StravaWebhookService
 from engine.scheduler import TrainingScheduler
 
 
@@ -50,6 +53,9 @@ if not len(firebase_admin._apps):
 
 
 REGION = "europe-west2"
+# Firestore-triggered functions must run where the database is. Change this if the Firestore
+# database is not in europe-west2 (Firebase console -> Firestore -> location).
+FIRESTORE_TRIGGER_REGION = REGION
 # Bearer tokens (not cookies) carry auth, so any origin may call; CORS adds no ambient authority.
 CORS = options.CorsOptions(cors_origins="*", cors_methods=["post", "options"])
 MAX_PLAN_DAYS = 28
@@ -368,3 +374,60 @@ def strava_disconnect(req: https_fn.Request) -> https_fn.Response:
         return _json({"message": "Strava disconnected", "data": StravaService.disconnect(uid)})
 
     return _run("strava_disconnect", handle)
+
+
+# Public and unauthenticated (Strava can't send a token): instance caps bound the cost of junk traffic.
+WEBHOOK_MAX_INSTANCES = 5
+
+
+@https_fn.on_request(region=REGION, invoker="public", secrets=["STRAVA_VERIFY_TOKEN"],
+                     max_instances=WEBHOOK_MAX_INSTANCES)
+def strava_webhook(req: https_fn.Request) -> https_fn.Response:
+    """
+    Strava push subscription endpoint.
+    GET: subscription handshake (echoes hub.challenge when hub.verify_token matches).
+    POST: an activity/athlete event; queued for `process_strava_event` and acknowledged at once.
+    """
+
+    def handle():
+        if req.method == "GET":
+            expected = os.environ.get("STRAVA_VERIFY_TOKEN")
+            if not expected:
+                print("[Functions] STRAVA_VERIFY_TOKEN is not configured")
+                return _json({"error": "Webhook not configured"}, 500)
+            token = req.args.get("hub.verify_token") or ""
+            challenge = req.args.get("hub.challenge")
+            if req.args.get("hub.mode") == "subscribe" and challenge \
+                    and hmac.compare_digest(token.encode(), expected.encode()):
+                return _json({"hub.challenge": challenge})
+            return _json({"error": "Verification failed"}, 403)
+        if (resp := _require_post(req)) is not None:
+            return resp
+        try:
+            event = StravaWebhookService.parse_event(_json_body(req))
+        except ValueError as exc:
+            raise BadRequest(str(exc))
+        subscription = os.environ.get("STRAVA_SUBSCRIPTION_ID")
+        if subscription and str(event["subscription_id"]) != subscription:
+            return _json({"message": "Ignored: unknown subscription"})
+        queued = StravaWebhookService.enqueue(event)
+        return _json({"message": "Event received" if queued else "Event already received"})
+
+    return _run("strava_webhook", handle)
+
+
+@firestore_fn.on_document_created(document="stravaEvents/{eventId}", region=FIRESTORE_TRIGGER_REGION,
+                                  secrets=["STRAVA_CLIENT_SECRET"], timeout_sec=120,
+                                  max_instances=WEBHOOK_MAX_INSTANCES)
+def process_strava_event(event: firestore_fn.Event[firestore_fn.DocumentSnapshot | None]) -> None:
+    """Applies a queued Strava event and records the outcome on the event document."""
+    snap = event.data
+    if snap is None:
+        return
+    try:
+        outcome = StravaWebhookService.process(snap.to_dict() or {}, client_id=_strava_client_id(),
+                                               client_secret=os.environ.get("STRAVA_CLIENT_SECRET") or "")
+    except Exception as exc:
+        print(f"[Functions] Error in process_strava_event {snap.id}: {type(exc).__name__}: {exc}")
+        outcome = "failed:internal"
+    snap.reference.update({"status": outcome, "processedAt": firestore.SERVER_TIMESTAMP})

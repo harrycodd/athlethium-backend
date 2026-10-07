@@ -18,6 +18,11 @@ Older app builds will get `401` responses from the functions.
 ```bash
 # The Strava client secret (regenerated after the old one was exposed). Never commit it.
 npx firebase functions:secrets:set STRAVA_CLIENT_SECRET --project athlethium-app
+
+# A new random verify token for the Strava webhook handshake (the old one was exposed).
+# Keep the value: step 4 needs it once to create the subscription.
+openssl rand -hex 24
+npx firebase functions:secrets:set STRAVA_VERIFY_TOKEN --project athlethium-app
 ```
 
 - **Strava client ID:** `STRAVA_CLIENT_ID` defaults to the public client ID `157155`. Override it
@@ -26,8 +31,12 @@ npx firebase functions:secrets:set STRAVA_CLIENT_SECRET --project athlethium-app
   `https://europe-west2-athlethium-app.cloudfunctions.net/strava_callback`.
 - **Strava settings page:** set **Authorization Callback Domain** to
   `europe-west2-athlethium-app.cloudfunctions.net`.
-- **Unused secrets:** the old `STRAVA_VERIFY_TOKEN` and webhook flow are not used by any deployed
-  function.
+- **Firestore location:** `process_strava_event` is a Firestore trigger. It must run in the
+  database's region, which is set by `FIRESTORE_TRIGGER_REGION` in `functions/main.py`
+  (default `europe-west2`).
+  - Check the location in Firebase console → Firestore → the database's location.
+  - If it is different, change `FIRESTORE_TRIGGER_REGION` before deploying. The deploy fails with
+    a clear error if they don't match.
 
 ## 2. Deploy rules, indexes and functions together
 
@@ -43,7 +52,10 @@ npx firebase deploy --project athlethium-app \
 - **Index:** `firestore.indexes.json` adds the `workouts (userId, date)` composite index. The
   planner needs it to read recent training history. Wait until the index shows **Enabled** in the
   console before relying on plan generation.
-- **New functions:** `strava_auth_start` and `strava_disconnect` are created on first deploy.
+- **New functions:** `strava_auth_start`, `strava_disconnect`, `strava_webhook` and
+  `process_strava_event` are created on first deploy.
+- **First Firestore trigger:** if this is the project's first one, Firebase may ask to enable the
+  Eventarc API and grant its service agent permissions. Accept, then re-run the deploy if asked.
 
 ## 3. One-off data migration (Strava tokens)
 
@@ -74,12 +86,37 @@ Build and release the matching app version from `harrycodd/fitness-app`, e.g.
 
 `EXPO_PUBLIC_FUNCTIONS_BASE_URL` must be unset (or set to the production URL) for production builds.
 
+## 4b. Subscribe to Strava activity events (once)
+
+The webhook only receives events after a push subscription exists. Strava allows one per app.
+
+```bash
+export STRAVA_CLIENT_SECRET=...   # from https://www.strava.com/settings/api
+export STRAVA_VERIFY_TOKEN=...     # the value you set in step 1
+functions/venv/bin/python scripts/strava_webhook_subscription.py show
+functions/venv/bin/python scripts/strava_webhook_subscription.py create
+```
+
+- **`create`:** Strava calls the deployed `strava_webhook` to check the verify token, and the
+  command prints the subscription ID.
+- **Old subscription:** if `show` lists one (from the old setup, pointing at a function that never
+  existed), remove it first with `delete --id <id>`.
+- **Optional hardening:** put `STRAVA_SUBSCRIPTION_ID=<id>` in `functions/.env.athlethium-app` and
+  redeploy the functions. Events for any other subscription ID are then ignored.
+- **Optional clean-up:** add a Firestore TTL policy on `stravaEvents.expireAt` so processed events
+  are deleted after 30 days.
+
 ## 5. Verify
 
 - Sign in on the new build.
   - Today's session appears.
   - `npx firebase functions:log --project athlethium-app` shows `generate_training_session` returning 200.
 - Connect and disconnect Strava from Settings.
+- With Strava connected, record (or upload) a short activity on Strava.
+  - Within a minute it should complete that day's planned session of the same sport, or appear
+    as a new completed session.
+  - Each event's outcome is stored on its `stravaEvents/{id}` document (`status`), e.g.
+    `completed_planned`, `imported` or `failed:<reason>`.
 - Upload a FIT file and complete a session.
 - Confirm that `curl -X POST https://europe-west2-athlethium-app.cloudfunctions.net/generate_training_session`
   returns `401`.

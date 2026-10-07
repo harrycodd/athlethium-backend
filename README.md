@@ -30,6 +30,10 @@ The React Native app lives in [harrycodd/fitness-app](https://github.com/harryco
 - **Endpoints:** `update_user_profile`, `generate_training_session`, `complete_manual_workout`,
   `upload_workout_fit`, `strava_auth_start`, `strava_callback`, `strava_disconnect`.
   See [docs/API_DOCS.md](docs/API_DOCS.md).
+- **Strava sync:** `strava_webhook` receives Strava's activity events and queues them in
+  `stravaEvents`. The `process_strava_event` trigger then fetches each activity and completes the
+  matching planned session (or records a new one), updating fitness. Retries, edits and deletes
+  are never double counted.
 - **Planner** (`functions/engine/planner.py`) plans whole Monday–Sunday weeks from the athlete's
   fitness (CTL/ATL), recent completed weeks and availability:
   - polarised: at most 25% hard sessions, no tempo;
@@ -58,8 +62,8 @@ python3.12 -m venv functions/venv
 functions/venv/bin/pip install -r requirements-dev.txt
 npm ci
 
-# Functions emulator needs a value for each declared secret; use a dummy.
-echo "STRAVA_CLIENT_SECRET=emulator-dummy-secret" > functions/.secret.local
+# Functions emulator needs a value for each declared secret; use dummies.
+printf "STRAVA_CLIENT_SECRET=emulator-dummy-secret\nSTRAVA_VERIFY_TOKEN=emulator-verify-token\n" > functions/.secret.local
 
 npx firebase emulators:start --project demo-athlethium --only auth,firestore,functions,storage
 ```
@@ -130,7 +134,7 @@ functions/            Cloud Functions package (deployed)
   generators/         endurance, strength and mobility session builders
   services/           auth, Firestore user/workout services, FIT completion, Strava
 tests/                pytest suites, factories, golden data, rules tests
-scripts/              test runner, seed and migration scripts, plan report
+scripts/              test runner, seed/migration scripts, Strava webhook subscription, plan report
 docs/                 API docs, deployment guide, golden plans
 firestore.rules  storage.rules  firestore.indexes.json  firebase.json
 ```

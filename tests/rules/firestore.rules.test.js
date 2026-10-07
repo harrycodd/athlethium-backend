@@ -43,6 +43,8 @@ beforeEach(async () => {
     await setDoc(doc(db, 'workouts/b1'), { userId: 'bob', date: '2026-10-06', status: 'planned' });
     await setDoc(doc(db, 'workout_library/cycling_2'), { workouts: [] });
     await setDoc(doc(db, 'oauthStates/s1'), { uid: 'alice' });
+    await setDoc(doc(db, 'stravaEvents/e1'), { owner_id: 42, status: 'queued' });
+    await setDoc(doc(db, 'stravaLinks/alice_1'), { userId: 'alice', workoutId: 'a1' });
     await setDoc(doc(db, 'something/else'), { x: 1 });
   });
 });
@@ -127,6 +129,13 @@ describe('other collections', () => {
     await assertSucceeds(getDoc(doc(as('alice'), 'workout_library/cycling_2')));
     await assertFails(setDoc(doc(as('alice'), 'workout_library/cycling_2'), { workouts: ['x'] }));
     await assertFails(getDoc(doc(anon(), 'workout_library/cycling_2')));
+  });
+
+  it('Strava webhook queue and links are server-only, even for their owner', async () => {
+    await assertFails(getDoc(doc(as('alice'), 'stravaEvents/e1')));
+    await assertFails(setDoc(doc(anon(), 'stravaEvents/fake'), { owner_id: 42 }));
+    await assertFails(getDoc(doc(as('alice'), 'stravaLinks/alice_1')));
+    await assertFails(setDoc(doc(as('alice'), 'stravaLinks/alice_2'), { userId: 'alice', workoutId: 'b1' }));
   });
 
   it('OAuth states and unknown collections are closed', async () => {
