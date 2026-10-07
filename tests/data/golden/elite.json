@@ -1,0 +1,15 @@
+{
+  "_about": "Morgan: elite age-group triathlete, 18 h/week, full power/pace data. Olympic-distance championship in 8 weeks.",
+  "displayName": "Morgan (elite)",
+  "fitness_level": "elite",
+  "sports": ["swimming", "cycling", "running", "strength"],
+  "focused_sports": ["cycling", "running", "swimming"],
+  "sportPercentages": {"swimming": 20, "cycling": 50, "running": 30},
+  "equipment": ["power_meter", "running_power", "swim_watch", "hr_monitor", "dumbbells"],
+  "weekly_hours": 18,
+  "dailyMaxHours": {"Monday": 1.5, "Tuesday": 3, "Wednesday": 3, "Thursday": 3, "Friday": 2, "Saturday": 5, "Sunday": 4},
+  "ctl": 115, "atl": 110, "metricsDate": "2026-10-04",
+  "ftpCycling": 330, "ftpRunning": 340, "ftpPaceRunning": 225, "ftpPaceSwimming": 82, "fthr": 172,
+  "goal": {"name": "National Olympic Tri Championship", "date": "2026-11-29", "sports": ["cycling", "running", "swimming"], "targetTime": 7200},
+  "wizardCompleted": true
+}

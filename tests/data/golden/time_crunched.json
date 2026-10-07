@@ -1,0 +1,13 @@
+{
+  "_about": "Jordan: parent with a desk job; 5 h/week max, short weekday slots, one longer weekend ride. Power meter, FTP 260 W.",
+  "displayName": "Jordan (time-crunched)",
+  "fitness_level": "intermediate",
+  "sports": ["cycling"],
+  "focused_sports": ["cycling"],
+  "equipment": ["power_meter"],
+  "weekly_hours": 5,
+  "dailyMaxHours": {"Monday": 0, "Tuesday": 1, "Wednesday": 0.75, "Thursday": 1, "Friday": 0, "Saturday": 2, "Sunday": 1},
+  "ctl": 45, "atl": 42, "metricsDate": "2026-10-04",
+  "ftpCycling": 260, "fthr": 172,
+  "wizardCompleted": true
+}

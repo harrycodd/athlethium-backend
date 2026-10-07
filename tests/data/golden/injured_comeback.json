@@ -1,0 +1,14 @@
+{
+  "_about": "Riley: trained runner/cyclist (CTL ~60) off for 3 weeks with an Achilles strain, now cleared to train. Last logged session 3 weeks ago.",
+  "displayName": "Riley (injured comeback)",
+  "fitness_level": "advanced",
+  "sports": ["running", "cycling", "stretching"],
+  "focused_sports": ["running", "cycling"],
+  "sportPercentages": {"running": 40, "cycling": 60},
+  "equipment": ["power_meter", "hr_monitor"],
+  "weekly_hours": 9,
+  "dailyMaxHours": {"Monday": 1, "Tuesday": 1.5, "Wednesday": 1, "Thursday": 1.5, "Friday": 1, "Saturday": 3, "Sunday": 2},
+  "ctl": 60, "atl": 58, "metricsDate": "2026-09-13",
+  "ftpCycling": 275, "ftpPaceRunning": 255, "fthr": 170,
+  "wizardCompleted": true
+}

@@ -4,7 +4,7 @@ Selects exercises based on user equipment and targeted anatomical focus.
 """
 
 from typing import Dict, Any, List, Optional
-from core.models import WorkoutStep, TargetType
+from core.models import WorkoutStep
 
 
 class StrengthGenerator:

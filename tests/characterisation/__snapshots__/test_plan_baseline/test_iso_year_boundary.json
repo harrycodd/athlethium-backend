@@ -1,0 +1,1079 @@
+[
+  {
+    "date": "2026-12-21",
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "recovery"
+  },
+  {
+    "date": "2026-12-22",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 45.0,
+    "name": "Cycling Threshold Intervals",
+    "rationale": "Recovery week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        420,
+        50,
+        75,
+        "power"
+      ],
+      [
+        "interval",
+        60,
+        95,
+        100,
+        "power"
+      ],
+      [
+        "recovery",
+        60,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "interval",
+        660,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        45,
+        55,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        112,
+        138
+      ],
+      [
+        "W",
+        125,
+        150
+      ]
+    ],
+    "tss": 45.5,
+    "week": "recovery"
+  },
+  {
+    "date": "2026-12-23",
+    "intensity": 1,
+    "kind": "recovery",
+    "minutes": 30.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Recovery week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        270,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        1260,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        270,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        100,
+        125
+      ],
+      [
+        "W",
+        112,
+        138
+      ]
+    ],
+    "tss": 13.0,
+    "week": "recovery"
+  },
+  {
+    "date": "2026-12-24",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 35.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        315,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        1470,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        315,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 24.6,
+    "week": "recovery"
+  },
+  {
+    "date": "2026-12-25",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 30.0,
+    "name": "Running Aerobic Base Building",
+    "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        270,
+        50,
+        65,
+        "pace"
+      ],
+      [
+        "interval",
+        1260,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "cooldown",
+        270,
+        50,
+        58,
+        "pace"
+      ]
+    ],
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        382,
+        399
+      ],
+      [
+        "s/km",
+        399,
+        438
+      ]
+    ],
+    "tss": 21.1,
+    "week": "recovery"
+  },
+  {
+    "date": "2026-12-26",
+    "intensity": 2,
+    "kind": "long",
+    "minutes": 70.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Recovery week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        600,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        600,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 49.5,
+    "week": "recovery"
+  },
+  {
+    "date": "2026-12-27",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 35.0,
+    "name": "Running Aerobic Base Building",
+    "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        315,
+        50,
+        65,
+        "pace"
+      ],
+      [
+        "interval",
+        1470,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "cooldown",
+        315,
+        50,
+        58,
+        "pace"
+      ]
+    ],
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        382,
+        399
+      ],
+      [
+        "s/km",
+        399,
+        438
+      ]
+    ],
+    "tss": 24.6,
+    "week": "recovery"
+  },
+  {
+    "date": "2026-12-28",
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
+  },
+  {
+    "date": "2026-12-29",
+    "intensity": 5,
+    "kind": "benchmark",
+    "minutes": 60.0,
+    "name": "Cycling 20-Min FTP Benchmark Test",
+    "rationale": "Load week (Base phase). Benchmark test: re-measures your threshold so every target stays personal to you.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        900,
+        50,
+        75,
+        "power"
+      ],
+      [
+        "interval",
+        60,
+        100,
+        105,
+        "power"
+      ],
+      [
+        "recovery",
+        60,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        60,
+        100,
+        105,
+        "power"
+      ],
+      [
+        "recovery",
+        60,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        60,
+        100,
+        105,
+        "power"
+      ],
+      [
+        "recovery",
+        60,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "recovery",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        1200,
+        100,
+        115,
+        "power"
+      ],
+      [
+        "cooldown",
+        840,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        100,
+        125
+      ],
+      [
+        "W",
+        112,
+        138
+      ]
+    ],
+    "tss": 61.6,
+    "week": "load"
+  },
+  {
+    "date": "2026-12-30",
+    "intensity": 1,
+    "kind": "recovery",
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        100,
+        125
+      ],
+      [
+        "W",
+        112,
+        138
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
+  },
+  {
+    "date": "2026-12-31",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 40.0,
+    "name": "Cycling Threshold Intervals",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        360,
+        50,
+        75,
+        "power"
+      ],
+      [
+        "interval",
+        60,
+        95,
+        100,
+        "power"
+      ],
+      [
+        "recovery",
+        60,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "interval",
+        420,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        45,
+        55,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        112,
+        138
+      ],
+      [
+        "W",
+        125,
+        150
+      ]
+    ],
+    "tss": 41.7,
+    "week": "load"
+  },
+  {
+    "date": "2027-01-01",
+    "intensity": 1,
+    "kind": "recovery",
+    "minutes": 60.0,
+    "name": "Cycling Active Recovery",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "power"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        100,
+        125
+      ],
+      [
+        "W",
+        112,
+        138
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
+  },
+  {
+    "date": "2027-01-02",
+    "intensity": 2,
+    "kind": "long",
+    "minutes": 125.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        600,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        6300,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        600,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 92.5,
+    "week": "load"
+  },
+  {
+    "date": "2027-01-03",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 75.0,
+    "name": "Running Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        600,
+        50,
+        65,
+        "pace"
+      ],
+      [
+        "interval",
+        3300,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "cooldown",
+        600,
+        50,
+        58,
+        "pace"
+      ]
+    ],
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        382,
+        399
+      ],
+      [
+        "s/km",
+        399,
+        438
+      ]
+    ],
+    "tss": 53.4,
+    "week": "load"
+  },
+  {
+    "date": "2027-01-04",
+    "intensity": -1,
+    "kind": "rest",
+    "minutes": 0.0,
+    "name": "Rest & Recovery Day",
+    "rationale": "Planned rest day",
+    "sport": "rest",
+    "steps": [],
+    "targetType": "time",
+    "targets": [],
+    "tss": 0.0,
+    "week": "load"
+  },
+  {
+    "date": "2027-01-05",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 45.0,
+    "name": "Cycling Threshold Intervals",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        420,
+        50,
+        75,
+        "power"
+      ],
+      [
+        "interval",
+        60,
+        95,
+        100,
+        "power"
+      ],
+      [
+        "recovery",
+        60,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "interval",
+        660,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        45,
+        55,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        112,
+        138
+      ],
+      [
+        "W",
+        125,
+        150
+      ]
+    ],
+    "tss": 45.5,
+    "week": "load"
+  },
+  {
+    "date": "2027-01-06",
+    "intensity": 1,
+    "kind": "recovery",
+    "minutes": 60.0,
+    "name": "Running Active Recovery",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "pace"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "pace"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "pace"
+      ]
+    ],
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        423,
+        438
+      ],
+      [
+        "s/km",
+        423,
+        454
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
+  },
+  {
+    "date": "2027-01-07",
+    "intensity": 4,
+    "kind": "hard",
+    "minutes": 45.0,
+    "name": "Cycling Threshold Intervals",
+    "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        420,
+        50,
+        75,
+        "power"
+      ],
+      [
+        "interval",
+        60,
+        95,
+        100,
+        "power"
+      ],
+      [
+        "recovery",
+        60,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "recovery",
+        240,
+        50,
+        60,
+        "power"
+      ],
+      [
+        "interval",
+        480,
+        96,
+        102,
+        "power"
+      ],
+      [
+        "interval",
+        660,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        300,
+        45,
+        55,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        112,
+        138
+      ],
+      [
+        "W",
+        125,
+        150
+      ]
+    ],
+    "tss": 45.5,
+    "week": "load"
+  },
+  {
+    "date": "2027-01-08",
+    "intensity": 1,
+    "kind": "recovery",
+    "minutes": 60.0,
+    "name": "Running Active Recovery",
+    "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
+    "sport": "running",
+    "steps": [
+      [
+        "warmup",
+        300,
+        45,
+        55,
+        "pace"
+      ],
+      [
+        "interval",
+        3000,
+        50,
+        55,
+        "pace"
+      ],
+      [
+        "cooldown",
+        300,
+        40,
+        50,
+        "pace"
+      ]
+    ],
+    "targetType": "pace",
+    "targets": [
+      [
+        "s/km",
+        423,
+        438
+      ],
+      [
+        "s/km",
+        423,
+        454
+      ]
+    ],
+    "tss": 26.7,
+    "week": "load"
+  },
+  {
+    "date": "2027-01-09",
+    "intensity": 2,
+    "kind": "long",
+    "minutes": 135.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        600,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        6900,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        600,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 100.3,
+    "week": "load"
+  },
+  {
+    "date": "2027-01-10",
+    "intensity": 2,
+    "kind": "easy",
+    "minutes": 115.0,
+    "name": "Cycling Aerobic Base Building",
+    "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
+    "sport": "cycling",
+    "steps": [
+      [
+        "warmup",
+        600,
+        50,
+        65,
+        "power"
+      ],
+      [
+        "interval",
+        5700,
+        65,
+        72,
+        "power"
+      ],
+      [
+        "cooldown",
+        600,
+        50,
+        58,
+        "power"
+      ]
+    ],
+    "targetType": "power",
+    "targets": [
+      [
+        "W",
+        125,
+        145
+      ],
+      [
+        "W",
+        125,
+        162
+      ]
+    ],
+    "tss": 84.7,
+    "week": "load"
+  }
+]

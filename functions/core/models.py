@@ -5,7 +5,6 @@ Core Data Models and Type Definitions for Athlethium Backend.
 from dataclasses import dataclass, field
 from typing import List, Dict, Any, Optional
 from enum import Enum
-import datetime
 
 
 class TrainingPhase(str, Enum):
@@ -54,7 +53,7 @@ class UserProfile:
     illness: int = 0  # 0=None, 1=Minor, 2=Severe
     recovery_metric: int = 3  # 1 (quick) to 3 (standard)
     interval_type: str = "structured"  # structured, mix, non-structured
-    
+
     # Setup wizard & UI preferences
     display_name: Optional[str] = None
     units: str = "Metric"  # Metric or Imperial
@@ -66,7 +65,7 @@ class UserProfile:
     sport_percentages: Dict[str, float] = field(default_factory=dict)
     sport_sessions_per_week: Dict[str, int] = field(default_factory=dict)
     wizard_completed: bool = False
-    
+
     # Threshold metrics
     ftp: float = 200.0
     ftp_cycling: float = 200.0
@@ -74,7 +73,7 @@ class UserProfile:
     ftp_pace_running: float = 330.0  # sec/km
     ftp_pace_swimming: float = 110.0  # sec/100m
     fthr: float = 170.0
-    
+
     # Day-of-week hour limits & overrides
     daily_max_hours: Dict[str, float] = field(default_factory=lambda: {
         "Monday": 1.5,
@@ -86,7 +85,22 @@ class UserProfile:
         "Sunday": 2.5
     })
     daily_hours_overrides: Dict[str, float] = field(default_factory=dict)
-    
+
+    # Date (YYYY-MM-DD) whose end-of-day state `ctl`/`atl` describe; None = unknown
+    metrics_date: Optional[str] = None
+    # IANA time zone (e.g. "Europe/London") used to decide which calendar day "today" is
+    timezone: Optional[str] = None
+    # Which thresholds the athlete has actually provided (None = treat all as known).
+    # Keys: cycling_power, running_power, running_pace, swim_pace, hr
+    known_thresholds: Optional[List[str]] = None
+    # Completed endurance load per week, keyed by the week's Monday (YYYY-MM-DD):
+    # [hours, tss] or [hours, tss, {sport: hours}].
+    # Loaded from workout history at request time (not stored on the profile).
+    recent_weeks: Dict[str, List[Any]] = field(default_factory=dict)
+    # Sessions completed so far in the current week: [[YYYY-MM-DD, tss], ...] (also request-time only).
+    # Lets the planner work from the athlete's state at the start of the week.
+    week_to_date: List[List[Any]] = field(default_factory=list)
+
     # Goal and history
     goal: Optional[Goal] = None
     history: Dict[str, Dict[str, List[float]]] = field(default_factory=dict)
@@ -161,6 +175,9 @@ class WorkoutDoc:
     tss_type: str = "estimated"
     coach_rationale: Optional[str] = None
     execution_tips: Optional[str] = None
+    session_kind: Optional[str] = None
+    week_type: Optional[str] = None
+    slot: str = "am"  # "pm" = second session of a double day
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -183,4 +200,7 @@ class WorkoutDoc:
             "tss_type": self.tss_type,
             "coach_rationale": self.coach_rationale,
             "execution_tips": self.execution_tips,
+            "session_kind": self.session_kind,
+            "week_type": self.week_type,
+            "slot": self.slot,
         }

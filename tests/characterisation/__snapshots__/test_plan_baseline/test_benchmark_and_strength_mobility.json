@@ -1,0 +1,851 @@
+{
+  "bench|cycling": [
+    {
+      "duration": 900,
+      "name": "Progressive Warm-up & Spin",
+      "targetType": "power",
+      "target_high": 75,
+      "target_low": 50,
+      "type": "warmup"
+    },
+    {
+      "duration": 60,
+      "name": "Threshold Opener 1/3",
+      "targetType": "power",
+      "target_high": 105,
+      "target_low": 100,
+      "type": "interval"
+    },
+    {
+      "duration": 60,
+      "name": "Easy Spin",
+      "targetType": "power",
+      "target_high": 55,
+      "target_low": 45,
+      "type": "recovery"
+    },
+    {
+      "duration": 60,
+      "name": "Threshold Opener 2/3",
+      "targetType": "power",
+      "target_high": 105,
+      "target_low": 100,
+      "type": "interval"
+    },
+    {
+      "duration": 60,
+      "name": "Easy Spin",
+      "targetType": "power",
+      "target_high": 55,
+      "target_low": 45,
+      "type": "recovery"
+    },
+    {
+      "duration": 60,
+      "name": "Threshold Opener 3/3",
+      "targetType": "power",
+      "target_high": 105,
+      "target_low": 100,
+      "type": "interval"
+    },
+    {
+      "duration": 60,
+      "name": "Easy Spin",
+      "targetType": "power",
+      "target_high": 55,
+      "target_low": 45,
+      "type": "recovery"
+    },
+    {
+      "duration": 300,
+      "name": "Pre-Test Rest & Focus",
+      "targetType": "power",
+      "target_high": 55,
+      "target_low": 45,
+      "type": "recovery"
+    },
+    {
+      "duration": 1200,
+      "name": "20-Min All-Out FTP Benchmark TT",
+      "notes": "Pace evenly for 20 minutes at maximum sustainable effort.",
+      "targetType": "power",
+      "target_high": 115,
+      "target_low": 100,
+      "type": "interval"
+    },
+    {
+      "duration": 1740,
+      "name": "Easy Spin Down",
+      "targetType": "power",
+      "target_high": 50,
+      "target_low": 40,
+      "type": "cooldown"
+    }
+  ],
+  "bench|rowing": [
+    {
+      "duration": 600,
+      "name": "Progressive Warm-up",
+      "targetType": "power",
+      "target_high": 70,
+      "target_low": 50,
+      "type": "warmup"
+    },
+    {
+      "duration": 1200,
+      "name": "Main Benchmark Assessment Effort",
+      "targetType": "power",
+      "target_high": 105,
+      "target_low": 95,
+      "type": "interval"
+    },
+    {
+      "duration": 2700,
+      "name": "Cool Down",
+      "targetType": "power",
+      "target_high": 50,
+      "target_low": 40,
+      "type": "cooldown"
+    }
+  ],
+  "bench|running": [
+    {
+      "duration": 900,
+      "name": "Easy Aerobic Warm-up Jog",
+      "targetType": "power",
+      "target_high": 65,
+      "target_low": 50,
+      "type": "warmup"
+    },
+    {
+      "duration": 25,
+      "name": "Strides & Dynamic Opener 1/4",
+      "targetType": "power",
+      "target_high": 120,
+      "target_low": 105,
+      "type": "interval"
+    },
+    {
+      "duration": 35,
+      "name": "Walk / Easy Float",
+      "targetType": "power",
+      "target_high": 50,
+      "target_low": 40,
+      "type": "recovery"
+    },
+    {
+      "duration": 25,
+      "name": "Strides & Dynamic Opener 2/4",
+      "targetType": "power",
+      "target_high": 120,
+      "target_low": 105,
+      "type": "interval"
+    },
+    {
+      "duration": 35,
+      "name": "Walk / Easy Float",
+      "targetType": "power",
+      "target_high": 50,
+      "target_low": 40,
+      "type": "recovery"
+    },
+    {
+      "duration": 25,
+      "name": "Strides & Dynamic Opener 3/4",
+      "targetType": "power",
+      "target_high": 120,
+      "target_low": 105,
+      "type": "interval"
+    },
+    {
+      "duration": 35,
+      "name": "Walk / Easy Float",
+      "targetType": "power",
+      "target_high": 50,
+      "target_low": 40,
+      "type": "recovery"
+    },
+    {
+      "duration": 25,
+      "name": "Strides & Dynamic Opener 4/4",
+      "targetType": "power",
+      "target_high": 120,
+      "target_low": 105,
+      "type": "interval"
+    },
+    {
+      "duration": 35,
+      "name": "Walk / Easy Float",
+      "targetType": "power",
+      "target_high": 50,
+      "target_low": 40,
+      "type": "recovery"
+    },
+    {
+      "duration": 180,
+      "name": "Pre-Test Focus & Rest",
+      "targetType": "power",
+      "target_high": 50,
+      "target_low": 40,
+      "type": "recovery"
+    },
+    {
+      "duration": 1200,
+      "name": "20-Min Threshold Pace Benchmark Run",
+      "notes": "Sustain maximum hard pace for 20 minutes to establish threshold pace.",
+      "targetType": "power",
+      "target_high": 105,
+      "target_low": 98,
+      "type": "interval"
+    },
+    {
+      "duration": 1980,
+      "name": "Cool-down Jog & Walk",
+      "targetType": "power",
+      "target_high": 50,
+      "target_low": 40,
+      "type": "cooldown"
+    }
+  ],
+  "bench|swimming": [
+    {
+      "duration": 600,
+      "name": "Warm-up & Drills (400m easy)",
+      "targetType": "power",
+      "target_high": 65,
+      "target_low": 50,
+      "type": "warmup"
+    },
+    {
+      "duration": 420,
+      "name": "400m Time Trial (Max Steady Effort)",
+      "targetType": "power",
+      "target_high": 105,
+      "target_low": 95,
+      "type": "interval"
+    },
+    {
+      "duration": 360,
+      "name": "Easy Recovery Kick & Float (200m)",
+      "targetType": "power",
+      "target_high": 50,
+      "target_low": 40,
+      "type": "recovery"
+    },
+    {
+      "duration": 210,
+      "name": "200m Time Trial (All-Out Effort)",
+      "targetType": "power",
+      "target_high": 115,
+      "target_low": 105,
+      "type": "interval"
+    },
+    {
+      "duration": 2910,
+      "name": "Cool-down Swim (200m)",
+      "targetType": "power",
+      "target_high": 50,
+      "target_low": 40,
+      "type": "cooldown"
+    }
+  ],
+  "mobility|bogus": [
+    {
+      "duration": 120,
+      "name": "Cat-Cow Dynamic Spine Waves",
+      "notes": "Inhale arch, exhale round",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 180,
+      "name": "Downward Dog to Cobra Flow",
+      "notes": "Hold each position 5 breaths",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 180,
+      "name": "Low Lunge Hip Flexor Stretch",
+      "notes": "90s per side with reach",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 240,
+      "name": "Pigeon Pose / Figure-4 Glute Stretch",
+      "notes": "2 mins each side",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 180,
+      "name": "World's Greatest Stretch",
+      "notes": "Step forward, rotate torso, reach high",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 180,
+      "name": "Seated Hamstring & Calf Reach",
+      "notes": "Hinge at hips, keep spine long",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 120,
+      "name": "Child's Pose & Deep Diaphragmatic Breathing",
+      "notes": "Calm nervous system",
+      "targetType": "time",
+      "type": "exercise"
+    }
+  ],
+  "mobility|core": [
+    {
+      "duration": 120,
+      "name": "Cat-Cow Dynamic Spine Waves",
+      "notes": "Inhale arch, exhale round",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 180,
+      "name": "Downward Dog to Cobra Flow",
+      "notes": "Hold each position 5 breaths",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 180,
+      "name": "Thoracic Bridge & Backbend Opener",
+      "notes": "Open thoracic extension",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 180,
+      "name": "Spinal Twist & Decompression",
+      "notes": "Gentle rotational release",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 540,
+      "name": "Child's Pose & Deep Diaphragmatic Breathing",
+      "notes": "Calm nervous system",
+      "targetType": "time",
+      "type": "exercise"
+    }
+  ],
+  "mobility|full": [
+    {
+      "duration": 120,
+      "name": "Cat-Cow Dynamic Spine Waves",
+      "notes": "Inhale arch, exhale round",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 180,
+      "name": "Downward Dog to Cobra Flow",
+      "notes": "Hold each position 5 breaths",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 180,
+      "name": "Low Lunge Hip Flexor Stretch",
+      "notes": "90s per side with reach",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 240,
+      "name": "Pigeon Pose / Figure-4 Glute Stretch",
+      "notes": "2 mins each side",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 180,
+      "name": "World's Greatest Stretch",
+      "notes": "Step forward, rotate torso, reach high",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 180,
+      "name": "Seated Hamstring & Calf Reach",
+      "notes": "Hinge at hips, keep spine long",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 120,
+      "name": "Child's Pose & Deep Diaphragmatic Breathing",
+      "notes": "Calm nervous system",
+      "targetType": "time",
+      "type": "exercise"
+    }
+  ],
+  "mobility|legs": [
+    {
+      "duration": 180,
+      "name": "Low Lunge Hip Flexor Stretch",
+      "notes": "90s per side with reach",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 240,
+      "name": "Pigeon Pose / Figure-4 Glute Stretch",
+      "notes": "2 mins each side",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 180,
+      "name": "Seated Hamstring & Calf Reach",
+      "notes": "Hinge at hips, keep spine long",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 180,
+      "name": "Deep Squat Ankle & Hip Opener",
+      "notes": "Pry hips open with elbows",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 240,
+      "name": "Front Splits / Half Splits Flow",
+      "notes": "Gentle hamstring & hip flexor elongation",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 180,
+      "name": "Frog Pose Hip Abduction",
+      "notes": "Hold and breathe deeply",
+      "targetType": "time",
+      "type": "exercise"
+    }
+  ],
+  "mobility|lower": [
+    {
+      "duration": 180,
+      "name": "Low Lunge Hip Flexor Stretch",
+      "notes": "90s per side with reach",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 240,
+      "name": "Pigeon Pose / Figure-4 Glute Stretch",
+      "notes": "2 mins each side",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 180,
+      "name": "Seated Hamstring & Calf Reach",
+      "notes": "Hinge at hips, keep spine long",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 180,
+      "name": "Deep Squat Ankle & Hip Opener",
+      "notes": "Pry hips open with elbows",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 240,
+      "name": "Front Splits / Half Splits Flow",
+      "notes": "Gentle hamstring & hip flexor elongation",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 180,
+      "name": "Frog Pose Hip Abduction",
+      "notes": "Hold and breathe deeply",
+      "targetType": "time",
+      "type": "exercise"
+    }
+  ],
+  "mobility|upper": [
+    {
+      "duration": 180,
+      "name": "Overhead Shoulder Mobility & Wall Slides",
+      "notes": "Keep ribs down, reach high",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 180,
+      "name": "Doorway / Wall Pectoral Opener",
+      "notes": "Open chest and anterior delts",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 180,
+      "name": "Thread the Needle Thoracic Opener",
+      "notes": "Rotate spine and open shoulders",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 660,
+      "name": "Puppy Pose Thoracic Extension",
+      "notes": "Sink chest toward floor",
+      "targetType": "time",
+      "type": "exercise"
+    }
+  ],
+  "strength|bogus": [
+    {
+      "duration": 300,
+      "name": "Dynamic Movement & Joint Mobility",
+      "notes": "Hip circles, arm sweeps, world's greatest stretch",
+      "targetType": "time",
+      "type": "warmup"
+    },
+    {
+      "duration": 420,
+      "name": "Squat to Overhead Press (Thruster)",
+      "notes": "Perform 3 sets of 10 reps with 60-90s rest between sets.",
+      "reps": 10,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 420,
+      "name": "Deadlift / Hip Hinge",
+      "notes": "Perform 3 sets of 8 reps with 60-90s rest between sets.",
+      "reps": 8,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 420,
+      "name": "Push-Ups / Chest Press",
+      "notes": "Perform 3 sets of 10 reps with 60-90s rest between sets.",
+      "reps": 10,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 420,
+      "name": "Plank / Hollow Body Hold",
+      "notes": "Perform 3 sets of 45 reps with 60-90s rest between sets.",
+      "reps": 45,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 420,
+      "name": "Side Plank Rotations",
+      "notes": "Perform 3 sets of 10 reps with 60-90s rest between sets.",
+      "reps": 10,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 300,
+      "name": "Cool Down & Static Stretches",
+      "targetType": "time",
+      "type": "cooldown"
+    }
+  ],
+  "strength|core": [
+    {
+      "duration": 300,
+      "name": "Dynamic Movement & Joint Mobility",
+      "notes": "Hip circles, arm sweeps, world's greatest stretch",
+      "targetType": "time",
+      "type": "warmup"
+    },
+    {
+      "duration": 420,
+      "name": "Plank Hold / Hollow Body",
+      "notes": "Perform 3 sets of 45 reps with 60-90s rest between sets.",
+      "reps": 45,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 420,
+      "name": "Hanging Leg Raises / Toes to Bar",
+      "notes": "Perform 3 sets of 12 reps with 60-90s rest between sets.",
+      "reps": 12,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 420,
+      "name": "Ab Wheel Rollouts / Deadbugs",
+      "notes": "Perform 3 sets of 10 reps with 60-90s rest between sets.",
+      "reps": 10,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 420,
+      "name": "Side Plank Rotations",
+      "notes": "Perform 3 sets of 10 reps with 60-90s rest between sets.",
+      "reps": 10,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 420,
+      "name": "Russian Twists / Cable Chops",
+      "notes": "Perform 3 sets of 16 reps with 60-90s rest between sets.",
+      "reps": 16,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 300,
+      "name": "Cool Down & Static Stretches",
+      "targetType": "time",
+      "type": "cooldown"
+    }
+  ],
+  "strength|full": [
+    {
+      "duration": 300,
+      "name": "Dynamic Movement & Joint Mobility",
+      "notes": "Hip circles, arm sweeps, world's greatest stretch",
+      "targetType": "time",
+      "type": "warmup"
+    },
+    {
+      "duration": 420,
+      "name": "Squat to Overhead Press (Thruster)",
+      "notes": "Perform 3 sets of 10 reps with 60-90s rest between sets.",
+      "reps": 10,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 420,
+      "name": "Deadlift / Hip Hinge",
+      "notes": "Perform 3 sets of 8 reps with 60-90s rest between sets.",
+      "reps": 8,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 420,
+      "name": "Push-Ups / Chest Press",
+      "notes": "Perform 3 sets of 10 reps with 60-90s rest between sets.",
+      "reps": 10,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 420,
+      "name": "Plank / Hollow Body Hold",
+      "notes": "Perform 3 sets of 45 reps with 60-90s rest between sets.",
+      "reps": 45,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 420,
+      "name": "Side Plank Rotations",
+      "notes": "Perform 3 sets of 10 reps with 60-90s rest between sets.",
+      "reps": 10,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 300,
+      "name": "Cool Down & Static Stretches",
+      "targetType": "time",
+      "type": "cooldown"
+    }
+  ],
+  "strength|legs": [
+    {
+      "duration": 300,
+      "name": "Dynamic Movement & Joint Mobility",
+      "notes": "Hip circles, arm sweeps, world's greatest stretch",
+      "targetType": "time",
+      "type": "warmup"
+    },
+    {
+      "duration": 420,
+      "name": "Goblet Squats",
+      "notes": "Perform 3 sets of 10 reps with 60-90s rest between sets.",
+      "reps": 10,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 420,
+      "name": "Walking Lunges",
+      "notes": "Perform 3 sets of 12 reps with 60-90s rest between sets.",
+      "reps": 12,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 420,
+      "name": "Bulgarian Split Squats",
+      "notes": "Perform 3 sets of 8 reps with 60-90s rest between sets.",
+      "reps": 8,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 420,
+      "name": "Calf Raises",
+      "notes": "Perform 3 sets of 15 reps with 60-90s rest between sets.",
+      "reps": 15,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 420,
+      "name": "Single-Leg Glute Bridges",
+      "notes": "Perform 3 sets of 12 reps with 60-90s rest between sets.",
+      "reps": 12,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 300,
+      "name": "Cool Down & Static Stretches",
+      "targetType": "time",
+      "type": "cooldown"
+    }
+  ],
+  "strength|lower": [
+    {
+      "duration": 300,
+      "name": "Dynamic Movement & Joint Mobility",
+      "notes": "Hip circles, arm sweeps, world's greatest stretch",
+      "targetType": "time",
+      "type": "warmup"
+    },
+    {
+      "duration": 420,
+      "name": "Goblet Squats",
+      "notes": "Perform 3 sets of 10 reps with 60-90s rest between sets.",
+      "reps": 10,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 420,
+      "name": "Walking Lunges",
+      "notes": "Perform 3 sets of 12 reps with 60-90s rest between sets.",
+      "reps": 12,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 420,
+      "name": "Bulgarian Split Squats",
+      "notes": "Perform 3 sets of 8 reps with 60-90s rest between sets.",
+      "reps": 8,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 420,
+      "name": "Calf Raises",
+      "notes": "Perform 3 sets of 15 reps with 60-90s rest between sets.",
+      "reps": 15,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 420,
+      "name": "Single-Leg Glute Bridges",
+      "notes": "Perform 3 sets of 12 reps with 60-90s rest between sets.",
+      "reps": 12,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 300,
+      "name": "Cool Down & Static Stretches",
+      "targetType": "time",
+      "type": "cooldown"
+    }
+  ],
+  "strength|upper": [
+    {
+      "duration": 300,
+      "name": "Dynamic Movement & Joint Mobility",
+      "notes": "Hip circles, arm sweeps, world's greatest stretch",
+      "targetType": "time",
+      "type": "warmup"
+    },
+    {
+      "duration": 700,
+      "name": "Push-Ups / Dumbbell Bench Press",
+      "notes": "Perform 3 sets of 10 reps with 60-90s rest between sets.",
+      "reps": 10,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 700,
+      "name": "Pull-Ups / Lat Pulldown",
+      "notes": "Perform 3 sets of 8 reps with 60-90s rest between sets.",
+      "reps": 8,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 700,
+      "name": "Plank Shoulder Taps",
+      "notes": "Perform 3 sets of 16 reps with 60-90s rest between sets.",
+      "reps": 16,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 300,
+      "name": "Cool Down & Static Stretches",
+      "targetType": "time",
+      "type": "cooldown"
+    }
+  ]
+}

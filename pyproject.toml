@@ -1,0 +1,37 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["functions", "."]
+addopts = "-ra --strict-markers"
+filterwarnings = [
+    # fitparse (third-party, unmaintained) uses datetime.utcfromtimestamp internally
+    "ignore:datetime.datetime.utcfromtimestamp:DeprecationWarning:fitparse",
+]
+markers = [
+    "emulator: needs the Firebase Emulator Suite (Firestore/Auth/Storage) running",
+    "functions_emulator: calls Cloud Functions over HTTP on the Functions emulator",
+]
+
+[tool.coverage.run]
+source = ["functions"]
+branch = true
+omit = ["functions/venv/*"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+exclude_also = [
+    "if __name__ == .__main__.:",
+    "except ImportError:",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+extend-exclude = [
+    "functions/venv",
+    "node_modules",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B"]
+ignore = ["E501", "B904", "B008"]

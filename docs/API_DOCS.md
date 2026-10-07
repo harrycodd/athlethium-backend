@@ -1,203 +1,205 @@
-# Athlethium API Documentation
+# Athlethium API
 
-This document describes the API endpoints exposed by the Athlethium backend. These endpoints are implemented as Firebase Gen 2 Cloud Functions.
+Base URL: `https://europe-west2-athlethium-app.cloudfunctions.net/<function>`.
+Against the emulators it is `http://127.0.0.1:5001/demo-athlethium/europe-west2/<function>`.
 
-## Base Configuration
+## Authentication
 
-- **Infrastructure:** Firebase Cloud Functions (Gen 2)
-- **Region:** `europe-west2`
-- **Content-Type:** `application/json`
+Every endpoint except `strava_callback` requires a Firebase ID token for the signed-in user:
 
----
-
-## Endpoints
-
-### 1. Generate Training Session
-Generates a personalized daily workout for a user based on their fitness profile (CTL/ATL), history, and equipment.
-
-- **URL:** `/generate_training_session`
-- **Method:** `POST`
-- **Auth Required:** No (Public)
-
-#### Request Body
-| Parameter | Type | Required | Description |
-| :--- | :--- | :--- | :--- |
-| `userId` | String | Yes | The unique identifier for the user. |
-| `date` | String | No | The start date for generation (`YYYY-MM-DD`). Defaults to today. |
-| `days` | Integer | No | Number of days to generate in advance. Defaults to `1`. |
-
-**Example Request (7-day generation):**
-```json
-{
-  "userId": "user123",
-  "date": "2026-05-10",
-  "days": 7
-}
+```
+Authorization: Bearer <Firebase ID token>
 ```
 
-#### Response
-- **Success (200 OK)**
-  ```json
-  {
-    "message": "Training generation complete",
-    "userId": "user123",
-    "generated_dates": ["2026-05-10", "2026-05-11", ...],
-    "skipped_dates": ["2026-05-12"]
-  }
-  ```
-- **Error (400 Bad Request):** If `userId` is missing or `date` format is invalid.
-- **Error (404 Not Found):** If the user profile is not found in Firestore for a specific date.
+- The user is always taken from the token.
+- Older clients may still send `userId` (or `uid`) in the body. It is accepted only if it matches
+  the token; otherwise the response is `403`.
+- All endpoints take `POST` with a JSON body, except `upload_workout_fit` (multipart) and
+  `strava_callback` (`GET`, called by Strava).
+
+### Errors
+
+| Status | Body | When |
+|---|---|---|
+| 400 | `{"error": "...", "details"?: [...]}` | invalid input, invalid/incomplete profile |
+| 401 | `{"error": "Authentication required"}` | missing or invalid ID token |
+| 403 | `{"error": "..."}` | `userId` does not match the token |
+| 404 | `{"error": "..."}` | profile or workout not found (or not owned by the user) |
+| 405 | `{"error": "..."}` | wrong HTTP method |
+| 413 | `{"error": "File too large (max 25 MB)"}` | FIT upload too large |
+| 500 | `{"error": "Internal server error"}` | unexpected failure (details only in logs) |
 
 ---
 
-## Firestore Data Structure Requirements
+## `update_user_profile`
 
-To ensure the backend functions correctly, your Firestore database MUST be structured as follows:
+Validates and saves the athlete's profile (used by the setup wizard and settings).
 
-### 1. User Profile (`users/{userId}`)
-The backend expects these specific fields to drive the training algorithm:
-
-| Field | Type | Description |
-| :--- | :--- | :--- |
-| `ctl` | Number | **(Critical)** Current Fitness (Chronic Training Load). |
-| `atl` | Number | **(Critical)** Current Fatigue (Acute Training Load). |
-| `weekly_hours` | Number | Target training hours per week (e.g., `12.5`). |
-| `daily_available_hours` | Number | Default hours available per day if no schedule is set. |
-| `sports` | Array<String> | List of sports the user participates in (e.g., `["cycling", "running"]`). |
-| `focused_sports` | Array<String> | Primary sports for priority generation (e.g., `["cycling"]`). |
-| `equipment` | Array<String> | Available gear (e.g., `["power_meter", "dumbbells", "bodyweight"]`). |
-| `history` | Map | **(Critical)** 7-day training history for TSB calculation. |
-| `history.{sport}.focus` | Array<Int> | 7-day focus levels (`-1` to `7`). |
-| `history.{sport}.hours` | Array<Num> | 7-day actual duration in hours. |
-| `intensity_weeks` | Integer | Training phase configuration (Default: `3`). |
-| `injury` / `illness` | Integer | Binary flags (`0` or `1`) that trigger safety recovery sessions. |
-
-**Example Firestore Document (`users/harry123`):**
 ```json
-{
-  "ctl": 65.2,
-  "atl": 58.4,
-  "weekly_hours": 10.0,
-  "daily_available_hours": 2.0,
-  "sports": ["cycling", "strength", "stretching"],
-  "focused_sports": ["cycling"],
-  "equipment": ["power_meter", "dumbbells", "bodyweight"],
-  "intensity_weeks": 3,
-  "injury": 0,
-  "illness": 0,
-  "history": {
-    "cycling": {
-      "focus": [1, 2, -1, 1, 0, 1, -1],
-      "hours": [1.5, 2.0, 0, 1.5, 0.5, 2.0, 0.0]
-    }
-  }
-}
+{ "profile": { "weekly_hours": 8, "sports": ["cycling"], "...": "..." }, "isPartial": true }
 ```
 
-### 2. Workouts Collection (`workouts/{workoutId}`)
-When generating or matching FIT files, the backend uses these fields:
+The profile may also be sent as the top-level body. With `isPartial: true` only the given fields
+are validated and merged.
 
-- `userId`: String (used for filtering).
-- `date`: String (Format: `YYYY-MM-DD`).
-- `sport`: String (e.g., `cycling`).
-- `completed`: Boolean (Crucial for smart-upload matching).
-- `createdAt`: Timestamp.
+Response: `{"message": "...", "userId": "<uid>", "wizardCompleted": true}`.
+On validation errors the response is `400` with a `details` list.
 
----
+## `generate_training_session`
 
-### 3. Upload Workout (.fit file)
-Manually marks a generated workout as completed. This updates the workout status in Firestore and recalculates the user's fitness metrics (CTL/ATL).
+Plans training for the signed-in athlete, skipping days that already have a session.
 
-- **URL:** `/complete_manual_workout`
-- **Method:** `POST`
-- **Auth Required:** No
+| Field | Type | Default | Notes |
+|---|---|---|---|
+| `date` | `YYYY-MM-DD` | athlete's local today | first day to plan (uses the profile `timezone`) |
+| `days` | integer 1–28 | 1 | number of days |
 
-#### Request Body
-| Parameter | Type | Required | Description |
-| :--- | :--- | :--- | :--- |
-| `workoutId` | String | Yes | The unique identifier for the workout session. |
-| `actual_time_sec` | Integer | No | The actual duration of the workout in seconds. |
-| `rpe` | Integer | No | Rate of Perceived Exertion (1-10 scale). |
-| `notes` | String | No | Optional notes or feedback about the session. |
-
-**Example Request:**
 ```json
-{
-  "workoutId": "workout987",
-  "actual_time_sec": 3600,
-  "rpe": 7,
-  "notes": "Felt strong today, focus on recovery tomorrow."
-}
+{ "message": "Training generation complete", "userId": "<uid>",
+  "generated_dates": ["2026-10-06"], "skipped_dates": [] }
 ```
 
-#### Response
-- **Success (200 OK)**
-  ```json
-  {
-    "message": "Workout completed manually",
-    "data": {
-      "completed": true,
-      "completedAt": "2026-05-09T14:30:00Z",
-      "completion_type": "manual",
-      "actual_time": 3600,
-      "rpe": 7,
-      "notes": "Felt strong today, focus on recovery tomorrow."
-    }
-  }
-  ```
-- **Error (400 Bad Request):** If `workoutId` is missing.
-- **Error (500 Internal Server Error):** If the workout is not found or profile update fails.
+Writes one document per session to `workouts`:
+- the main session gets the ID `plan_<uid>_<date>`;
+- the second session of a double day gets `plan_<uid>_<date>_pm` (with `slot: "pm"`).
+
+Each document carries:
+- `steps` with personal `target_range`s (W, bpm or pace);
+- `coach_rationale`, `execution_tips`, `session_kind` and `week_type`.
+
+Completed sessions are never overwritten.
+
+## `complete_manual_workout`
+
+```json
+{ "workoutId": "plan_<uid>_2026-10-06", "actual_time_sec": 3600, "rpe": 6, "notes": "felt good" }
+```
+
+Body fields:
+- `actual_time_sec`: 1–86400.
+- `rpe`: optional, 1–10.
+- `notes`: up to 2000 characters.
+
+The workout must belong to the user. Re-completing replaces the previous load rather than
+adding to it.
+
+Response:
+
+```json
+{ "message": "...",
+  "data": { "workoutId": "...", "actual_time": 3600, "actual_tss": 55.0, "status": "completed" } }
+```
+
+## `upload_workout_fit`
+
+`multipart/form-data` with:
+- `file`: a `.fit` file, max 25 MB;
+- `workoutId`: optional.
+
+Without a `workoutId`, the activity is matched to an uncompleted planned session on the same
+local day. A session of the same sport is preferred, which matters on double days. If nothing
+matches, a new "Recorded Activity" is created.
+
+- **TSS:** computed from normalised power, or from heart rate when there is no power.
+- **FTP:** a cycling FTP increase from the best 20 minutes is suggested.
+- **Storage:** the raw file is stored privately at `users/{uid}/workouts/{id}.fit`; clients have
+  no Storage access.
+
+Response: `{"message": "...", "data": {"workout_id", "sport", "date", "actual_time", "actual_tss", "stats", "new_ftp"}}`.
+
+## Strava
+
+### `strava_auth_start`
+
+```json
+{ "returnUrl": "athlethium://settings" }
+```
+
+- `returnUrl` must use the app's scheme: `athlethium`, `exp` or `exps`.
+- The response is `{"state", "authUrl", "returnUrl"}`. The app opens `authUrl` in an auth session.
+- `state` is single-use and bound to the user.
+
+### `strava_callback` (GET, called by Strava)
+
+Exchanges the code using the `STRAVA_CLIENT_SECRET` secret. Tokens are stored in the server-only
+document `users/{uid}/private/strava`.
+
+It then redirects to `returnUrl` with one of:
+- `?success=true`
+- `?error=<code>`, where `<code>` is one of:
+  - `access_denied`
+  - `strava_timeout`
+  - `strava_unreachable`
+  - `strava_rate_limited`
+  - `strava_auth_rejected`
+  - `strava_unavailable`
+  - `strava_bad_response`
+  - `missing_code`
+
+### `strava_disconnect`
+
+Revokes the grant with Strava (best effort) and deletes the stored tokens.
+Response: `{"message": "Strava disconnected", "data": {...}}`.
+
+### `strava_webhook` (called by Strava)
+
+The endpoint for Strava's push subscription. It takes no Firebase token.
+
+- **`GET`:** the subscription handshake. When `hub.mode=subscribe` and `hub.verify_token` matches
+  the `STRAVA_VERIFY_TOKEN` secret, it returns `{"hub.challenge": "<challenge>"}`. Otherwise it
+  returns `403`.
+- **`POST`:** an event such as `{"object_type": "activity" | "athlete", "aspect_type": "create" |
+  "update" | "delete", "object_id", "owner_id", "subscription_id", "event_time", "updates"}`.
+  - The event is validated (`400` if malformed) and queued as `stravaEvents/{type_id_aspect_owner_time}`.
+  - The response is `200` straight away. Strava's retries land on the same document, so they
+    are queued once.
+  - When `STRAVA_SUBSCRIPTION_ID` is set, events for other subscriptions are acknowledged and
+    dropped.
+
+### `process_strava_event` (Firestore trigger on `stravaEvents/{id}`)
+
+Handles each queued event for every account linked to the Strava athlete (`stravaAthleteId`).
+Nothing in the event is trusted:
+
+- **Activity created or updated:**
+  - The activity is fetched from Strava with the athlete's token, refreshing the token if it
+    expires within 5 minutes. It must belong to `owner_id`.
+  - Supported types are rides, runs, swims, strength (no TSS) and yoga/pilates (no TSS). Other
+    types are ignored.
+  - TSS comes from measured power (vs FTP) or heart rate (vs threshold HR).
+- **Which workout it lands on**, on the activity's local date and for the same sport:
+  1. A session already logged by FIT upload or by ticking it off, with duration within 25%, is
+     **linked**. A FIT upload keeps its own numbers; a ticked-off session takes Strava's.
+  2. Otherwise the first open planned session (morning first) is **completed**.
+  3. Otherwise a new completed workout `strava_{activityId}` is **imported**.
+- **Counting:** each activity is linked through `stravaLinks/{uid}_{activityId}`. Retries and
+  updates re-sync the same workout and apply only the TSS change, so nothing is counted twice.
+- **Activity deleted:** acted on only if Strava returns 404 for it.
+  - An imported workout is removed.
+  - A completed planned session is reopened.
+  - A FIT upload is just unlinked.
+  - The activity's TSS is taken back off fitness.
+- **Athlete revoked access** (`updates.authorized == "false"`): acted on only if Strava rejects the
+  athlete's refresh token. The tokens are then deleted and `stravaConnected` is set to `false`.
+
+The outcome is written to the event document's `status`:
+- `completed_planned`, `imported`, `updated`, `linked`, `unchanged`;
+- `removed`, `reopened`, `unlinked`, `disconnected`;
+- `ignored:<reason>` or `failed:<strava error code>`.
+
+Transient Strava errors are retried once.
 
 ---
 
-### 3. Upload Workout (.fit file)
-Uploads a binary FIT file (from Garmin/Wahoo/etc.) to complete a workout. This endpoint is "smart": it attempts to match the file to a planned workout for the same day and sport.
+## Firestore data
 
-- **URL:** `/upload_workout_fit`
-- **Method:** `POST`
-- **Content-Type:** `multipart/form-data`
-- **Auth Required:** No
+| Path | Who can read/write |
+|---|---|
+| `users/{uid}` | the owner (Strava fields are server-only) |
+| `users/{uid}/private/*` | server only |
+| `workouts/{id}` | the owner (`userId == uid`) |
+| `oauthStates/{state}` | server only |
+| `stravaEvents/{id}`, `stravaLinks/{id}` | server only |
 
-#### Request Body (Multipart/Form-Data)
-| Parameter | Type | Required | Description |
-| :--- | :--- | :--- | :--- |
-| `userId` | String | Yes | The unique identifier for the user. |
-| `file` | Binary | Yes | The `.fit` file to upload. |
-
-#### Smart Matching Logic
-1.  **Date & Sport Extraction:** Extracts the start time and activity type (sport) directly from the FIT file.
-2.  **Matching:** Searches for an uncompleted planned workout for that user, on that specific date, for that sport.
-3.  **Completion:** 
-    - If a match is found, it updates that planned workout with the actual metrics (TSS, duration, etc.) and marks it complete.
-    - If no match is found, it creates a new "Unplanned" workout record for that day and marks it complete.
-4.  **Profile Update:** Recalculates the user's CTL and ATL based on the actual TSS and duration in the file.
-
-#### Response
-- **Success (200 OK)**
-  ```json
-  {
-    "message": "Workout uploaded and processed successfully",
-    "data": {
-      "completed": true,
-      "completedAt": "2026-05-09T14:30:00Z",
-      "completion_type": "fit_file",
-      "actual_time": 3600,
-      "actual_tss": 65.5,
-      "avg_power": 210,
-      "sport": "cycling",
-      "fit_file_url": "gs://athlethium-bucket/workouts/..."
-    }
-  }
-  ```
-- **Error (400 Bad Request):** If `userId` or `file` is missing.
-- **Error (500 Internal Server Error):** If parsing fails or database update fails.
-
----
-
-## Data Models (Brief)
-
-### User Profile (Firestore: `users/{userId}`)
-The profile includes `ctl`, `atl`, `weekly_hours`, `equipment`, `focused_sports`, and a 7-day `history` array.
-
-### Workout (Firestore: `workouts/{workoutId}`)
-Contains workout details like `sport`, `intensity`, `targetType`, `tss`, `steps`, and `descriptions`.
+The planner queries `workouts` by `userId` and `date`. This needs the composite index in
+`firestore.indexes.json`.

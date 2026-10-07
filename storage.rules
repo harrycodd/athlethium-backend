@@ -1,0 +1,10 @@
+rules_version = '2';
+// Raw .fit uploads are written and read only by Cloud Functions (Admin SDK bypasses these rules).
+// Clients get no direct access; GPS traces must never be world-readable.
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

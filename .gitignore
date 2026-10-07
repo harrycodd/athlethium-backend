@@ -67,3 +67,15 @@ node_modules/
 
 # dataconnect generated files
 .dataconnect
+
+# Test artefacts
+.pytest_cache/
+.hypothesis/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.DS_Store
+__pycache__/
+*.pyc
+node_modules/
