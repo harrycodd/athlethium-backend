@@ -123,7 +123,8 @@ def test_recent_load_summarises_completed_weeks(main_module, athlete, seed):
         "workouts/other": make_workout_doc("someone-else", "2026-09-29", completed=True, actual_tss=99.0),
     })
     weeks, week_to_date = main_module.WorkoutService.recent_load(athlete.uid, datetime.date(2026, 10, 7))
-    assert weeks == {"2026-09-21": [1.5, 90.0, {"cycling": 1.5}], "2026-09-28": [2.0, 90.0, {"cycling": 2.0}]}
+    assert weeks == {"2026-09-21": [1.5, 90.0, {"cycling": 1.5}, {"cycling": 1.0}],
+                     "2026-09-28": [2.0, 90.0, {"cycling": 2.0}, {"cycling": 2.0}]}
     assert week_to_date == [["2026-10-06", 70.0]]
 
 

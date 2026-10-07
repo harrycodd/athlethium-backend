@@ -406,3 +406,70 @@ def test_new_sport_starts_from_transfer_credit():
     if first.context.week_type == "load":
         assert first.sport_hours["running"] <= 0.25 * 16.0 * 1.10 + 1e-6
     assert max(s.hours for s in first.sessions if s.sport == "running") <= 0.4 * 0.25 * 16 * 1.10 + 1e-6
+
+
+# ------------------------------------------------------------------ switching to running
+
+def _runs(plan):
+    return [s for s in plan.sessions if s.sport == "running"]
+
+
+def test_pro_cyclist_switching_to_running_starts_with_short_easy_runs():
+    """Fitness transfers, legs don't: a pro cyclist's first runs are 45 min, easy, one a day."""
+    hist = {"2026-09-28": [27.0, 1300.0, {"cycling": 27.0}, {"cycling": 5.0}]}
+    p = make_profile(ctl=120, atl=110, metrics_date="2026-10-04", daily_max_hours=ROOMY, weekly_hours=30,
+                     sports=["running"], focused_sports=["running"], recent_weeks=hist, uid="switch",
+                     fitness_level="pro")
+    first = weeks(p, 1)[0]
+    runs = _runs(first)
+    assert runs and max(s.hours for s in runs) <= 0.75
+    assert all(s.kind in (Kind.EASY, Kind.RECOVERY, Kind.LONG) for s in runs)
+    assert len({s.date for s in runs}) == len(runs)  # never two runs in a day
+
+
+def test_new_runner_with_other_sports_keeps_intensity_off_the_run():
+    hist = {"2026-09-28": [12.0, 600.0, {"cycling": 12.0}, {"cycling": 3.0}]}
+    p = make_profile(ctl=70, atl=65, metrics_date="2026-10-04", daily_max_hours=ROOMY, weekly_hours=20,
+                     sports=["running", "cycling"], focused_sports=["running"], recent_weeks=hist, uid="tri")
+    plan = weeks(p, 1)[0]
+    assert all(s.kind in (Kind.EASY, Kind.RECOVERY, Kind.LONG) for s in _runs(plan))
+    assert any(s.kind in (Kind.HARD, Kind.BENCHMARK) and s.sport == "cycling" for s in plan.sessions)
+
+
+def test_long_run_grows_by_at_most_15_minutes_a_week_when_planning_ahead():
+    hist = {"2026-09-28": [9.0, 450.0, {"cycling": 6.0, "running": 3.0}, {"cycling": 2.0, "running": 1.0}]}
+    p = make_profile(ctl=60, atl=60, metrics_date="2026-10-04", daily_max_hours=ROOMY | {"Sunday": 4.0},
+                     weekly_hours=25, sports=["running", "cycling"], focused_sports=["running", "cycling"],
+                     recent_weeks=hist, uid="ahead")
+    longest = 1.0
+    for plan in weeks(p, 6):
+        week_longest = max(s.hours for s in _runs(plan))
+        assert week_longest <= longest + 0.25 + 1e-6
+        longest = max(longest, week_longest)
+    assert longest > 1.0  # and it does grow
+
+
+def test_established_runner_keeps_their_long_run():
+    hist = {"2026-09-28": [8.0, 400.0, {"running": 8.0}, {"running": 2.0}]}
+    p = make_profile(ctl=50, atl=50, metrics_date="2026-10-04", daily_max_hours=ROOMY | {"Sunday": 4.0},
+                     weekly_hours=12, sports=["running"], focused_sports=["running"], recent_weeks=hist,
+                     uid="runner", fitness_level="advanced")
+    plan = weeks(p, 1)[0]
+    assert max(s.hours for s in _runs(plan)) >= 2.0
+    allowance = WeekPlanner.sport_allowances({"running": 8.0}, ["running"], "load", False, 8.0, 2, {"running": 2.0})
+    assert allowance.run_cap == 2.25 and not allowance.new_runner
+
+
+@pytest.mark.parametrize("history,expected_cap,expected_new", [
+    ({"cycling": 10.0}, 0.75, True),                    # older history without session lengths, no running yet
+    ({"cycling": 10.0, "running": 3.0}, None, False),   # ...with running: sized from the running allowance
+])
+def test_run_cap_without_session_lengths(history, expected_cap, expected_new):
+    allowance = WeekPlanner.sport_allowances(history, ["running"], "load", False, 10.0, 2)
+    assert allowance.run_cap == expected_cap and allowance.new_runner is expected_new
+
+
+def test_malformed_longest_entry_is_ignored():
+    p = make_profile(ctl=50, atl=50, metrics_date="2026-10-04",
+                     recent_weeks={"2026-09-28": [5.0, 230.0, {"cycling": 5.0}, "garbage"]})
+    assert WeekPlanner._completed_weeks(p, MON) == [(datetime.date(2026, 9, 28), 5.0, 230.0, {"cycling": 5.0}, None)]

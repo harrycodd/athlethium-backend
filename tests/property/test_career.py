@@ -24,7 +24,8 @@ START = datetime.date(2026, 10, 5)
 
 def simulate(sports, focus, weeks, compliance=1.0, switch=None, weekly_hours=30):
     """
-    Returns per-week records: {start, type, hours, tss, ctl, level, sports: {sport: hours}}.
+    Returns per-week records: {start, type, hours, tss, ctl, level, sports: {sport: hours},
+    longest: {sport: longest session hours}, double_runs: days with two runs}.
     `switch=(week, sports, focus)` changes the athlete's sports mid-career (no restart).
     """
     profile = UserProfile(uid="career", sports=sports, focused_sports=focus, weekly_hours=weekly_hours,
@@ -37,15 +38,19 @@ def simulate(sports, focus, weeks, compliance=1.0, switch=None, weekly_hours=30)
         if switch and w == switch[0]:
             profile = dataclasses.replace(profile, sports=switch[1], focused_sports=switch[2])
         monday = day
-        week = {"start": monday, "hours": 0.0, "tss": 0.0, "sports": {}}
+        week = {"start": monday, "hours": 0.0, "tss": 0.0, "sports": {}, "longest": {}, "double_runs": 0}
         this_week = {}
         for _ in range(7):
             recent = {k: v for k, v in history.items()
                       if monday - datetime.timedelta(weeks=3) <= datetime.date.fromisoformat(k) < monday}
             week_to_date = [[k, v] for k, v in this_week.items()]
             profile = dataclasses.replace(profile, recent_weeks=recent, week_to_date=week_to_date)
-            for doc in TrainingScheduler.schedule_day_all(profile, day, as_of=day):
+            docs = TrainingScheduler.schedule_day_all(profile, day, as_of=day)
+            week["double_runs"] += sum(d.sport == "running" for d in docs) > 1
+            for doc in docs:
                 week["type"] = doc.week_type
+                if doc.time > 0:
+                    week["longest"][doc.sport] = max(week["longest"].get(doc.sport, 0.0), doc.time / 3600)
                 if doc.time > 0 and doc.sport in ENDURANCE:
                     tss, hours = doc.tss * compliance, doc.time / 3600 * compliance
                     last = datetime.date.fromisoformat(profile.metrics_date) if profile.metrics_date else None
@@ -57,7 +62,8 @@ def simulate(sports, focus, weeks, compliance=1.0, switch=None, weekly_hours=30)
                     this_week[day.isoformat()] = this_week.get(day.isoformat(), 0.0) + tss
             day += datetime.timedelta(days=1)
         week.update(ctl=profile.ctl, level=athlete_level(profile))
-        history[monday.isoformat()] = [week["hours"], week["tss"], dict(week["sports"])]
+        history[monday.isoformat()] = [week["hours"], week["tss"], dict(week["sports"]),
+                                       {sp: h for sp, h in week["longest"].items() if sp in ENDURANCE}]
         records.append(week)
     return records
 
@@ -162,6 +168,25 @@ def test_cyclist_to_runner_starts_from_transfer_credit_not_full_volume():
             assert w["sports"]["running"] <= max(prev * 1.10, prev + 0.5) + 1e-6
         prev = w["sports"]["running"]
     assert weeks[-1]["sports"]["running"] > first_run
+
+
+@pytest.mark.parametrize("new_sports,focus", [(["running"], ["running"]), (TRI, ["running", "swimming", "cycling"])])
+def test_new_runners_build_run_length_from_their_own_running(new_sports, focus):
+    """A fit cyclist who takes up running starts with short runs and lengthens them gradually."""
+    weeks = simulate(["cycling"], ["cycling"], 80, switch=(SWITCH_WEEK, new_sports, focus))
+    after = weeks[SWITCH_WEEK:]
+    assert after[0]["longest"]["running"] <= 0.75 + 1e-6          # first week: runs of 45 min at most
+    assert after[0]["sports"]["running"] >= 2.0                     # ...but still a real running week
+    longest_so_far = after[0]["longest"]["running"]
+    for w in after[1:]:
+        # the longest run grows by at most 15 min a week
+        assert w["longest"]["running"] <= longest_so_far + 0.25 + 1e-6, (w["start"], w["longest"], longest_so_far)
+        longest_so_far = max(longest_so_far, w["longest"]["running"])
+    # until established (2 h/week and an hour-long run) a new runner never runs twice in a day
+    established = next(i for i, w in enumerate(after) if w["sports"]["running"] >= 2.0 and
+                       max(x["longest"]["running"] for x in after[:i + 1]) >= 1.0)
+    assert all(w["double_runs"] == 0 for w in after[:established + 1])
+    assert after[-1]["longest"]["running"] >= 1.5
 
 
 def test_cyclist_to_triathlete_keeps_fitness():

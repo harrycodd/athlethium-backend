@@ -142,6 +142,8 @@ def render(profiles) -> Tuple[str, Dict]:
         "   cycling/swimming +30% (overall load is still +10%). A new or switched-to sport starts from",
         "   transfer credit: bike->run 25%, run->bike 75%, swim<->others 25% (min 2 h). Runs are",
         "   capped at 40% of the week's running (min 1 h). Switching sport never restarts the athlete.",
+        "   New runners (under 2 h/week or no hour-long run yet) run easy only, once a day, starting at",
+        "   45 min; the longest run then grows by at most 15 min a week, whatever their other fitness.",
         "4. Hard sessions take ~20% of weekly time (max 25%), are never on Monday or back-to-back,",
         "   need at least 40 min, and the day after one is Zone 1 recovery. No tempo/grey-zone sessions.",
         "5. Beginners: max one hard session, two rest days. Under ~3.3 h/week: no hard sessions.",

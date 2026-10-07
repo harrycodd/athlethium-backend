@@ -91,7 +91,8 @@ class WorkoutService:
         """
         Completed endurance load for the planner:
         - per Monday-Sunday week for the `weeks` full weeks before today's week:
-          {Monday: [hours, tss, {sport: hours}]} (per sport so each sport ramps on its own)
+          {Monday: [hours, tss, {sport: hours}, {sport: longest session hours}]}
+          (per sport so each sport ramps on its own; longest so long runs build gradually)
         - this week's completed sessions so far: [[date, tss], ...]
         """
         this_monday = today - datetime.timedelta(days=today.weekday())
@@ -100,7 +101,7 @@ class WorkoutService:
                                   .where(filter=FieldFilter("userId", "==", user_id)) \
                                   .where(filter=FieldFilter("date", ">=", start.isoformat())) \
                                   .get()
-        load: Dict[str, List[float]] = {}
+        load: Dict[str, List[Any]] = {}
         week_to_date: List[List[Any]] = []
         for snap in snaps:
             data = snap.to_dict() or {}
@@ -117,10 +118,12 @@ class WorkoutService:
                     week_to_date.append([day.isoformat(), round(tss, 1)])
                 continue
             key = (day - datetime.timedelta(days=day.weekday())).isoformat()
-            week = load.setdefault(key, [0.0, 0.0, {}])
+            week = load.setdefault(key, [0.0, 0.0, {}, {}])
             week[0] += hours
             week[1] += tss
             week[2][data["sport"]] = week[2].get(data["sport"], 0.0) + hours
-        return ({k: [round(h, 3), round(t, 1), {sp: round(x, 3) for sp, x in by.items()}]
-                 for k, (h, t, by) in load.items()},
+            week[3][data["sport"]] = max(week[3].get(data["sport"], 0.0), hours)
+        return ({k: [round(h, 3), round(t, 1), {sp: round(x, 3) for sp, x in by.items()},
+                     {sp: round(x, 3) for sp, x in longest.items()}]
+                 for k, (h, t, by, longest) in load.items()},
                 sorted(week_to_date))
