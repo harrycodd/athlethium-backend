@@ -1,6 +1,5 @@
 import pytest
 from google.cloud.firestore_v1.base_query import FieldFilter
-import time_machine
 
 from tests.factories import make_profile_doc, make_workout_doc
 
@@ -35,7 +34,29 @@ def test_goal_day_no_longer_crashes(main_module, call, athlete, db):
     assert r.status == 200 and r.json["generated_dates"] == ["2026-11-29"]
 
 
-@time_machine.travel("2026-10-06 23:30:00+00:00", tick=False)
+@pytest.fixture
+def late_evening_utc(monkeypatch):
+    """
+    Pins the clock UserService reads to 23:30 UTC on 6 Oct 2026. Only that module's clock: freezing
+    the whole process (time_machine) puts gRPC deadlines in the past once the real date moves on.
+    """
+    import datetime
+    import types
+
+    from services import user_service
+
+    class Pinned(datetime.datetime):
+        @classmethod
+        def now(cls, tz=None):
+            moment = datetime.datetime(2026, 10, 6, 23, 30, tzinfo=datetime.timezone.utc)
+            return moment.astimezone(tz) if tz else moment.replace(tzinfo=None)
+
+    clock = types.SimpleNamespace(**{k: getattr(datetime, k) for k in dir(datetime) if not k.startswith("_")})
+    clock.datetime = Pinned
+    monkeypatch.setattr(user_service, "datetime", clock)
+
+
+@pytest.mark.usefixtures("late_evening_utc")
 def test_default_date_is_athletes_local_today(main_module, call, make_user, seed):
     user = make_user()
     seed({f"users/{user.uid}": make_profile_doc(timezone="Australia/Sydney")})
@@ -43,7 +64,7 @@ def test_default_date_is_athletes_local_today(main_module, call, make_user, seed
     assert r.json["generated_dates"] == ["2026-10-07"]  # already Wednesday in Sydney
 
 
-@time_machine.travel("2026-10-06 23:30:00+00:00", tick=False)
+@pytest.mark.usefixtures("late_evening_utc")
 def test_default_date_utc_when_timezone_invalid(main_module, call, make_user, seed):
     user = make_user()
     seed({f"users/{user.uid}": make_profile_doc(timezone="Not/AZone")})
