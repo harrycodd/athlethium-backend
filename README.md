@@ -134,7 +134,3 @@ scripts/              test runner, seed and migration scripts, plan report
 docs/                 API docs, deployment guide, golden plans
 firestore.rules  storage.rules  firestore.indexes.json  firebase.json
 ```
-
-`scripts/add_custom_workout.py`, `scripts/tui_strength.py` and `scripts/tui_stretch.py` are
-legacy tools that import modules no longer in the codebase. They are excluded from lint and do
-not run.

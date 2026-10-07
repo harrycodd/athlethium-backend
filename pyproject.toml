@@ -30,10 +30,6 @@ target-version = "py312"
 extend-exclude = [
     "functions/venv",
     "node_modules",
-    # Legacy CLI tools that import modules removed before this repo's history began (see README).
-    "scripts/add_custom_workout.py",
-    "scripts/tui_strength.py",
-    "scripts/tui_stretch.py",
 ]
 
 [tool.ruff.lint]
