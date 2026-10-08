@@ -251,317 +251,611 @@
   ],
   "mobility|bogus": [
     {
-      "duration": 120,
-      "name": "Cat-Cow Dynamic Spine Waves",
-      "notes": "Inhale arch, exhale round",
+      "duration": 60,
+      "name": "Cat-Cow",
+      "notes": "Slowly arch and round the spine with the breath.",
       "targetType": "time",
       "type": "exercise"
     },
     {
-      "duration": 180,
-      "name": "Downward Dog to Cobra Flow",
-      "notes": "Hold each position 5 breaths",
-      "targetType": "time",
-      "type": "exercise"
-    },
-    {
-      "duration": 180,
-      "name": "Low Lunge Hip Flexor Stretch",
-      "notes": "90s per side with reach",
-      "targetType": "time",
-      "type": "exercise"
-    },
-    {
-      "duration": 240,
-      "name": "Pigeon Pose / Figure-4 Glute Stretch",
-      "notes": "2 mins each side",
-      "targetType": "time",
-      "type": "exercise"
-    },
-    {
-      "duration": 180,
-      "name": "World's Greatest Stretch",
-      "notes": "Step forward, rotate torso, reach high",
-      "targetType": "time",
-      "type": "exercise"
-    },
-    {
-      "duration": 180,
-      "name": "Seated Hamstring & Calf Reach",
-      "notes": "Hinge at hips, keep spine long",
+      "duration": 60,
+      "name": "90/90 Hip Switches",
+      "notes": "Sit tall, rotate both knees side to side slowly; pause at each end.",
       "targetType": "time",
       "type": "exercise"
     },
     {
       "duration": 120,
-      "name": "Child's Pose & Deep Diaphragmatic Breathing",
-      "notes": "Calm nervous system",
+      "name": "Half-Kneeling Hip Flexor Stretch",
+      "notes": "60 s each side. Squeeze the back glute, tuck the pelvis, reach the arm up.",
       "targetType": "time",
       "type": "exercise"
+    },
+    {
+      "duration": 90,
+      "name": "Open Book Rotation",
+      "notes": "45 s each side. Side-lying, knees bent; rotate the top arm open and follow it with your eyes.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 90,
+      "name": "Lying Hamstring Stretch",
+      "notes": "45 s each side. Strap or towel round the foot, leg straight, pull gently.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 60,
+      "name": "Wall Slides",
+      "notes": "Back and forearms on the wall; slide up without the ribs flaring.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 120,
+      "name": "Pigeon Stretch",
+      "notes": "60 s each side. Front shin across the body, hips square; fold forward to deepen.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 120,
+      "name": "Couch Stretch",
+      "notes": "60 s each side. Back knee at the wall, shin up the wall; stay upright.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 90,
+      "name": "Thread the Needle",
+      "notes": "45 s each side. On all fours, reach one arm under the body, then open it to the ceiling.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 90,
+      "name": "Hamstring Floss",
+      "notes": "45 s each side. Half-kneeling, straighten and bend the front leg for 10 slow reps.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 90,
+      "name": "Doorway Chest Stretch",
+      "notes": "45 s each side. Forearm on the door frame at shoulder height, step through.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 60,
+      "name": "Deep Squat Hold",
+      "notes": "Heels down, elbows push the knees out, chest up.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 60,
+      "name": "Foam Roller Thoracic Extension",
+      "notes": "Roller across the upper back, hands behind the head, extend over it.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 30,
+      "name": "Sleeper Stretch",
+      "notes": "45 s each side. Lie on your side, arm at 90°; gently press the forearm down.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 60,
+      "name": "Child's Pose Breathing",
+      "notes": "Long breaths out through the mouth to switch off.",
+      "targetType": "time",
+      "type": "cooldown"
     }
   ],
   "mobility|core": [
     {
+      "duration": 60,
+      "name": "Cat-Cow",
+      "notes": "Slowly arch and round the spine with the breath.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 90,
+      "name": "Open Book Rotation",
+      "notes": "45 s each side. Side-lying, knees bent; rotate the top arm open and follow it with your eyes.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
       "duration": 120,
-      "name": "Cat-Cow Dynamic Spine Waves",
-      "notes": "Inhale arch, exhale round",
+      "name": "Half-Kneeling Hip Flexor Stretch",
+      "notes": "60 s each side. Squeeze the back glute, tuck the pelvis, reach the arm up.",
       "targetType": "time",
       "type": "exercise"
     },
     {
-      "duration": 180,
-      "name": "Downward Dog to Cobra Flow",
-      "notes": "Hold each position 5 breaths",
+      "duration": 90,
+      "name": "Figure-4 Stretch",
+      "notes": "45 s each side. On your back, ankle over the opposite knee, pull the leg in.",
       "targetType": "time",
       "type": "exercise"
     },
     {
-      "duration": 180,
-      "name": "Thoracic Bridge & Backbend Opener",
-      "notes": "Open thoracic extension",
+      "duration": 90,
+      "name": "Child's Pose Side Reach",
+      "notes": "45 s each side. Walk both hands to one side and breathe into the ribs.",
       "targetType": "time",
       "type": "exercise"
     },
     {
-      "duration": 180,
-      "name": "Spinal Twist & Decompression",
-      "notes": "Gentle rotational release",
+      "duration": 90,
+      "name": "Thread the Needle",
+      "notes": "45 s each side. On all fours, reach one arm under the body, then open it to the ceiling.",
       "targetType": "time",
       "type": "exercise"
     },
     {
-      "duration": 540,
-      "name": "Child's Pose & Deep Diaphragmatic Breathing",
-      "notes": "Calm nervous system",
+      "duration": 120,
+      "name": "Couch Stretch",
+      "notes": "60 s each side. Back knee at the wall, shin up the wall; stay upright.",
       "targetType": "time",
       "type": "exercise"
+    },
+    {
+      "duration": 45,
+      "name": "Glute Bridge March",
+      "notes": "Hold the bridge, lift one foot at a time without the hips dropping.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 45,
+      "name": "Bench Lat Stretch",
+      "notes": "Kneel, elbows on a bench, sink the chest towards the floor.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 390,
+      "name": "Foam Roller Thoracic Extension",
+      "notes": "Roller across the upper back, hands behind the head, extend over it.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 60,
+      "name": "Child's Pose Breathing",
+      "notes": "Long breaths out through the mouth to switch off.",
+      "targetType": "time",
+      "type": "cooldown"
     }
   ],
   "mobility|full": [
     {
-      "duration": 120,
-      "name": "Cat-Cow Dynamic Spine Waves",
-      "notes": "Inhale arch, exhale round",
+      "duration": 60,
+      "name": "Cat-Cow",
+      "notes": "Slowly arch and round the spine with the breath.",
       "targetType": "time",
       "type": "exercise"
     },
     {
-      "duration": 180,
-      "name": "Downward Dog to Cobra Flow",
-      "notes": "Hold each position 5 breaths",
-      "targetType": "time",
-      "type": "exercise"
-    },
-    {
-      "duration": 180,
-      "name": "Low Lunge Hip Flexor Stretch",
-      "notes": "90s per side with reach",
-      "targetType": "time",
-      "type": "exercise"
-    },
-    {
-      "duration": 240,
-      "name": "Pigeon Pose / Figure-4 Glute Stretch",
-      "notes": "2 mins each side",
-      "targetType": "time",
-      "type": "exercise"
-    },
-    {
-      "duration": 180,
-      "name": "World's Greatest Stretch",
-      "notes": "Step forward, rotate torso, reach high",
-      "targetType": "time",
-      "type": "exercise"
-    },
-    {
-      "duration": 180,
-      "name": "Seated Hamstring & Calf Reach",
-      "notes": "Hinge at hips, keep spine long",
+      "duration": 60,
+      "name": "90/90 Hip Switches",
+      "notes": "Sit tall, rotate both knees side to side slowly; pause at each end.",
       "targetType": "time",
       "type": "exercise"
     },
     {
       "duration": 120,
-      "name": "Child's Pose & Deep Diaphragmatic Breathing",
-      "notes": "Calm nervous system",
+      "name": "Half-Kneeling Hip Flexor Stretch",
+      "notes": "60 s each side. Squeeze the back glute, tuck the pelvis, reach the arm up.",
       "targetType": "time",
       "type": "exercise"
+    },
+    {
+      "duration": 90,
+      "name": "Open Book Rotation",
+      "notes": "45 s each side. Side-lying, knees bent; rotate the top arm open and follow it with your eyes.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 90,
+      "name": "Lying Hamstring Stretch",
+      "notes": "45 s each side. Strap or towel round the foot, leg straight, pull gently.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 60,
+      "name": "Wall Slides",
+      "notes": "Back and forearms on the wall; slide up without the ribs flaring.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 120,
+      "name": "Pigeon Stretch",
+      "notes": "60 s each side. Front shin across the body, hips square; fold forward to deepen.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 120,
+      "name": "Couch Stretch",
+      "notes": "60 s each side. Back knee at the wall, shin up the wall; stay upright.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 90,
+      "name": "Thread the Needle",
+      "notes": "45 s each side. On all fours, reach one arm under the body, then open it to the ceiling.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 90,
+      "name": "Hamstring Floss",
+      "notes": "45 s each side. Half-kneeling, straighten and bend the front leg for 10 slow reps.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 90,
+      "name": "Doorway Chest Stretch",
+      "notes": "45 s each side. Forearm on the door frame at shoulder height, step through.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 60,
+      "name": "Deep Squat Hold",
+      "notes": "Heels down, elbows push the knees out, chest up.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 60,
+      "name": "Foam Roller Thoracic Extension",
+      "notes": "Roller across the upper back, hands behind the head, extend over it.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 30,
+      "name": "Sleeper Stretch",
+      "notes": "45 s each side. Lie on your side, arm at 90°; gently press the forearm down.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 60,
+      "name": "Child's Pose Breathing",
+      "notes": "Long breaths out through the mouth to switch off.",
+      "targetType": "time",
+      "type": "cooldown"
     }
   ],
   "mobility|legs": [
     {
-      "duration": 180,
-      "name": "Low Lunge Hip Flexor Stretch",
-      "notes": "90s per side with reach",
+      "duration": 60,
+      "name": "Cat-Cow",
+      "notes": "Slowly arch and round the spine with the breath.",
       "targetType": "time",
       "type": "exercise"
     },
     {
-      "duration": 240,
-      "name": "Pigeon Pose / Figure-4 Glute Stretch",
-      "notes": "2 mins each side",
+      "duration": 60,
+      "name": "90/90 Hip Switches",
+      "notes": "Sit tall, rotate both knees side to side slowly; pause at each end.",
       "targetType": "time",
       "type": "exercise"
     },
     {
-      "duration": 180,
-      "name": "Seated Hamstring & Calf Reach",
-      "notes": "Hinge at hips, keep spine long",
+      "duration": 90,
+      "name": "Lying Hamstring Stretch",
+      "notes": "45 s each side. Strap or towel round the foot, leg straight, pull gently.",
       "targetType": "time",
       "type": "exercise"
     },
     {
-      "duration": 180,
-      "name": "Deep Squat Ankle & Hip Opener",
-      "notes": "Pry hips open with elbows",
+      "duration": 120,
+      "name": "Half-Kneeling Hip Flexor Stretch",
+      "notes": "60 s each side. Squeeze the back glute, tuck the pelvis, reach the arm up.",
       "targetType": "time",
       "type": "exercise"
     },
     {
-      "duration": 240,
-      "name": "Front Splits / Half Splits Flow",
-      "notes": "Gentle hamstring & hip flexor elongation",
+      "duration": 90,
+      "name": "Wall Calf Stretch",
+      "notes": "45 s each side. Back leg straight for 20 s, then bend the knee for the rest.",
       "targetType": "time",
       "type": "exercise"
     },
     {
-      "duration": 180,
-      "name": "Frog Pose Hip Abduction",
-      "notes": "Hold and breathe deeply",
+      "duration": 90,
+      "name": "Figure-4 Stretch",
+      "notes": "45 s each side. On your back, ankle over the opposite knee, pull the leg in.",
       "targetType": "time",
       "type": "exercise"
+    },
+    {
+      "duration": 120,
+      "name": "Pigeon Stretch",
+      "notes": "60 s each side. Front shin across the body, hips square; fold forward to deepen.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 90,
+      "name": "Hamstring Floss",
+      "notes": "45 s each side. Half-kneeling, straighten and bend the front leg for 10 slow reps.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 120,
+      "name": "Couch Stretch",
+      "notes": "60 s each side. Back knee at the wall, shin up the wall; stay upright.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 90,
+      "name": "Ankle Rocks",
+      "notes": "45 s each side. Half-kneeling, drive the front knee over the toes and back, heel down.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 45,
+      "name": "Glute Bridge March",
+      "notes": "Hold the bridge, lift one foot at a time without the hips dropping.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 165,
+      "name": "Deep Squat Hold",
+      "notes": "Heels down, elbows push the knees out, chest up.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 60,
+      "name": "Child's Pose Breathing",
+      "notes": "Long breaths out through the mouth to switch off.",
+      "targetType": "time",
+      "type": "cooldown"
     }
   ],
   "mobility|lower": [
     {
-      "duration": 180,
-      "name": "Low Lunge Hip Flexor Stretch",
-      "notes": "90s per side with reach",
+      "duration": 60,
+      "name": "Cat-Cow",
+      "notes": "Slowly arch and round the spine with the breath.",
       "targetType": "time",
       "type": "exercise"
     },
     {
-      "duration": 240,
-      "name": "Pigeon Pose / Figure-4 Glute Stretch",
-      "notes": "2 mins each side",
+      "duration": 60,
+      "name": "90/90 Hip Switches",
+      "notes": "Sit tall, rotate both knees side to side slowly; pause at each end.",
       "targetType": "time",
       "type": "exercise"
     },
     {
-      "duration": 180,
-      "name": "Seated Hamstring & Calf Reach",
-      "notes": "Hinge at hips, keep spine long",
+      "duration": 90,
+      "name": "Lying Hamstring Stretch",
+      "notes": "45 s each side. Strap or towel round the foot, leg straight, pull gently.",
       "targetType": "time",
       "type": "exercise"
     },
     {
-      "duration": 180,
-      "name": "Deep Squat Ankle & Hip Opener",
-      "notes": "Pry hips open with elbows",
+      "duration": 120,
+      "name": "Half-Kneeling Hip Flexor Stretch",
+      "notes": "60 s each side. Squeeze the back glute, tuck the pelvis, reach the arm up.",
       "targetType": "time",
       "type": "exercise"
     },
     {
-      "duration": 240,
-      "name": "Front Splits / Half Splits Flow",
-      "notes": "Gentle hamstring & hip flexor elongation",
+      "duration": 90,
+      "name": "Wall Calf Stretch",
+      "notes": "45 s each side. Back leg straight for 20 s, then bend the knee for the rest.",
       "targetType": "time",
       "type": "exercise"
     },
     {
-      "duration": 180,
-      "name": "Frog Pose Hip Abduction",
-      "notes": "Hold and breathe deeply",
+      "duration": 90,
+      "name": "Figure-4 Stretch",
+      "notes": "45 s each side. On your back, ankle over the opposite knee, pull the leg in.",
       "targetType": "time",
       "type": "exercise"
+    },
+    {
+      "duration": 120,
+      "name": "Pigeon Stretch",
+      "notes": "60 s each side. Front shin across the body, hips square; fold forward to deepen.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 90,
+      "name": "Hamstring Floss",
+      "notes": "45 s each side. Half-kneeling, straighten and bend the front leg for 10 slow reps.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 120,
+      "name": "Couch Stretch",
+      "notes": "60 s each side. Back knee at the wall, shin up the wall; stay upright.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 90,
+      "name": "Ankle Rocks",
+      "notes": "45 s each side. Half-kneeling, drive the front knee over the toes and back, heel down.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 45,
+      "name": "Glute Bridge March",
+      "notes": "Hold the bridge, lift one foot at a time without the hips dropping.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 165,
+      "name": "Deep Squat Hold",
+      "notes": "Heels down, elbows push the knees out, chest up.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 60,
+      "name": "Child's Pose Breathing",
+      "notes": "Long breaths out through the mouth to switch off.",
+      "targetType": "time",
+      "type": "cooldown"
     }
   ],
   "mobility|upper": [
     {
-      "duration": 180,
-      "name": "Overhead Shoulder Mobility & Wall Slides",
-      "notes": "Keep ribs down, reach high",
+      "duration": 60,
+      "name": "Cat-Cow",
+      "notes": "Slowly arch and round the spine with the breath.",
       "targetType": "time",
       "type": "exercise"
     },
     {
-      "duration": 180,
-      "name": "Doorway / Wall Pectoral Opener",
-      "notes": "Open chest and anterior delts",
+      "duration": 60,
+      "name": "Wall Slides",
+      "notes": "Back and forearms on the wall; slide up without the ribs flaring.",
       "targetType": "time",
       "type": "exercise"
     },
     {
-      "duration": 180,
-      "name": "Thread the Needle Thoracic Opener",
-      "notes": "Rotate spine and open shoulders",
+      "duration": 90,
+      "name": "Open Book Rotation",
+      "notes": "45 s each side. Side-lying, knees bent; rotate the top arm open and follow it with your eyes.",
       "targetType": "time",
       "type": "exercise"
     },
     {
-      "duration": 660,
-      "name": "Puppy Pose Thoracic Extension",
-      "notes": "Sink chest toward floor",
+      "duration": 90,
+      "name": "Child's Pose Side Reach",
+      "notes": "45 s each side. Walk both hands to one side and breathe into the ribs.",
       "targetType": "time",
       "type": "exercise"
+    },
+    {
+      "duration": 90,
+      "name": "Doorway Chest Stretch",
+      "notes": "45 s each side. Forearm on the door frame at shoulder height, step through.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 90,
+      "name": "Thread the Needle",
+      "notes": "45 s each side. On all fours, reach one arm under the body, then open it to the ceiling.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 45,
+      "name": "Bench Lat Stretch",
+      "notes": "Kneel, elbows on a bench, sink the chest towards the floor.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 90,
+      "name": "Sleeper Stretch",
+      "notes": "45 s each side. Lie on your side, arm at 90°; gently press the forearm down.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 525,
+      "name": "Foam Roller Thoracic Extension",
+      "notes": "Roller across the upper back, hands behind the head, extend over it.",
+      "targetType": "time",
+      "type": "exercise"
+    },
+    {
+      "duration": 60,
+      "name": "Child's Pose Breathing",
+      "notes": "Long breaths out through the mouth to switch off.",
+      "targetType": "time",
+      "type": "cooldown"
     }
   ],
   "strength|bogus": [
     {
       "duration": 300,
-      "name": "Dynamic Movement & Joint Mobility",
-      "notes": "Hip circles, arm sweeps, world's greatest stretch",
+      "name": "Warm-up",
+      "notes": "2 rounds: 10 bodyweight squats, 5 walking lunges each leg, 10 glute bridges, 10 band pull-aparts or arm circles. Then 1-2 light sets of the first lift.",
       "targetType": "time",
       "type": "warmup"
     },
     {
-      "duration": 420,
-      "name": "Squat to Overhead Press (Thruster)",
-      "notes": "Perform 3 sets of 10 reps with 60-90s rest between sets.",
-      "reps": 10,
-      "sets": 3,
-      "targetType": "reps",
-      "type": "exercise"
-    },
-    {
-      "duration": 420,
-      "name": "Deadlift / Hip Hinge",
-      "notes": "Perform 3 sets of 8 reps with 60-90s rest between sets.",
+      "duration": 475,
+      "name": "A. Tempo Bodyweight Squat",
+      "notes": "3 × 8. 3 s down, 1 s pause at the bottom, stand up tall. Rest 2 min between sets. Challenging weight: finish each set with 2-3 reps left in the tank.",
       "reps": 8,
       "sets": 3,
       "targetType": "reps",
       "type": "exercise"
     },
     {
-      "duration": 420,
-      "name": "Push-Ups / Chest Press",
-      "notes": "Perform 3 sets of 10 reps with 60-90s rest between sets.",
-      "reps": 10,
+      "duration": 475,
+      "name": "B1. Push-Up",
+      "notes": "3 × 8. Body in one straight line; hands on a bench makes it easier, feet on it harder. Superset with Inverted Row: alternate sets, rest 2 min after each pair. Challenging weight: finish each set with 2-3 reps left in the tank.",
+      "reps": 8,
       "sets": 3,
       "targetType": "reps",
       "type": "exercise"
     },
     {
-      "duration": 420,
-      "name": "Plank / Hollow Body Hold",
-      "notes": "Perform 3 sets of 45 reps with 60-90s rest between sets.",
-      "reps": 45,
+      "duration": 475,
+      "name": "B2. Inverted Row",
+      "notes": "3 × 8. Under a sturdy table or low bar, body straight; pull the chest to it. Superset with Push-Up: alternate sets, rest 2 min after each pair. Challenging weight: finish each set with 2-3 reps left in the tank.",
+      "reps": 8,
       "sets": 3,
       "targetType": "reps",
       "type": "exercise"
     },
     {
-      "duration": 420,
-      "name": "Side Plank Rotations",
-      "notes": "Perform 3 sets of 10 reps with 60-90s rest between sets.",
-      "reps": 10,
+      "duration": 475,
+      "name": "C. Single-Leg Romanian Deadlift",
+      "notes": "3 × 8 each side. Reach the free leg back with hips square; touch a wall for balance if needed. Rest 2 min between sets. Challenging weight: finish each set with 2-3 reps left in the tank.",
+      "reps": 8,
       "sets": 3,
       "targetType": "reps",
       "type": "exercise"
     },
     {
-      "duration": 300,
-      "name": "Cool Down & Static Stretches",
+      "duration": 320,
+      "name": "D1. Front Plank",
+      "notes": "2 × 40 s hold. Squeeze the glutes and brace; don't let the hips sag. Rest 45 s.",
+      "sets": 2,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 180,
+      "name": "Cool-down Stretches",
+      "notes": "Half-kneeling hip flexor stretch 30 s each side, standing hamstring stretch 30 s each side, doorway chest stretch 30 s.",
       "targetType": "time",
       "type": "cooldown"
     }
@@ -569,59 +863,59 @@
   "strength|core": [
     {
       "duration": 300,
-      "name": "Dynamic Movement & Joint Mobility",
-      "notes": "Hip circles, arm sweeps, world's greatest stretch",
+      "name": "Warm-up",
+      "notes": "2 rounds: 10 bodyweight squats, 5 walking lunges each leg, 10 glute bridges, 10 band pull-aparts or arm circles. Then 1-2 light sets of the first lift.",
       "targetType": "time",
       "type": "warmup"
     },
     {
-      "duration": 420,
-      "name": "Plank Hold / Hollow Body",
-      "notes": "Perform 3 sets of 45 reps with 60-90s rest between sets.",
-      "reps": 45,
+      "duration": 512,
+      "name": "A. Tempo Bodyweight Squat",
+      "notes": "3 × 8. 3 s down, 1 s pause at the bottom, stand up tall. Rest 2 min between sets. Challenging weight: finish each set with 2-3 reps left in the tank.",
+      "reps": 8,
       "sets": 3,
       "targetType": "reps",
       "type": "exercise"
     },
     {
-      "duration": 420,
-      "name": "Hanging Leg Raises / Toes to Bar",
-      "notes": "Perform 3 sets of 12 reps with 60-90s rest between sets.",
-      "reps": 12,
+      "duration": 512,
+      "name": "B1. Push-Up",
+      "notes": "3 × 8. Body in one straight line; hands on a bench makes it easier, feet on it harder. Superset with Inverted Row: alternate sets, rest 2 min after each pair. Challenging weight: finish each set with 2-3 reps left in the tank.",
+      "reps": 8,
       "sets": 3,
       "targetType": "reps",
       "type": "exercise"
     },
     {
-      "duration": 420,
-      "name": "Ab Wheel Rollouts / Deadbugs",
-      "notes": "Perform 3 sets of 10 reps with 60-90s rest between sets.",
-      "reps": 10,
+      "duration": 512,
+      "name": "B2. Inverted Row",
+      "notes": "3 × 8. Under a sturdy table or low bar, body straight; pull the chest to it. Superset with Push-Up: alternate sets, rest 2 min after each pair. Challenging weight: finish each set with 2-3 reps left in the tank.",
+      "reps": 8,
       "sets": 3,
       "targetType": "reps",
       "type": "exercise"
     },
     {
-      "duration": 420,
-      "name": "Side Plank Rotations",
-      "notes": "Perform 3 sets of 10 reps with 60-90s rest between sets.",
-      "reps": 10,
-      "sets": 3,
+      "duration": 341,
+      "name": "D1. Front Plank",
+      "notes": "2 × 40 s hold. Squeeze the glutes and brace; don't let the hips sag. Rest 45 s.",
+      "sets": 2,
       "targetType": "reps",
       "type": "exercise"
     },
     {
-      "duration": 420,
-      "name": "Russian Twists / Cable Chops",
-      "notes": "Perform 3 sets of 16 reps with 60-90s rest between sets.",
-      "reps": 16,
-      "sets": 3,
+      "duration": 343,
+      "name": "D2. Bird Dog",
+      "notes": "2 × 8 each side. Reach the opposite arm and leg long, hold 2 s, keep the hips level. Rest 45 s.",
+      "reps": 8,
+      "sets": 2,
       "targetType": "reps",
       "type": "exercise"
     },
     {
-      "duration": 300,
-      "name": "Cool Down & Static Stretches",
+      "duration": 180,
+      "name": "Cool-down Stretches",
+      "notes": "Half-kneeling hip flexor stretch 30 s each side, standing hamstring stretch 30 s each side, doorway chest stretch 30 s.",
       "targetType": "time",
       "type": "cooldown"
     }
@@ -629,59 +923,59 @@
   "strength|full": [
     {
       "duration": 300,
-      "name": "Dynamic Movement & Joint Mobility",
-      "notes": "Hip circles, arm sweeps, world's greatest stretch",
+      "name": "Warm-up",
+      "notes": "2 rounds: 10 bodyweight squats, 5 walking lunges each leg, 10 glute bridges, 10 band pull-aparts or arm circles. Then 1-2 light sets of the first lift.",
       "targetType": "time",
       "type": "warmup"
     },
     {
-      "duration": 420,
-      "name": "Squat to Overhead Press (Thruster)",
-      "notes": "Perform 3 sets of 10 reps with 60-90s rest between sets.",
-      "reps": 10,
-      "sets": 3,
-      "targetType": "reps",
-      "type": "exercise"
-    },
-    {
-      "duration": 420,
-      "name": "Deadlift / Hip Hinge",
-      "notes": "Perform 3 sets of 8 reps with 60-90s rest between sets.",
+      "duration": 475,
+      "name": "A. Tempo Bodyweight Squat",
+      "notes": "3 × 8. 3 s down, 1 s pause at the bottom, stand up tall. Rest 2 min between sets. Challenging weight: finish each set with 2-3 reps left in the tank.",
       "reps": 8,
       "sets": 3,
       "targetType": "reps",
       "type": "exercise"
     },
     {
-      "duration": 420,
-      "name": "Push-Ups / Chest Press",
-      "notes": "Perform 3 sets of 10 reps with 60-90s rest between sets.",
-      "reps": 10,
+      "duration": 475,
+      "name": "B1. Push-Up",
+      "notes": "3 × 8. Body in one straight line; hands on a bench makes it easier, feet on it harder. Superset with Inverted Row: alternate sets, rest 2 min after each pair. Challenging weight: finish each set with 2-3 reps left in the tank.",
+      "reps": 8,
       "sets": 3,
       "targetType": "reps",
       "type": "exercise"
     },
     {
-      "duration": 420,
-      "name": "Plank / Hollow Body Hold",
-      "notes": "Perform 3 sets of 45 reps with 60-90s rest between sets.",
-      "reps": 45,
+      "duration": 475,
+      "name": "B2. Inverted Row",
+      "notes": "3 × 8. Under a sturdy table or low bar, body straight; pull the chest to it. Superset with Push-Up: alternate sets, rest 2 min after each pair. Challenging weight: finish each set with 2-3 reps left in the tank.",
+      "reps": 8,
       "sets": 3,
       "targetType": "reps",
       "type": "exercise"
     },
     {
-      "duration": 420,
-      "name": "Side Plank Rotations",
-      "notes": "Perform 3 sets of 10 reps with 60-90s rest between sets.",
-      "reps": 10,
+      "duration": 475,
+      "name": "C. Single-Leg Romanian Deadlift",
+      "notes": "3 × 8 each side. Reach the free leg back with hips square; touch a wall for balance if needed. Rest 2 min between sets. Challenging weight: finish each set with 2-3 reps left in the tank.",
+      "reps": 8,
       "sets": 3,
       "targetType": "reps",
       "type": "exercise"
     },
     {
-      "duration": 300,
-      "name": "Cool Down & Static Stretches",
+      "duration": 320,
+      "name": "D1. Front Plank",
+      "notes": "2 × 40 s hold. Squeeze the glutes and brace; don't let the hips sag. Rest 45 s.",
+      "sets": 2,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 180,
+      "name": "Cool-down Stretches",
+      "notes": "Half-kneeling hip flexor stretch 30 s each side, standing hamstring stretch 30 s each side, doorway chest stretch 30 s.",
       "targetType": "time",
       "type": "cooldown"
     }
@@ -689,59 +983,50 @@
   "strength|legs": [
     {
       "duration": 300,
-      "name": "Dynamic Movement & Joint Mobility",
-      "notes": "Hip circles, arm sweeps, world's greatest stretch",
+      "name": "Warm-up",
+      "notes": "2 rounds: 10 bodyweight squats, 5 walking lunges each leg, 10 glute bridges, 10 band pull-aparts or arm circles. Then 1-2 light sets of the first lift.",
       "targetType": "time",
       "type": "warmup"
     },
     {
-      "duration": 420,
-      "name": "Goblet Squats",
-      "notes": "Perform 3 sets of 10 reps with 60-90s rest between sets.",
-      "reps": 10,
-      "sets": 3,
-      "targetType": "reps",
-      "type": "exercise"
-    },
-    {
-      "duration": 420,
-      "name": "Walking Lunges",
-      "notes": "Perform 3 sets of 12 reps with 60-90s rest between sets.",
-      "reps": 12,
-      "sets": 3,
-      "targetType": "reps",
-      "type": "exercise"
-    },
-    {
-      "duration": 420,
-      "name": "Bulgarian Split Squats",
-      "notes": "Perform 3 sets of 8 reps with 60-90s rest between sets.",
+      "duration": 605,
+      "name": "A. Tempo Bodyweight Squat",
+      "notes": "3 × 8. 3 s down, 1 s pause at the bottom, stand up tall. Rest 2 min between sets. Challenging weight: finish each set with 2-3 reps left in the tank.",
       "reps": 8,
       "sets": 3,
       "targetType": "reps",
       "type": "exercise"
     },
     {
-      "duration": 420,
-      "name": "Calf Raises",
-      "notes": "Perform 3 sets of 15 reps with 60-90s rest between sets.",
-      "reps": 15,
+      "duration": 605,
+      "name": "B. Single-Leg Romanian Deadlift",
+      "notes": "3 × 8 each side. Reach the free leg back with hips square; touch a wall for balance if needed. Rest 2 min between sets. Challenging weight: finish each set with 2-3 reps left in the tank.",
+      "reps": 8,
       "sets": 3,
       "targetType": "reps",
       "type": "exercise"
     },
     {
-      "duration": 420,
-      "name": "Single-Leg Glute Bridges",
-      "notes": "Perform 3 sets of 12 reps with 60-90s rest between sets.",
-      "reps": 12,
+      "duration": 605,
+      "name": "C. Reverse Lunge",
+      "notes": "3 × 8 each side. Step back, back knee to just above the floor, push through the front heel. Rest 2 min between sets. Challenging weight: finish each set with 2-3 reps left in the tank.",
+      "reps": 8,
       "sets": 3,
       "targetType": "reps",
       "type": "exercise"
     },
     {
-      "duration": 300,
-      "name": "Cool Down & Static Stretches",
+      "duration": 405,
+      "name": "D1. Front Plank",
+      "notes": "2 × 40 s hold. Squeeze the glutes and brace; don't let the hips sag. Rest 45 s.",
+      "sets": 2,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 180,
+      "name": "Cool-down Stretches",
+      "notes": "Half-kneeling hip flexor stretch 30 s each side, standing hamstring stretch 30 s each side, doorway chest stretch 30 s.",
       "targetType": "time",
       "type": "cooldown"
     }
@@ -749,59 +1034,50 @@
   "strength|lower": [
     {
       "duration": 300,
-      "name": "Dynamic Movement & Joint Mobility",
-      "notes": "Hip circles, arm sweeps, world's greatest stretch",
+      "name": "Warm-up",
+      "notes": "2 rounds: 10 bodyweight squats, 5 walking lunges each leg, 10 glute bridges, 10 band pull-aparts or arm circles. Then 1-2 light sets of the first lift.",
       "targetType": "time",
       "type": "warmup"
     },
     {
-      "duration": 420,
-      "name": "Goblet Squats",
-      "notes": "Perform 3 sets of 10 reps with 60-90s rest between sets.",
-      "reps": 10,
-      "sets": 3,
-      "targetType": "reps",
-      "type": "exercise"
-    },
-    {
-      "duration": 420,
-      "name": "Walking Lunges",
-      "notes": "Perform 3 sets of 12 reps with 60-90s rest between sets.",
-      "reps": 12,
-      "sets": 3,
-      "targetType": "reps",
-      "type": "exercise"
-    },
-    {
-      "duration": 420,
-      "name": "Bulgarian Split Squats",
-      "notes": "Perform 3 sets of 8 reps with 60-90s rest between sets.",
+      "duration": 605,
+      "name": "A. Tempo Bodyweight Squat",
+      "notes": "3 × 8. 3 s down, 1 s pause at the bottom, stand up tall. Rest 2 min between sets. Challenging weight: finish each set with 2-3 reps left in the tank.",
       "reps": 8,
       "sets": 3,
       "targetType": "reps",
       "type": "exercise"
     },
     {
-      "duration": 420,
-      "name": "Calf Raises",
-      "notes": "Perform 3 sets of 15 reps with 60-90s rest between sets.",
-      "reps": 15,
+      "duration": 605,
+      "name": "B. Single-Leg Romanian Deadlift",
+      "notes": "3 × 8 each side. Reach the free leg back with hips square; touch a wall for balance if needed. Rest 2 min between sets. Challenging weight: finish each set with 2-3 reps left in the tank.",
+      "reps": 8,
       "sets": 3,
       "targetType": "reps",
       "type": "exercise"
     },
     {
-      "duration": 420,
-      "name": "Single-Leg Glute Bridges",
-      "notes": "Perform 3 sets of 12 reps with 60-90s rest between sets.",
-      "reps": 12,
+      "duration": 605,
+      "name": "C. Reverse Lunge",
+      "notes": "3 × 8 each side. Step back, back knee to just above the floor, push through the front heel. Rest 2 min between sets. Challenging weight: finish each set with 2-3 reps left in the tank.",
+      "reps": 8,
       "sets": 3,
       "targetType": "reps",
       "type": "exercise"
     },
     {
-      "duration": 300,
-      "name": "Cool Down & Static Stretches",
+      "duration": 405,
+      "name": "D1. Front Plank",
+      "notes": "2 × 40 s hold. Squeeze the glutes and brace; don't let the hips sag. Rest 45 s.",
+      "sets": 2,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 180,
+      "name": "Cool-down Stretches",
+      "notes": "Half-kneeling hip flexor stretch 30 s each side, standing hamstring stretch 30 s each side, doorway chest stretch 30 s.",
       "targetType": "time",
       "type": "cooldown"
     }
@@ -809,41 +1085,50 @@
   "strength|upper": [
     {
       "duration": 300,
-      "name": "Dynamic Movement & Joint Mobility",
-      "notes": "Hip circles, arm sweeps, world's greatest stretch",
+      "name": "Warm-up",
+      "notes": "2 rounds: 10 bodyweight squats, 5 walking lunges each leg, 10 glute bridges, 10 band pull-aparts or arm circles. Then 1-2 light sets of the first lift.",
       "targetType": "time",
       "type": "warmup"
     },
     {
-      "duration": 700,
-      "name": "Push-Ups / Dumbbell Bench Press",
-      "notes": "Perform 3 sets of 10 reps with 60-90s rest between sets.",
-      "reps": 10,
-      "sets": 3,
-      "targetType": "reps",
-      "type": "exercise"
-    },
-    {
-      "duration": 700,
-      "name": "Pull-Ups / Lat Pulldown",
-      "notes": "Perform 3 sets of 8 reps with 60-90s rest between sets.",
+      "duration": 605,
+      "name": "A. Push-Up",
+      "notes": "3 × 8. Body in one straight line; hands on a bench makes it easier, feet on it harder. Rest 2 min between sets. Challenging weight: finish each set with 2-3 reps left in the tank.",
       "reps": 8,
       "sets": 3,
       "targetType": "reps",
       "type": "exercise"
     },
     {
-      "duration": 700,
-      "name": "Plank Shoulder Taps",
-      "notes": "Perform 3 sets of 16 reps with 60-90s rest between sets.",
-      "reps": 16,
+      "duration": 605,
+      "name": "B. Inverted Row",
+      "notes": "3 × 8. Under a sturdy table or low bar, body straight; pull the chest to it. Rest 2 min between sets. Challenging weight: finish each set with 2-3 reps left in the tank.",
+      "reps": 8,
       "sets": 3,
       "targetType": "reps",
       "type": "exercise"
     },
     {
-      "duration": 300,
-      "name": "Cool Down & Static Stretches",
+      "duration": 605,
+      "name": "C. Pike Push-Up",
+      "notes": "3 × 8. Hips high, lower the top of your head towards the floor between your hands. Rest 2 min between sets. Challenging weight: finish each set with 2-3 reps left in the tank.",
+      "reps": 8,
+      "sets": 3,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 405,
+      "name": "D1. Front Plank",
+      "notes": "2 × 40 s hold. Squeeze the glutes and brace; don't let the hips sag. Rest 45 s.",
+      "sets": 2,
+      "targetType": "reps",
+      "type": "exercise"
+    },
+    {
+      "duration": 180,
+      "name": "Cool-down Stretches",
+      "notes": "Half-kneeling hip flexor stretch 30 s each side, standing hamstring stretch 30 s each side, doorway chest stretch 30 s.",
       "targetType": "time",
       "type": "cooldown"
     }

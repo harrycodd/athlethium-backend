@@ -4,10 +4,24 @@
     "intensity": null,
     "kind": "mobility",
     "minutes": 20.0,
-    "name": "Core Mobility & Recovery Flow",
+    "name": "Core & Spine Mobility",
     "rationale": "Load week (Build phase), 10 weeks to your event. Mobility on a rest day.",
     "sport": "stretching",
     "steps": [
+      [
+        "exercise",
+        60,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        90,
+        null,
+        null,
+        "time"
+      ],
       [
         "exercise",
         120,
@@ -17,28 +31,56 @@
       ],
       [
         "exercise",
-        180,
+        45,
         null,
         null,
         "time"
       ],
       [
         "exercise",
-        180,
+        45,
         null,
         null,
         "time"
       ],
       [
         "exercise",
-        180,
+        90,
         null,
         null,
         "time"
       ],
       [
         "exercise",
-        540,
+        120,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        90,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        90,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        390,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "cooldown",
+        60,
         null,
         null,
         "time"
@@ -279,7 +321,7 @@
     "intensity": null,
     "kind": "strength",
     "minutes": 30.0,
-    "name": "Core Body Functional Strength",
+    "name": "Core & Full Body Strength B",
     "rationale": "Load week (Build phase), 10 weeks to your event. Strength: supports injury resistance and power transfer. Kept away from the day before a hard session.",
     "sport": "strength",
     "steps": [
@@ -292,28 +334,49 @@
       ],
       [
         "exercise",
-        400,
+        247,
         null,
         null,
         "reps"
       ],
       [
         "exercise",
-        400,
+        247,
         null,
         null,
         "reps"
       ],
       [
         "exercise",
-        400,
+        247,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        165,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        165,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        249,
         null,
         null,
         "reps"
       ],
       [
         "cooldown",
-        300,
+        180,
         null,
         null,
         "time"
@@ -423,10 +486,24 @@
     "intensity": null,
     "kind": "mobility",
     "minutes": 20.0,
-    "name": "Core Mobility & Recovery Flow",
+    "name": "Core & Spine Mobility",
     "rationale": "Recovery week (Build phase), 9 weeks to your event. Mobility on a rest day.",
     "sport": "stretching",
     "steps": [
+      [
+        "exercise",
+        60,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        90,
+        null,
+        null,
+        "time"
+      ],
       [
         "exercise",
         120,
@@ -436,28 +513,56 @@
       ],
       [
         "exercise",
-        180,
+        90,
         null,
         null,
         "time"
       ],
       [
         "exercise",
-        180,
+        90,
         null,
         null,
         "time"
       ],
       [
         "exercise",
-        180,
+        60,
         null,
         null,
         "time"
       ],
       [
         "exercise",
-        540,
+        120,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        45,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        45,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        420,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "cooldown",
+        60,
         null,
         null,
         "time"
@@ -562,7 +667,7 @@
     "intensity": null,
     "kind": "strength",
     "minutes": 30.0,
-    "name": "Core Body Functional Strength",
+    "name": "Core & Full Body Strength A",
     "rationale": "Recovery week (Build phase), 9 weeks to your event. Strength: supports injury resistance and power transfer. Kept away from the day before a hard session.",
     "sport": "strength",
     "steps": [
@@ -575,28 +680,49 @@
       ],
       [
         "exercise",
-        400,
+        247,
         null,
         null,
         "reps"
       ],
       [
         "exercise",
-        400,
+        247,
         null,
         null,
         "reps"
       ],
       [
         "exercise",
-        400,
+        247,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        165,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        165,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        249,
         null,
         null,
         "reps"
       ],
       [
         "cooldown",
-        300,
+        180,
         null,
         null,
         "time"
@@ -800,10 +926,24 @@
     "intensity": null,
     "kind": "mobility",
     "minutes": 20.0,
-    "name": "Core Mobility & Recovery Flow",
+    "name": "Core & Spine Mobility",
     "rationale": "Load week (Build phase), 8 weeks to your event. Mobility on a rest day.",
     "sport": "stretching",
     "steps": [
+      [
+        "exercise",
+        60,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        60,
+        null,
+        null,
+        "time"
+      ],
       [
         "exercise",
         120,
@@ -813,28 +953,56 @@
       ],
       [
         "exercise",
-        180,
+        45,
         null,
         null,
         "time"
       ],
       [
         "exercise",
-        180,
+        45,
         null,
         null,
         "time"
       ],
       [
         "exercise",
-        180,
+        90,
         null,
         null,
         "time"
       ],
       [
         "exercise",
-        540,
+        120,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        90,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        90,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        420,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "cooldown",
+        60,
         null,
         null,
         "time"
@@ -1040,7 +1208,7 @@
     "intensity": null,
     "kind": "strength",
     "minutes": 30.0,
-    "name": "Core Body Functional Strength",
+    "name": "Core & Full Body Strength B",
     "rationale": "Load week (Build phase), 8 weeks to your event. Strength: supports injury resistance and power transfer. Kept away from the day before a hard session.",
     "sport": "strength",
     "steps": [
@@ -1053,28 +1221,49 @@
       ],
       [
         "exercise",
-        400,
+        247,
         null,
         null,
         "reps"
       ],
       [
         "exercise",
-        400,
+        247,
         null,
         null,
         "reps"
       ],
       [
         "exercise",
-        400,
+        247,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        165,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        165,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        249,
         null,
         null,
         "reps"
       ],
       [
         "cooldown",
-        300,
+        180,
         null,
         null,
         "time"
@@ -1184,10 +1373,24 @@
     "intensity": null,
     "kind": "mobility",
     "minutes": 20.0,
-    "name": "Core Mobility & Recovery Flow",
+    "name": "Core & Spine Mobility",
     "rationale": "Load week (Build phase), 7 weeks to your event. Mobility on a rest day.",
     "sport": "stretching",
     "steps": [
+      [
+        "exercise",
+        60,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        90,
+        null,
+        null,
+        "time"
+      ],
       [
         "exercise",
         120,
@@ -1197,28 +1400,56 @@
       ],
       [
         "exercise",
-        180,
+        90,
         null,
         null,
         "time"
       ],
       [
         "exercise",
-        180,
+        90,
         null,
         null,
         "time"
       ],
       [
         "exercise",
-        180,
+        90,
         null,
         null,
         "time"
       ],
       [
         "exercise",
-        540,
+        120,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        45,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        45,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        390,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "cooldown",
+        60,
         null,
         null,
         "time"
@@ -1487,7 +1718,7 @@
     "intensity": null,
     "kind": "strength",
     "minutes": 30.0,
-    "name": "Core Body Functional Strength",
+    "name": "Core & Full Body Strength B",
     "rationale": "Load week (Build phase), 7 weeks to your event. Strength: supports injury resistance and power transfer. Kept away from the day before a hard session.",
     "sport": "strength",
     "steps": [
@@ -1500,28 +1731,49 @@
       ],
       [
         "exercise",
-        400,
+        247,
         null,
         null,
         "reps"
       ],
       [
         "exercise",
-        400,
+        247,
         null,
         null,
         "reps"
       ],
       [
         "exercise",
-        400,
+        247,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        165,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        165,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        249,
         null,
         null,
         "reps"
       ],
       [
         "cooldown",
-        300,
+        180,
         null,
         null,
         "time"
@@ -1631,10 +1883,24 @@
     "intensity": null,
     "kind": "mobility",
     "minutes": 20.0,
-    "name": "Core Mobility & Recovery Flow",
+    "name": "Core & Spine Mobility",
     "rationale": "Load week (Build phase), 6 weeks to your event. Mobility on a rest day.",
     "sport": "stretching",
     "steps": [
+      [
+        "exercise",
+        60,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        90,
+        null,
+        null,
+        "time"
+      ],
       [
         "exercise",
         120,
@@ -1644,28 +1910,56 @@
       ],
       [
         "exercise",
-        180,
+        45,
         null,
         null,
         "time"
       ],
       [
         "exercise",
-        180,
+        45,
         null,
         null,
         "time"
       ],
       [
         "exercise",
-        180,
+        60,
         null,
         null,
         "time"
       ],
       [
         "exercise",
-        540,
+        120,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        90,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        90,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        420,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "cooldown",
+        60,
         null,
         null,
         "time"
@@ -1934,7 +2228,7 @@
     "intensity": null,
     "kind": "strength",
     "minutes": 30.0,
-    "name": "Core Body Functional Strength",
+    "name": "Core & Full Body Strength B",
     "rationale": "Load week (Build phase), 6 weeks to your event. Strength: supports injury resistance and power transfer. Kept away from the day before a hard session.",
     "sport": "strength",
     "steps": [
@@ -1947,28 +2241,49 @@
       ],
       [
         "exercise",
-        400,
+        247,
         null,
         null,
         "reps"
       ],
       [
         "exercise",
-        400,
+        247,
         null,
         null,
         "reps"
       ],
       [
         "exercise",
-        400,
+        247,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        165,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        165,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        249,
         null,
         null,
         "reps"
       ],
       [
         "cooldown",
-        300,
+        180,
         null,
         null,
         "time"
@@ -2078,10 +2393,24 @@
     "intensity": null,
     "kind": "mobility",
     "minutes": 20.0,
-    "name": "Core Mobility & Recovery Flow",
+    "name": "Core & Spine Mobility",
     "rationale": "Recovery week (Build phase), 5 weeks to your event. Mobility on a rest day.",
     "sport": "stretching",
     "steps": [
+      [
+        "exercise",
+        60,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        60,
+        null,
+        null,
+        "time"
+      ],
       [
         "exercise",
         120,
@@ -2091,28 +2420,56 @@
       ],
       [
         "exercise",
-        180,
+        90,
         null,
         null,
         "time"
       ],
       [
         "exercise",
-        180,
+        90,
         null,
         null,
         "time"
       ],
       [
         "exercise",
-        180,
+        90,
         null,
         null,
         "time"
       ],
       [
         "exercise",
-        540,
+        120,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        45,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        45,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        420,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "cooldown",
+        60,
         null,
         null,
         "time"
@@ -2224,7 +2581,7 @@
     "intensity": null,
     "kind": "strength",
     "minutes": 30.0,
-    "name": "Core Body Functional Strength",
+    "name": "Core & Full Body Strength A",
     "rationale": "Recovery week (Build phase), 5 weeks to your event. Strength: supports injury resistance and power transfer. Kept away from the day before a hard session.",
     "sport": "strength",
     "steps": [
@@ -2237,28 +2594,49 @@
       ],
       [
         "exercise",
-        400,
+        247,
         null,
         null,
         "reps"
       ],
       [
         "exercise",
-        400,
+        247,
         null,
         null,
         "reps"
       ],
       [
         "exercise",
-        400,
+        247,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        165,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        165,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        249,
         null,
         null,
         "reps"
       ],
       [
         "cooldown",
-        300,
+        180,
         null,
         null,
         "time"
@@ -2462,10 +2840,24 @@
     "intensity": null,
     "kind": "mobility",
     "minutes": 20.0,
-    "name": "Core Mobility & Recovery Flow",
+    "name": "Core & Spine Mobility",
     "rationale": "Load week (Peak phase), 4 weeks to your event. Mobility on a rest day.",
     "sport": "stretching",
     "steps": [
+      [
+        "exercise",
+        60,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        90,
+        null,
+        null,
+        "time"
+      ],
       [
         "exercise",
         120,
@@ -2475,28 +2867,56 @@
       ],
       [
         "exercise",
-        180,
+        45,
         null,
         null,
         "time"
       ],
       [
         "exercise",
-        180,
+        45,
         null,
         null,
         "time"
       ],
       [
         "exercise",
-        180,
+        90,
         null,
         null,
         "time"
       ],
       [
         "exercise",
-        540,
+        120,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        90,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        90,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        390,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "cooldown",
+        60,
         null,
         null,
         "time"
@@ -2765,7 +3185,7 @@
     "intensity": null,
     "kind": "strength",
     "minutes": 30.0,
-    "name": "Core Body Functional Strength",
+    "name": "Core & Full Body Strength B",
     "rationale": "Load week (Peak phase), 4 weeks to your event. Strength: supports injury resistance and power transfer. Kept away from the day before a hard session.",
     "sport": "strength",
     "steps": [
@@ -2778,28 +3198,49 @@
       ],
       [
         "exercise",
-        400,
+        247,
         null,
         null,
         "reps"
       ],
       [
         "exercise",
-        400,
+        247,
         null,
         null,
         "reps"
       ],
       [
         "exercise",
-        400,
+        247,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        165,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        165,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        249,
         null,
         null,
         "reps"
       ],
       [
         "cooldown",
-        300,
+        180,
         null,
         null,
         "time"
@@ -2909,10 +3350,24 @@
     "intensity": null,
     "kind": "mobility",
     "minutes": 20.0,
-    "name": "Core Mobility & Recovery Flow",
+    "name": "Core & Spine Mobility",
     "rationale": "Load week (Peak phase), 3 weeks to your event. Mobility on a rest day.",
     "sport": "stretching",
     "steps": [
+      [
+        "exercise",
+        60,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        90,
+        null,
+        null,
+        "time"
+      ],
       [
         "exercise",
         120,
@@ -2922,28 +3377,56 @@
       ],
       [
         "exercise",
-        180,
+        90,
         null,
         null,
         "time"
       ],
       [
         "exercise",
-        180,
+        90,
         null,
         null,
         "time"
       ],
       [
         "exercise",
-        180,
+        60,
         null,
         null,
         "time"
       ],
       [
         "exercise",
-        540,
+        120,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        45,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        45,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "exercise",
+        420,
+        null,
+        null,
+        "time"
+      ],
+      [
+        "cooldown",
+        60,
         null,
         null,
         "time"
@@ -3212,7 +3695,7 @@
     "intensity": null,
     "kind": "strength",
     "minutes": 30.0,
-    "name": "Core Body Functional Strength",
+    "name": "Core & Full Body Strength B",
     "rationale": "Load week (Peak phase), 3 weeks to your event. Strength: supports injury resistance and power transfer. Kept away from the day before a hard session.",
     "sport": "strength",
     "steps": [
@@ -3225,28 +3708,49 @@
       ],
       [
         "exercise",
-        400,
+        247,
         null,
         null,
         "reps"
       ],
       [
         "exercise",
-        400,
+        247,
         null,
         null,
         "reps"
       ],
       [
         "exercise",
-        400,
+        247,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        165,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        165,
+        null,
+        null,
+        "reps"
+      ],
+      [
+        "exercise",
+        249,
         null,
         null,
         "reps"
       ],
       [
         "cooldown",
-        300,
+        180,
         null,
         null,
         "time"
