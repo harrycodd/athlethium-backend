@@ -31,10 +31,13 @@ def build_payload(session, profile: UserProfile) -> Dict[str, Any]:
     if kind == "strength":
         return StrengthGenerator.generate(focus=anatomical_focus(profile),
                                           duration_minutes=int(round(session.hours * 60)),
-                                          difficulty=2, user_equipment=profile.equipment)
+                                          difficulty=2, user_equipment=profile.equipment,
+                                          session_date=session.date, sports=profile.sports,
+                                          level=profile.fitness_level)
     if kind == "mobility":
         return MobilityGenerator.generate(focus=anatomical_focus(profile),
-                                          duration_minutes=int(round(session.hours * 60)))
+                                          duration_minutes=int(round(session.hours * 60)),
+                                          sports=profile.sports, session_date=session.date)
     if kind == "benchmark":
         return EnduranceGenerator.generate_benchmark_workout(
             sport=session.sport, duration_hours=session.hours, interval_style=profile.interval_type,

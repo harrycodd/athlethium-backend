@@ -70,56 +70,56 @@ Sam: new to cycling, 4 h/week, heart-rate strap only, no FTP yet. Building towar
 
 | Date | Session | Sport | Duration | TSS | Main set / targets |
 |---|---|---|---:|---:|---|
-| Mon 05 Oct | Mobility | stretching | 20 min | 0 | Cat-Cow Dynamic Spine Waves, Downward Dog to Cobra Flow, Low Lunge Hip Flexor Stretch, Pigeon Pose / Figure-4 Glute Stretch ... |
+| Mon 05 Oct | Mobility | stretching | 20 min | 0 | Cat-Cow, Couch Stretch, Open Book Rotation, Glute Bridge March ... |
 | Tue 06 Oct | Rest | | | | |
 | Wed 07 Oct | Rest | | | | |
 | Thu 08 Oct | Rest | | | | |
 | Fri 09 Oct | Rest | | | | |
 | Sat 10 Oct | Easy | cycling | 40 min | 28 | 40 min @ 127-136 bpm |
 | Sun 11 Oct | Easy | cycling | 45 min | 32 | 45 min @ 127-136 bpm |
-| Mon 12 Oct | Mobility | stretching | 20 min | 0 | Cat-Cow Dynamic Spine Waves, Downward Dog to Cobra Flow, Low Lunge Hip Flexor Stretch, Pigeon Pose / Figure-4 Glute Stretch ... |
+| Mon 12 Oct | Mobility | stretching | 20 min | 0 | Cat-Cow, Half-Kneeling Hip Flexor Stretch, Thread the Needle, Figure-4 Stretch ... |
 | Tue 13 Oct | Easy | cycling | 30 min | 21 | 30 min @ 127-136 bpm |
 | Wed 14 Oct | Rest | | | | |
 | Thu 15 Oct | Easy | cycling | 30 min | 21 | 30 min @ 127-136 bpm |
 | Fri 16 Oct | Rest | | | | |
 | Sat 17 Oct | Long | cycling | 1h00 | 42 | 1h00 @ 127-136 bpm |
 | Sun 18 Oct | Easy | cycling | 30 min | 21 | 30 min @ 127-136 bpm |
-| Mon 19 Oct | Mobility | stretching | 20 min | 0 | Cat-Cow Dynamic Spine Waves, Downward Dog to Cobra Flow, Low Lunge Hip Flexor Stretch, Pigeon Pose / Figure-4 Glute Stretch ... |
+| Mon 19 Oct | Mobility | stretching | 20 min | 0 | Cat-Cow, Couch Stretch, Foam Roller Thoracic Extension, Glute Bridge March ... |
 | Tue 20 Oct | Easy | cycling | 35 min | 25 | 35 min @ 127-136 bpm |
 | Wed 21 Oct | Rest | | | | |
 | Thu 22 Oct | Easy | cycling | 35 min | 25 | 35 min @ 127-136 bpm |
 | Fri 23 Oct | Rest | | | | |
 | Sat 24 Oct | Long | cycling | 1h00 | 42 | 1h00 @ 127-136 bpm |
 | Sun 25 Oct | Easy | cycling | 35 min | 25 | 35 min @ 127-136 bpm |
-| Mon 26 Oct | Mobility | stretching | 20 min | 0 | Cat-Cow Dynamic Spine Waves, Downward Dog to Cobra Flow, Low Lunge Hip Flexor Stretch, Pigeon Pose / Figure-4 Glute Stretch ... |
+| Mon 26 Oct | Mobility | stretching | 20 min | 0 | Cat-Cow, Half-Kneeling Hip Flexor Stretch, Open Book Rotation, Figure-4 Stretch ... |
 | Tue 27 Oct | Easy | cycling | 30 min | 21 | 30 min @ 127-136 bpm |
 | Wed 28 Oct | Easy | cycling | 30 min | 21 | 30 min @ 127-136 bpm |
 | Thu 29 Oct | Easy | cycling | 30 min | 21 | 30 min @ 127-136 bpm |
 | Fri 30 Oct | Rest | | | | |
 | Sat 31 Oct | Long | cycling | 1h00 | 42 | 1h00 @ 127-136 bpm |
 | Sun 01 Nov | Easy | cycling | 30 min | 21 | 30 min @ 127-136 bpm |
-| Mon 02 Nov | Mobility | stretching | 20 min | 0 | Cat-Cow Dynamic Spine Waves, Downward Dog to Cobra Flow, Low Lunge Hip Flexor Stretch, Pigeon Pose / Figure-4 Glute Stretch ... |
+| Mon 02 Nov | Mobility | stretching | 20 min | 0 | Cat-Cow, Couch Stretch, Thread the Needle, Glute Bridge March ... |
 | Tue 03 Nov | Easy | cycling | 35 min | 25 | 35 min @ 127-136 bpm |
 | Wed 04 Nov | Rest | | | | |
 | Thu 05 Nov | Rest | | | | |
 | Fri 06 Nov | Rest | | | | |
 | Sat 07 Nov | Easy | cycling | 40 min | 28 | 40 min @ 127-136 bpm |
 | Sun 08 Nov | Easy | cycling | 40 min | 28 | 40 min @ 127-136 bpm |
-| Mon 09 Nov | Mobility | stretching | 20 min | 0 | Cat-Cow Dynamic Spine Waves, Downward Dog to Cobra Flow, Low Lunge Hip Flexor Stretch, Pigeon Pose / Figure-4 Glute Stretch ... |
+| Mon 09 Nov | Mobility | stretching | 20 min | 0 | Cat-Cow, Half-Kneeling Hip Flexor Stretch, Foam Roller Thoracic Extension, Figure-4 Stretch ... |
 | Tue 10 Nov | Easy | cycling | 35 min | 25 | 35 min @ 127-136 bpm |
 | Wed 11 Nov | Easy | cycling | 30 min | 21 | 30 min @ 127-136 bpm |
 | Thu 12 Nov | Easy | cycling | 35 min | 25 | 35 min @ 127-136 bpm |
 | Fri 13 Nov | Rest | | | | |
 | Sat 14 Nov | Long | cycling | 1h00 | 42 | 1h00 @ 127-136 bpm |
 | Sun 15 Nov | Easy | cycling | 35 min | 25 | 35 min @ 127-136 bpm |
-| Mon 16 Nov | Mobility | stretching | 20 min | 0 | Cat-Cow Dynamic Spine Waves, Downward Dog to Cobra Flow, Low Lunge Hip Flexor Stretch, Pigeon Pose / Figure-4 Glute Stretch ... |
+| Mon 16 Nov | Mobility | stretching | 20 min | 0 | Cat-Cow, Couch Stretch, Open Book Rotation, Glute Bridge March ... |
 | Tue 17 Nov | KEY | cycling | 40 min | 42 | 1 x 1 min @ 164-170 bpm; 2 x 8 min @ 166-173 bpm |
 | Wed 18 Nov | Recovery | cycling | 35 min | 15 | 35 min @ 104-114 bpm |
 | Thu 19 Nov | Easy | cycling | 35 min | 25 | 35 min @ 127-136 bpm |
 | Fri 20 Nov | Rest | | | | |
 | Sat 21 Nov | Long | cycling | 55 min | 39 | 55 min @ 127-136 bpm |
 | Sun 22 Nov | Easy | cycling | 40 min | 28 | 40 min @ 127-136 bpm |
-| Mon 23 Nov | Mobility | stretching | 20 min | 0 | Cat-Cow Dynamic Spine Waves, Downward Dog to Cobra Flow, Low Lunge Hip Flexor Stretch, Pigeon Pose / Figure-4 Glute Stretch ... |
+| Mon 23 Nov | Mobility | stretching | 20 min | 0 | Cat-Cow, Half-Kneeling Hip Flexor Stretch, Thread the Needle, Figure-4 Stretch ... |
 | Tue 24 Nov | KEY | cycling | 45 min | 46 | 1 x 1 min @ 164-170 bpm; 2 x 8 min @ 166-173 bpm |
 | Wed 25 Nov | Recovery | cycling | 35 min | 15 | 35 min @ 104-114 bpm |
 | Thu 26 Nov | Easy | cycling | 40 min | 28 | 40 min @ 127-136 bpm |
@@ -154,56 +154,56 @@ Alex: former club runner (sub-40 10k) back after two years off; jogging 2-3x/wee
 |---|---|---|---:|---:|---|
 | Mon 05 Oct | Rest | | | | |
 | Tue 06 Oct | Easy | running | 50 min | 35 | 50 min @ 133-142 bpm |
-| Wed 07 Oct | Strength | strength | 30 min | 0 | Squat to Overhead Press (Thruster), Deadlift / Hip Hinge, Push-Ups / Chest Press |
-| Thu 08 Oct | Strength | strength | 30 min | 0 | Squat to Overhead Press (Thruster), Deadlift / Hip Hinge, Push-Ups / Chest Press |
+| Wed 07 Oct | Strength | strength | 30 min | 0 | A. Dumbbell Goblet Squat, B1. Dumbbell Floor Press, B2. One-Arm Dumbbell Row, C. Dumbbell Romanian Deadlift ... |
+| Thu 08 Oct | Strength | strength | 30 min | 0 | A. Dumbbell Reverse Lunge, B1. Standing Dumbbell Overhead Press, B2. One-Arm Dumbbell Row, C. Kettlebell Deadlift ... |
 | Fri 09 Oct | Rest | | | | |
 | Sat 10 Oct | Long | running | 1h00 | 42 | 1h00 @ 133-142 bpm |
 | Sun 11 Oct | Easy | running | 55 min | 39 | 55 min @ 133-142 bpm |
 | Mon 12 Oct | Rest | | | | |
 | Tue 13 Oct | Easy | running | 1h00 | 42 | 1h00 @ 133-142 bpm |
-| Wed 14 Oct | Strength | strength | 30 min | 0 | Squat to Overhead Press (Thruster), Deadlift / Hip Hinge, Push-Ups / Chest Press |
-| Thu 15 Oct | Strength | strength | 30 min | 0 | Squat to Overhead Press (Thruster), Deadlift / Hip Hinge, Push-Ups / Chest Press |
+| Wed 14 Oct | Strength | strength | 30 min | 0 | A. Kettlebell Goblet Squat, B1. Dumbbell Floor Press, B2. One-Arm Dumbbell Row, C. Kettlebell Deadlift ... |
+| Thu 15 Oct | Strength | strength | 30 min | 0 | A. Dumbbell Reverse Lunge, B1. Half-Kneeling Kettlebell Press, B2. One-Arm Dumbbell Row, C. Dumbbell Romanian Deadlift ... |
 | Fri 16 Oct | Rest | | | | |
 | Sat 17 Oct | Long | running | 1h00 | 42 | 1h00 @ 133-142 bpm |
 | Sun 18 Oct | Easy | running | 1h00 | 42 | 1h00 @ 133-142 bpm |
 | Mon 19 Oct | Rest | | | | |
 | Tue 20 Oct | Easy | running | 35 min | 25 | 35 min @ 133-142 bpm |
-| Wed 21 Oct | Strength | strength | 30 min | 0 | Squat to Overhead Press (Thruster), Deadlift / Hip Hinge, Push-Ups / Chest Press |
+| Wed 21 Oct | Strength | strength | 30 min | 0 | A. Kettlebell Goblet Squat, B1. Dumbbell Floor Press, B2. One-Arm Dumbbell Row, C. Kettlebell Deadlift ... |
 | Thu 22 Oct | Rest | | | | |
 | Fri 23 Oct | Rest | | | | |
 | Sat 24 Oct | Easy | running | 40 min | 28 | 40 min @ 133-142 bpm |
 | Sun 25 Oct | Easy | running | 40 min | 28 | 40 min @ 133-142 bpm |
 | Mon 26 Oct | Rest | | | | |
 | Tue 27 Oct | Easy | running | 1h00 | 42 | 1h00 @ 133-142 bpm |
-| Wed 28 Oct | Strength | strength | 30 min | 0 | Squat to Overhead Press (Thruster), Deadlift / Hip Hinge, Push-Ups / Chest Press |
-| Thu 29 Oct | Strength | strength | 30 min | 0 | Squat to Overhead Press (Thruster), Deadlift / Hip Hinge, Push-Ups / Chest Press |
+| Wed 28 Oct | Strength | strength | 30 min | 0 | A. Kettlebell Goblet Squat, B1. Dumbbell Floor Press, B2. One-Arm Dumbbell Row, C. Kettlebell Deadlift ... |
+| Thu 29 Oct | Strength | strength | 30 min | 0 | A. Dumbbell Reverse Lunge, B1. Half-Kneeling Kettlebell Press, B2. One-Arm Dumbbell Row, C. Dumbbell Romanian Deadlift ... |
 | Fri 30 Oct | Rest | | | | |
 | Sat 31 Oct | Long | running | 1h15 | 53 | 1h15 @ 133-142 bpm |
 | Sun 01 Nov | Easy | running | 1h00 | 42 | 1h00 @ 133-142 bpm |
 | Mon 02 Nov | Rest | | | | |
 | Tue 03 Nov | KEY | running | 40 min | 42 | 4 x 3 min @ 188-190 bpm |
-| Wed 04 Nov | Strength | strength | 30 min | 0 | Squat to Overhead Press (Thruster), Deadlift / Hip Hinge, Push-Ups / Chest Press |
+| Wed 04 Nov | Strength | strength | 30 min | 0 | A. Kettlebell Goblet Squat, B1. Dumbbell Floor Press, B2. One-Arm Dumbbell Row, C. Kettlebell Deadlift ... |
 | Thu 05 Nov | Easy | running | 55 min | 39 | 55 min @ 133-142 bpm |
 | Fri 06 Nov | Rest | | | | |
 | Sat 07 Nov | Long | running | 50 min | 35 | 50 min @ 133-142 bpm |
 | Sun 08 Nov | Easy | running | 50 min | 35 | 50 min @ 133-142 bpm |
 | Mon 09 Nov | Rest | | | | |
 | Tue 10 Nov | KEY | running | 40 min | 42 | 4 x 3 min @ 188-190 bpm |
-| Wed 11 Nov | Strength | strength | 30 min | 0 | Squat to Overhead Press (Thruster), Deadlift / Hip Hinge, Push-Ups / Chest Press |
+| Wed 11 Nov | Strength | strength | 30 min | 0 | A. Dumbbell Goblet Squat, B1. Dumbbell Floor Press, B2. One-Arm Dumbbell Row, C. Dumbbell Romanian Deadlift ... |
 | Thu 12 Nov | Easy | running | 55 min | 39 | 55 min @ 133-142 bpm |
 | Fri 13 Nov | Rest | | | | |
 | Sat 14 Nov | Long | running | 1h00 | 42 | 1h00 @ 133-142 bpm |
 | Sun 15 Nov | Easy | running | 55 min | 39 | 55 min @ 133-142 bpm |
 | Mon 16 Nov | Rest | | | | |
 | Tue 17 Nov | Easy | running | 30 min | 21 | 30 min @ 133-142 bpm |
-| Wed 18 Nov | Strength | strength | 30 min | 0 | Squat to Overhead Press (Thruster), Deadlift / Hip Hinge, Push-Ups / Chest Press |
+| Wed 18 Nov | Strength | strength | 30 min | 0 | A. Dumbbell Goblet Squat, B1. Dumbbell Floor Press, B2. One-Arm Dumbbell Row, C. Dumbbell Romanian Deadlift ... |
 | Thu 19 Nov | Easy | running | 35 min | 25 | 35 min @ 133-142 bpm |
 | Fri 20 Nov | Rest | | | | |
 | Sat 21 Nov | Easy | running | 35 min | 25 | 35 min @ 133-142 bpm |
 | Sun 22 Nov | Easy | running | 35 min | 25 | 35 min @ 133-142 bpm |
 | Mon 23 Nov | Rest | | | | |
 | Tue 24 Nov | KEY | running | 45 min | 47 | 5 x 3 min @ 188-190 bpm |
-| Wed 25 Nov | Strength | strength | 30 min | 0 | Squat to Overhead Press (Thruster), Deadlift / Hip Hinge, Push-Ups / Chest Press |
+| Wed 25 Nov | Strength | strength | 30 min | 0 | A. Dumbbell Goblet Squat, B1. Dumbbell Floor Press, B2. One-Arm Dumbbell Row, C. Dumbbell Romanian Deadlift ... |
 | Thu 26 Nov | Easy | running | 1h00 | 42 | 1h00 @ 133-142 bpm |
 | Fri 27 Nov | Rest | | | | |
 | Sat 28 Nov | Long | running | 1h00 | 42 | 1h00 @ 133-142 bpm |
@@ -321,7 +321,7 @@ Morgan: elite age-group triathlete, 18 h/week, full power/pace data. Olympic-dis
 | Wed 07 Oct | Recovery | swimming | 2h00 | 54 | 2h00 @ 1:45-1:49 /100m |
 | Wed 07 Oct (PM) | Recovery | running | 1h00 | 27 | 1h00 @ 170-187 W |
 | Thu 08 Oct | KEY | running | 1h35 | 94 | 1 x 1 min @ 323-340 W; 4 x 8 min @ 326-347 W |
-| Fri 09 Oct | Strength | strength | 30 min | 0 | Squat to Overhead Press (Thruster), Deadlift / Hip Hinge, Push-Ups / Chest Press |
+| Fri 09 Oct | Strength | strength | 30 min | 0 | A. Dumbbell Reverse Lunge, B1. Standing Dumbbell Overhead Press, B2. One-Arm Dumbbell Row, C. Kettlebell Deadlift ... |
 | Sat 10 Oct | Long | cycling | 5h00 | 229 | 5h00 @ 214-238 W |
 | Sun 11 Oct | Easy | cycling | 4h00 | 182 | 4h00 @ 214-238 W |
 | Mon 12 Oct | Rest | | | | |
@@ -329,14 +329,14 @@ Morgan: elite age-group triathlete, 18 h/week, full power/pace data. Olympic-dis
 | Wed 14 Oct | Recovery | swimming | 2h00 | 54 | 2h00 @ 1:45-1:49 /100m |
 | Wed 14 Oct (PM) | Recovery | running | 1h00 | 27 | 1h00 @ 170-187 W |
 | Thu 15 Oct | KEY | running | 1h40 | 98 | 1 x 1 min @ 323-340 W; 4 x 8 min @ 326-347 W |
-| Fri 16 Oct | Strength | strength | 30 min | 0 | Squat to Overhead Press (Thruster), Deadlift / Hip Hinge, Push-Ups / Chest Press |
+| Fri 16 Oct | Strength | strength | 30 min | 0 | A. Dumbbell Reverse Lunge, B1. Half-Kneeling Kettlebell Press, B2. One-Arm Dumbbell Row, C. Dumbbell Romanian Deadlift ... |
 | Sat 17 Oct | Long | cycling | 5h00 | 229 | 5h00 @ 214-238 W |
 | Sun 18 Oct | Easy | cycling | 4h00 | 182 | 4h00 @ 214-238 W |
 | Mon 19 Oct | Rest | | | | |
 | Tue 20 Oct | KEY | cycling | 1h55 | 109 | 1 x 1 min @ 314-330 W; 4 x 8 min @ 317-337 W |
 | Wed 21 Oct | Recovery | swimming | 1h40 | 45 | 1h40 @ 1:45-1:49 /100m |
 | Thu 22 Oct | Easy | running | 1h40 | 73 | 1h40 @ 221-245 W |
-| Fri 23 Oct | Strength | strength | 30 min | 0 | Squat to Overhead Press (Thruster), Deadlift / Hip Hinge, Push-Ups / Chest Press |
+| Fri 23 Oct | Strength | strength | 30 min | 0 | A. Dumbbell Reverse Lunge, B1. Half-Kneeling Kettlebell Press, B2. One-Arm Dumbbell Row, C. Dumbbell Romanian Deadlift ... |
 | Sat 24 Oct | Long | cycling | 2h55 | 132 | 2h55 @ 214-238 W |
 | Sun 25 Oct | Easy | running | 1h45 | 77 | 1h45 @ 221-245 W |
 | Mon 26 Oct | Rest | | | | |
@@ -344,7 +344,7 @@ Morgan: elite age-group triathlete, 18 h/week, full power/pace data. Olympic-dis
 | Wed 28 Oct | Recovery | swimming | 2h00 | 54 | 2h00 @ 1:45-1:49 /100m |
 | Wed 28 Oct (PM) | Recovery | running | 1h00 | 27 | 1h00 @ 170-187 W |
 | Thu 29 Oct | KEY | running | 1h40 | 98 | 1 x 1 min @ 323-340 W; 4 x 8 min @ 326-347 W |
-| Fri 30 Oct | Strength | strength | 30 min | 0 | Squat to Overhead Press (Thruster), Deadlift / Hip Hinge, Push-Ups / Chest Press |
+| Fri 30 Oct | Strength | strength | 30 min | 0 | A. Dumbbell Reverse Lunge, B1. Half-Kneeling Kettlebell Press, B2. One-Arm Dumbbell Row, C. Dumbbell Romanian Deadlift ... |
 | Sat 31 Oct | Long | cycling | 5h00 | 229 | 5h00 @ 214-238 W |
 | Sun 01 Nov | Easy | cycling | 4h00 | 182 | 4h00 @ 214-238 W |
 | Mon 02 Nov | Rest | | | | |
@@ -352,7 +352,7 @@ Morgan: elite age-group triathlete, 18 h/week, full power/pace data. Olympic-dis
 | Wed 04 Nov | Recovery | swimming | 2h00 | 54 | 2h00 @ 1:45-1:49 /100m |
 | Wed 04 Nov (PM) | Recovery | running | 1h00 | 27 | 1h00 @ 170-187 W |
 | Thu 05 Nov | KEY | running | 1h40 | 98 | 1 x 1 min @ 323-340 W; 4 x 8 min @ 326-347 W |
-| Fri 06 Nov | Strength | strength | 30 min | 0 | Squat to Overhead Press (Thruster), Deadlift / Hip Hinge, Push-Ups / Chest Press |
+| Fri 06 Nov | Strength | strength | 30 min | 0 | A. Dumbbell Reverse Lunge, B1. Half-Kneeling Kettlebell Press, B2. One-Arm Dumbbell Row, C. Dumbbell Romanian Deadlift ... |
 | Sat 07 Nov | Long | cycling | 5h00 | 229 | 5h00 @ 214-238 W |
 | Sun 08 Nov | Easy | cycling | 4h00 | 182 | 4h00 @ 214-238 W |
 | Mon 09 Nov | Rest | | | | |
@@ -360,7 +360,7 @@ Morgan: elite age-group triathlete, 18 h/week, full power/pace data. Olympic-dis
 | Wed 11 Nov | Recovery | swimming | 2h00 | 54 | 2h00 @ 1:45-1:49 /100m |
 | Wed 11 Nov (PM) | Recovery | running | 1h00 | 27 | 1h00 @ 170-187 W |
 | Thu 12 Nov | KEY | running | 1h40 | 98 | 1 x 1 min @ 323-340 W; 4 x 8 min @ 326-347 W |
-| Fri 13 Nov | Strength | strength | 30 min | 0 | Squat to Overhead Press (Thruster), Deadlift / Hip Hinge, Push-Ups / Chest Press |
+| Fri 13 Nov | Strength | strength | 30 min | 0 | A. Dumbbell Reverse Lunge, B1. Standing Dumbbell Overhead Press, B2. One-Arm Dumbbell Row, C. Kettlebell Deadlift ... |
 | Sat 14 Nov | Long | cycling | 5h00 | 229 | 5h00 @ 214-238 W |
 | Sun 15 Nov | Easy | cycling | 4h00 | 182 | 4h00 @ 214-238 W |
 | Mon 16 Nov | Rest | | | | |
@@ -403,56 +403,56 @@ Riley: trained runner/cyclist (CTL ~60) off for 3 weeks with an Achilles strain,
 
 | Date | Session | Sport | Duration | TSS | Main set / targets |
 |---|---|---|---:|---:|---|
-| Mon 05 Oct | Mobility | stretching | 20 min | 0 | Cat-Cow Dynamic Spine Waves, Downward Dog to Cobra Flow, Low Lunge Hip Flexor Stretch, Pigeon Pose / Figure-4 Glute Stretch ... |
+| Mon 05 Oct | Mobility | stretching | 20 min | 0 | Cat-Cow, Ankle Rocks, 90/90 Hip Switches, Hamstring Floss ... |
 | Tue 06 Oct | Easy | running | 40 min | 28 | 40 min @ 129-137 bpm |
 | Wed 07 Oct | Easy | running | 35 min | 25 | 35 min @ 129-137 bpm |
 | Thu 08 Oct | Easy | cycling | 40 min | 28 | 40 min @ 179-198 W |
 | Fri 09 Oct | Easy | running | 40 min | 28 | 40 min @ 129-137 bpm |
 | Sat 10 Oct | Long | cycling | 1h20 | 57 | 1h20 @ 179-198 W |
 | Sun 11 Oct | Easy | cycling | 40 min | 28 | 40 min @ 179-198 W |
-| Mon 12 Oct | Mobility | stretching | 20 min | 0 | Cat-Cow Dynamic Spine Waves, Downward Dog to Cobra Flow, Low Lunge Hip Flexor Stretch, Pigeon Pose / Figure-4 Glute Stretch ... |
+| Mon 12 Oct | Mobility | stretching | 20 min | 0 | Cat-Cow, Wall Calf Stretch, Pigeon Stretch, Lying Hamstring Stretch ... |
 | Tue 13 Oct | KEY | running | 1h00 | 61 | 1 x 1 min @ 166-172 bpm; 3 x 8 min @ 168-175 bpm |
 | Wed 14 Oct | Recovery | cycling | 35 min | 15 | 35 min @ 138-151 W |
 | Thu 15 Oct | Easy | cycling | 40 min | 28 | 40 min @ 179-198 W |
 | Fri 16 Oct | Easy | running | 35 min | 25 | 35 min @ 129-137 bpm |
 | Sat 17 Oct | Long | cycling | 1h30 | 65 | 1h30 @ 179-198 W |
 | Sun 18 Oct | Easy | running | 40 min | 28 | 40 min @ 129-137 bpm |
-| Mon 19 Oct | Mobility | stretching | 20 min | 0 | Cat-Cow Dynamic Spine Waves, Downward Dog to Cobra Flow, Low Lunge Hip Flexor Stretch, Pigeon Pose / Figure-4 Glute Stretch ... |
+| Mon 19 Oct | Mobility | stretching | 20 min | 0 | Cat-Cow, Ankle Rocks, Deep Squat Hold, Hamstring Floss ... |
 | Tue 20 Oct | Easy | cycling | 30 min | 21 | 30 min @ 179-198 W |
 | Wed 21 Oct | Easy | running | 35 min | 25 | 35 min @ 129-137 bpm |
 | Thu 22 Oct | Easy | cycling | 35 min | 25 | 35 min @ 179-198 W |
 | Fri 23 Oct | Rest | | | | |
 | Sat 24 Oct | Long | cycling | 1h00 | 42 | 1h00 @ 179-198 W |
 | Sun 25 Oct | Easy | running | 35 min | 25 | 35 min @ 129-137 bpm |
-| Mon 26 Oct | Mobility | stretching | 20 min | 0 | Cat-Cow Dynamic Spine Waves, Downward Dog to Cobra Flow, Low Lunge Hip Flexor Stretch, Pigeon Pose / Figure-4 Glute Stretch ... |
+| Mon 26 Oct | Mobility | stretching | 20 min | 0 | Cat-Cow, Wall Calf Stretch, 90/90 Hip Switches, Lying Hamstring Stretch ... |
 | Tue 27 Oct | TEST | running | 1h00 | 54 | 4 x 25 s @ 178-184 bpm; 1 x 20 min @ 170-178 bpm |
 | Wed 28 Oct | Recovery | running | 40 min | 18 | 40 min @ 105-116 bpm |
 | Thu 29 Oct | Easy | cycling | 45 min | 32 | 45 min @ 179-198 W |
 | Fri 30 Oct | Easy | running | 45 min | 32 | 45 min @ 129-137 bpm |
 | Sat 31 Oct | Long | cycling | 1h35 | 69 | 1h35 @ 179-198 W |
 | Sun 01 Nov | Easy | cycling | 45 min | 32 | 45 min @ 179-198 W |
-| Mon 02 Nov | Mobility | stretching | 20 min | 0 | Cat-Cow Dynamic Spine Waves, Downward Dog to Cobra Flow, Low Lunge Hip Flexor Stretch, Pigeon Pose / Figure-4 Glute Stretch ... |
+| Mon 02 Nov | Mobility | stretching | 20 min | 0 | Cat-Cow, Ankle Rocks, Pigeon Stretch, Hamstring Floss ... |
 | Tue 03 Nov | KEY | running | 1h10 | 73 | 1 x 1 min @ 166-172 bpm; 4 x 8 min @ 168-175 bpm |
 | Wed 04 Nov | Recovery | running | 45 min | 20 | 45 min @ 105-116 bpm |
 | Thu 05 Nov | Easy | cycling | 45 min | 32 | 45 min @ 179-198 W |
 | Fri 06 Nov | Easy | running | 45 min | 32 | 45 min @ 129-137 bpm |
 | Sat 07 Nov | Long | cycling | 1h30 | 65 | 1h30 @ 179-198 W |
 | Sun 08 Nov | Easy | cycling | 50 min | 35 | 50 min @ 179-198 W |
-| Mon 09 Nov | Mobility | stretching | 20 min | 0 | Cat-Cow Dynamic Spine Waves, Downward Dog to Cobra Flow, Low Lunge Hip Flexor Stretch, Pigeon Pose / Figure-4 Glute Stretch ... |
+| Mon 09 Nov | Mobility | stretching | 20 min | 0 | Cat-Cow, Wall Calf Stretch, Deep Squat Hold, Lying Hamstring Stretch ... |
 | Tue 10 Nov | KEY | running | 1h15 | 78 | 1 x 1 min @ 166-172 bpm; 4 x 8 min @ 168-175 bpm |
 | Wed 11 Nov | Recovery | cycling | 45 min | 20 | 45 min @ 138-151 W |
 | Thu 12 Nov | Easy | cycling | 50 min | 35 | 50 min @ 179-198 W |
 | Fri 13 Nov | Easy | running | 45 min | 32 | 45 min @ 129-137 bpm |
 | Sat 14 Nov | Long | cycling | 1h50 | 81 | 1h50 @ 179-198 W |
 | Sun 15 Nov | Easy | running | 50 min | 35 | 50 min @ 129-137 bpm |
-| Mon 16 Nov | Mobility | stretching | 20 min | 0 | Cat-Cow Dynamic Spine Waves, Downward Dog to Cobra Flow, Low Lunge Hip Flexor Stretch, Pigeon Pose / Figure-4 Glute Stretch ... |
+| Mon 16 Nov | Mobility | stretching | 20 min | 0 | Cat-Cow, Ankle Rocks, 90/90 Hip Switches, Hamstring Floss ... |
 | Tue 17 Nov | KEY | running | 45 min | 46 | 1 x 1 min @ 166-172 bpm; 2 x 8 min @ 168-175 bpm |
 | Wed 18 Nov | Recovery | running | 30 min | 13 | 30 min @ 105-116 bpm |
 | Thu 19 Nov | Easy | cycling | 30 min | 21 | 30 min @ 179-198 W |
 | Fri 20 Nov | Easy | running | 30 min | 21 | 30 min @ 129-137 bpm |
 | Sat 21 Nov | Long | cycling | 1h10 | 50 | 1h10 @ 179-198 W |
 | Sun 22 Nov | Easy | cycling | 35 min | 25 | 35 min @ 179-198 W |
-| Mon 23 Nov | Mobility | stretching | 20 min | 0 | Cat-Cow Dynamic Spine Waves, Downward Dog to Cobra Flow, Low Lunge Hip Flexor Stretch, Pigeon Pose / Figure-4 Glute Stretch ... |
+| Mon 23 Nov | Mobility | stretching | 20 min | 0 | Cat-Cow, Wall Calf Stretch, Pigeon Stretch, Lying Hamstring Stretch ... |
 | Tue 24 Nov | TEST | running | 1h00 | 54 | 4 x 25 s @ 178-184 bpm; 1 x 20 min @ 170-178 bpm |
 | Wed 25 Nov | Recovery | cycling | 1h00 | 27 | 1h00 @ 138-151 W |
 | Thu 26 Nov | KEY | cycling | 40 min | 42 | 1 x 1 min @ 261-275 W; 2 x 8 min @ 264-280 W |
