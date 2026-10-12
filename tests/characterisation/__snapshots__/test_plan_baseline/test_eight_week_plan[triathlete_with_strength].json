@@ -96,78 +96,197 @@
     "intensity": 5,
     "kind": "hard",
     "minutes": 40.0,
-    "name": "Swimming VO2 Max Power Intervals",
+    "name": "Swim Speed: 12 × 50 m",
     "rationale": "Load week (Build phase), 10 weeks to your event. Key session: VO2max intervals to raise your aerobic ceiling.",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        528,
+        775,
+        55,
+        68,
+        "pace"
+      ],
+      [
+        "interval",
+        52,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
         50,
-        75,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        52,
+        105,
+        112,
         "pace"
       ],
       [
         "recovery",
-        180,
-        45,
-        55,
+        20,
+        40,
+        50,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        52,
+        105,
+        112,
         "pace"
       ],
       [
         "recovery",
-        180,
-        45,
-        55,
+        20,
+        40,
+        50,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        52,
+        105,
+        112,
         "pace"
       ],
       [
         "recovery",
-        180,
-        45,
-        55,
+        20,
+        40,
+        50,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        52,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
         "pace"
       ],
       [
         "interval",
-        312,
+        52,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        52,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        52,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        52,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        52,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        52,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        52,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        486,
         65,
         72,
         "pace"
       ],
       [
         "cooldown",
-        300,
-        45,
-        55,
+        275,
+        50,
+        60,
         "pace"
       ]
     ],
@@ -175,16 +294,16 @@
     "targets": [
       [
         "s/100m",
-        101,
-        105
+        104,
+        108
       ],
       [
         "s/100m",
-        125,
-        146
+        127,
+        133
       ]
     ],
-    "tss": 41.6,
+    "tss": 38.5,
     "week": "load"
   },
   {
@@ -192,7 +311,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Run Recovery (Zone 1)",
     "rationale": "Load week (Build phase), 10 weeks to your event. Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
@@ -239,29 +358,15 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 40.0,
-    "name": "Cycling Threshold Intervals",
+    "name": "Bike Threshold: 2 × 8 min",
     "rationale": "Load week (Build phase), 10 weeks to your event. Key session: threshold intervals to lift your sustainable pace.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        360,
+        480,
         50,
         75,
-        "power"
-      ],
-      [
-        "interval",
-        60,
-        95,
-        100,
-        "power"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
         "power"
       ],
       [
@@ -313,7 +418,7 @@
         150
       ]
     ],
-    "tss": 41.7,
+    "tss": 40.9,
     "week": "load"
   },
   {
@@ -392,29 +497,288 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 120.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 18 × 200 m + pull",
     "rationale": "Load week (Build phase), 10 weeks to your event. Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
-        50,
-        65,
+        775,
+        55,
+        68,
         "pace"
       ],
       [
         "interval",
-        6000,
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "interval",
+        232,
         65,
         72,
         "pace"
       ],
       [
         "cooldown",
-        600,
+        275,
         50,
-        58,
+        60,
         "pace"
       ]
     ],
@@ -427,11 +791,11 @@
       ],
       [
         "s/100m",
-        133,
-        146
+        130,
+        141
       ]
     ],
-    "tss": 88.6,
+    "tss": 87.9,
     "week": "load"
   },
   {
@@ -439,7 +803,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 120.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Build phase), 10 weeks to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
@@ -578,71 +942,99 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 50.0,
-    "name": "Swimming Threshold Intervals",
+    "name": "Swim Threshold: 5 × 200 m",
     "rationale": "Recovery week (Build phase), 9 weeks to your event. Key session: threshold intervals to lift your sustainable pace.",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        480,
-        50,
-        75,
+        775,
+        55,
+        68,
         "pace"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "pace"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "pace"
-      ],
-      [
-        "interval",
-        480,
+        220,
         96,
         102,
         "pace"
       ],
       [
         "recovery",
-        240,
+        20,
+        40,
         50,
-        60,
         "pace"
       ],
       [
         "interval",
-        480,
+        220,
         96,
         102,
         "pace"
       ],
       [
         "recovery",
-        240,
+        20,
+        40,
         50,
-        60,
         "pace"
       ],
       [
         "interval",
-        480,
+        220,
         96,
         102,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        220,
+        96,
+        102,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        220,
+        96,
+        102,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        750,
+        65,
+        72,
         "pace"
       ],
       [
         "cooldown",
-        480,
-        45,
-        55,
+        275,
+        50,
+        60,
         "pace"
       ]
     ],
@@ -655,11 +1047,11 @@
       ],
       [
         "s/100m",
-        111,
-        113
+        127,
+        133
       ]
     ],
-    "tss": 53.9,
+    "tss": 50.7,
     "week": "recovery"
   },
   {
@@ -738,7 +1130,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 45.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Recovery week (Build phase), 9 weeks to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -785,7 +1177,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 45.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Recovery week (Build phase), 9 weeks to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -832,29 +1224,176 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 80.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 10 × 200 m + pull",
     "rationale": "Recovery week (Build phase), 9 weeks to your event. Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
-        50,
-        65,
+        775,
+        55,
+        68,
         "pace"
       ],
       [
         "interval",
-        3600,
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "interval",
+        192,
         65,
         72,
         "pace"
       ],
       [
         "cooldown",
-        600,
+        275,
         50,
-        58,
+        60,
         "pace"
       ]
     ],
@@ -867,11 +1406,11 @@
       ],
       [
         "s/100m",
-        133,
-        146
+        130,
+        141
       ]
     ],
-    "tss": 57.3,
+    "tss": 57.8,
     "week": "recovery"
   },
   {
@@ -879,7 +1418,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 50.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Recovery week (Build phase), 9 weeks to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
@@ -1079,7 +1618,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Run Recovery (Zone 1)",
     "rationale": "Load week (Build phase), 8 weeks to your event. Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
@@ -1126,29 +1665,15 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 45.0,
-    "name": "Cycling Threshold Intervals",
+    "name": "Bike Threshold: 2 × 8 min",
     "rationale": "Load week (Build phase), 8 weeks to your event. Key session: threshold intervals to lift your sustainable pace.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        420,
+        540,
         50,
         75,
-        "power"
-      ],
-      [
-        "interval",
-        60,
-        95,
-        100,
-        "power"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
         "power"
       ],
       [
@@ -1200,7 +1725,7 @@
         150
       ]
     ],
-    "tss": 45.5,
+    "tss": 44.7,
     "week": "load"
   },
   {
@@ -1279,29 +1804,288 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 120.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 18 × 200 m + pull",
     "rationale": "Load week (Build phase), 8 weeks to your event. Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
-        50,
-        65,
+        775,
+        55,
+        68,
         "pace"
       ],
       [
         "interval",
-        6000,
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "interval",
+        232,
         65,
         72,
         "pace"
       ],
       [
         "cooldown",
-        600,
+        275,
         50,
-        58,
+        60,
         "pace"
       ]
     ],
@@ -1314,11 +2098,11 @@
       ],
       [
         "s/100m",
-        133,
-        146
+        130,
+        141
       ]
     ],
-    "tss": 88.6,
+    "tss": 87.9,
     "week": "load"
   },
   {
@@ -1326,7 +2110,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 120.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Build phase), 8 weeks to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
@@ -1465,99 +2249,197 @@
     "intensity": 5,
     "kind": "hard",
     "minutes": 50.0,
-    "name": "Swimming VO2 Max Power Intervals",
+    "name": "Swim Speed: 12 × 50 m",
     "rationale": "Load week (Build phase), 7 weeks to your event. Key session: VO2max intervals to raise your aerobic ceiling.",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        660,
+        775,
+        55,
+        68,
+        "pace"
+      ],
+      [
+        "interval",
+        52,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
         50,
-        75,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        52,
+        105,
+        112,
         "pace"
       ],
       [
         "recovery",
-        180,
-        45,
-        55,
+        20,
+        40,
+        50,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        52,
+        105,
+        112,
         "pace"
       ],
       [
         "recovery",
-        180,
-        45,
-        55,
+        20,
+        40,
+        50,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        52,
+        105,
+        112,
         "pace"
       ],
       [
         "recovery",
-        180,
-        45,
-        55,
+        20,
+        40,
+        50,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        52,
+        105,
+        112,
         "pace"
       ],
       [
         "recovery",
-        180,
-        45,
-        55,
+        20,
+        40,
+        50,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        52,
+        105,
+        112,
         "pace"
       ],
       [
         "recovery",
-        180,
-        45,
-        55,
+        20,
+        40,
+        50,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        52,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        52,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        52,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        52,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        52,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        52,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        1086,
+        65,
+        72,
         "pace"
       ],
       [
         "cooldown",
-        360,
-        45,
-        55,
+        275,
+        50,
+        60,
         "pace"
       ]
     ],
@@ -1565,16 +2447,16 @@
     "targets": [
       [
         "s/100m",
-        101,
-        105
+        104,
+        108
       ],
       [
         "s/100m",
-        125,
-        146
+        127,
+        133
       ]
     ],
-    "tss": 54.9,
+    "tss": 46.4,
     "week": "load"
   },
   {
@@ -1582,7 +2464,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Run Recovery (Zone 1)",
     "rationale": "Load week (Build phase), 7 weeks to your event. Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
@@ -1629,29 +2511,15 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 50.0,
-    "name": "Cycling Threshold Intervals",
+    "name": "Bike Threshold: 3 × 8 min",
     "rationale": "Load week (Build phase), 7 weeks to your event. Key session: threshold intervals to lift your sustainable pace.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        480,
+        600,
         50,
         75,
-        "power"
-      ],
-      [
-        "interval",
-        60,
-        95,
-        100,
-        "power"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
         "power"
       ],
       [
@@ -1710,7 +2578,7 @@
         150
       ]
     ],
-    "tss": 53.9,
+    "tss": 53.1,
     "week": "load"
   },
   {
@@ -1789,29 +2657,288 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 120.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 18 × 200 m + pull",
     "rationale": "Load week (Build phase), 7 weeks to your event. Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
-        50,
-        65,
+        775,
+        55,
+        68,
         "pace"
       ],
       [
         "interval",
-        6000,
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "interval",
+        232,
         65,
         72,
         "pace"
       ],
       [
         "cooldown",
-        600,
+        275,
         50,
-        58,
+        60,
         "pace"
       ]
     ],
@@ -1824,11 +2951,11 @@
       ],
       [
         "s/100m",
-        133,
-        146
+        130,
+        141
       ]
     ],
-    "tss": 88.6,
+    "tss": 87.9,
     "week": "load"
   },
   {
@@ -1836,7 +2963,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 120.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Build phase), 7 weeks to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
@@ -1975,99 +3102,141 @@
     "intensity": 5,
     "kind": "hard",
     "minutes": 50.0,
-    "name": "Swimming VO2 Max Power Intervals",
+    "name": "Swim Speed: 8 × 100 m",
     "rationale": "Load week (Build phase), 6 weeks to your event. Key session: VO2max intervals to raise your aerobic ceiling.",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        660,
+        775,
+        55,
+        68,
+        "pace"
+      ],
+      [
+        "interval",
+        105,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        30,
+        40,
         50,
-        75,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        105,
+        105,
+        112,
         "pace"
       ],
       [
         "recovery",
-        180,
-        45,
-        55,
+        30,
+        40,
+        50,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        105,
+        105,
+        112,
         "pace"
       ],
       [
         "recovery",
-        180,
-        45,
-        55,
+        30,
+        40,
+        50,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        105,
+        105,
+        112,
         "pace"
       ],
       [
         "recovery",
-        180,
-        45,
-        55,
+        30,
+        40,
+        50,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        105,
+        105,
+        112,
         "pace"
       ],
       [
         "recovery",
-        180,
-        45,
-        55,
+        30,
+        40,
+        50,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        105,
+        105,
+        112,
         "pace"
       ],
       [
         "recovery",
-        180,
-        45,
-        55,
+        30,
+        40,
+        50,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        105,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        30,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        105,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        30,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        870,
+        65,
+        72,
         "pace"
       ],
       [
         "cooldown",
-        360,
-        45,
-        55,
+        275,
+        50,
+        60,
         "pace"
       ]
     ],
@@ -2075,16 +3244,16 @@
     "targets": [
       [
         "s/100m",
-        101,
-        105
+        104,
+        108
       ],
       [
         "s/100m",
-        125,
-        146
+        127,
+        133
       ]
     ],
-    "tss": 54.9,
+    "tss": 50.6,
     "week": "load"
   },
   {
@@ -2092,7 +3261,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Run Recovery (Zone 1)",
     "rationale": "Load week (Build phase), 6 weeks to your event. Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
@@ -2139,29 +3308,15 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 50.0,
-    "name": "Cycling Threshold Intervals",
+    "name": "Bike Threshold: 3 × 8 min",
     "rationale": "Load week (Build phase), 6 weeks to your event. Key session: threshold intervals to lift your sustainable pace.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        480,
+        600,
         50,
         75,
-        "power"
-      ],
-      [
-        "interval",
-        60,
-        95,
-        100,
-        "power"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
         "power"
       ],
       [
@@ -2220,7 +3375,7 @@
         150
       ]
     ],
-    "tss": 53.9,
+    "tss": 53.1,
     "week": "load"
   },
   {
@@ -2299,29 +3454,288 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 120.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 18 × 200 m + pull",
     "rationale": "Load week (Build phase), 6 weeks to your event. Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
-        50,
-        65,
+        775,
+        55,
+        68,
         "pace"
       ],
       [
         "interval",
-        6000,
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "interval",
+        232,
         65,
         72,
         "pace"
       ],
       [
         "cooldown",
-        600,
+        275,
         50,
-        58,
+        60,
         "pace"
       ]
     ],
@@ -2334,11 +3748,11 @@
       ],
       [
         "s/100m",
-        133,
-        146
+        130,
+        141
       ]
     ],
-    "tss": 88.6,
+    "tss": 87.9,
     "week": "load"
   },
   {
@@ -2346,7 +3760,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 120.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Build phase), 6 weeks to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
@@ -2485,78 +3899,85 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 55.0,
-    "name": "Swimming Threshold Intervals",
+    "name": "Swim Threshold: 4 × 300 m",
     "rationale": "Recovery week (Build phase), 5 weeks to your event. Key session: threshold intervals to lift your sustainable pace.",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        540,
-        50,
-        75,
+        775,
+        55,
+        68,
         "pace"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "pace"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "pace"
-      ],
-      [
-        "interval",
-        480,
+        330,
         96,
         102,
         "pace"
       ],
       [
         "recovery",
-        240,
+        20,
+        40,
         50,
-        60,
         "pace"
       ],
       [
         "interval",
-        480,
+        330,
         96,
         102,
         "pace"
       ],
       [
         "recovery",
-        240,
+        20,
+        40,
         50,
-        60,
         "pace"
       ],
       [
         "interval",
-        480,
+        330,
         96,
         102,
         "pace"
       ],
       [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
         "interval",
-        420,
+        330,
+        96,
+        102,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        850,
         65,
         72,
         "pace"
       ],
       [
         "cooldown",
-        300,
-        45,
-        55,
+        275,
+        50,
+        60,
         "pace"
       ]
     ],
@@ -2569,11 +3990,11 @@
       ],
       [
         "s/100m",
-        111,
-        113
+        127,
+        133
       ]
     ],
-    "tss": 58.7,
+    "tss": 57.9,
     "week": "recovery"
   },
   {
@@ -2652,7 +4073,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 50.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Recovery week (Build phase), 5 weeks to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -2699,7 +4120,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 50.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Recovery week (Build phase), 5 weeks to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -2746,29 +4167,190 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 85.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 11 × 200 m + pull",
     "rationale": "Recovery week (Build phase), 5 weeks to your event. Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
-        50,
-        65,
+        775,
+        55,
+        68,
         "pace"
       ],
       [
         "interval",
-        3900,
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "interval",
+        197,
         65,
         72,
         "pace"
       ],
       [
         "cooldown",
-        600,
+        275,
         50,
-        58,
+        60,
         "pace"
       ]
     ],
@@ -2781,11 +4363,11 @@
       ],
       [
         "s/100m",
-        133,
-        146
+        130,
+        141
       ]
     ],
-    "tss": 61.2,
+    "tss": 61.6,
     "week": "recovery"
   },
   {
@@ -2793,7 +4375,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 55.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Recovery week (Build phase), 5 weeks to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
@@ -2932,99 +4514,197 @@
     "intensity": 5,
     "kind": "hard",
     "minutes": 50.0,
-    "name": "Swimming VO2 Max Power Intervals",
+    "name": "Swim Speed: 12 × 50 m",
     "rationale": "Load week (Peak phase), 4 weeks to your event. Key session: VO2max intervals to raise your aerobic ceiling.",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        660,
+        775,
+        55,
+        68,
+        "pace"
+      ],
+      [
+        "interval",
+        52,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
         50,
-        75,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        52,
+        105,
+        112,
         "pace"
       ],
       [
         "recovery",
-        180,
-        45,
-        55,
+        20,
+        40,
+        50,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        52,
+        105,
+        112,
         "pace"
       ],
       [
         "recovery",
-        180,
-        45,
-        55,
+        20,
+        40,
+        50,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        52,
+        105,
+        112,
         "pace"
       ],
       [
         "recovery",
-        180,
-        45,
-        55,
+        20,
+        40,
+        50,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        52,
+        105,
+        112,
         "pace"
       ],
       [
         "recovery",
-        180,
-        45,
-        55,
+        20,
+        40,
+        50,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        52,
+        105,
+        112,
         "pace"
       ],
       [
         "recovery",
-        180,
-        45,
-        55,
+        20,
+        40,
+        50,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        52,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        52,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        52,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        52,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        52,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        52,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        1086,
+        65,
+        72,
         "pace"
       ],
       [
         "cooldown",
-        360,
-        45,
-        55,
+        275,
+        50,
+        60,
         "pace"
       ]
     ],
@@ -3032,16 +4712,16 @@
     "targets": [
       [
         "s/100m",
-        101,
-        105
+        104,
+        108
       ],
       [
         "s/100m",
-        125,
-        146
+        127,
+        133
       ]
     ],
-    "tss": 54.9,
+    "tss": 46.4,
     "week": "load"
   },
   {
@@ -3049,7 +4729,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Run Recovery (Zone 1)",
     "rationale": "Load week (Peak phase), 4 weeks to your event. Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
@@ -3096,29 +4776,15 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 50.0,
-    "name": "Cycling Threshold Intervals",
+    "name": "Bike Threshold: 3 × 8 min",
     "rationale": "Load week (Peak phase), 4 weeks to your event. Key session: threshold intervals to lift your sustainable pace.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        480,
+        600,
         50,
         75,
-        "power"
-      ],
-      [
-        "interval",
-        60,
-        95,
-        100,
-        "power"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
         "power"
       ],
       [
@@ -3177,7 +4843,7 @@
         150
       ]
     ],
-    "tss": 53.9,
+    "tss": 53.1,
     "week": "load"
   },
   {
@@ -3256,29 +4922,288 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 120.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 18 × 200 m + pull",
     "rationale": "Load week (Peak phase), 4 weeks to your event. Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
-        50,
-        65,
+        775,
+        55,
+        68,
         "pace"
       ],
       [
         "interval",
-        6000,
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "interval",
+        232,
         65,
         72,
         "pace"
       ],
       [
         "cooldown",
-        600,
+        275,
         50,
-        58,
+        60,
         "pace"
       ]
     ],
@@ -3291,11 +5216,11 @@
       ],
       [
         "s/100m",
-        133,
-        146
+        130,
+        141
       ]
     ],
-    "tss": 88.6,
+    "tss": 87.9,
     "week": "load"
   },
   {
@@ -3303,7 +5228,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 120.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Peak phase), 4 weeks to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
@@ -3442,99 +5367,141 @@
     "intensity": 5,
     "kind": "hard",
     "minutes": 50.0,
-    "name": "Swimming VO2 Max Power Intervals",
+    "name": "Swim Speed: 8 × 100 m",
     "rationale": "Load week (Peak phase), 3 weeks to your event. Key session: VO2max intervals to raise your aerobic ceiling.",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        660,
+        775,
+        55,
+        68,
+        "pace"
+      ],
+      [
+        "interval",
+        105,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        30,
+        40,
         50,
-        75,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        105,
+        105,
+        112,
         "pace"
       ],
       [
         "recovery",
-        180,
-        45,
-        55,
+        30,
+        40,
+        50,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        105,
+        105,
+        112,
         "pace"
       ],
       [
         "recovery",
-        180,
-        45,
-        55,
+        30,
+        40,
+        50,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        105,
+        105,
+        112,
         "pace"
       ],
       [
         "recovery",
-        180,
-        45,
-        55,
+        30,
+        40,
+        50,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        105,
+        105,
+        112,
         "pace"
       ],
       [
         "recovery",
-        180,
-        45,
-        55,
+        30,
+        40,
+        50,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        105,
+        105,
+        112,
         "pace"
       ],
       [
         "recovery",
-        180,
-        45,
-        55,
+        30,
+        40,
+        50,
         "pace"
       ],
       [
         "interval",
-        180,
-        110,
-        118,
+        105,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        30,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        105,
+        105,
+        112,
+        "pace"
+      ],
+      [
+        "recovery",
+        30,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        870,
+        65,
+        72,
         "pace"
       ],
       [
         "cooldown",
-        360,
-        45,
-        55,
+        275,
+        50,
+        60,
         "pace"
       ]
     ],
@@ -3542,16 +5509,16 @@
     "targets": [
       [
         "s/100m",
-        101,
-        105
+        104,
+        108
       ],
       [
         "s/100m",
-        125,
-        146
+        127,
+        133
       ]
     ],
-    "tss": 54.9,
+    "tss": 50.6,
     "week": "load"
   },
   {
@@ -3559,7 +5526,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Run Recovery (Zone 1)",
     "rationale": "Load week (Peak phase), 3 weeks to your event. Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
@@ -3606,29 +5573,15 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 50.0,
-    "name": "Cycling Threshold Intervals",
+    "name": "Bike Threshold: 3 × 8 min",
     "rationale": "Load week (Peak phase), 3 weeks to your event. Key session: threshold intervals to lift your sustainable pace.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        480,
+        600,
         50,
         75,
-        "power"
-      ],
-      [
-        "interval",
-        60,
-        95,
-        100,
-        "power"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
         "power"
       ],
       [
@@ -3687,7 +5640,7 @@
         150
       ]
     ],
-    "tss": 53.9,
+    "tss": 53.1,
     "week": "load"
   },
   {
@@ -3766,29 +5719,288 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 120.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 18 × 200 m + pull",
     "rationale": "Load week (Peak phase), 3 weeks to your event. Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
-        50,
-        65,
+        775,
+        55,
+        68,
         "pace"
       ],
       [
         "interval",
-        6000,
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "pace"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "pace"
+      ],
+      [
+        "interval",
+        232,
         65,
         72,
         "pace"
       ],
       [
         "cooldown",
-        600,
+        275,
         50,
-        58,
+        60,
         "pace"
       ]
     ],
@@ -3801,11 +6013,11 @@
       ],
       [
         "s/100m",
-        133,
-        146
+        130,
+        141
       ]
     ],
-    "tss": 88.6,
+    "tss": 87.9,
     "week": "load"
   },
   {
@@ -3813,7 +6025,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 120.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Peak phase), 3 weeks to your event. Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [

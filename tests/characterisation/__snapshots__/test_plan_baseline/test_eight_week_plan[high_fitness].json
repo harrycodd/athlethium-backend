@@ -114,7 +114,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Cycling Active Recovery",
+    "name": "Bike Recovery (Zone 1)",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "cycling",
     "steps": [
@@ -161,76 +161,83 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 60.0,
-    "name": "Running Threshold Intervals",
+    "name": "Run Threshold: 5 × 6 min",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        600,
+        720,
         50,
         75,
         "pace"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "pace"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "pace"
-      ],
-      [
-        "interval",
-        480,
+        360,
         96,
         102,
         "pace"
       ],
       [
         "recovery",
-        240,
+        90,
         50,
         60,
-        "pace"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "pace"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "pace"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
         "pace"
       ],
       [
         "interval",
         360,
-        65,
-        72,
+        96,
+        102,
+        "pace"
+      ],
+      [
+        "recovery",
+        90,
+        50,
+        60,
+        "pace"
+      ],
+      [
+        "interval",
+        360,
+        96,
+        102,
+        "pace"
+      ],
+      [
+        "recovery",
+        90,
+        50,
+        60,
+        "pace"
+      ],
+      [
+        "interval",
+        360,
+        96,
+        102,
+        "pace"
+      ],
+      [
+        "recovery",
+        90,
+        50,
+        60,
+        "pace"
+      ],
+      [
+        "interval",
+        360,
+        96,
+        102,
         "pace"
       ],
       [
         "cooldown",
-        600,
+        720,
         45,
         55,
         "pace"
@@ -245,11 +252,11 @@
       ],
       [
         "s/km",
-        332,
-        340
+        375,
+        438
       ]
     ],
-    "tss": 60.7,
+    "tss": 64.8,
     "week": "load"
   },
   {
@@ -257,7 +264,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Run Recovery (Zone 1)",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
@@ -304,7 +311,7 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 180.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "cycling",
     "steps": [
@@ -351,7 +358,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 120.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -412,29 +419,15 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 55.0,
-    "name": "Cycling Threshold Intervals",
+    "name": "Bike Threshold: 3 × 8 min",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        540,
+        660,
         50,
         75,
-        "power"
-      ],
-      [
-        "interval",
-        60,
-        95,
-        100,
-        "power"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
         "power"
       ],
       [
@@ -500,7 +493,7 @@
         150
       ]
     ],
-    "tss": 58.7,
+    "tss": 58.0,
     "week": "load"
   },
   {
@@ -508,7 +501,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Cycling Active Recovery",
+    "name": "Bike Recovery (Zone 1)",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "cycling",
     "steps": [
@@ -555,27 +548,27 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 55.0,
-    "name": "Running Threshold Intervals",
+    "name": "Run Threshold: 4 × 8 min",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        540,
+        660,
         50,
         75,
         "pace"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
+        480,
+        96,
+        102,
         "pace"
       ],
       [
         "recovery",
-        60,
+        120,
         50,
         60,
         "pace"
@@ -589,7 +582,7 @@
       ],
       [
         "recovery",
-        240,
+        120,
         50,
         60,
         "pace"
@@ -603,7 +596,7 @@
       ],
       [
         "recovery",
-        240,
+        120,
         50,
         60,
         "pace"
@@ -613,18 +606,11 @@
         480,
         96,
         102,
-        "pace"
-      ],
-      [
-        "interval",
-        420,
-        65,
-        72,
         "pace"
       ],
       [
         "cooldown",
-        300,
+        360,
         45,
         55,
         "pace"
@@ -639,11 +625,11 @@
       ],
       [
         "s/km",
-        332,
-        340
+        375,
+        438
       ]
     ],
-    "tss": 58.7,
+    "tss": 65.0,
     "week": "load"
   },
   {
@@ -651,7 +637,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Run Recovery (Zone 1)",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
@@ -698,7 +684,7 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 180.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "cycling",
     "steps": [
@@ -745,7 +731,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 120.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -806,29 +792,15 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 55.0,
-    "name": "Cycling Threshold Intervals",
+    "name": "Bike Threshold: 3 × 8 min",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        540,
+        660,
         50,
         75,
-        "power"
-      ],
-      [
-        "interval",
-        60,
-        95,
-        100,
-        "power"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
         "power"
       ],
       [
@@ -894,7 +866,7 @@
         150
       ]
     ],
-    "tss": 58.7,
+    "tss": 58.0,
     "week": "load"
   },
   {
@@ -902,7 +874,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Cycling Active Recovery",
+    "name": "Bike Recovery (Zone 1)",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "cycling",
     "steps": [
@@ -949,69 +921,55 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 55.0,
-    "name": "Running Threshold Intervals",
+    "name": "Run Threshold: 3 × 10 min",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        540,
+        660,
         50,
         75,
         "pace"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "pace"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "pace"
-      ],
-      [
-        "interval",
-        480,
+        600,
         96,
         102,
         "pace"
       ],
       [
         "recovery",
-        240,
+        120,
         50,
         60,
         "pace"
       ],
       [
         "interval",
-        480,
+        600,
         96,
         102,
         "pace"
       ],
       [
         "recovery",
-        240,
+        120,
         50,
         60,
         "pace"
       ],
       [
         "interval",
-        480,
+        600,
         96,
         102,
         "pace"
       ],
       [
         "interval",
-        420,
+        300,
         65,
         72,
         "pace"
@@ -1033,11 +991,11 @@
       ],
       [
         "s/km",
-        332,
-        340
+        375,
+        438
       ]
     ],
-    "tss": 58.7,
+    "tss": 64.2,
     "week": "load"
   },
   {
@@ -1045,7 +1003,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Run Recovery (Zone 1)",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
@@ -1092,7 +1050,7 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 180.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "cycling",
     "steps": [
@@ -1139,7 +1097,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 120.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -1200,76 +1158,55 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 65.0,
-    "name": "Cycling Threshold Intervals",
+    "name": "Bike Threshold: 3 × 10 min",
     "rationale": "Recovery week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        600,
+        780,
         50,
         75,
         "power"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "power"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "power"
-      ],
-      [
-        "interval",
-        480,
+        600,
         96,
         102,
         "power"
       ],
       [
         "recovery",
-        240,
+        300,
         50,
         60,
         "power"
       ],
       [
         "interval",
-        480,
+        600,
         96,
         102,
         "power"
       ],
       [
         "recovery",
-        240,
+        300,
         50,
         60,
         "power"
       ],
       [
         "interval",
-        480,
+        600,
         96,
         102,
-        "power"
-      ],
-      [
-        "interval",
-        660,
-        65,
-        72,
         "power"
       ],
       [
         "cooldown",
-        600,
+        720,
         45,
         55,
         "power"
@@ -1288,7 +1225,7 @@
         150
       ]
     ],
-    "tss": 64.6,
+    "tss": 67.5,
     "week": "recovery"
   },
   {
@@ -1296,7 +1233,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 40.0,
-    "name": "Cycling Active Recovery",
+    "name": "Bike Recovery (Zone 1)",
     "rationale": "Recovery week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "cycling",
     "steps": [
@@ -1343,7 +1280,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 45.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -1390,7 +1327,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 45.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -1437,7 +1374,7 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 100.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Recovery week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "cycling",
     "steps": [
@@ -1484,7 +1421,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 45.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -1641,7 +1578,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Cycling Active Recovery",
+    "name": "Bike Recovery (Zone 1)",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "cycling",
     "steps": [
@@ -1688,27 +1625,27 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 55.0,
-    "name": "Running Threshold Intervals",
+    "name": "Run Threshold: 4 × 8 min",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        540,
+        660,
         50,
         75,
         "pace"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
+        480,
+        96,
+        102,
         "pace"
       ],
       [
         "recovery",
-        60,
+        120,
         50,
         60,
         "pace"
@@ -1722,7 +1659,7 @@
       ],
       [
         "recovery",
-        240,
+        120,
         50,
         60,
         "pace"
@@ -1736,7 +1673,7 @@
       ],
       [
         "recovery",
-        240,
+        120,
         50,
         60,
         "pace"
@@ -1746,18 +1683,11 @@
         480,
         96,
         102,
-        "pace"
-      ],
-      [
-        "interval",
-        420,
-        65,
-        72,
         "pace"
       ],
       [
         "cooldown",
-        300,
+        360,
         45,
         55,
         "pace"
@@ -1772,11 +1702,11 @@
       ],
       [
         "s/km",
-        332,
-        340
+        375,
+        438
       ]
     ],
-    "tss": 58.7,
+    "tss": 65.0,
     "week": "load"
   },
   {
@@ -1784,7 +1714,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Run Recovery (Zone 1)",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
@@ -1831,7 +1761,7 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 180.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "cycling",
     "steps": [
@@ -1878,7 +1808,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 120.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -1939,29 +1869,15 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 55.0,
-    "name": "Cycling Threshold Intervals",
+    "name": "Bike Threshold: 3 × 8 min",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        540,
+        660,
         50,
         75,
-        "power"
-      ],
-      [
-        "interval",
-        60,
-        95,
-        100,
-        "power"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
         "power"
       ],
       [
@@ -2027,7 +1943,7 @@
         150
       ]
     ],
-    "tss": 58.7,
+    "tss": 58.0,
     "week": "load"
   },
   {
@@ -2035,7 +1951,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Cycling Active Recovery",
+    "name": "Bike Recovery (Zone 1)",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "cycling",
     "steps": [
@@ -2082,69 +1998,55 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 55.0,
-    "name": "Running Threshold Intervals",
+    "name": "Run Threshold: 3 × 10 min",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        540,
+        660,
         50,
         75,
         "pace"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "pace"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "pace"
-      ],
-      [
-        "interval",
-        480,
+        600,
         96,
         102,
         "pace"
       ],
       [
         "recovery",
-        240,
+        120,
         50,
         60,
         "pace"
       ],
       [
         "interval",
-        480,
+        600,
         96,
         102,
         "pace"
       ],
       [
         "recovery",
-        240,
+        120,
         50,
         60,
         "pace"
       ],
       [
         "interval",
-        480,
+        600,
         96,
         102,
         "pace"
       ],
       [
         "interval",
-        420,
+        300,
         65,
         72,
         "pace"
@@ -2166,11 +2068,11 @@
       ],
       [
         "s/km",
-        332,
-        340
+        375,
+        438
       ]
     ],
-    "tss": 58.7,
+    "tss": 64.2,
     "week": "load"
   },
   {
@@ -2178,7 +2080,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Run Recovery (Zone 1)",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
@@ -2225,7 +2127,7 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 180.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "cycling",
     "steps": [
@@ -2272,7 +2174,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 120.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -2333,29 +2235,15 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 55.0,
-    "name": "Cycling Threshold Intervals",
+    "name": "Bike Threshold: 3 × 8 min",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        540,
+        660,
         50,
         75,
-        "power"
-      ],
-      [
-        "interval",
-        60,
-        95,
-        100,
-        "power"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
         "power"
       ],
       [
@@ -2421,7 +2309,7 @@
         150
       ]
     ],
-    "tss": 58.7,
+    "tss": 58.0,
     "week": "load"
   },
   {
@@ -2429,7 +2317,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Cycling Active Recovery",
+    "name": "Bike Recovery (Zone 1)",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "cycling",
     "steps": [
@@ -2476,76 +2364,83 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 55.0,
-    "name": "Running Threshold Intervals",
+    "name": "Run Threshold: 5 × 6 min",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        540,
+        660,
         50,
         75,
         "pace"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "pace"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "pace"
-      ],
-      [
-        "interval",
-        480,
+        360,
         96,
         102,
         "pace"
       ],
       [
         "recovery",
-        240,
+        90,
         50,
         60,
         "pace"
       ],
       [
         "interval",
-        480,
+        360,
         96,
         102,
         "pace"
       ],
       [
         "recovery",
-        240,
+        90,
         50,
         60,
         "pace"
       ],
       [
         "interval",
-        480,
+        360,
         96,
         102,
         "pace"
       ],
       [
+        "recovery",
+        90,
+        50,
+        60,
+        "pace"
+      ],
+      [
         "interval",
-        420,
-        65,
-        72,
+        360,
+        96,
+        102,
+        "pace"
+      ],
+      [
+        "recovery",
+        90,
+        50,
+        60,
+        "pace"
+      ],
+      [
+        "interval",
+        360,
+        96,
+        102,
         "pace"
       ],
       [
         "cooldown",
-        300,
+        480,
         45,
         55,
         "pace"
@@ -2560,11 +2455,11 @@
       ],
       [
         "s/km",
-        332,
-        340
+        375,
+        438
       ]
     ],
-    "tss": 58.7,
+    "tss": 62.5,
     "week": "load"
   },
   {
@@ -2572,7 +2467,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Run Recovery (Zone 1)",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
@@ -2619,7 +2514,7 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 180.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "cycling",
     "steps": [
@@ -2666,7 +2561,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 120.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -2727,76 +2622,55 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 65.0,
-    "name": "Cycling Threshold Intervals",
+    "name": "Bike Threshold: 3 × 10 min",
     "rationale": "Recovery week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        600,
+        780,
         50,
         75,
         "power"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "power"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "power"
-      ],
-      [
-        "interval",
-        480,
+        600,
         96,
         102,
         "power"
       ],
       [
         "recovery",
-        240,
+        300,
         50,
         60,
         "power"
       ],
       [
         "interval",
-        480,
+        600,
         96,
         102,
         "power"
       ],
       [
         "recovery",
-        240,
+        300,
         50,
         60,
         "power"
       ],
       [
         "interval",
-        480,
+        600,
         96,
         102,
-        "power"
-      ],
-      [
-        "interval",
-        660,
-        65,
-        72,
         "power"
       ],
       [
         "cooldown",
-        600,
+        720,
         45,
         55,
         "power"
@@ -2815,7 +2689,7 @@
         150
       ]
     ],
-    "tss": 64.6,
+    "tss": 67.5,
     "week": "recovery"
   },
   {
@@ -2823,7 +2697,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 40.0,
-    "name": "Cycling Active Recovery",
+    "name": "Bike Recovery (Zone 1)",
     "rationale": "Recovery week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "cycling",
     "steps": [
@@ -2870,7 +2744,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 45.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -2917,7 +2791,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 45.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -2964,7 +2838,7 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 100.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Recovery week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "cycling",
     "steps": [
@@ -3011,7 +2885,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 45.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [

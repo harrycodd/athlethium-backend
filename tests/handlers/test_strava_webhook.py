@@ -150,6 +150,8 @@ class TestImport:
         assert ws["ride"]["completed"] and ws["ride"]["completion_type"] == "strava"
         assert ws["ride"]["stravaId"] == "111" and ws["ride"]["actual_time"] == 3600
         assert ws["ride"]["actual_tss"] == pytest.approx(3600 * 200 * 0.8 / (250 * 3600) * 100, abs=0.1)
+        assert ws["ride"]["stats"] == {"duration_seconds": 3600, "distance_m": 30000.0, "avg_power": 190.0,
+                                       "normalized_power": 200.0, "avg_heart_rate": 140.0}
         assert not ws["swim"]["completed"]
         assert ctl(db) > before
         assert strava.request_history[-1].headers["Authorization"] == "Bearer acc"
@@ -225,7 +227,10 @@ class TestImport:
         strava.get(ACTIVITY_URL, json=activity(sport_type="WeightTraining"))
         before = ctl(db)
         assert process(event()) == "completed_planned"
-        assert workouts(db)["gym"]["actual_tss"] == 0.0 and ctl(db) == before
+        gym = workouts(db)["gym"]
+        assert gym["actual_tss"] == 0.0 and ctl(db) == before
+        assert set(gym["stats"]) == {"duration_seconds", "avg_heart_rate"}  # no distance, speed or power
+        assert gym["steps"] == []  # the planned session's content is kept as it was
 
     @pytest.mark.parametrize("payload,outcome", [
         (activity(sport_type="Walk"), "ignored:unsupported_type"),

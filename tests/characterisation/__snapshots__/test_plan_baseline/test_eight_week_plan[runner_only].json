@@ -128,7 +128,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Run Recovery (Zone 1)",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
@@ -175,55 +175,55 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 40.0,
-    "name": "Running Threshold Intervals",
+    "name": "Run Threshold: 3 × 6 min",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        360,
+        480,
         50,
         75,
         "heart_rate"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
+        360,
         96,
         102,
         "heart_rate"
       ],
       [
         "recovery",
-        240,
+        90,
         50,
         60,
         "heart_rate"
       ],
       [
         "interval",
-        480,
+        360,
+        96,
+        102,
+        "heart_rate"
+      ],
+      [
+        "recovery",
+        90,
+        50,
+        60,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        360,
         96,
         102,
         "heart_rate"
       ],
       [
         "interval",
-        420,
+        360,
         65,
         72,
         "heart_rate"
@@ -249,7 +249,7 @@
         119
       ]
     ],
-    "tss": 41.7,
+    "tss": 42.9,
     "week": "load"
   },
   {
@@ -257,7 +257,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Run Recovery (Zone 1)",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
@@ -304,7 +304,7 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 125.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "running",
     "steps": [
@@ -351,7 +351,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 75.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -412,62 +412,69 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 45.0,
-    "name": "Running Threshold Intervals",
+    "name": "Run Threshold: 4 × 6 min",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        420,
+        540,
         50,
         75,
         "heart_rate"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
+        360,
         96,
         102,
         "heart_rate"
       ],
       [
         "recovery",
-        240,
+        90,
         50,
         60,
         "heart_rate"
       ],
       [
         "interval",
-        480,
+        360,
         96,
         102,
         "heart_rate"
       ],
       [
+        "recovery",
+        90,
+        50,
+        60,
+        "heart_rate"
+      ],
+      [
         "interval",
-        660,
-        65,
-        72,
+        360,
+        96,
+        102,
+        "heart_rate"
+      ],
+      [
+        "recovery",
+        90,
+        50,
+        60,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        360,
+        96,
+        102,
         "heart_rate"
       ],
       [
         "cooldown",
-        300,
+        450,
         45,
         55,
         "heart_rate"
@@ -486,7 +493,7 @@
         119
       ]
     ],
-    "tss": 45.5,
+    "tss": 50.5,
     "week": "load"
   },
   {
@@ -494,7 +501,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Run Recovery (Zone 1)",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
@@ -541,62 +548,69 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 45.0,
-    "name": "Running Threshold Intervals",
+    "name": "Run Threshold: 4 × 6 min",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        420,
+        540,
         50,
         75,
         "heart_rate"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
+        360,
         96,
         102,
         "heart_rate"
       ],
       [
         "recovery",
-        240,
+        90,
         50,
         60,
         "heart_rate"
       ],
       [
         "interval",
-        480,
+        360,
         96,
         102,
         "heart_rate"
       ],
       [
+        "recovery",
+        90,
+        50,
+        60,
+        "heart_rate"
+      ],
+      [
         "interval",
-        660,
-        65,
-        72,
+        360,
+        96,
+        102,
+        "heart_rate"
+      ],
+      [
+        "recovery",
+        90,
+        50,
+        60,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        360,
+        96,
+        102,
         "heart_rate"
       ],
       [
         "cooldown",
-        300,
+        450,
         45,
         55,
         "heart_rate"
@@ -615,7 +629,7 @@
         119
       ]
     ],
-    "tss": 45.5,
+    "tss": 50.5,
     "week": "load"
   },
   {
@@ -623,7 +637,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Run Recovery (Zone 1)",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
@@ -669,8 +683,8 @@
     "date": "2026-10-17",
     "intensity": 2,
     "kind": "long",
-    "minutes": 135.0,
-    "name": "Running Aerobic Base Building",
+    "minutes": 125.0,
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "running",
     "steps": [
@@ -683,7 +697,7 @@
       ],
       [
         "interval",
-        6900,
+        6300,
         65,
         72,
         "heart_rate"
@@ -709,7 +723,7 @@
         125
       ]
     ],
-    "tss": 100.3,
+    "tss": 92.5,
     "week": "load"
   },
   {
@@ -717,7 +731,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 105.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -778,62 +792,69 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 45.0,
-    "name": "Running Threshold Intervals",
+    "name": "Run Threshold: 4 × 6 min",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        420,
+        540,
         50,
         75,
         "heart_rate"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
+        360,
         96,
         102,
         "heart_rate"
       ],
       [
         "recovery",
-        240,
+        90,
         50,
         60,
         "heart_rate"
       ],
       [
         "interval",
-        480,
+        360,
         96,
         102,
         "heart_rate"
       ],
       [
+        "recovery",
+        90,
+        50,
+        60,
+        "heart_rate"
+      ],
+      [
         "interval",
-        660,
-        65,
-        72,
+        360,
+        96,
+        102,
+        "heart_rate"
+      ],
+      [
+        "recovery",
+        90,
+        50,
+        60,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        360,
+        96,
+        102,
         "heart_rate"
       ],
       [
         "cooldown",
-        300,
+        450,
         45,
         55,
         "heart_rate"
@@ -852,7 +873,7 @@
         119
       ]
     ],
-    "tss": 45.5,
+    "tss": 50.5,
     "week": "load"
   },
   {
@@ -860,7 +881,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Run Recovery (Zone 1)",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
@@ -907,62 +928,69 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 45.0,
-    "name": "Running Threshold Intervals",
+    "name": "Run Threshold: 4 × 6 min",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        420,
+        540,
         50,
         75,
         "heart_rate"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
+        360,
         96,
         102,
         "heart_rate"
       ],
       [
         "recovery",
-        240,
+        90,
         50,
         60,
         "heart_rate"
       ],
       [
         "interval",
-        480,
+        360,
         96,
         102,
         "heart_rate"
       ],
       [
+        "recovery",
+        90,
+        50,
+        60,
+        "heart_rate"
+      ],
+      [
         "interval",
-        660,
-        65,
-        72,
+        360,
+        96,
+        102,
+        "heart_rate"
+      ],
+      [
+        "recovery",
+        90,
+        50,
+        60,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        360,
+        96,
+        102,
         "heart_rate"
       ],
       [
         "cooldown",
-        300,
+        450,
         45,
         55,
         "heart_rate"
@@ -981,7 +1009,7 @@
         119
       ]
     ],
-    "tss": 45.5,
+    "tss": 50.5,
     "week": "load"
   },
   {
@@ -989,7 +1017,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Run Recovery (Zone 1)",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
@@ -1036,7 +1064,7 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 165.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "running",
     "steps": [
@@ -1083,7 +1111,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 105.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -1144,76 +1172,83 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 60.0,
-    "name": "Running Threshold Intervals",
+    "name": "Run Threshold: 5 × 6 min",
     "rationale": "Recovery week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        600,
+        720,
         50,
         75,
         "heart_rate"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
+        360,
         96,
         102,
         "heart_rate"
       ],
       [
         "recovery",
-        240,
+        90,
         50,
         60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        240,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
-        96,
-        102,
         "heart_rate"
       ],
       [
         "interval",
         360,
-        65,
-        72,
+        96,
+        102,
+        "heart_rate"
+      ],
+      [
+        "recovery",
+        90,
+        50,
+        60,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        360,
+        96,
+        102,
+        "heart_rate"
+      ],
+      [
+        "recovery",
+        90,
+        50,
+        60,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        360,
+        96,
+        102,
+        "heart_rate"
+      ],
+      [
+        "recovery",
+        90,
+        50,
+        60,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        360,
+        96,
+        102,
         "heart_rate"
       ],
       [
         "cooldown",
-        600,
+        720,
         45,
         55,
         "heart_rate"
@@ -1232,7 +1267,7 @@
         119
       ]
     ],
-    "tss": 60.7,
+    "tss": 64.8,
     "week": "recovery"
   },
   {
@@ -1240,7 +1275,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 40.0,
-    "name": "Running Active Recovery",
+    "name": "Run Recovery (Zone 1)",
     "rationale": "Recovery week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
@@ -1287,7 +1322,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 40.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -1334,7 +1369,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 40.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -1381,7 +1416,7 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 90.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Recovery week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "running",
     "steps": [
@@ -1428,7 +1463,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 40.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -1599,7 +1634,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Run Recovery (Zone 1)",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
@@ -1646,69 +1681,76 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 50.0,
-    "name": "Running Threshold Intervals",
+    "name": "Run Threshold: 4 × 6 min",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        480,
+        600,
         50,
         75,
         "heart_rate"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
+        360,
         96,
         102,
         "heart_rate"
       ],
       [
         "recovery",
-        240,
+        90,
         50,
         60,
         "heart_rate"
       ],
       [
         "interval",
-        480,
+        360,
         96,
         102,
         "heart_rate"
       ],
       [
         "recovery",
-        240,
+        90,
         50,
         60,
         "heart_rate"
       ],
       [
         "interval",
-        480,
+        360,
         96,
         102,
+        "heart_rate"
+      ],
+      [
+        "recovery",
+        90,
+        50,
+        60,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        360,
+        96,
+        102,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        390,
+        65,
+        72,
         "heart_rate"
       ],
       [
         "cooldown",
-        480,
+        300,
         45,
         55,
         "heart_rate"
@@ -1727,7 +1769,7 @@
         119
       ]
     ],
-    "tss": 53.9,
+    "tss": 55.1,
     "week": "load"
   },
   {
@@ -1735,7 +1777,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Run Recovery (Zone 1)",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
@@ -1782,7 +1824,7 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 165.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "running",
     "steps": [
@@ -1829,7 +1871,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 105.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -1890,69 +1932,55 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 50.0,
-    "name": "Running Threshold Intervals",
+    "name": "Run Threshold: 3 × 10 min",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        480,
+        600,
         50,
         75,
         "heart_rate"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
+        600,
         96,
         102,
         "heart_rate"
       ],
       [
         "recovery",
-        240,
+        120,
         50,
         60,
         "heart_rate"
       ],
       [
         "interval",
-        480,
+        600,
         96,
         102,
         "heart_rate"
       ],
       [
         "recovery",
-        240,
+        120,
         50,
         60,
         "heart_rate"
       ],
       [
         "interval",
-        480,
+        600,
         96,
         102,
         "heart_rate"
       ],
       [
         "cooldown",
-        480,
+        360,
         45,
         55,
         "heart_rate"
@@ -1971,7 +1999,7 @@
         119
       ]
     ],
-    "tss": 53.9,
+    "tss": 60.0,
     "week": "load"
   },
   {
@@ -1979,7 +2007,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Run Recovery (Zone 1)",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
@@ -2026,69 +2054,55 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 50.0,
-    "name": "Running Threshold Intervals",
+    "name": "Run Threshold: 3 × 10 min",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        480,
+        600,
         50,
         75,
         "heart_rate"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
+        600,
         96,
         102,
         "heart_rate"
       ],
       [
         "recovery",
-        240,
+        120,
         50,
         60,
         "heart_rate"
       ],
       [
         "interval",
-        480,
+        600,
         96,
         102,
         "heart_rate"
       ],
       [
         "recovery",
-        240,
+        120,
         50,
         60,
         "heart_rate"
       ],
       [
         "interval",
-        480,
+        600,
         96,
         102,
         "heart_rate"
       ],
       [
         "cooldown",
-        480,
+        360,
         45,
         55,
         "heart_rate"
@@ -2107,7 +2121,7 @@
         119
       ]
     ],
-    "tss": 53.9,
+    "tss": 60.0,
     "week": "load"
   },
   {
@@ -2115,7 +2129,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Run Recovery (Zone 1)",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
@@ -2162,7 +2176,7 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 165.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "running",
     "steps": [
@@ -2209,7 +2223,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 105.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -2270,69 +2284,76 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 50.0,
-    "name": "Running Threshold Intervals",
+    "name": "Run Threshold: 4 × 6 min",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        480,
+        600,
         50,
         75,
         "heart_rate"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
+        360,
         96,
         102,
         "heart_rate"
       ],
       [
         "recovery",
-        240,
+        90,
         50,
         60,
         "heart_rate"
       ],
       [
         "interval",
-        480,
+        360,
         96,
         102,
         "heart_rate"
       ],
       [
         "recovery",
-        240,
+        90,
         50,
         60,
         "heart_rate"
       ],
       [
         "interval",
-        480,
+        360,
         96,
         102,
+        "heart_rate"
+      ],
+      [
+        "recovery",
+        90,
+        50,
+        60,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        360,
+        96,
+        102,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        390,
+        65,
+        72,
         "heart_rate"
       ],
       [
         "cooldown",
-        480,
+        300,
         45,
         55,
         "heart_rate"
@@ -2351,7 +2372,7 @@
         119
       ]
     ],
-    "tss": 53.9,
+    "tss": 55.1,
     "week": "load"
   },
   {
@@ -2359,7 +2380,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Run Recovery (Zone 1)",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
@@ -2406,69 +2427,76 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 50.0,
-    "name": "Running Threshold Intervals",
+    "name": "Run Threshold: 4 × 6 min",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        480,
+        600,
         50,
         75,
         "heart_rate"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "heart_rate"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        480,
+        360,
         96,
         102,
         "heart_rate"
       ],
       [
         "recovery",
-        240,
+        90,
         50,
         60,
         "heart_rate"
       ],
       [
         "interval",
-        480,
+        360,
         96,
         102,
         "heart_rate"
       ],
       [
         "recovery",
-        240,
+        90,
         50,
         60,
         "heart_rate"
       ],
       [
         "interval",
-        480,
+        360,
         96,
         102,
+        "heart_rate"
+      ],
+      [
+        "recovery",
+        90,
+        50,
+        60,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        360,
+        96,
+        102,
+        "heart_rate"
+      ],
+      [
+        "interval",
+        390,
+        65,
+        72,
         "heart_rate"
       ],
       [
         "cooldown",
-        480,
+        300,
         45,
         55,
         "heart_rate"
@@ -2487,7 +2515,7 @@
         119
       ]
     ],
-    "tss": 53.9,
+    "tss": 55.1,
     "week": "load"
   },
   {
@@ -2495,7 +2523,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Running Active Recovery",
+    "name": "Run Recovery (Zone 1)",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
@@ -2542,7 +2570,7 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 165.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "running",
     "steps": [
@@ -2589,7 +2617,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 105.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -2650,27 +2678,27 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 60.0,
-    "name": "Running Threshold Intervals",
+    "name": "Run Threshold: 4 × 8 min",
     "rationale": "Recovery week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "running",
     "steps": [
       [
         "warmup",
-        600,
+        720,
         50,
         75,
         "heart_rate"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
+        480,
+        96,
+        102,
         "heart_rate"
       ],
       [
         "recovery",
-        60,
+        120,
         50,
         60,
         "heart_rate"
@@ -2684,7 +2712,7 @@
       ],
       [
         "recovery",
-        240,
+        120,
         50,
         60,
         "heart_rate"
@@ -2698,7 +2726,7 @@
       ],
       [
         "recovery",
-        240,
+        120,
         50,
         60,
         "heart_rate"
@@ -2708,13 +2736,6 @@
         480,
         96,
         102,
-        "heart_rate"
-      ],
-      [
-        "interval",
-        360,
-        65,
-        72,
         "heart_rate"
       ],
       [
@@ -2738,7 +2759,7 @@
         119
       ]
     ],
-    "tss": 60.7,
+    "tss": 67.3,
     "week": "recovery"
   },
   {
@@ -2746,7 +2767,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 40.0,
-    "name": "Running Active Recovery",
+    "name": "Run Recovery (Zone 1)",
     "rationale": "Recovery week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
@@ -2793,7 +2814,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 40.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -2840,7 +2861,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 40.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -2887,7 +2908,7 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 90.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Recovery week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "running",
     "steps": [
@@ -2934,7 +2955,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 45.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [

@@ -1,6 +1,6 @@
 {
   "cycling|z1|0.25h": [
-    "Cycling Active Recovery",
+    "Bike Recovery (Zone 1)",
     "power",
     [
       [
@@ -18,7 +18,7 @@
     ]
   ],
   "cycling|z1|0.75h": [
-    "Cycling Active Recovery",
+    "Bike Recovery (Zone 1)",
     "power",
     [
       [
@@ -36,7 +36,7 @@
     ]
   ],
   "cycling|z1|1.5h": [
-    "Cycling Active Recovery",
+    "Bike Recovery (Zone 1)",
     "power",
     [
       [
@@ -54,7 +54,7 @@
     ]
   ],
   "cycling|z2|0.25h": [
-    "Cycling Aerobic Base Building",
+    "Bike Endurance (Zone 2)",
     "power",
     [
       [
@@ -72,7 +72,7 @@
     ]
   ],
   "cycling|z2|0.75h": [
-    "Cycling Aerobic Base Building",
+    "Bike Endurance (Zone 2)",
     "power",
     [
       [
@@ -90,7 +90,7 @@
     ]
   ],
   "cycling|z2|1.5h": [
-    "Cycling Aerobic Base Building",
+    "Bike Endurance (Zone 2)",
     "power",
     [
       [
@@ -194,24 +194,16 @@
     ]
   ],
   "cycling|z4|0.25h": [
-    "Cycling Threshold Intervals",
+    "Bike Threshold: 2 × 3 min",
     "power",
     [
       [
         "warmup",
-        120
+        240
       ],
       [
         "interval",
-        60
-      ],
-      [
-        "recovery",
-        60
-      ],
-      [
-        "interval",
-        480
+        180
       ],
       [
         "recovery",
@@ -219,29 +211,21 @@
       ],
       [
         "interval",
-        480
+        180
       ],
       [
         "cooldown",
-        60
+        360
       ]
     ]
   ],
   "cycling|z4|0.75h": [
-    "Cycling Threshold Intervals",
+    "Bike Threshold: 2 × 8 min",
     "power",
     [
       [
         "warmup",
-        420
-      ],
-      [
-        "interval",
-        60
-      ],
-      [
-        "recovery",
-        60
+        540
       ],
       [
         "interval",
@@ -266,52 +250,36 @@
     ]
   ],
   "cycling|z4|1.5h": [
-    "Cycling Threshold Intervals",
+    "Bike Threshold: 3 × 10 min",
     "power",
     [
       [
         "warmup",
+        900
+      ],
+      [
+        "interval",
+        600
+      ],
+      [
+        "recovery",
+        300
+      ],
+      [
+        "interval",
+        600
+      ],
+      [
+        "recovery",
+        300
+      ],
+      [
+        "interval",
         600
       ],
       [
         "interval",
-        60
-      ],
-      [
-        "recovery",
-        60
-      ],
-      [
-        "interval",
-        480
-      ],
-      [
-        "recovery",
-        240
-      ],
-      [
-        "interval",
-        480
-      ],
-      [
-        "recovery",
-        240
-      ],
-      [
-        "interval",
-        480
-      ],
-      [
-        "recovery",
-        240
-      ],
-      [
-        "interval",
-        480
-      ],
-      [
-        "interval",
-        1440
+        1500
       ],
       [
         "cooldown",
@@ -320,20 +288,12 @@
     ]
   ],
   "cycling|z5|0.25h": [
-    "Cycling VO2 Max Power Intervals",
+    "Bike VO2max: 2 × 3 min",
     "power",
     [
       [
         "warmup",
-        264
-      ],
-      [
-        "interval",
-        180
-      ],
-      [
-        "recovery",
-        180
+        240
       ],
       [
         "interval",
@@ -349,17 +309,17 @@
       ],
       [
         "cooldown",
-        60
+        420
       ]
     ]
   ],
   "cycling|z5|0.75h": [
-    "Cycling VO2 Max Power Intervals",
+    "Bike VO2max: 5 × 3 min",
     "power",
     [
       [
         "warmup",
-        594
+        540
       ],
       [
         "interval",
@@ -399,17 +359,17 @@
       ],
       [
         "cooldown",
-        486
+        540
       ]
     ]
   ],
   "cycling|z5|1.5h": [
-    "Cycling VO2 Max Power Intervals",
+    "Bike VO2max: 6 × 3 min",
     "power",
     [
       [
         "warmup",
-        720
+        900
       ],
       [
         "interval",
@@ -457,7 +417,7 @@
       ],
       [
         "interval",
-        2100
+        1920
       ],
       [
         "cooldown",
@@ -814,7 +774,7 @@
     ]
   ],
   "running|z1|0.25h": [
-    "Running Active Recovery",
+    "Run Recovery (Zone 1)",
     "pace",
     [
       [
@@ -832,7 +792,7 @@
     ]
   ],
   "running|z1|0.75h": [
-    "Running Active Recovery",
+    "Run Recovery (Zone 1)",
     "pace",
     [
       [
@@ -850,7 +810,7 @@
     ]
   ],
   "running|z1|1.5h": [
-    "Running Active Recovery",
+    "Run Recovery (Zone 1)",
     "pace",
     [
       [
@@ -868,7 +828,7 @@
     ]
   ],
   "running|z2|0.25h": [
-    "Running Aerobic Base Building",
+    "Run Endurance (Zone 2)",
     "pace",
     [
       [
@@ -886,7 +846,7 @@
     ]
   ],
   "running|z2|0.75h": [
-    "Running Aerobic Base Building",
+    "Run Endurance (Zone 2)",
     "pace",
     [
       [
@@ -904,7 +864,7 @@
     ]
   ],
   "running|z2|1.5h": [
-    "Running Aerobic Base Building",
+    "Run Endurance (Zone 2)",
     "pace",
     [
       [
@@ -1008,124 +968,120 @@
     ]
   ],
   "running|z4|0.25h": [
-    "Running Threshold Intervals",
+    "Run Threshold: 2 × 4 min",
     "pace",
     [
       [
         "warmup",
-        120
-      ],
-      [
-        "interval",
-        60
-      ],
-      [
-        "recovery",
-        60
-      ],
-      [
-        "interval",
-        480
-      ],
-      [
-        "recovery",
         240
       ],
       [
         "interval",
-        480
+        240
+      ],
+      [
+        "recovery",
+        90
+      ],
+      [
+        "interval",
+        240
       ],
       [
         "cooldown",
-        60
+        390
       ]
     ]
   ],
   "running|z4|0.75h": [
-    "Running Threshold Intervals",
+    "Run Threshold: 4 × 6 min",
     "pace",
     [
       [
         "warmup",
-        420
+        540
       ],
       [
         "interval",
-        60
+        360
       ],
       [
         "recovery",
-        60
+        90
       ],
       [
         "interval",
-        480
+        360
       ],
       [
         "recovery",
-        240
+        90
       ],
       [
         "interval",
-        480
+        360
+      ],
+      [
+        "recovery",
+        90
       ],
       [
         "interval",
-        660
+        360
       ],
       [
         "cooldown",
-        300
+        450
       ]
     ]
   ],
   "running|z4|1.5h": [
-    "Running Threshold Intervals",
+    "Run Threshold: 5 × 6 min",
     "pace",
     [
       [
         "warmup",
-        600
+        900
       ],
       [
         "interval",
-        60
+        360
       ],
       [
         "recovery",
-        60
+        90
       ],
       [
         "interval",
-        480
+        360
       ],
       [
         "recovery",
-        240
+        90
       ],
       [
         "interval",
-        480
+        360
       ],
       [
         "recovery",
-        240
+        90
       ],
       [
         "interval",
-        480
+        360
       ],
       [
         "recovery",
-        240
+        90
       ],
       [
         "interval",
-        480
+        360
       ],
       [
         "interval",
-        1440
+        1740
       ],
       [
         "cooldown",
@@ -1134,12 +1090,12 @@
     ]
   ],
   "running|z5|0.25h": [
-    "Running VO2 Max Power Intervals",
+    "Run VO2max: 2 × 3 min",
     "pace",
     [
       [
         "warmup",
-        264
+        240
       ],
       [
         "interval",
@@ -1147,15 +1103,7 @@
       ],
       [
         "recovery",
-        180
-      ],
-      [
-        "interval",
-        180
-      ],
-      [
-        "recovery",
-        180
+        150
       ],
       [
         "interval",
@@ -1163,17 +1111,17 @@
       ],
       [
         "cooldown",
-        60
+        450
       ]
     ]
   ],
   "running|z5|0.75h": [
-    "Running VO2 Max Power Intervals",
+    "Run VO2max: 6 × 3 min",
     "pace",
     [
       [
         "warmup",
-        594
+        540
       ],
       [
         "interval",
@@ -1181,7 +1129,7 @@
       ],
       [
         "recovery",
-        180
+        150
       ],
       [
         "interval",
@@ -1189,7 +1137,7 @@
       ],
       [
         "recovery",
-        180
+        150
       ],
       [
         "interval",
@@ -1197,7 +1145,7 @@
       ],
       [
         "recovery",
-        180
+        150
       ],
       [
         "interval",
@@ -1205,7 +1153,15 @@
       ],
       [
         "recovery",
+        150
+      ],
+      [
+        "interval",
         180
+      ],
+      [
+        "recovery",
+        150
       ],
       [
         "interval",
@@ -1213,17 +1169,17 @@
       ],
       [
         "cooldown",
-        486
+        330
       ]
     ]
   ],
   "running|z5|1.5h": [
-    "Running VO2 Max Power Intervals",
+    "Run VO2max: 6 × 3 min",
     "pace",
     [
       [
         "warmup",
-        720
+        900
       ],
       [
         "interval",
@@ -1231,7 +1187,7 @@
       ],
       [
         "recovery",
-        180
+        150
       ],
       [
         "interval",
@@ -1239,7 +1195,7 @@
       ],
       [
         "recovery",
-        180
+        150
       ],
       [
         "interval",
@@ -1247,7 +1203,7 @@
       ],
       [
         "recovery",
-        180
+        150
       ],
       [
         "interval",
@@ -1255,7 +1211,7 @@
       ],
       [
         "recovery",
-        180
+        150
       ],
       [
         "interval",
@@ -1263,7 +1219,7 @@
       ],
       [
         "recovery",
-        180
+        150
       ],
       [
         "interval",
@@ -1271,7 +1227,7 @@
       ],
       [
         "interval",
-        2100
+        2070
       ],
       [
         "cooldown",
@@ -1628,110 +1584,382 @@
     ]
   ],
   "swimming|z1|0.25h": [
-    "Swimming Active Recovery",
+    "Swim Recovery: 1 × 200 m",
     "time",
     [
       [
         "warmup",
-        180
+        456
       ],
       [
         "interval",
-        840
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        174
       ],
       [
         "cooldown",
-        180
+        275
       ]
     ]
   ],
   "swimming|z1|0.75h": [
-    "Swimming Active Recovery",
+    "Swim Recovery: 3 × 200 m + pull",
     "time",
     [
       [
         "warmup",
-        300
+        775
       ],
       [
         "interval",
-        2100
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        608
+      ],
+      [
+        "interval",
+        157
       ],
       [
         "cooldown",
-        300
+        275
       ]
     ]
   ],
   "swimming|z1|1.5h": [
-    "Swimming Active Recovery",
+    "Swim Recovery: 12 × 200 m + pull",
     "time",
     [
       [
         "warmup",
-        300
+        775
       ],
       [
         "interval",
-        4800
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        608
+      ],
+      [
+        "interval",
+        202
       ],
       [
         "cooldown",
-        300
+        275
       ]
     ]
   ],
   "swimming|z2|0.25h": [
-    "Swimming Aerobic Base Building",
+    "Swim Aerobic: 1 × 200 m",
     "time",
     [
       [
         "warmup",
-        180
+        456
       ],
       [
         "interval",
-        840
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        174
       ],
       [
         "cooldown",
-        180
+        275
       ]
     ]
   ],
   "swimming|z2|0.75h": [
-    "Swimming Aerobic Base Building",
+    "Swim Aerobic: 3 × 200 m + pull",
     "time",
     [
       [
         "warmup",
-        405
+        775
       ],
       [
         "interval",
-        1890
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        608
+      ],
+      [
+        "interval",
+        157
       ],
       [
         "cooldown",
-        405
+        275
       ]
     ]
   ],
   "swimming|z2|1.5h": [
-    "Swimming Aerobic Base Building",
+    "Swim Aerobic: 12 × 200 m + pull",
     "time",
     [
       [
         "warmup",
-        600
+        775
       ],
       [
         "interval",
-        4200
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        275
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        608
+      ],
+      [
+        "interval",
+        202
       ],
       [
         "cooldown",
-        600
+        275
       ]
     ]
   ],
@@ -1822,274 +2050,534 @@
     ]
   ],
   "swimming|z4|0.25h": [
-    "Swimming Threshold Intervals",
+    "Swim Threshold: 4 × 100 m",
     "time",
     [
       [
         "warmup",
-        120
+        456
       ],
       [
         "interval",
-        60
+        110
       ],
       [
         "recovery",
-        60
+        15
       ],
       [
         "interval",
-        480
+        110
       ],
       [
         "recovery",
-        240
+        15
       ],
       [
         "interval",
-        480
+        110
+      ],
+      [
+        "recovery",
+        15
+      ],
+      [
+        "interval",
+        110
+      ],
+      [
+        "recovery",
+        15
       ],
       [
         "cooldown",
-        60
+        244
       ]
     ]
   ],
   "swimming|z4|0.75h": [
-    "Swimming Threshold Intervals",
+    "Swim Threshold: 10 × 100 m",
     "time",
     [
       [
         "warmup",
-        420
+        775
       ],
       [
         "interval",
-        60
+        110
       ],
       [
         "recovery",
-        60
+        15
       ],
       [
         "interval",
-        480
+        110
       ],
       [
         "recovery",
-        240
+        15
       ],
       [
         "interval",
-        480
+        110
+      ],
+      [
+        "recovery",
+        15
       ],
       [
         "interval",
-        660
+        110
+      ],
+      [
+        "recovery",
+        15
+      ],
+      [
+        "interval",
+        110
+      ],
+      [
+        "recovery",
+        15
+      ],
+      [
+        "interval",
+        110
+      ],
+      [
+        "recovery",
+        15
+      ],
+      [
+        "interval",
+        110
+      ],
+      [
+        "recovery",
+        15
+      ],
+      [
+        "interval",
+        110
+      ],
+      [
+        "recovery",
+        15
+      ],
+      [
+        "interval",
+        110
+      ],
+      [
+        "recovery",
+        15
+      ],
+      [
+        "interval",
+        110
+      ],
+      [
+        "recovery",
+        15
+      ],
+      [
+        "interval",
+        400
       ],
       [
         "cooldown",
-        300
+        275
       ]
     ]
   ],
   "swimming|z4|1.5h": [
-    "Swimming Threshold Intervals",
+    "Swim Threshold: 10 × 100 m",
     "time",
     [
       [
         "warmup",
-        600
+        775
       ],
       [
         "interval",
-        60
+        110
       ],
       [
         "recovery",
-        60
+        15
       ],
       [
         "interval",
-        480
+        110
       ],
       [
         "recovery",
-        240
+        15
       ],
       [
         "interval",
-        480
+        110
       ],
       [
         "recovery",
-        240
+        15
       ],
       [
         "interval",
-        480
+        110
       ],
       [
         "recovery",
-        240
+        15
       ],
       [
         "interval",
-        480
+        110
+      ],
+      [
+        "recovery",
+        15
       ],
       [
         "interval",
-        1440
+        110
+      ],
+      [
+        "recovery",
+        15
+      ],
+      [
+        "interval",
+        110
+      ],
+      [
+        "recovery",
+        15
+      ],
+      [
+        "interval",
+        110
+      ],
+      [
+        "recovery",
+        15
+      ],
+      [
+        "interval",
+        110
+      ],
+      [
+        "recovery",
+        15
+      ],
+      [
+        "interval",
+        110
+      ],
+      [
+        "recovery",
+        15
+      ],
+      [
+        "interval",
+        3100
       ],
       [
         "cooldown",
-        600
+        275
       ]
     ]
   ],
   "swimming|z5|0.25h": [
-    "Swimming VO2 Max Power Intervals",
+    "Swim Speed: 6 × 50 m",
     "time",
     [
       [
         "warmup",
-        264
+        456
       ],
       [
         "interval",
-        180
+        52
       ],
       [
         "recovery",
-        180
+        20
       ],
       [
         "interval",
-        180
+        52
       ],
       [
         "recovery",
-        180
+        20
       ],
       [
         "interval",
-        180
+        52
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        52
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        52
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        52
+      ],
+      [
+        "recovery",
+        20
       ],
       [
         "cooldown",
-        60
+        312
       ]
     ]
   ],
   "swimming|z5|0.75h": [
-    "Swimming VO2 Max Power Intervals",
+    "Swim Speed: 12 × 50 m",
     "time",
     [
       [
         "warmup",
-        594
+        775
       ],
       [
         "interval",
-        180
+        52
       ],
       [
         "recovery",
-        180
+        20
       ],
       [
         "interval",
-        180
+        52
       ],
       [
         "recovery",
-        180
+        20
       ],
       [
         "interval",
-        180
+        52
       ],
       [
         "recovery",
-        180
+        20
       ],
       [
         "interval",
-        180
+        52
       ],
       [
         "recovery",
-        180
+        20
       ],
       [
         "interval",
-        180
+        52
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        52
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        52
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        52
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        52
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        52
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        52
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        52
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        786
       ],
       [
         "cooldown",
-        486
+        275
       ]
     ]
   ],
   "swimming|z5|1.5h": [
-    "Swimming VO2 Max Power Intervals",
+    "Swim Speed: 12 × 50 m",
     "time",
     [
       [
         "warmup",
-        720
+        775
       ],
       [
         "interval",
-        180
+        52
       ],
       [
         "recovery",
-        180
+        20
       ],
       [
         "interval",
-        180
+        52
       ],
       [
         "recovery",
-        180
+        20
       ],
       [
         "interval",
-        180
+        52
       ],
       [
         "recovery",
-        180
+        20
       ],
       [
         "interval",
-        180
+        52
       ],
       [
         "recovery",
-        180
+        20
       ],
       [
         "interval",
-        180
+        52
       ],
       [
         "recovery",
-        180
+        20
       ],
       [
         "interval",
-        180
+        52
+      ],
+      [
+        "recovery",
+        20
       ],
       [
         "interval",
-        2100
+        52
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        52
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        52
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        52
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        52
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        52
+      ],
+      [
+        "recovery",
+        20
+      ],
+      [
+        "interval",
+        3486
       ],
       [
         "cooldown",
-        600
+        275
       ]
     ]
   ],

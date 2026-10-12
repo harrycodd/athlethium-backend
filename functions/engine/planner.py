@@ -48,6 +48,7 @@ LONG_SESSION_MIN_WEEK_H = 2.5
 COMEBACK_IDLE_DAYS = 7
 STRENGTH_H = 0.5
 MOBILITY_H = 20 / 60
+MOBILITY_PER_WEEK = 2   # when the athlete hasn't said how many they want
 SHAKEOUT_H = 25 / 60
 OPENER_H = 0.75
 SLOT = 1 / 12                # durations are rounded down to 5 minutes
@@ -415,10 +416,10 @@ class WeekPlanner:
                                    allowance=allowance)
         sessions = cls._apply_race_proximity(profile, ctx, sessions, caps, sports, focus)
         sessions = cls._trim_to(sessions, target)
-        sessions = cls._add_mobility(profile, sessions, caps)
         if sports and level >= DOUBLES_MIN_LEVEL and ctx.week_type in (WeekType.LOAD, WeekType.RECOVERY) \
                 and not comeback and not minor_issue:
             sessions = cls._add_doubles(profile, sessions, caps, target, level, sports, focus, allowance)
+        sessions = cls._add_mobility(profile, ctx, sessions, caps)
         if ctx.week_type == WeekType.LOAD and not comeback and reference_tss:
             sessions = cls._cap_load(profile, sessions, RAMP * reference_tss)
         # last: every earlier step can only shorten easy time, so polarisation is checked at the end
@@ -837,12 +838,27 @@ class WeekPlanner:
         return out
 
     @classmethod
-    def _add_mobility(cls, profile, sessions, caps):
+    def _add_mobility(cls, profile, ctx, sessions, caps):
+        """
+        As many 20-min mobility sessions as the athlete asked for (default 2): on free rest days
+        first, then as an evening session after an easy, recovery or long session with time to
+        spare. Never after hard work, never in race week, never as a third session in a day.
+        """
         if "stretching" not in profile.sports:
             return sessions
+        wanted = min(7, max(0, int(profile.sport_sessions_per_week.get("stretching", MOBILITY_PER_WEEK) or 0)))
         out = list(sessions)
-        for i, s in enumerate(out):
-            if s.kind == Kind.REST and caps[i] >= MOBILITY_H and not s.reason:
-                out[i] = PlannedSession(s.date, Kind.MOBILITY, "stretching", 1, MOBILITY_H)
-                break
+        mains = [s for s in out if s.slot == "am"]
+        for i, s in enumerate(mains):
+            if wanted and s.kind == Kind.REST and caps[i] >= MOBILITY_H and not s.reason:
+                out[out.index(s)] = PlannedSession(s.date, Kind.MOBILITY, "stretching", 1, MOBILITY_H)
+                wanted -= 1
+        if not wanted or ctx.week_type == WeekType.RACE:
+            return out
+        busy = {s.date for s in out if s.slot == "pm"}
+        used = {d: sum(s.hours for s in out if s.date == d) for d in {s.date for s in out}}
+        spare = [i for i, s in enumerate(mains) if s.kind in (Kind.EASY, Kind.RECOVERY, Kind.LONG)
+                 and s.date not in busy and caps[i] - used[s.date] >= MOBILITY_H - 1e-9]
+        for i in sorted(spare, key=lambda i: (-(caps[i] - used[mains[i].date]), i))[:wanted]:
+            out.append(PlannedSession(mains[i].date, Kind.MOBILITY, "stretching", 1, MOBILITY_H, slot="pm"))
         return out

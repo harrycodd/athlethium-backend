@@ -473,3 +473,58 @@ def test_malformed_longest_entry_is_ignored():
     p = make_profile(ctl=50, atl=50, metrics_date="2026-10-04",
                      recent_weeks={"2026-09-28": [5.0, 230.0, {"cycling": 5.0}, "garbage"]})
     assert WeekPlanner._completed_weeks(p, MON) == [(datetime.date(2026, 9, 28), 5.0, 230.0, {"cycling": 5.0}, None)]
+
+
+# ------------------------------------------------------------------ mobility
+
+def _mobility(plan):
+    return [s for s in plan.sessions if s.kind == Kind.MOBILITY]
+
+
+def _mobility_profile(**overrides):
+    base = dict(ctl=40, atl=40, metrics_date="2026-10-04", weekly_hours=8, daily_max_hours=ROOMY,
+                sports=["cycling", "running", "stretching"], focused_sports=["cycling"])
+    return make_profile(**(base | overrides))
+
+
+@pytest.mark.parametrize("asked,expected", [(None, 2), (1, 1), (3, 3), (0, 0)])
+def test_mobility_sessions_follow_what_the_athlete_asked_for(asked, expected):
+    p = _mobility_profile(sport_sessions_per_week={} if asked is None else {"stretching": asked})
+    load_weeks = [w for w in weeks(p, 4) if w.context.week_type == "load"]
+    assert load_weeks and all(len(_mobility(w)) == expected for w in load_weeks)
+
+
+def test_extra_mobility_goes_after_easy_sessions_never_hard_ones():
+    p = _mobility_profile(sport_sessions_per_week={"stretching": 4})
+    for plan in weeks(p, 4):
+        for m in _mobility(plan):
+            if m.slot == "pm":
+                main = next(s for s in plan.sessions if s.date == m.date and s.slot == "am")
+                assert main.kind in (Kind.EASY, Kind.RECOVERY, Kind.LONG)
+                assert sum(s.hours for s in plan.sessions if s.date == m.date) <= ROOMY[m.date.strftime("%A")] + 1e-6
+
+
+def test_no_mobility_without_stretching_or_time():
+    assert not any(_mobility(w) for w in weeks(_mobility_profile(sports=["cycling", "running"]), 2))
+    no_time = _mobility_profile(daily_max_hours={d: 0 for d in DAYS} | {"Saturday": 1.0, "Sunday": 1.0})
+    for plan in weeks(no_time, 2):
+        for m in _mobility(plan):
+            assert sum(s.hours for s in plan.sessions if s.date == m.date) <= 1.0 + 1e-6
+
+
+def test_race_week_gets_no_evening_mobility():
+    p = _mobility_profile(goal=make_goal(date="2026-10-11", sports=["cycling"]),
+                          sport_sessions_per_week={"stretching": 5})
+    race_week = weeks(p, 1)[0]
+    assert race_week.context.week_type == "race"
+    assert all(m.slot == "am" for m in _mobility(race_week))
+
+
+def test_mobility_never_a_third_session_in_a_day():
+    p = _mobility_profile(ctl=110, atl=100, weekly_hours=30, fitness_level="pro",
+                          daily_max_hours={d: 6.0 for d in DAYS}, sport_sessions_per_week={"stretching": 7})
+    for plan in weeks(p, 4):
+        per_day = {}
+        for s in plan.sessions:
+            per_day[s.date] = per_day.get(s.date, 0) + 1
+        assert max(per_day.values()) <= 2

@@ -57,21 +57,21 @@ Sam: new to cycling, 4 h/week, heart-rate strap only, no FTP yet. Building towar
 
 | Wk | Starts | Type | Hours | TSS | Sessions | KEY/TEST | Easy % | High % | Mid % |
 |---:|---|---|---:|---:|---:|---:|---:|---:|---:|
-| 1 | 2026-10-05 | Recovery | 1.4 | 60 | 3 | 0 | 100 | 0 | 0 |
-| 2 | 2026-10-12 | Load | 2.5 | 106 | 5 | 0 | 100 | 0 | 0 |
-| 3 | 2026-10-19 | Load | 2.8 | 116 | 5 | 0 | 100 | 0 | 0 |
-| 4 | 2026-10-26 | Load | 3.0 | 127 | 6 | 0 | 100 | 0 | 0 |
-| 5 | 2026-11-02 | Recovery | 1.9 | 81 | 4 | 0 | 100 | 0 | 0 |
-| 6 | 2026-11-09 | Load | 3.2 | 137 | 6 | 0 | 100 | 0 | 0 |
-| 7 | 2026-11-16 | Load | 3.4 | 148 | 6 | 1 | 80 | 8 | 0 |
-| 8 | 2026-11-23 | Load | 3.8 | 163 | 6 | 1 | 80 | 8 | 0 |
+| 1 | 2026-10-05 | Recovery | 1.4 | 60 | 4 | 0 | 100 | 0 | 0 |
+| 2 | 2026-10-12 | Load | 2.5 | 106 | 6 | 0 | 100 | 0 | 0 |
+| 3 | 2026-10-19 | Load | 2.8 | 116 | 6 | 0 | 100 | 0 | 0 |
+| 4 | 2026-10-26 | Load | 3.0 | 127 | 7 | 0 | 100 | 0 | 0 |
+| 5 | 2026-11-02 | Recovery | 1.9 | 81 | 5 | 0 | 100 | 0 | 0 |
+| 6 | 2026-11-09 | Load | 3.2 | 137 | 7 | 0 | 100 | 0 | 0 |
+| 7 | 2026-11-16 | Load | 3.4 | 148 | 7 | 1 | 80 | 8 | 0 |
+| 8 | 2026-11-23 | Load | 3.8 | 162 | 7 | 1 | 80 | 7 | 0 |
 
 <details><summary>Day-by-day plan</summary>
 
 | Date | Session | Sport | Duration | TSS | Main set / targets |
 |---|---|---|---:|---:|---|
 | Mon 05 Oct | Mobility | stretching | 20 min | 0 | Cat-Cow, Couch Stretch, Open Book Rotation, Glute Bridge March ... |
-| Tue 06 Oct | Rest | | | | |
+| Tue 06 Oct | Mobility | stretching | 20 min | 0 | Cat-Cow, Couch Stretch, Open Book Rotation, Glute Bridge March ... |
 | Wed 07 Oct | Rest | | | | |
 | Thu 08 Oct | Rest | | | | |
 | Fri 09 Oct | Rest | | | | |
@@ -79,14 +79,14 @@ Sam: new to cycling, 4 h/week, heart-rate strap only, no FTP yet. Building towar
 | Sun 11 Oct | Easy | cycling | 45 min | 32 | 45 min @ 127-136 bpm |
 | Mon 12 Oct | Mobility | stretching | 20 min | 0 | Cat-Cow, Half-Kneeling Hip Flexor Stretch, Thread the Needle, Figure-4 Stretch ... |
 | Tue 13 Oct | Easy | cycling | 30 min | 21 | 30 min @ 127-136 bpm |
-| Wed 14 Oct | Rest | | | | |
+| Wed 14 Oct | Mobility | stretching | 20 min | 0 | Cat-Cow, Half-Kneeling Hip Flexor Stretch, Thread the Needle, Figure-4 Stretch ... |
 | Thu 15 Oct | Easy | cycling | 30 min | 21 | 30 min @ 127-136 bpm |
 | Fri 16 Oct | Rest | | | | |
 | Sat 17 Oct | Long | cycling | 1h00 | 42 | 1h00 @ 127-136 bpm |
 | Sun 18 Oct | Easy | cycling | 30 min | 21 | 30 min @ 127-136 bpm |
 | Mon 19 Oct | Mobility | stretching | 20 min | 0 | Cat-Cow, Couch Stretch, Foam Roller Thoracic Extension, Glute Bridge March ... |
 | Tue 20 Oct | Easy | cycling | 35 min | 25 | 35 min @ 127-136 bpm |
-| Wed 21 Oct | Rest | | | | |
+| Wed 21 Oct | Mobility | stretching | 20 min | 0 | Cat-Cow, Couch Stretch, Foam Roller Thoracic Extension, Glute Bridge March ... |
 | Thu 22 Oct | Easy | cycling | 35 min | 25 | 35 min @ 127-136 bpm |
 | Fri 23 Oct | Rest | | | | |
 | Sat 24 Oct | Long | cycling | 1h00 | 42 | 1h00 @ 127-136 bpm |
@@ -97,10 +97,11 @@ Sam: new to cycling, 4 h/week, heart-rate strap only, no FTP yet. Building towar
 | Thu 29 Oct | Easy | cycling | 30 min | 21 | 30 min @ 127-136 bpm |
 | Fri 30 Oct | Rest | | | | |
 | Sat 31 Oct | Long | cycling | 1h00 | 42 | 1h00 @ 127-136 bpm |
+| Sat 31 Oct (PM) | Mobility | stretching | 20 min | 0 | Cat-Cow, Half-Kneeling Hip Flexor Stretch, Open Book Rotation, Figure-4 Stretch ... |
 | Sun 01 Nov | Easy | cycling | 30 min | 21 | 30 min @ 127-136 bpm |
 | Mon 02 Nov | Mobility | stretching | 20 min | 0 | Cat-Cow, Couch Stretch, Thread the Needle, Glute Bridge March ... |
 | Tue 03 Nov | Easy | cycling | 35 min | 25 | 35 min @ 127-136 bpm |
-| Wed 04 Nov | Rest | | | | |
+| Wed 04 Nov | Mobility | stretching | 20 min | 0 | Cat-Cow, Couch Stretch, Thread the Needle, Glute Bridge March ... |
 | Thu 05 Nov | Rest | | | | |
 | Fri 06 Nov | Rest | | | | |
 | Sat 07 Nov | Easy | cycling | 40 min | 28 | 40 min @ 127-136 bpm |
@@ -111,20 +112,23 @@ Sam: new to cycling, 4 h/week, heart-rate strap only, no FTP yet. Building towar
 | Thu 12 Nov | Easy | cycling | 35 min | 25 | 35 min @ 127-136 bpm |
 | Fri 13 Nov | Rest | | | | |
 | Sat 14 Nov | Long | cycling | 1h00 | 42 | 1h00 @ 127-136 bpm |
+| Sat 14 Nov (PM) | Mobility | stretching | 20 min | 0 | Cat-Cow, Half-Kneeling Hip Flexor Stretch, Foam Roller Thoracic Extension, Figure-4 Stretch ... |
 | Sun 15 Nov | Easy | cycling | 35 min | 25 | 35 min @ 127-136 bpm |
 | Mon 16 Nov | Mobility | stretching | 20 min | 0 | Cat-Cow, Couch Stretch, Open Book Rotation, Glute Bridge March ... |
-| Tue 17 Nov | KEY | cycling | 40 min | 42 | 1 x 1 min @ 164-170 bpm; 2 x 8 min @ 166-173 bpm |
+| Tue 17 Nov | KEY | cycling | 40 min | 41 | 2 x 8 min @ 166-173 bpm |
 | Wed 18 Nov | Recovery | cycling | 35 min | 15 | 35 min @ 104-114 bpm |
 | Thu 19 Nov | Easy | cycling | 35 min | 25 | 35 min @ 127-136 bpm |
 | Fri 20 Nov | Rest | | | | |
 | Sat 21 Nov | Long | cycling | 55 min | 39 | 55 min @ 127-136 bpm |
+| Sat 21 Nov (PM) | Mobility | stretching | 20 min | 0 | Cat-Cow, Couch Stretch, Open Book Rotation, Glute Bridge March ... |
 | Sun 22 Nov | Easy | cycling | 40 min | 28 | 40 min @ 127-136 bpm |
 | Mon 23 Nov | Mobility | stretching | 20 min | 0 | Cat-Cow, Half-Kneeling Hip Flexor Stretch, Thread the Needle, Figure-4 Stretch ... |
-| Tue 24 Nov | KEY | cycling | 45 min | 46 | 1 x 1 min @ 164-170 bpm; 2 x 8 min @ 166-173 bpm |
+| Tue 24 Nov | KEY | cycling | 45 min | 45 | 2 x 8 min @ 166-173 bpm |
 | Wed 25 Nov | Recovery | cycling | 35 min | 15 | 35 min @ 104-114 bpm |
 | Thu 26 Nov | Easy | cycling | 40 min | 28 | 40 min @ 127-136 bpm |
 | Fri 27 Nov | Rest | | | | |
 | Sat 28 Nov | Long | cycling | 1h05 | 46 | 1h05 @ 127-136 bpm |
+| Sat 28 Nov (PM) | Mobility | stretching | 20 min | 0 | Cat-Cow, Half-Kneeling Hip Flexor Stretch, Thread the Needle, Figure-4 Stretch ... |
 | Sun 29 Nov | Easy | cycling | 40 min | 28 | 40 min @ 127-136 bpm |
 
 </details>
@@ -143,10 +147,10 @@ Alex: former club runner (sub-40 10k) back after two years off; jogging 2-3x/wee
 | 2 | 2026-10-12 | Load | 3.0 | 127 | 5 | 0 | 100 | 0 | 0 |
 | 3 | 2026-10-19 | Recovery | 1.9 | 81 | 4 | 0 | 100 | 0 | 0 |
 | 4 | 2026-10-26 | Load | 3.2 | 138 | 5 | 0 | 100 | 0 | 0 |
-| 5 | 2026-11-02 | Load | 3.2 | 150 | 5 | 1 | 79 | 6 | 0 |
-| 6 | 2026-11-09 | Load | 3.5 | 161 | 5 | 1 | 81 | 6 | 0 |
-| 7 | 2026-11-16 | Recovery | 2.2 | 95 | 5 | 0 | 100 | 0 | 0 |
-| 8 | 2026-11-23 | Load | 3.8 | 174 | 5 | 1 | 80 | 7 | 0 |
+| 5 | 2026-11-02 | Load | 3.2 | 151 | 5 | 1 | 79 | 8 | 0 |
+| 6 | 2026-11-09 | Load | 3.4 | 162 | 5 | 1 | 80 | 7 | 0 |
+| 7 | 2026-11-16 | Recovery | 2.2 | 91 | 5 | 0 | 100 | 0 | 0 |
+| 8 | 2026-11-23 | Load | 3.7 | 176 | 5 | 1 | 80 | 8 | 0 |
 
 <details><summary>Day-by-day plan</summary>
 
@@ -181,30 +185,30 @@ Alex: former club runner (sub-40 10k) back after two years off; jogging 2-3x/wee
 | Sat 31 Oct | Long | running | 1h15 | 53 | 1h15 @ 133-142 bpm |
 | Sun 01 Nov | Easy | running | 1h00 | 42 | 1h00 @ 133-142 bpm |
 | Mon 02 Nov | Rest | | | | |
-| Tue 03 Nov | KEY | running | 40 min | 42 | 4 x 3 min @ 188-190 bpm |
+| Tue 03 Nov | KEY | running | 40 min | 46 | 5 x 3 min @ 188-190 bpm |
 | Wed 04 Nov | Strength | strength | 30 min | 0 | A. Kettlebell Goblet Squat, B1. Dumbbell Floor Press, B2. One-Arm Dumbbell Row, C. Kettlebell Deadlift ... |
-| Thu 05 Nov | Easy | running | 55 min | 39 | 55 min @ 133-142 bpm |
+| Thu 05 Nov | Easy | running | 50 min | 35 | 50 min @ 133-142 bpm |
 | Fri 06 Nov | Rest | | | | |
 | Sat 07 Nov | Long | running | 50 min | 35 | 50 min @ 133-142 bpm |
 | Sun 08 Nov | Easy | running | 50 min | 35 | 50 min @ 133-142 bpm |
 | Mon 09 Nov | Rest | | | | |
-| Tue 10 Nov | KEY | running | 40 min | 42 | 4 x 3 min @ 188-190 bpm |
+| Tue 10 Nov | KEY | running | 40 min | 46 | 5 x 3 min @ 188-190 bpm |
 | Wed 11 Nov | Strength | strength | 30 min | 0 | A. Dumbbell Goblet Squat, B1. Dumbbell Floor Press, B2. One-Arm Dumbbell Row, C. Dumbbell Romanian Deadlift ... |
-| Thu 12 Nov | Easy | running | 55 min | 39 | 55 min @ 133-142 bpm |
+| Thu 12 Nov | Easy | running | 50 min | 35 | 50 min @ 133-142 bpm |
 | Fri 13 Nov | Rest | | | | |
 | Sat 14 Nov | Long | running | 1h00 | 42 | 1h00 @ 133-142 bpm |
 | Sun 15 Nov | Easy | running | 55 min | 39 | 55 min @ 133-142 bpm |
 | Mon 16 Nov | Rest | | | | |
 | Tue 17 Nov | Easy | running | 30 min | 21 | 30 min @ 133-142 bpm |
 | Wed 18 Nov | Strength | strength | 30 min | 0 | A. Dumbbell Goblet Squat, B1. Dumbbell Floor Press, B2. One-Arm Dumbbell Row, C. Dumbbell Romanian Deadlift ... |
-| Thu 19 Nov | Easy | running | 35 min | 25 | 35 min @ 133-142 bpm |
+| Thu 19 Nov | Easy | running | 30 min | 21 | 30 min @ 133-142 bpm |
 | Fri 20 Nov | Rest | | | | |
 | Sat 21 Nov | Easy | running | 35 min | 25 | 35 min @ 133-142 bpm |
 | Sun 22 Nov | Easy | running | 35 min | 25 | 35 min @ 133-142 bpm |
 | Mon 23 Nov | Rest | | | | |
-| Tue 24 Nov | KEY | running | 45 min | 47 | 5 x 3 min @ 188-190 bpm |
+| Tue 24 Nov | KEY | running | 45 min | 53 | 6 x 3 min @ 188-190 bpm |
 | Wed 25 Nov | Strength | strength | 30 min | 0 | A. Dumbbell Goblet Squat, B1. Dumbbell Floor Press, B2. One-Arm Dumbbell Row, C. Dumbbell Romanian Deadlift ... |
-| Thu 26 Nov | Easy | running | 1h00 | 42 | 1h00 @ 133-142 bpm |
+| Thu 26 Nov | Easy | running | 55 min | 39 | 55 min @ 133-142 bpm |
 | Fri 27 Nov | Rest | | | | |
 | Sat 28 Nov | Long | running | 1h00 | 42 | 1h00 @ 133-142 bpm |
 | Sun 29 Nov | Easy | running | 1h00 | 42 | 1h00 @ 133-142 bpm |
@@ -221,7 +225,7 @@ Jordan: parent with a desk job; 5 h/week max, short weekday slots, one longer we
 
 | Wk | Starts | Type | Hours | TSS | Sessions | KEY/TEST | Easy % | High % | Mid % |
 |---:|---|---|---:|---:|---:|---:|---:|---:|---:|
-| 1 | 2026-10-05 | Recovery | 3.7 | 159 | 5 | 1 | 82 | 8 | 0 |
+| 1 | 2026-10-05 | Recovery | 3.7 | 158 | 5 | 1 | 82 | 7 | 0 |
 | 2 | 2026-10-12 | Load | 5.0 | 220 | 5 | 1 | 80 | 8 | 0 |
 | 3 | 2026-10-19 | Load | 5.0 | 219 | 5 | 1 | 80 | 8 | 0 |
 | 4 | 2026-10-26 | Load | 5.0 | 219 | 5 | 1 | 80 | 8 | 0 |
@@ -235,7 +239,7 @@ Jordan: parent with a desk job; 5 h/week max, short weekday slots, one longer we
 | Date | Session | Sport | Duration | TSS | Main set / targets |
 |---|---|---|---:|---:|---|
 | Mon 05 Oct | Rest | | | | |
-| Tue 06 Oct | KEY | cycling | 40 min | 42 | 1 x 1 min @ 247-260 W; 2 x 8 min @ 250-265 W |
+| Tue 06 Oct | KEY | cycling | 40 min | 41 | 2 x 8 min @ 250-265 W |
 | Wed 07 Oct | Recovery | cycling | 35 min | 15 | 35 min @ 130-143 W |
 | Thu 08 Oct | Easy | cycling | 40 min | 28 | 40 min @ 169-187 W |
 | Fri 09 Oct | Rest | | | | |
@@ -249,14 +253,14 @@ Jordan: parent with a desk job; 5 h/week max, short weekday slots, one longer we
 | Sat 17 Oct | Long | cycling | 1h30 | 65 | 1h30 @ 169-187 W |
 | Sun 18 Oct | Easy | cycling | 55 min | 39 | 55 min @ 169-187 W |
 | Mon 19 Oct | Rest | | | | |
-| Tue 20 Oct | KEY | cycling | 1h00 | 61 | 1 x 1 min @ 247-260 W; 3 x 8 min @ 250-265 W |
+| Tue 20 Oct | KEY | cycling | 1h00 | 60 | 3 x 8 min @ 250-265 W |
 | Wed 21 Oct | Recovery | cycling | 45 min | 20 | 45 min @ 130-143 W |
 | Thu 22 Oct | Easy | cycling | 50 min | 35 | 50 min @ 169-187 W |
 | Fri 23 Oct | Rest | | | | |
 | Sat 24 Oct | Long | cycling | 1h30 | 65 | 1h30 @ 169-187 W |
 | Sun 25 Oct | Easy | cycling | 55 min | 39 | 55 min @ 169-187 W |
 | Mon 26 Oct | Rest | | | | |
-| Tue 27 Oct | KEY | cycling | 1h00 | 61 | 1 x 1 min @ 247-260 W; 3 x 8 min @ 250-265 W |
+| Tue 27 Oct | KEY | cycling | 1h00 | 60 | 3 x 8 min @ 250-265 W |
 | Wed 28 Oct | Recovery | cycling | 45 min | 20 | 45 min @ 130-143 W |
 | Thu 29 Oct | Easy | cycling | 50 min | 35 | 50 min @ 169-187 W |
 | Fri 30 Oct | Rest | | | | |
@@ -277,14 +281,14 @@ Jordan: parent with a desk job; 5 h/week max, short weekday slots, one longer we
 | Sat 14 Nov | Long | cycling | 1h30 | 65 | 1h30 @ 169-187 W |
 | Sun 15 Nov | Easy | cycling | 55 min | 39 | 55 min @ 169-187 W |
 | Mon 16 Nov | Rest | | | | |
-| Tue 17 Nov | KEY | cycling | 1h00 | 61 | 1 x 1 min @ 247-260 W; 3 x 8 min @ 250-265 W |
+| Tue 17 Nov | KEY | cycling | 1h00 | 60 | 3 x 8 min @ 250-265 W |
 | Wed 18 Nov | Recovery | cycling | 45 min | 20 | 45 min @ 130-143 W |
 | Thu 19 Nov | Easy | cycling | 50 min | 35 | 50 min @ 169-187 W |
 | Fri 20 Nov | Rest | | | | |
 | Sat 21 Nov | Long | cycling | 1h30 | 65 | 1h30 @ 169-187 W |
 | Sun 22 Nov | Easy | cycling | 55 min | 39 | 55 min @ 169-187 W |
 | Mon 23 Nov | Rest | | | | |
-| Tue 24 Nov | KEY | cycling | 1h00 | 61 | 1 x 1 min @ 247-260 W; 3 x 8 min @ 250-265 W |
+| Tue 24 Nov | KEY | cycling | 1h00 | 60 | 3 x 8 min @ 250-265 W |
 | Wed 25 Nov | Recovery | cycling | 45 min | 20 | 45 min @ 130-143 W |
 | Thu 26 Nov | Easy | cycling | 50 min | 35 | 50 min @ 169-187 W |
 | Fri 27 Nov | Rest | | | | |
@@ -303,13 +307,13 @@ Morgan: elite age-group triathlete, 18 h/week, full power/pace data. Olympic-dis
 
 | Wk | Starts | Type | Hours | TSS | Sessions | KEY/TEST | Easy % | High % | Mid % |
 |---:|---|---|---:|---:|---:|---:|---:|---:|---:|
-| 1 | 2026-10-05 | Load | 15.2 | 675 | 7 | 2 | 79 | 6 | 0 |
-| 2 | 2026-10-12 | Load | 15.3 | 683 | 7 | 2 | 78 | 6 | 0 |
-| 3 | 2026-10-19 | Recovery | 9.9 | 436 | 6 | 1 | 81 | 6 | 0 |
-| 4 | 2026-10-26 | Load | 15.3 | 683 | 7 | 2 | 78 | 6 | 0 |
-| 5 | 2026-11-02 | Load | 15.3 | 683 | 7 | 2 | 78 | 6 | 0 |
-| 6 | 2026-11-09 | Load | 15.3 | 683 | 7 | 2 | 78 | 6 | 0 |
-| 7 | 2026-11-16 | Taper | 9.2 | 392 | 6 | 2 | 80 | 8 | 0 |
+| 1 | 2026-10-05 | Load | 15.2 | 695 | 7 | 2 | 79 | 5 | 0 |
+| 2 | 2026-10-12 | Load | 15.3 | 703 | 7 | 2 | 78 | 5 | 0 |
+| 3 | 2026-10-19 | Recovery | 9.9 | 456 | 6 | 1 | 81 | 7 | 0 |
+| 4 | 2026-10-26 | Load | 15.3 | 703 | 7 | 2 | 78 | 5 | 0 |
+| 5 | 2026-11-02 | Load | 15.3 | 703 | 7 | 2 | 78 | 5 | 0 |
+| 6 | 2026-11-09 | Load | 15.3 | 703 | 7 | 2 | 78 | 5 | 0 |
+| 7 | 2026-11-16 | Taper | 9.2 | 403 | 6 | 2 | 80 | 9 | 0 |
 | 8 | 2026-11-23 | Race | 3.2 | 127 | 5 | 0 | 100 | 2 | 0 |
 
 <details><summary>Day-by-day plan</summary>
@@ -317,59 +321,59 @@ Morgan: elite age-group triathlete, 18 h/week, full power/pace data. Olympic-dis
 | Date | Session | Sport | Duration | TSS | Main set / targets |
 |---|---|---|---:|---:|---|
 | Mon 05 Oct | Rest | | | | |
-| Tue 06 Oct | KEY | cycling | 1h35 | 88 | 6 x 3 min @ 363-389 W |
-| Wed 07 Oct | Recovery | swimming | 2h00 | 54 | 2h00 @ 1:45-1:49 /100m |
+| Tue 06 Oct | KEY | cycling | 1h35 | 94 | 4 x 5 min @ 363-389 W |
+| Wed 07 Oct | Recovery | swimming | 2h00 | 70 | 2h00 @ 1:37-1:45 /100m |
 | Wed 07 Oct (PM) | Recovery | running | 1h00 | 27 | 1h00 @ 170-187 W |
-| Thu 08 Oct | KEY | running | 1h35 | 94 | 1 x 1 min @ 323-340 W; 4 x 8 min @ 326-347 W |
+| Thu 08 Oct | KEY | running | 1h35 | 93 | 3 x 10 min @ 326-347 W |
 | Fri 09 Oct | Strength | strength | 30 min | 0 | A. Dumbbell Reverse Lunge, B1. Standing Dumbbell Overhead Press, B2. One-Arm Dumbbell Row, C. Kettlebell Deadlift ... |
 | Sat 10 Oct | Long | cycling | 5h00 | 229 | 5h00 @ 214-238 W |
 | Sun 11 Oct | Easy | cycling | 4h00 | 182 | 4h00 @ 214-238 W |
 | Mon 12 Oct | Rest | | | | |
-| Tue 13 Oct | KEY | cycling | 1h40 | 92 | 6 x 3 min @ 363-389 W |
-| Wed 14 Oct | Recovery | swimming | 2h00 | 54 | 2h00 @ 1:45-1:49 /100m |
+| Tue 13 Oct | KEY | cycling | 1h40 | 98 | 4 x 5 min @ 363-389 W |
+| Wed 14 Oct | Recovery | swimming | 2h00 | 70 | 2h00 @ 1:37-1:45 /100m |
 | Wed 14 Oct (PM) | Recovery | running | 1h00 | 27 | 1h00 @ 170-187 W |
-| Thu 15 Oct | KEY | running | 1h40 | 98 | 1 x 1 min @ 323-340 W; 4 x 8 min @ 326-347 W |
+| Thu 15 Oct | KEY | running | 1h40 | 97 | 2 x 15 min @ 326-347 W |
 | Fri 16 Oct | Strength | strength | 30 min | 0 | A. Dumbbell Reverse Lunge, B1. Half-Kneeling Kettlebell Press, B2. One-Arm Dumbbell Row, C. Dumbbell Romanian Deadlift ... |
 | Sat 17 Oct | Long | cycling | 5h00 | 229 | 5h00 @ 214-238 W |
 | Sun 18 Oct | Easy | cycling | 4h00 | 182 | 4h00 @ 214-238 W |
 | Mon 19 Oct | Rest | | | | |
-| Tue 20 Oct | KEY | cycling | 1h55 | 109 | 1 x 1 min @ 314-330 W; 4 x 8 min @ 317-337 W |
-| Wed 21 Oct | Recovery | swimming | 1h40 | 45 | 1h40 @ 1:45-1:49 /100m |
+| Tue 20 Oct | KEY | cycling | 1h55 | 117 | 2 x 20 min @ 317-337 W |
+| Wed 21 Oct | Recovery | swimming | 1h40 | 58 | 1h40 @ 1:37-1:45 /100m |
 | Thu 22 Oct | Easy | running | 1h40 | 73 | 1h40 @ 221-245 W |
 | Fri 23 Oct | Strength | strength | 30 min | 0 | A. Dumbbell Reverse Lunge, B1. Half-Kneeling Kettlebell Press, B2. One-Arm Dumbbell Row, C. Dumbbell Romanian Deadlift ... |
 | Sat 24 Oct | Long | cycling | 2h55 | 132 | 2h55 @ 214-238 W |
 | Sun 25 Oct | Easy | running | 1h45 | 77 | 1h45 @ 221-245 W |
 | Mon 26 Oct | Rest | | | | |
-| Tue 27 Oct | KEY | cycling | 1h40 | 92 | 6 x 3 min @ 363-389 W |
-| Wed 28 Oct | Recovery | swimming | 2h00 | 54 | 2h00 @ 1:45-1:49 /100m |
+| Tue 27 Oct | KEY | cycling | 1h40 | 98 | 4 x 5 min @ 363-389 W |
+| Wed 28 Oct | Recovery | swimming | 2h00 | 70 | 2h00 @ 1:37-1:45 /100m |
 | Wed 28 Oct (PM) | Recovery | running | 1h00 | 27 | 1h00 @ 170-187 W |
-| Thu 29 Oct | KEY | running | 1h40 | 98 | 1 x 1 min @ 323-340 W; 4 x 8 min @ 326-347 W |
+| Thu 29 Oct | KEY | running | 1h40 | 97 | 3 x 10 min @ 326-347 W |
 | Fri 30 Oct | Strength | strength | 30 min | 0 | A. Dumbbell Reverse Lunge, B1. Half-Kneeling Kettlebell Press, B2. One-Arm Dumbbell Row, C. Dumbbell Romanian Deadlift ... |
 | Sat 31 Oct | Long | cycling | 5h00 | 229 | 5h00 @ 214-238 W |
 | Sun 01 Nov | Easy | cycling | 4h00 | 182 | 4h00 @ 214-238 W |
 | Mon 02 Nov | Rest | | | | |
-| Tue 03 Nov | KEY | cycling | 1h40 | 92 | 6 x 3 min @ 363-389 W |
-| Wed 04 Nov | Recovery | swimming | 2h00 | 54 | 2h00 @ 1:45-1:49 /100m |
+| Tue 03 Nov | KEY | cycling | 1h40 | 98 | 4 x 5 min @ 363-389 W |
+| Wed 04 Nov | Recovery | swimming | 2h00 | 70 | 2h00 @ 1:37-1:45 /100m |
 | Wed 04 Nov (PM) | Recovery | running | 1h00 | 27 | 1h00 @ 170-187 W |
-| Thu 05 Nov | KEY | running | 1h40 | 98 | 1 x 1 min @ 323-340 W; 4 x 8 min @ 326-347 W |
+| Thu 05 Nov | KEY | running | 1h40 | 97 | 2 x 15 min @ 326-347 W |
 | Fri 06 Nov | Strength | strength | 30 min | 0 | A. Dumbbell Reverse Lunge, B1. Half-Kneeling Kettlebell Press, B2. One-Arm Dumbbell Row, C. Dumbbell Romanian Deadlift ... |
 | Sat 07 Nov | Long | cycling | 5h00 | 229 | 5h00 @ 214-238 W |
 | Sun 08 Nov | Easy | cycling | 4h00 | 182 | 4h00 @ 214-238 W |
 | Mon 09 Nov | Rest | | | | |
-| Tue 10 Nov | KEY | cycling | 1h40 | 92 | 6 x 3 min @ 363-389 W |
-| Wed 11 Nov | Recovery | swimming | 2h00 | 54 | 2h00 @ 1:45-1:49 /100m |
+| Tue 10 Nov | KEY | cycling | 1h40 | 98 | 4 x 5 min @ 363-389 W |
+| Wed 11 Nov | Recovery | swimming | 2h00 | 70 | 2h00 @ 1:37-1:45 /100m |
 | Wed 11 Nov (PM) | Recovery | running | 1h00 | 27 | 1h00 @ 170-187 W |
-| Thu 12 Nov | KEY | running | 1h40 | 98 | 1 x 1 min @ 323-340 W; 4 x 8 min @ 326-347 W |
+| Thu 12 Nov | KEY | running | 1h40 | 97 | 2 x 15 min @ 326-347 W |
 | Fri 13 Nov | Strength | strength | 30 min | 0 | A. Dumbbell Reverse Lunge, B1. Standing Dumbbell Overhead Press, B2. One-Arm Dumbbell Row, C. Kettlebell Deadlift ... |
 | Sat 14 Nov | Long | cycling | 5h00 | 229 | 5h00 @ 214-238 W |
 | Sun 15 Nov | Easy | cycling | 4h00 | 182 | 4h00 @ 214-238 W |
 | Mon 16 Nov | Rest | | | | |
-| Tue 17 Nov | KEY | cycling | 55 min | 59 | 6 x 3 min @ 363-389 W |
+| Tue 17 Nov | KEY | cycling | 55 min | 65 | 4 x 5 min @ 363-389 W |
 | Wed 18 Nov | Recovery | running | 1h30 | 40 | 1h30 @ 170-187 W |
-| Thu 19 Nov | KEY | running | 55 min | 59 | 1 x 1 min @ 323-340 W; 3 x 8 min @ 326-347 W |
+| Thu 19 Nov | KEY | running | 55 min | 64 | 3 x 10 min @ 326-347 W |
 | Fri 20 Nov | Recovery | cycling | 1h30 | 40 | 1h30 @ 165-182 W |
 | Sat 21 Nov | Long | cycling | 2h45 | 124 | 2h45 @ 214-238 W |
-| Sun 22 Nov | Easy | swimming | 1h35 | 69 | 1h35 @ 1:35-1:39 /100m |
+| Sun 22 Nov | Easy | swimming | 1h35 | 69 | 1h35 @ 1:37-1:45 /100m |
 | Mon 23 Nov | Rest | | | | |
 | Tue 24 Nov | Easy | cycling | 1h00 | 42 | 1h00 @ 214-238 W |
 | Wed 25 Nov | Easy | running | 1h00 | 42 | 1h00 @ 221-245 W |
@@ -390,14 +394,14 @@ Riley: trained runner/cyclist (CTL ~60) off for 3 weeks with an Achilles strain,
 
 | Wk | Starts | Type | Hours | TSS | Sessions | KEY/TEST | Easy % | High % | Mid % |
 |---:|---|---|---:|---:|---:|---:|---:|---:|---:|
-| 1 | 2026-10-05 | Load | 4.6 | 194 | 7 | 0 | 100 | 0 | 0 |
-| 2 | 2026-10-12 | Load | 5.0 | 222 | 7 | 1 | 80 | 8 | 0 |
-| 3 | 2026-10-19 | Recovery | 3.2 | 137 | 6 | 0 | 100 | 0 | 0 |
-| 4 | 2026-10-26 | Load | 5.5 | 235 | 7 | 1 | 82 | 7 | 0 |
-| 5 | 2026-11-02 | Load | 5.8 | 256 | 7 | 1 | 80 | 10 | 0 |
-| 6 | 2026-11-09 | Load | 6.2 | 280 | 7 | 1 | 80 | 9 | 0 |
-| 7 | 2026-11-16 | Recovery | 4.0 | 175 | 7 | 1 | 81 | 7 | 0 |
-| 8 | 2026-11-23 | Load | 6.8 | 287 | 7 | 2 | 76 | 9 | 0 |
+| 1 | 2026-10-05 | Load | 4.6 | 194 | 8 | 0 | 100 | 0 | 0 |
+| 2 | 2026-10-12 | Load | 5.0 | 226 | 8 | 1 | 80 | 10 | 0 |
+| 3 | 2026-10-19 | Recovery | 3.2 | 137 | 7 | 0 | 100 | 0 | 0 |
+| 4 | 2026-10-26 | Load | 5.5 | 235 | 8 | 1 | 82 | 7 | 0 |
+| 5 | 2026-11-02 | Load | 5.8 | 257 | 8 | 1 | 80 | 9 | 0 |
+| 6 | 2026-11-09 | Load | 6.2 | 280 | 8 | 1 | 80 | 8 | 0 |
+| 7 | 2026-11-16 | Recovery | 4.0 | 180 | 8 | 1 | 81 | 10 | 0 |
+| 8 | 2026-11-23 | Load | 6.8 | 286 | 8 | 2 | 76 | 9 | 0 |
 
 <details><summary>Day-by-day plan</summary>
 
@@ -409,19 +413,21 @@ Riley: trained runner/cyclist (CTL ~60) off for 3 weeks with an Achilles strain,
 | Thu 08 Oct | Easy | cycling | 40 min | 28 | 40 min @ 179-198 W |
 | Fri 09 Oct | Easy | running | 40 min | 28 | 40 min @ 129-137 bpm |
 | Sat 10 Oct | Long | cycling | 1h20 | 57 | 1h20 @ 179-198 W |
+| Sat 10 Oct (PM) | Mobility | stretching | 20 min | 0 | Cat-Cow, Ankle Rocks, 90/90 Hip Switches, Hamstring Floss ... |
 | Sun 11 Oct | Easy | cycling | 40 min | 28 | 40 min @ 179-198 W |
 | Mon 12 Oct | Mobility | stretching | 20 min | 0 | Cat-Cow, Wall Calf Stretch, Pigeon Stretch, Lying Hamstring Stretch ... |
-| Tue 13 Oct | KEY | running | 1h00 | 61 | 1 x 1 min @ 166-172 bpm; 3 x 8 min @ 168-175 bpm |
+| Tue 13 Oct | KEY | running | 1h00 | 65 | 3 x 10 min @ 168-175 bpm |
 | Wed 14 Oct | Recovery | cycling | 35 min | 15 | 35 min @ 138-151 W |
 | Thu 15 Oct | Easy | cycling | 40 min | 28 | 40 min @ 179-198 W |
 | Fri 16 Oct | Easy | running | 35 min | 25 | 35 min @ 129-137 bpm |
 | Sat 17 Oct | Long | cycling | 1h30 | 65 | 1h30 @ 179-198 W |
+| Sat 17 Oct (PM) | Mobility | stretching | 20 min | 0 | Cat-Cow, Wall Calf Stretch, Pigeon Stretch, Lying Hamstring Stretch ... |
 | Sun 18 Oct | Easy | running | 40 min | 28 | 40 min @ 129-137 bpm |
 | Mon 19 Oct | Mobility | stretching | 20 min | 0 | Cat-Cow, Ankle Rocks, Deep Squat Hold, Hamstring Floss ... |
 | Tue 20 Oct | Easy | cycling | 30 min | 21 | 30 min @ 179-198 W |
 | Wed 21 Oct | Easy | running | 35 min | 25 | 35 min @ 129-137 bpm |
 | Thu 22 Oct | Easy | cycling | 35 min | 25 | 35 min @ 179-198 W |
-| Fri 23 Oct | Rest | | | | |
+| Fri 23 Oct | Mobility | stretching | 20 min | 0 | Cat-Cow, Ankle Rocks, Deep Squat Hold, Hamstring Floss ... |
 | Sat 24 Oct | Long | cycling | 1h00 | 42 | 1h00 @ 179-198 W |
 | Sun 25 Oct | Easy | running | 35 min | 25 | 35 min @ 129-137 bpm |
 | Mon 26 Oct | Mobility | stretching | 20 min | 0 | Cat-Cow, Wall Calf Stretch, 90/90 Hip Switches, Lying Hamstring Stretch ... |
@@ -430,34 +436,39 @@ Riley: trained runner/cyclist (CTL ~60) off for 3 weeks with an Achilles strain,
 | Thu 29 Oct | Easy | cycling | 45 min | 32 | 45 min @ 179-198 W |
 | Fri 30 Oct | Easy | running | 45 min | 32 | 45 min @ 129-137 bpm |
 | Sat 31 Oct | Long | cycling | 1h35 | 69 | 1h35 @ 179-198 W |
+| Sat 31 Oct (PM) | Mobility | stretching | 20 min | 0 | Cat-Cow, Wall Calf Stretch, 90/90 Hip Switches, Lying Hamstring Stretch ... |
 | Sun 01 Nov | Easy | cycling | 45 min | 32 | 45 min @ 179-198 W |
 | Mon 02 Nov | Mobility | stretching | 20 min | 0 | Cat-Cow, Ankle Rocks, Pigeon Stretch, Hamstring Floss ... |
-| Tue 03 Nov | KEY | running | 1h10 | 73 | 1 x 1 min @ 166-172 bpm; 4 x 8 min @ 168-175 bpm |
+| Tue 03 Nov | KEY | running | 1h10 | 74 | 3 x 10 min @ 168-175 bpm |
 | Wed 04 Nov | Recovery | running | 45 min | 20 | 45 min @ 105-116 bpm |
 | Thu 05 Nov | Easy | cycling | 45 min | 32 | 45 min @ 179-198 W |
 | Fri 06 Nov | Easy | running | 45 min | 32 | 45 min @ 129-137 bpm |
 | Sat 07 Nov | Long | cycling | 1h30 | 65 | 1h30 @ 179-198 W |
+| Sat 07 Nov (PM) | Mobility | stretching | 20 min | 0 | Cat-Cow, Ankle Rocks, Pigeon Stretch, Hamstring Floss ... |
 | Sun 08 Nov | Easy | cycling | 50 min | 35 | 50 min @ 179-198 W |
 | Mon 09 Nov | Mobility | stretching | 20 min | 0 | Cat-Cow, Wall Calf Stretch, Deep Squat Hold, Lying Hamstring Stretch ... |
-| Tue 10 Nov | KEY | running | 1h15 | 78 | 1 x 1 min @ 166-172 bpm; 4 x 8 min @ 168-175 bpm |
+| Tue 10 Nov | KEY | running | 1h15 | 78 | 2 x 15 min @ 168-175 bpm |
 | Wed 11 Nov | Recovery | cycling | 45 min | 20 | 45 min @ 138-151 W |
 | Thu 12 Nov | Easy | cycling | 50 min | 35 | 50 min @ 179-198 W |
 | Fri 13 Nov | Easy | running | 45 min | 32 | 45 min @ 129-137 bpm |
 | Sat 14 Nov | Long | cycling | 1h50 | 81 | 1h50 @ 179-198 W |
+| Sat 14 Nov (PM) | Mobility | stretching | 20 min | 0 | Cat-Cow, Wall Calf Stretch, Deep Squat Hold, Lying Hamstring Stretch ... |
 | Sun 15 Nov | Easy | running | 50 min | 35 | 50 min @ 129-137 bpm |
 | Mon 16 Nov | Mobility | stretching | 20 min | 0 | Cat-Cow, Ankle Rocks, 90/90 Hip Switches, Hamstring Floss ... |
-| Tue 17 Nov | KEY | running | 45 min | 46 | 1 x 1 min @ 166-172 bpm; 2 x 8 min @ 168-175 bpm |
+| Tue 17 Nov | KEY | running | 45 min | 50 | 4 x 6 min @ 168-175 bpm |
 | Wed 18 Nov | Recovery | running | 30 min | 13 | 30 min @ 105-116 bpm |
 | Thu 19 Nov | Easy | cycling | 30 min | 21 | 30 min @ 179-198 W |
 | Fri 20 Nov | Easy | running | 30 min | 21 | 30 min @ 129-137 bpm |
 | Sat 21 Nov | Long | cycling | 1h10 | 50 | 1h10 @ 179-198 W |
+| Sat 21 Nov (PM) | Mobility | stretching | 20 min | 0 | Cat-Cow, Ankle Rocks, 90/90 Hip Switches, Hamstring Floss ... |
 | Sun 22 Nov | Easy | cycling | 35 min | 25 | 35 min @ 179-198 W |
 | Mon 23 Nov | Mobility | stretching | 20 min | 0 | Cat-Cow, Wall Calf Stretch, Pigeon Stretch, Lying Hamstring Stretch ... |
 | Tue 24 Nov | TEST | running | 1h00 | 54 | 4 x 25 s @ 178-184 bpm; 1 x 20 min @ 170-178 bpm |
 | Wed 25 Nov | Recovery | cycling | 1h00 | 27 | 1h00 @ 138-151 W |
-| Thu 26 Nov | KEY | cycling | 40 min | 42 | 1 x 1 min @ 261-275 W; 2 x 8 min @ 264-280 W |
+| Thu 26 Nov | KEY | cycling | 40 min | 41 | 2 x 8 min @ 264-280 W |
 | Fri 27 Nov | Recovery | running | 1h00 | 27 | 1h00 @ 105-116 bpm |
 | Sat 28 Nov | Long | cycling | 2h00 | 89 | 2h00 @ 179-198 W |
+| Sat 28 Nov (PM) | Mobility | stretching | 20 min | 0 | Cat-Cow, Wall Calf Stretch, Pigeon Stretch, Lying Hamstring Stretch ... |
 | Sun 29 Nov | Easy | running | 1h10 | 50 | 1h10 @ 129-137 bpm |
 
 </details>

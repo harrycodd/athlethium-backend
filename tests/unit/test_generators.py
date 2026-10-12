@@ -57,20 +57,50 @@ class TestEndurance:
         assert {s["duration"] for s in long_blocks} == {900}
         assert {s["duration"] for s in short_blocks} == {600}
 
-    @pytest.mark.parametrize("hours,reps", [(0.5, 3), (0.75, 5), (1.5, 6), (3.0, 6)])
-    def test_vo2_three_minute_repeats_scale_with_time(self, hours, reps):
-        work = [s for s in E.generate("cycling", hours, 5)["steps"] if s["name"].startswith("VO2 Max Repeat")]
-        assert len(work) == reps and {s["duration"] for s in work} == {180}
+    @staticmethod
+    def efforts(workout, marker):
+        return [s for s in workout["steps"] if s["type"] == "interval" and s["name"].startswith(marker)]
 
-    @pytest.mark.parametrize("hours,reps", [(0.5, 2), (1.0, 3), (1.5, 4), (3.0, 4)])
-    def test_threshold_reps_scale_with_time(self, hours, reps):
-        work = [s for s in E.generate("cycling", hours, 4)["steps"] if s["name"].startswith("Threshold Interval")]
-        assert len(work) == reps and {s["duration"] for s in work} == {480}
+    @pytest.mark.parametrize("level,progression,expected", [
+        (0, 0, (3, 480)), (0, 1, (3, 600)), (1, 1, (4, 600)), (2, 1, (3, 720)), (4, 2, (2, 1200)),
+    ])
+    def test_bike_threshold_progresses_with_level_and_block_week(self, level, progression, expected):
+        w = E.generate("cycling", 1.75, 4, level=level, progression=progression)
+        work = self.efforts(w, "Threshold")
+        assert (len(work), work[0]["duration"]) == expected
+        assert w["name"] == f"Bike Threshold: {expected[0]} × {expected[1] // 60} min"
+        assert all((s["target_low"], s["target_high"]) == (96, 102) for s in work)
+
+    def test_run_threshold_is_cruise_intervals_with_short_recoveries(self):
+        w = E.generate("running", 1.0, 4, level=1, progression=0)
+        assert w["name"] == "Run Threshold: 5 × 6 min"
+        recoveries = [s for s in w["steps"] if s["type"] == "recovery"]
+        assert {s["duration"] for s in recoveries} == {90}
+
+    @pytest.mark.parametrize("sport,level,expected", [("cycling", 0, (5, 180)), ("cycling", 3, (4, 300)),
+                                                      ("running", 2, (5, 240)), ("rowing", 0, (5, 180))])
+    def test_vo2_sets(self, sport, level, expected):
+        work = self.efforts(E.generate(sport, 1.5, 5, level=level), "VO2max")
+        assert (len(work), work[0]["duration"]) == expected
+
+    def test_a_short_session_gets_fewer_reps_not_a_longer_session(self):
+        w = E.generate("cycling", 40 / 60, 4, level=4, progression=2)
+        assert total(w) == 2400 and len(self.efforts(w, "Threshold")) >= 2
+
+    def test_a_tiny_session_shortens_the_efforts(self):
+        w = E.generate("cycling", 20 / 60, 4, level=2)
+        work = self.efforts(w, "Threshold")
+        assert total(w) == 1200 and len(work) == 2 and work[0]["duration"] < 480
+
+    def test_openers_live_in_the_warm_up_not_a_separate_hard_step(self):
+        steps = E.generate("cycling", 1.0, 4)["steps"]
+        assert steps[0]["type"] == "warmup" and "3 × 1 min" in steps[0]["notes"]
+        assert steps[1]["name"].startswith("Threshold 1/")
 
     @pytest.mark.parametrize("intensity", [4, 5])
     def test_spare_time_in_long_hard_sessions_is_zone2_not_cooldown(self, intensity):
         steps = E.generate("cycling", 2.5, intensity)["steps"]
-        assert steps[-2]["name"] == "Steady Aerobic Z2" and steps[-2]["duration"] > 1800
+        assert steps[-2]["name"] == "Steady Aerobic Z2" and steps[-2]["duration"] > 1500
         assert steps[-1]["type"] == "cooldown" and steps[-1]["duration"] <= 600
 
     @pytest.mark.parametrize("kind,marker,max_high_s", [("opener", "Opener", 180), ("shakeout", "Shake-Out", 60)])
@@ -253,3 +283,64 @@ class TestMobility:
 
     def test_zero_minutes(self):
         assert MobilityGenerator.generate("full", 0)["steps"] == []
+
+
+class TestSwim:
+    CSS = 100  # 1:40 per 100 m
+
+    def swim(self, hours, intensity, level=1, progression=0, css=CSS):
+        return E.generate("swimming", hours, intensity, ["swim_watch"], level=level, progression=progression,
+                          swim_css_sec=css)
+
+    def reps(self, workout):
+        return [s for s in workout["steps"] if s["type"] == "interval" and " m " in s["name"] + " "
+                and "/" in s["name"]]
+
+    @pytest.mark.parametrize("level,progression,name", [(0, 0, "Swim Threshold: 8 × 100 m"),
+                                                        (1, 1, "Swim Threshold: 5 × 200 m"),
+                                                        (4, 2, "Swim Threshold: 3 × 400 m")])
+    def test_threshold_sets_are_by_distance_at_css(self, level, progression, name):
+        w = self.swim(1.25, 4, level, progression)
+        assert w["name"] == name and total(w) == 4500
+        metres = int(name.split("× ")[1].split(" ")[0])
+        assert {s["duration"] for s in self.reps(w)} == {metres // 100 * self.CSS}  # each rep at CSS pace
+        assert "at CSS" in self.reps(w)[0]["notes"]
+
+    def test_speed_set_is_faster_than_css(self):
+        w = self.swim(1.0, 5, level=0)
+        assert w["name"].startswith("Swim Speed: ")
+        reps = self.reps(w)
+        assert all(s["target_low"] >= 105 for s in reps) and reps[0]["duration"] == round((self.CSS - 5) / 2)
+
+    def test_aerobic_swim_has_drills_200s_and_pull(self):
+        w = self.swim(1.0, 2)
+        names = [s["name"] for s in w["steps"]]
+        assert names[0] == "Warm-up: 300 m easy + 4 × 50 m drill" and "catch-up" in w["steps"][0]["notes"]
+        assert "4 × 100 m pull" in names and names[-1] == "Swim-down: 200 m easy"
+        assert w["name"].startswith("Swim Aerobic:") and w["name"].endswith("+ pull")
+
+    def test_recovery_swim_is_easier(self):
+        rec = self.swim(0.75, 1)
+        easy = self.swim(0.75, 2)
+        assert rec["name"].startswith("Swim Recovery:")
+        assert max(s["target_high"] for s in rec["steps"]) < max(s["target_high"] for s in easy["steps"])
+
+    def test_short_swim_has_a_short_warm_up_and_no_pull(self):
+        w = self.swim(20 / 60, 2)
+        assert total(w) == 1200 and w["steps"][0]["name"].startswith("Warm-up: 200 m")
+        assert "pull" not in w["name"]
+
+    def test_short_hard_swim_drops_reps(self):
+        w = self.swim(25 / 60, 4, level=1, progression=1, css=130)
+        assert total(w) == 1500 and 4 <= len(self.reps(w)) < 8
+
+    def test_spare_time_becomes_easy_swimming(self):
+        w = self.swim(1.5, 4, level=0)
+        easy = [s for s in w["steps"] if s["name"] == "Easy swim"]
+        assert easy and easy[0]["notes"].startswith("About ")
+
+    def test_faster_swimmer_swims_further_in_the_same_time(self):
+        slow, fast = self.swim(1.0, 2, css=120), self.swim(1.0, 2, css=90)
+        assert total(slow) == total(fast) == 3600
+        count = lambda w: int(w["name"].split(": ")[1].split(" ×")[0])  # noqa: E731
+        assert count(fast) > count(slow)

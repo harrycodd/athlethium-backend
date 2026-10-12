@@ -125,3 +125,40 @@ def test_storage_failure_still_completes(main_module, call, athlete, monkeypatch
     monkeypatch.setattr(main_module.storage, "bucket", broken_bucket)
     r = upload(main_module, call, athlete, steady_ride(600))
     assert r.status == 200 and "fit_file_path" not in r.json["data"]
+
+
+def test_strength_fit_imports_sets_and_stays_strength(main_module, call, athlete, seed, db):
+    """A gym session from a watch completes the planned strength session with its sets (it used to count as a run)."""
+    seed({"workouts/gym": make_workout_doc(athlete.uid, "2026-10-06", sport="strength", plannedTss=0, tss=0),
+          "workouts/run": make_workout_doc(athlete.uid, "2026-10-06", sport="running")})
+    before = db.document(f"users/{athlete.uid}").get().to_dict()["ctl"]
+    fit = build_fit(seconds=2400, heart_rate=[115] * 2400, sport="training", totals={"calories": 310, "max_hr": 150},
+                    sets=[("deadlift", 5, 100, 40, True), ("unknown", 0, 0, 120, False),
+                          ("squat", 8, 60.5, 35, True), ("bench_press", 8, 50, 30, True)])
+    data = upload(main_module, call, athlete, fit).json["data"]
+    assert data["workout_id"] == "gym" and data["sport"] == "strength" and data["actual_tss"] == 0
+    gym = db.document("workouts/gym").get().to_dict()
+    assert gym["logged_sets"] == [
+        {"exercise": "Deadlift", "reps": 5, "weight_kg": 100.0, "duration_sec": 40},
+        {"exercise": "Squat", "reps": 8, "weight_kg": 60.5, "duration_sec": 35},
+        {"exercise": "Bench Press", "reps": 8, "weight_kg": 50.0, "duration_sec": 30},
+    ]
+    assert gym["stats"] == {"duration_seconds": 2400, "avg_heart_rate": 115.0, "max_heart_rate": 150.0,
+                            "calories": 310.0}  # no distance, speed or power for a gym session
+    assert not db.document("workouts/run").get().to_dict()["completed"]
+    assert db.document(f"users/{athlete.uid}").get().to_dict()["ctl"] == before
+
+
+def test_ride_stats_keep_distance_speed_and_power(main_module, call, athlete, db):
+    fit = build_fit(seconds=1800, power=[220] * 1800, heart_rate=[140] * 1800, sport="cycling",
+                    totals={"distance_m": 15000, "avg_speed_ms": 8.33, "ascent_m": 210, "calories": 500})
+    stats = upload(main_module, call, athlete, fit).json["data"]["stats"]
+    assert stats["distance_m"] == 15000.0 and stats["avg_speed_ms"] == 8.3 and stats["elevation_m"] == 210.0
+    assert stats["avg_power"] == 220.0 and stats["avg_heart_rate"] == 140.0
+    assert "max_heart_rate" not in stats  # not recorded -> not shown as 0
+
+
+def test_swim_stats_have_no_power_or_speed(main_module, call, athlete):
+    fit = build_fit(seconds=1800, power=[150] * 1800, sport="swimming", totals={"distance_m": 1500, "avg_speed_ms": 0.9})
+    stats = upload(main_module, call, athlete, fit).json["data"]["stats"]
+    assert stats == {"duration_seconds": 1800, "distance_m": 1500.0}

@@ -32,6 +32,7 @@ except ImportError:
     firestore = None
 
 from engine.physiology import PhysiologyEngine
+from services.activity_stats import relevant_stats
 from services.strava_service import HTTP_TIMEOUT_SEC, StravaError, StravaService, private_token_ref
 from services.user_service import UserService
 
@@ -282,13 +283,19 @@ class StravaWebhookService:
             "completedAt": firestore.SERVER_TIMESTAMP,
             "actual_time": duration,
             "actual_tss": tss,
-            "stats": {
-                "avg_power": round(float(activity.get("average_watts") or 0), 1),
-                "normalized_power": round(float(activity.get("weighted_average_watts") or 0), 1),
-                "avg_heart_rate": round(float(activity.get("average_heartrate") or 0), 1),
+            "stats": relevant_stats(sport, {
                 "duration_seconds": duration,
-                "distance_m": round(float(activity.get("distance") or 0), 1),
-            },
+                "distance_m": activity.get("distance"),
+                "avg_speed_ms": activity.get("average_speed"),
+                "elevation_m": activity.get("total_elevation_gain"),
+                # power only when a power meter measured it (Strava estimates it otherwise)
+                "avg_power": activity.get("average_watts") if activity.get("device_watts") else None,
+                "normalized_power": activity.get("weighted_average_watts") if activity.get("device_watts") else None,
+                "avg_heart_rate": activity.get("average_heartrate"),
+                "max_heart_rate": activity.get("max_heartrate"),
+                "avg_cadence": activity.get("average_cadence"),
+                "calories": activity.get("calories"),
+            }),
             "completion_type": "strava",
             "stravaId": str(activity_id),
             "source": "strava",
