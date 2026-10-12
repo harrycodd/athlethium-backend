@@ -14,6 +14,7 @@ try:
 except ImportError:
     firestore = None
 from engine.physiology import PhysiologyEngine
+from services.activity_stats import logged_set, relevant_stats
 from services.user_service import UserService
 
 
@@ -127,7 +128,10 @@ class WorkoutCompleterService:
 
     @staticmethod
     def parse_fit(fit_file_path: str) -> Dict[str, Any]:
-        """Extracts sport, start time, duration and 1 Hz power/HR samples from a FIT file."""
+        """
+        Extracts sport, start time, duration, 1 Hz power/HR samples, session totals (distance, speed,
+        ascent, calories...) and, for strength activities, each set (exercise, reps, weight).
+        """
         if not fitparse:
             raise FitFileError("fitparse module is not available")
         try:
@@ -146,8 +150,17 @@ class WorkoutCompleterService:
 
             total_time_sec = 0
             sport = None
+            totals: Dict[str, Any] = {}
             for session in fitfile.get_messages("session"):
                 s_vals = session.get_values()
+                totals = {
+                    "distance_m": s_vals.get("total_distance"),
+                    "avg_speed_ms": s_vals.get("enhanced_avg_speed") or s_vals.get("avg_speed"),
+                    "elevation_m": s_vals.get("total_ascent"),
+                    "max_heart_rate": s_vals.get("max_heart_rate"),
+                    "avg_cadence": s_vals.get("avg_cadence"),
+                    "calories": s_vals.get("total_calories"),
+                }
                 if s_vals.get("total_timer_time"):
                     total_time_sec = int(s_vals["total_timer_time"])
                 elif s_vals.get("total_elapsed_time"):
@@ -156,6 +169,9 @@ class WorkoutCompleterService:
                     start_time = s_vals["start_time"]
                 if s_vals.get("sport"):
                     sport = FIT_SPORTS.get(str(s_vals["sport"]).lower())
+            sets = [logged_set(v.get("category"), v.get("repetitions"), v.get("weight"), v.get("duration"))
+                    for v in (m.get_values() for m in fitfile.get_messages("set"))
+                    if v.get("set_type") != "rest"]
         except Exception as exc:
             raise FitFileError(f"Could not read FIT file: {exc}") from exc
 
@@ -163,7 +179,8 @@ class WorkoutCompleterService:
             total_time_sec = len(power) or len(hr)
         if total_time_sec <= 0:
             raise FitFileError("FIT file contains no activity data")
-        return {"sport": sport, "start_time": start_time, "duration_sec": total_time_sec, "power": power, "hr": hr}
+        return {"sport": sport, "start_time": start_time, "duration_sec": total_time_sec, "power": power, "hr": hr,
+                "totals": totals, "sets": sets}
 
     @classmethod
     def complete_with_fit(
@@ -186,9 +203,8 @@ class WorkoutCompleterService:
             target_ref, target_data = cls._get_owned_workout(db, user_id, workout_id)
 
         date_str = _local_date(parsed["start_time"], user_profile.timezone if user_profile else None).isoformat()
+        # Trust the sport the device recorded; strength stays strength (it used to be counted as a run).
         sport = parsed["sport"] or str(target_data.get("sport") or "cycling")
-        if sport in NON_ENDURANCE_SPORTS:
-            sport = "cycling" if parsed["power"] else "running"
 
         power, hr = parsed["power"], parsed["hr"]
         avg_power = sum(power) / len(power) if power else 0.0
@@ -202,7 +218,8 @@ class WorkoutCompleterService:
         fthr = user_profile.fthr if user_profile else 170.0
         use_power = sport in ("cycling", "running") and avg_power > 0
 
-        actual_tss = PhysiologyEngine.calculate_actual_tss(
+        # Strength and mobility add no endurance load, as in the planner and the Strava import
+        actual_tss = 0.0 if sport in NON_ENDURANCE_SPORTS else PhysiologyEngine.calculate_actual_tss(
             sport=sport,
             duration_sec=parsed["duration_sec"],
             avg_power=avg_power if use_power else 0,
@@ -227,12 +244,13 @@ class WorkoutCompleterService:
         if target_ref is None:
             target_ref, target_data = cls._match_planned_workout(db, user_id, date_str, sport)
 
-        stats_dict = {
-            "avg_power": round(avg_power, 1),
-            "normalized_power": round(np_power, 1),
-            "avg_heart_rate": round(avg_hr, 1),
-            "duration_seconds": parsed["duration_sec"]
-        }
+        stats_dict = relevant_stats(sport, {
+            **parsed["totals"],
+            "avg_power": avg_power if use_power else 0,
+            "normalized_power": np_power if use_power else 0,
+            "avg_heart_rate": avg_hr,
+            "duration_seconds": parsed["duration_sec"],
+        })
         completion = {
             "completed": True,
             "status": "completed",
@@ -242,6 +260,8 @@ class WorkoutCompleterService:
             "stats": stats_dict,
             "completion_type": "fit_upload"
         }
+        if parsed["sets"]:
+            completion["logged_sets"] = parsed["sets"]
 
         previous_tss = 0.0
         if target_ref is not None:
