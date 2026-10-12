@@ -13,6 +13,7 @@ from generators.mobility import MobilityGenerator
 from generators.strength import StrengthGenerator
 
 ENDURANCE = ("cycling", "running", "swimming")
+LEVELS = {"beginner": 0, "intermediate": 1, "advanced": 2, "elite": 3, "pro": 4}
 
 
 def anatomical_focus(profile: UserProfile) -> str:
@@ -49,7 +50,11 @@ def build_payload(session, profile: UserProfile) -> Dict[str, Any]:
             multisport=bool(profile.goal and len(set(profile.goal.sports or [])) > 1))
     return EnduranceGenerator.generate(sport=session.sport, duration_hours=session.hours,
                                       intensity=session.intensity, user_equipment=profile.equipment,
-                                      interval_style=profile.interval_type)
+                                      interval_style=profile.interval_type,
+                                      level=LEVELS.get(profile.fitness_level, 1),
+                                      # interval sets grow over the 3 weeks of a training block
+                                      progression=session.date.toordinal() // 7 % 3,
+                                      swim_css_sec=profile.ftp_pace_swimming)
 
 
 def payload_tss(session, payload: Dict[str, Any]) -> float:

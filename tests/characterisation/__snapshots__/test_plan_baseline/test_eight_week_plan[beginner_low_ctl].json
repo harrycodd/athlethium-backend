@@ -18,7 +18,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 30.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
@@ -65,7 +65,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 30.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -112,7 +112,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 30.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
@@ -173,7 +173,7 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 60.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "cycling",
     "steps": [
@@ -248,7 +248,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 35.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
@@ -295,7 +295,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 35.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -342,7 +342,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 35.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
@@ -403,7 +403,7 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 60.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "cycling",
     "steps": [
@@ -478,7 +478,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 30.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
@@ -525,7 +525,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 30.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
@@ -572,7 +572,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 30.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -633,7 +633,7 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 60.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "cycling",
     "steps": [
@@ -680,7 +680,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 30.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
@@ -741,7 +741,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 35.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -802,7 +802,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 40.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
@@ -863,7 +863,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 40.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
@@ -938,7 +938,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 30.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
@@ -985,7 +985,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 35.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
@@ -1032,7 +1032,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 35.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
@@ -1093,7 +1093,7 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 60.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "cycling",
     "steps": [
@@ -1140,7 +1140,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 35.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -1201,29 +1201,15 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 40.0,
-    "name": "Cycling Threshold Intervals",
+    "name": "Bike Threshold: 2 × 8 min",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        360,
+        480,
         50,
         75,
-        "power"
-      ],
-      [
-        "interval",
-        60,
-        95,
-        100,
-        "power"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
         "power"
       ],
       [
@@ -1275,7 +1261,7 @@
         150
       ]
     ],
-    "tss": 41.7,
+    "tss": 40.9,
     "week": "load"
   },
   {
@@ -1283,7 +1269,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 35.0,
-    "name": "Running Active Recovery",
+    "name": "Run Recovery (Zone 1)",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "running",
     "steps": [
@@ -1330,7 +1316,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 35.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -1391,7 +1377,7 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 55.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "cycling",
     "steps": [
@@ -1438,7 +1424,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 40.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
@@ -1499,29 +1485,15 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 45.0,
-    "name": "Cycling Threshold Intervals",
+    "name": "Bike Threshold: 2 × 8 min",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace.",
     "sport": "cycling",
     "steps": [
       [
         "warmup",
-        420,
+        540,
         50,
         75,
-        "power"
-      ],
-      [
-        "interval",
-        60,
-        95,
-        100,
-        "power"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
         "power"
       ],
       [
@@ -1573,7 +1545,7 @@
         150
       ]
     ],
-    "tss": 45.5,
+    "tss": 44.7,
     "week": "load"
   },
   {
@@ -1581,7 +1553,7 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 35.0,
-    "name": "Cycling Active Recovery",
+    "name": "Bike Recovery (Zone 1)",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
     "sport": "cycling",
     "steps": [
@@ -1628,7 +1600,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 40.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
@@ -1689,7 +1661,7 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 65.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
     "sport": "cycling",
     "steps": [
@@ -1736,7 +1708,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 40.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -1797,7 +1769,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 35.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
@@ -1858,7 +1830,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 35.0,
-    "name": "Running Aerobic Base Building",
+    "name": "Run Endurance (Zone 2)",
     "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "running",
     "steps": [
@@ -1919,7 +1891,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 35.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [
@@ -1966,7 +1938,7 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 40.0,
-    "name": "Cycling Aerobic Base Building",
+    "name": "Bike Endurance (Zone 2)",
     "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here.",
     "sport": "cycling",
     "steps": [

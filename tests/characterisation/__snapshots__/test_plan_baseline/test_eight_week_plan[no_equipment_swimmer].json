@@ -68,29 +68,120 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Swimming Active Recovery",
+    "name": "Swim Recovery: 6 × 200 m + pull",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        300,
-        45,
+        775,
         55,
+        68,
         "time"
       ],
       [
         "interval",
-        3000,
-        50,
+        275,
         55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "interval",
+        172,
+        65,
+        72,
         "time"
       ],
       [
         "cooldown",
-        300,
-        40,
+        275,
         50,
+        60,
         "time"
       ]
     ],
@@ -104,64 +195,162 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 40.0,
-    "name": "Swimming Threshold Intervals",
+    "name": "Swim Threshold: 10 × 100 m",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        360,
-        50,
-        75,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "time"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
+        110,
         96,
         102,
         "time"
       ],
       [
         "recovery",
-        240,
+        15,
+        40,
         50,
-        60,
         "time"
       ],
       [
         "interval",
-        480,
+        110,
         96,
         102,
         "time"
       ],
       [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
         "interval",
-        420,
-        65,
-        72,
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
         "time"
       ],
       [
         "cooldown",
-        300,
-        45,
-        55,
+        375,
+        50,
+        60,
         "time"
       ]
     ],
@@ -175,29 +364,120 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Swimming Active Recovery",
+    "name": "Swim Recovery: 6 × 200 m + pull",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        300,
-        45,
+        775,
         55,
+        68,
         "time"
       ],
       [
         "interval",
-        3000,
-        50,
+        275,
         55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "interval",
+        172,
+        65,
+        72,
         "time"
       ],
       [
         "cooldown",
-        300,
-        40,
+        275,
         50,
+        60,
         "time"
       ]
     ],
@@ -211,29 +491,288 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 120.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 18 × 200 m + pull",
     "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
-        50,
-        65,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        6000,
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "interval",
+        232,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        600,
+        275,
         50,
-        58,
+        60,
         "time"
       ]
     ],
@@ -247,29 +786,176 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 80.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 10 × 200 m + pull",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
-        50,
-        65,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        3600,
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "interval",
+        192,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        600,
+        275,
         50,
-        58,
+        60,
         "time"
       ]
     ],
@@ -297,64 +983,99 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 45.0,
-    "name": "Swimming Threshold Intervals",
+    "name": "Swim Threshold: 5 × 200 m",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        420,
-        50,
-        75,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "time"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
+        220,
         96,
         102,
         "time"
       ],
       [
         "recovery",
-        240,
+        20,
+        40,
         50,
-        60,
         "time"
       ],
       [
         "interval",
-        480,
+        220,
         96,
         102,
         "time"
       ],
       [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
         "interval",
-        660,
+        220,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        220,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        220,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        450,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        300,
-        45,
-        55,
+        275,
+        50,
+        60,
         "time"
       ]
     ],
@@ -368,29 +1089,120 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Swimming Active Recovery",
+    "name": "Swim Recovery: 6 × 200 m + pull",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        300,
-        45,
+        775,
         55,
+        68,
         "time"
       ],
       [
         "interval",
-        3000,
-        50,
+        275,
         55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "interval",
+        172,
+        65,
+        72,
         "time"
       ],
       [
         "cooldown",
-        300,
-        40,
+        275,
         50,
+        60,
         "time"
       ]
     ],
@@ -404,64 +1216,99 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 45.0,
-    "name": "Swimming Threshold Intervals",
+    "name": "Swim Threshold: 5 × 200 m",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        420,
-        50,
-        75,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "time"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
+        220,
         96,
         102,
         "time"
       ],
       [
         "recovery",
-        240,
+        20,
+        40,
         50,
-        60,
         "time"
       ],
       [
         "interval",
-        480,
+        220,
         96,
         102,
         "time"
       ],
       [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
         "interval",
-        660,
+        220,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        220,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        220,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        450,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        300,
-        45,
-        55,
+        275,
+        50,
+        60,
         "time"
       ]
     ],
@@ -475,29 +1322,120 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Swimming Active Recovery",
+    "name": "Swim Recovery: 6 × 200 m + pull",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        300,
-        45,
+        775,
         55,
+        68,
         "time"
       ],
       [
         "interval",
-        3000,
-        50,
+        275,
         55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "interval",
+        172,
+        65,
+        72,
         "time"
       ],
       [
         "cooldown",
-        300,
-        40,
+        275,
         50,
+        60,
         "time"
       ]
     ],
@@ -511,29 +1449,288 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 120.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 18 × 200 m + pull",
     "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
-        50,
-        65,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        6000,
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "interval",
+        232,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        600,
+        275,
         50,
-        58,
+        60,
         "time"
       ]
     ],
@@ -547,29 +1744,246 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 105.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 15 × 200 m + pull",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
-        50,
-        65,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        5100,
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "interval",
+        217,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        600,
+        275,
         50,
-        58,
+        60,
         "time"
       ]
     ],
@@ -597,64 +2011,85 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 45.0,
-    "name": "Swimming Threshold Intervals",
+    "name": "Swim Threshold: 4 × 300 m",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        420,
-        50,
-        75,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "time"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
+        330,
         96,
         102,
         "time"
       ],
       [
         "recovery",
-        240,
+        20,
+        40,
         50,
-        60,
         "time"
       ],
       [
         "interval",
-        480,
+        330,
         96,
         102,
         "time"
       ],
       [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
         "interval",
-        660,
+        330,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        330,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        250,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        300,
-        45,
-        55,
+        275,
+        50,
+        60,
         "time"
       ]
     ],
@@ -668,29 +2103,120 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Swimming Active Recovery",
+    "name": "Swim Recovery: 6 × 200 m + pull",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        300,
-        45,
+        775,
         55,
+        68,
         "time"
       ],
       [
         "interval",
-        3000,
-        50,
+        275,
         55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "interval",
+        172,
+        65,
+        72,
         "time"
       ],
       [
         "cooldown",
-        300,
-        40,
+        275,
         50,
+        60,
         "time"
       ]
     ],
@@ -704,64 +2230,85 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 45.0,
-    "name": "Swimming Threshold Intervals",
+    "name": "Swim Threshold: 4 × 300 m",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        420,
-        50,
-        75,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "time"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
+        330,
         96,
         102,
         "time"
       ],
       [
         "recovery",
-        240,
+        20,
+        40,
         50,
-        60,
         "time"
       ],
       [
         "interval",
-        480,
+        330,
         96,
         102,
         "time"
       ],
       [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
         "interval",
-        660,
+        330,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        330,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        250,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        300,
-        45,
-        55,
+        275,
+        50,
+        60,
         "time"
       ]
     ],
@@ -775,29 +2322,120 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Swimming Active Recovery",
+    "name": "Swim Recovery: 6 × 200 m + pull",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        300,
-        45,
+        775,
         55,
+        68,
         "time"
       ],
       [
         "interval",
-        3000,
-        50,
+        275,
         55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "interval",
+        172,
+        65,
+        72,
         "time"
       ],
       [
         "cooldown",
-        300,
-        40,
+        275,
         50,
+        60,
         "time"
       ]
     ],
@@ -811,29 +2449,288 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 120.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 18 × 200 m + pull",
     "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
-        50,
-        65,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        6000,
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "interval",
+        232,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        600,
+        275,
         50,
-        58,
+        60,
         "time"
       ]
     ],
@@ -847,29 +2744,246 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 105.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 15 × 200 m + pull",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
-        50,
-        65,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        5100,
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "interval",
+        217,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        600,
+        275,
         50,
-        58,
+        60,
         "time"
       ]
     ],
@@ -897,78 +3011,169 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 60.0,
-    "name": "Swimming Threshold Intervals",
+    "name": "Swim Threshold: 10 × 100 m",
     "rationale": "Recovery week (Base phase). Key session: threshold intervals to lift your sustainable pace. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
-        50,
-        75,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "time"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
+        110,
         96,
         102,
         "time"
       ],
       [
         "recovery",
-        240,
+        15,
+        40,
         50,
-        60,
         "time"
       ],
       [
         "interval",
-        480,
+        110,
         96,
         102,
         "time"
       ],
       [
         "recovery",
-        240,
+        15,
+        40,
         50,
-        60,
         "time"
       ],
       [
         "interval",
-        480,
+        110,
         96,
         102,
         "time"
       ],
       [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
         "interval",
-        360,
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        1300,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        600,
-        45,
-        55,
+        275,
+        50,
+        60,
         "time"
       ]
     ],
@@ -982,29 +3187,64 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 35.0,
-    "name": "Swimming Active Recovery",
+    "name": "Swim Recovery: 2 × 200 m + pull",
     "rationale": "Recovery week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        300,
-        45,
+        456,
         55,
+        68,
         "time"
       ],
       [
         "interval",
-        1500,
-        50,
+        275,
         55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "interval",
+        171,
+        65,
+        72,
         "time"
       ],
       [
         "cooldown",
-        300,
-        40,
+        275,
         50,
+        60,
         "time"
       ]
     ],
@@ -1018,29 +3258,64 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 40.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 2 × 200 m + pull",
     "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        360,
-        50,
-        65,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        1680,
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "interval",
+        152,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        360,
+        275,
         50,
-        58,
+        60,
         "time"
       ]
     ],
@@ -1054,29 +3329,64 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 40.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 2 × 200 m + pull",
     "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        360,
-        50,
-        65,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        1680,
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "interval",
+        152,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        360,
+        275,
         50,
-        58,
+        60,
         "time"
       ]
     ],
@@ -1090,29 +3400,204 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 90.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 12 × 200 m + pull",
     "rationale": "Recovery week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
-        50,
-        65,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        4200,
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "interval",
+        202,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        600,
+        275,
         50,
-        58,
+        60,
         "time"
       ]
     ],
@@ -1126,29 +3611,64 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 40.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 2 × 200 m + pull",
     "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        360,
-        50,
-        65,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        1680,
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "interval",
+        152,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        360,
+        275,
         50,
-        58,
+        60,
         "time"
       ]
     ],
@@ -1226,29 +3746,120 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Swimming Active Recovery",
+    "name": "Swim Recovery: 6 × 200 m + pull",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        300,
-        45,
+        775,
         55,
+        68,
         "time"
       ],
       [
         "interval",
-        3000,
-        50,
+        275,
         55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "interval",
+        172,
+        65,
+        72,
         "time"
       ],
       [
         "cooldown",
-        300,
-        40,
+        275,
         50,
+        60,
         "time"
       ]
     ],
@@ -1262,71 +3873,99 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 50.0,
-    "name": "Swimming Threshold Intervals",
+    "name": "Swim Threshold: 5 × 200 m",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        480,
-        50,
-        75,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "time"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
+        220,
         96,
         102,
         "time"
       ],
       [
         "recovery",
-        240,
+        20,
+        40,
         50,
-        60,
         "time"
       ],
       [
         "interval",
-        480,
+        220,
         96,
         102,
         "time"
       ],
       [
         "recovery",
-        240,
+        20,
+        40,
         50,
-        60,
         "time"
       ],
       [
         "interval",
-        480,
+        220,
         96,
         102,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        220,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        220,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        750,
+        65,
+        72,
         "time"
       ],
       [
         "cooldown",
-        480,
-        45,
-        55,
+        275,
+        50,
+        60,
         "time"
       ]
     ],
@@ -1340,29 +3979,120 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Swimming Active Recovery",
+    "name": "Swim Recovery: 6 × 200 m + pull",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        300,
-        45,
+        775,
         55,
+        68,
         "time"
       ],
       [
         "interval",
-        3000,
-        50,
+        275,
         55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "interval",
+        172,
+        65,
+        72,
         "time"
       ],
       [
         "cooldown",
-        300,
-        40,
+        275,
         50,
+        60,
         "time"
       ]
     ],
@@ -1376,29 +4106,232 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 100.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 14 × 200 m + pull",
     "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
-        50,
-        65,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        4800,
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "interval",
+        212,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        600,
+        275,
         50,
-        58,
+        60,
         "time"
       ]
     ],
@@ -1412,29 +4345,232 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 100.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 14 × 200 m + pull",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
-        50,
-        65,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        4800,
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "interval",
+        212,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        600,
+        275,
         50,
-        58,
+        60,
         "time"
       ]
     ],
@@ -1462,71 +4598,85 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 50.0,
-    "name": "Swimming Threshold Intervals",
+    "name": "Swim Threshold: 4 × 300 m",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        480,
-        50,
-        75,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "time"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
+        330,
         96,
         102,
         "time"
       ],
       [
         "recovery",
-        240,
+        20,
+        40,
         50,
-        60,
         "time"
       ],
       [
         "interval",
-        480,
+        330,
         96,
         102,
         "time"
       ],
       [
         "recovery",
-        240,
+        20,
+        40,
         50,
-        60,
         "time"
       ],
       [
         "interval",
-        480,
+        330,
         96,
         102,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        330,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        550,
+        65,
+        72,
         "time"
       ],
       [
         "cooldown",
-        480,
-        45,
-        55,
+        275,
+        50,
+        60,
         "time"
       ]
     ],
@@ -1540,29 +4690,120 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Swimming Active Recovery",
+    "name": "Swim Recovery: 6 × 200 m + pull",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        300,
-        45,
+        775,
         55,
+        68,
         "time"
       ],
       [
         "interval",
-        3000,
-        50,
+        275,
         55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "interval",
+        172,
+        65,
+        72,
         "time"
       ],
       [
         "cooldown",
-        300,
-        40,
+        275,
         50,
+        60,
         "time"
       ]
     ],
@@ -1576,71 +4817,85 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 50.0,
-    "name": "Swimming Threshold Intervals",
+    "name": "Swim Threshold: 4 × 300 m",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        480,
-        50,
-        75,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "time"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
+        330,
         96,
         102,
         "time"
       ],
       [
         "recovery",
-        240,
+        20,
+        40,
         50,
-        60,
         "time"
       ],
       [
         "interval",
-        480,
+        330,
         96,
         102,
         "time"
       ],
       [
         "recovery",
-        240,
+        20,
+        40,
         50,
-        60,
         "time"
       ],
       [
         "interval",
-        480,
+        330,
         96,
         102,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        330,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        550,
+        65,
+        72,
         "time"
       ],
       [
         "cooldown",
-        480,
-        45,
-        55,
+        275,
+        50,
+        60,
         "time"
       ]
     ],
@@ -1654,29 +4909,120 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Swimming Active Recovery",
+    "name": "Swim Recovery: 6 × 200 m + pull",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        300,
-        45,
+        775,
         55,
+        68,
         "time"
       ],
       [
         "interval",
-        3000,
-        50,
+        275,
         55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "interval",
+        172,
+        65,
+        72,
         "time"
       ],
       [
         "cooldown",
-        300,
-        40,
+        275,
         50,
+        60,
         "time"
       ]
     ],
@@ -1690,29 +5036,288 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 120.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 18 × 200 m + pull",
     "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
-        50,
-        65,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        6000,
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "interval",
+        232,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        600,
+        275,
         50,
-        58,
+        60,
         "time"
       ]
     ],
@@ -1726,29 +5331,246 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 105.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 15 × 200 m + pull",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
-        50,
-        65,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        5100,
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "interval",
+        217,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        600,
+        275,
         50,
-        58,
+        60,
         "time"
       ]
     ],
@@ -1776,78 +5598,169 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 55.0,
-    "name": "Swimming Threshold Intervals",
+    "name": "Swim Threshold: 10 × 100 m",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        540,
-        50,
-        75,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "time"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
+        110,
         96,
         102,
         "time"
       ],
       [
         "recovery",
-        240,
+        15,
+        40,
         50,
-        60,
         "time"
       ],
       [
         "interval",
-        480,
+        110,
         96,
         102,
         "time"
       ],
       [
         "recovery",
-        240,
+        15,
+        40,
         50,
-        60,
         "time"
       ],
       [
         "interval",
-        480,
+        110,
         96,
         102,
         "time"
       ],
       [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
         "interval",
-        420,
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        1000,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        300,
-        45,
-        55,
+        275,
+        50,
+        60,
         "time"
       ]
     ],
@@ -1861,29 +5774,120 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Swimming Active Recovery",
+    "name": "Swim Recovery: 6 × 200 m + pull",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        300,
-        45,
+        775,
         55,
+        68,
         "time"
       ],
       [
         "interval",
-        3000,
-        50,
+        275,
         55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "interval",
+        172,
+        65,
+        72,
         "time"
       ],
       [
         "cooldown",
-        300,
-        40,
+        275,
         50,
+        60,
         "time"
       ]
     ],
@@ -1897,78 +5901,169 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 55.0,
-    "name": "Swimming Threshold Intervals",
+    "name": "Swim Threshold: 10 × 100 m",
     "rationale": "Load week (Base phase). Key session: threshold intervals to lift your sustainable pace. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        540,
-        50,
-        75,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "time"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
+        110,
         96,
         102,
         "time"
       ],
       [
         "recovery",
-        240,
+        15,
+        40,
         50,
-        60,
         "time"
       ],
       [
         "interval",
-        480,
+        110,
         96,
         102,
         "time"
       ],
       [
         "recovery",
-        240,
+        15,
+        40,
         50,
-        60,
         "time"
       ],
       [
         "interval",
-        480,
+        110,
         96,
         102,
         "time"
       ],
       [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
         "interval",
-        420,
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        110,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        15,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        1000,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        300,
-        45,
-        55,
+        275,
+        50,
+        60,
         "time"
       ]
     ],
@@ -1982,29 +6077,120 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 60.0,
-    "name": "Swimming Active Recovery",
+    "name": "Swim Recovery: 6 × 200 m + pull",
     "rationale": "Load week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        300,
-        45,
+        775,
         55,
+        68,
         "time"
       ],
       [
         "interval",
-        3000,
-        50,
+        275,
         55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "interval",
+        172,
+        65,
+        72,
         "time"
       ],
       [
         "cooldown",
-        300,
-        40,
+        275,
         50,
+        60,
         "time"
       ]
     ],
@@ -2018,29 +6204,288 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 120.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 18 × 200 m + pull",
     "rationale": "Load week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
-        50,
-        65,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        6000,
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "interval",
+        232,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        600,
+        275,
         50,
-        58,
+        60,
         "time"
       ]
     ],
@@ -2054,29 +6499,246 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 105.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 15 × 200 m + pull",
     "rationale": "Load week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
-        50,
-        65,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        5100,
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "interval",
+        217,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        600,
+        275,
         50,
-        58,
+        60,
         "time"
       ]
     ],
@@ -2104,78 +6766,99 @@
     "intensity": 4,
     "kind": "hard",
     "minutes": 65.0,
-    "name": "Swimming Threshold Intervals",
+    "name": "Swim Threshold: 5 × 200 m",
     "rationale": "Recovery week (Base phase). Key session: threshold intervals to lift your sustainable pace. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
-        50,
-        75,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        60,
-        95,
-        100,
-        "time"
-      ],
-      [
-        "recovery",
-        60,
-        50,
-        60,
-        "time"
-      ],
-      [
-        "interval",
-        480,
+        220,
         96,
         102,
         "time"
       ],
       [
         "recovery",
-        240,
+        20,
+        40,
         50,
-        60,
         "time"
       ],
       [
         "interval",
-        480,
+        220,
         96,
         102,
         "time"
       ],
       [
         "recovery",
-        240,
+        20,
+        40,
         50,
-        60,
         "time"
       ],
       [
         "interval",
-        480,
+        220,
         96,
         102,
         "time"
       ],
       [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
         "interval",
-        660,
+        220,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        220,
+        96,
+        102,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        1650,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        600,
-        45,
-        55,
+        275,
+        50,
+        60,
         "time"
       ]
     ],
@@ -2189,29 +6872,64 @@
     "intensity": 1,
     "kind": "recovery",
     "minutes": 40.0,
-    "name": "Swimming Active Recovery",
+    "name": "Swim Recovery: 2 × 200 m + pull",
     "rationale": "Recovery week (Base phase). Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        300,
-        45,
+        775,
         55,
+        68,
         "time"
       ],
       [
         "interval",
-        1800,
-        50,
+        275,
         55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        55,
+        65,
+        "time"
+      ],
+      [
+        "interval",
+        152,
+        65,
+        72,
         "time"
       ],
       [
         "cooldown",
-        300,
-        40,
+        275,
         50,
+        60,
         "time"
       ]
     ],
@@ -2225,29 +6943,78 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 45.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 3 × 200 m + pull",
     "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        405,
-        50,
-        65,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        1890,
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "interval",
+        157,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        405,
+        275,
         50,
-        58,
+        60,
         "time"
       ]
     ],
@@ -2261,29 +7028,64 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 40.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 2 × 200 m + pull",
     "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        360,
-        50,
-        65,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        1680,
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "interval",
+        152,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        360,
+        275,
         50,
-        58,
+        60,
         "time"
       ]
     ],
@@ -2297,29 +7099,218 @@
     "intensity": 2,
     "kind": "long",
     "minutes": 95.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 13 × 200 m + pull",
     "rationale": "Recovery week (Base phase). Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        600,
-        50,
-        65,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        4500,
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "interval",
+        207,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        600,
+        275,
         50,
-        58,
+        60,
         "time"
       ]
     ],
@@ -2333,29 +7324,78 @@
     "intensity": 2,
     "kind": "easy",
     "minutes": 45.0,
-    "name": "Swimming Aerobic Base Building",
+    "name": "Swim Aerobic: 3 × 200 m + pull",
     "rationale": "Recovery week (Base phase). Aerobic base: conversational Zone 2. Most of your training lives here. No threshold on file for this sport yet, so targets are % of threshold / feel (RPE).",
     "sport": "swimming",
     "steps": [
       [
         "warmup",
-        405,
-        50,
-        65,
+        775,
+        55,
+        68,
         "time"
       ],
       [
         "interval",
-        1890,
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        275,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "recovery",
+        20,
+        40,
+        50,
+        "time"
+      ],
+      [
+        "interval",
+        608,
+        65,
+        72,
+        "time"
+      ],
+      [
+        "interval",
+        157,
         65,
         72,
         "time"
       ],
       [
         "cooldown",
-        405,
+        275,
         50,
-        58,
+        60,
         "time"
       ]
     ],
