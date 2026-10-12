@@ -17,35 +17,37 @@ from engine.physiology import PhysiologyEngine
 from engine.planner import Kind, PlannedSession, WeekPlan, WeekPlanner
 from engine.sessions import build_payload, payload_tss
 from engine.zones import apply_athlete_targets
+from i18n import sport_text, t
 
 ENDURANCE = ("cycling", "running", "swimming")
 GUARDRAIL_HORIZON_DAYS = 7
 
+# message keys (i18n/messages) for the week type, training phase and session purpose
 WEEK_LABELS = {
-    WeekType.LOAD: "Load week",
-    WeekType.RECOVERY: "Recovery week",
-    WeekType.TAPER: "Taper week",
-    WeekType.RACE: "Race week",
-    WeekType.POST_RACE: "Post-race recovery week",
+    WeekType.LOAD: "week.load",
+    WeekType.RECOVERY: "week.recovery",
+    WeekType.TAPER: "week.taper",
+    WeekType.RACE: "week.race",
+    WeekType.POST_RACE: "week.postRace",
 }
 PHASE_LABELS = {
-    TrainingPhase.BASE: "Base",
-    TrainingPhase.BUILD: "Build",
-    TrainingPhase.PEAK: "Peak",
-    TrainingPhase.TAPER: "Taper",
-    TrainingPhase.RACE: "Race",
-    TrainingPhase.RECOVERY: "Recovery",
+    TrainingPhase.BASE: "phase.base",
+    TrainingPhase.BUILD: "phase.build",
+    TrainingPhase.PEAK: "phase.peak",
+    TrainingPhase.TAPER: "phase.taper",
+    TrainingPhase.RACE: "phase.race",
+    TrainingPhase.RECOVERY: "phase.recovery",
 }
 SESSION_PURPOSE = {
-    Kind.EASY: "Aerobic base: conversational Zone 2. Most of your training lives here.",
-    Kind.LONG: "Long aerobic session: steady Zone 2 for durability and fat oxidation. Fuel as you would on race day.",
-    Kind.RECOVERY: "Recovery: very easy Zone 1 the day after a key session. Keep it genuinely easy.",
-    Kind.STRENGTH: "Strength: supports injury resistance and power transfer. Kept away from the day before a hard session.",
-    Kind.MOBILITY: "Mobility on a rest day.",
-    Kind.BENCHMARK: "Benchmark test: re-measures your threshold so every target stays personal to you.",
-    Kind.OPENER: "Race opener three days out: short race-pace efforts to stay sharp without fatigue.",
-    Kind.SHAKEOUT: "Pre-race shake-out: short and easy with a few strides.",
-    Kind.RACE: "Race day.",
+    Kind.EASY: "purpose.easy",
+    Kind.LONG: "purpose.long",
+    Kind.RECOVERY: "purpose.recovery",
+    Kind.STRENGTH: "purpose.strength",
+    Kind.MOBILITY: "purpose.mobility",
+    Kind.BENCHMARK: "purpose.benchmark",
+    Kind.OPENER: "purpose.opener",
+    Kind.SHAKEOUT: "purpose.shakeout",
+    Kind.RACE: "purpose.race",
 }
 
 
@@ -86,8 +88,9 @@ class TrainingScheduler:
                    target_date: datetime.date, as_of: Optional[datetime.date]) -> WorkoutDoc:
         date_str = target_date.strftime("%Y-%m-%d")
         workout_id = f"plan_{uid}_{date_str}" + ("_pm" if session.slot == "pm" else "")
+        lang = user_profile.language
         if session.kind == Kind.REST:
-            return cls._rest(uid, date_str, session.reason or "Planned rest day", week)
+            return cls._rest(uid, date_str, session.reason or t(lang, "rest.planned"), week, lang)
 
         intensity, hours, clamp_reason = session.intensity, session.hours, None
         # Day-of guardrails use today's fatigue, so they only apply to the coming week; later weeks
@@ -100,7 +103,7 @@ class TrainingScheduler:
                 requested_duration=session.hours, recent_intensities=[],
             )
             if intensity <= 0:
-                return cls._rest(uid, date_str, clamp_reason or "Rest & recovery", week)
+                return cls._rest(uid, date_str, clamp_reason or t(lang, "rest.default"), week, lang)
             if clamp_reason:
                 session = dataclasses.replace(session, kind=Kind.RECOVERY if intensity == 1 else Kind.EASY,
                                               intensity=intensity, hours=hours, style=None)
@@ -112,9 +115,9 @@ class TrainingScheduler:
             has_targets = apply_athlete_targets(steps, session.sport, payload.get("targetType", "time"), user_profile)
         tss = payload_tss(session, payload)
 
-        notes = cls._coaching_notes(session, week, clamp_reason, has_targets)
+        notes = cls._coaching_notes(session, week, clamp_reason, has_targets, lang)
         if session.slot == "pm":
-            notes += " Second session today: keep it easy and refuel well between sessions."
+            notes += " " + t(lang, "notes.secondSession")
         description = "\n\n".join(p for p in (payload.get("description", "").strip(), notes) if p)
         total_time_sec = sum(st["duration"] for st in steps) if steps else int(round(session.hours * 3600))
         is_endurance = session.sport in ENDURANCE
@@ -123,7 +126,7 @@ class TrainingScheduler:
             workout_id=workout_id,
             user_id=uid,
             date=date_str,
-            name=payload.get("name", f"{session.sport.capitalize()} Session"),
+            name=payload.get("name", t(lang, "session.generic.name", sport=sport_text(lang, session.sport, "title"))),
             sport=session.sport,
             intensity=session.intensity if is_endurance else None,
             time=total_time_sec,
@@ -135,8 +138,8 @@ class TrainingScheduler:
             steps=steps,
             event_type="Race" if session.kind == Kind.RACE else "Training",
             coach_rationale=notes,
-            execution_tips=("Focus on form, controlled tempo and full range of motion." if not is_endurance
-                            else cls._execution_tip(session, has_targets)),
+            execution_tips=(t(lang, "tips.strength") if not is_endurance
+                            else cls._execution_tip(session, has_targets, lang)),
             session_kind=session.kind,
             week_type=week.context.week_type,
             slot=session.slot,
@@ -157,39 +160,40 @@ class TrainingScheduler:
         return dataclasses.replace(user_profile, ctl=ctl, atl=atl)
 
     @staticmethod
-    def _coaching_notes(session: PlannedSession, week: WeekPlan, clamp_reason: Optional[str], has_targets: bool) -> str:
+    def _coaching_notes(session: PlannedSession, week: WeekPlan, clamp_reason: Optional[str], has_targets: bool,
+                        lang: str = "en") -> str:
         ctx = week.context
-        header = f"{WEEK_LABELS.get(ctx.week_type, 'Training week')} ({PHASE_LABELS.get(ctx.phase, 'Base')} phase)"
-        if week.comeback:
-            header += ": easing back in after time off, aerobic only this week"
+        header_key = "notes.header" + (".comeback" if week.comeback else "")
         if ctx.weeks_to_goal:
-            header += f", {ctx.weeks_to_goal} week{'s' if ctx.weeks_to_goal != 1 else ''} to your event"
+            header_key += ".toEvent.one" if ctx.weeks_to_goal == 1 else ".toEvent.other"
+        header = t(lang, header_key, week=t(lang, WEEK_LABELS.get(ctx.week_type, "week.training")),
+                   phase=t(lang, PHASE_LABELS.get(ctx.phase, "phase.base")), weeks=ctx.weeks_to_goal)
         if clamp_reason:
-            body = f"Adaptive Guardrail: {clamp_reason}"
+            body = t(lang, "notes.guardrail", reason=clamp_reason)
         elif session.kind == Kind.HARD:
-            body = ("Key session: VO2max intervals to raise your aerobic ceiling." if session.style == "vo2"
-                    else "Key session: threshold intervals to lift your sustainable pace.")
+            body = t(lang, "purpose.hard.vo2" if session.style == "vo2" else "purpose.hard.threshold")
         else:
-            body = SESSION_PURPOSE.get(session.kind, "")
+            body = t(lang, SESSION_PURPOSE[session.kind]) if session.kind in SESSION_PURPOSE else ""
         if session.sport in ENDURANCE and not has_targets and session.kind != Kind.RACE:
-            body += " No threshold on file for this sport yet, so targets are % of threshold / feel (RPE)."
-        return f"{header}. {body}".strip()
+            body += " " + t(lang, "notes.noThreshold")
+        return t(lang, "notes.rationale", header=header, body=body).strip()
 
     @staticmethod
-    def _execution_tip(session: PlannedSession, has_targets: bool) -> str:
+    def _execution_tip(session: PlannedSession, has_targets: bool, lang: str = "en") -> str:
         if session.kind in (Kind.EASY, Kind.LONG, Kind.RECOVERY):
-            return "Stay easy enough to talk in full sentences. Resist the urge to push."
+            return t(lang, "tips.easy")
         if session.kind == Kind.HARD:
-            return "Hit the targets on every rep; stop the set if form or pace falls apart."
-        return "Follow the step targets." if has_targets else "Go by feel (RPE)."
+            return t(lang, "tips.hard")
+        return t(lang, "tips.followTargets" if has_targets else "tips.byFeel")
 
     @classmethod
-    def _rest(cls, user_id: str, date_str: str, reason: str, week: Optional[WeekPlan] = None) -> WorkoutDoc:
+    def _rest(cls, user_id: str, date_str: str, reason: str, week: Optional[WeekPlan] = None,
+              lang: str = "en") -> WorkoutDoc:
         return WorkoutDoc(
             workout_id=f"plan_{user_id}_{date_str}",
             user_id=user_id,
             date=date_str,
-            name="Rest & Recovery Day",
+            name=t(lang, "rest.name"),
             sport="rest",
             intensity=-1,
             time=0,
@@ -197,7 +201,7 @@ class TrainingScheduler:
             tss=0.0,
             planned_tss=0.0,
             target_type=TargetType.TIME.value,
-            description=f"Complete Rest Day: {reason}. Allow physiological adaptations to take place.",
+            description=t(lang, "rest.description", reason=reason),
             steps=[],
             coach_rationale=reason,
             session_kind=Kind.REST,

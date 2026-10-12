@@ -405,3 +405,18 @@ def test_trigger_records_the_outcome(main_module, rider, db, monkeypatch):
         data = None
 
     trigger(NoData())  # deleted before delivery: nothing to do
+
+
+class TestLanguage:
+    def test_unnamed_activity_gets_a_name_in_the_athletes_language(self, rider, db, strava, monkeypatch):
+        import i18n
+        from i18n.messages import en
+        strava.get(ACTIVITY_URL, json=activity(name=""))
+        assert process(event()) == "imported"
+        assert workouts(db)["strava_111"]["name"] == "Strava activity"
+
+        monkeypatch.setitem(i18n.CATALOGS, "de", {k: "DE:" + v for k, v in en.MESSAGES.items()})
+        db.document(f"users/{UID}").update({"language": "de"})
+        strava.get(ACTIVITY_URL, json=activity(name=None, moving=4000))
+        assert process(event(aspect="update")) == "updated"
+        assert workouts(db)["strava_111"]["name"] == "DE:Strava activity"

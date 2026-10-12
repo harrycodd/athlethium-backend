@@ -12,6 +12,7 @@ from dataclasses import dataclass
 from typing import Any, Dict, List, Optional, Sequence
 
 from core.models import WorkoutStep
+from i18n import t
 
 MIN_STEP_SEC = 30
 DEFAULT_DATE = datetime.date(2026, 1, 5)
@@ -19,10 +20,15 @@ DEFAULT_DATE = datetime.date(2026, 1, 5)
 
 @dataclass(frozen=True)
 class Drill:
-    name: str
+    key: str              # messages: drill.<key>.name / drill.<key>.cue
     seconds: int          # per side when per_side
-    cue: str
     per_side: bool = False
+
+    def name(self, lang: str) -> str:
+        return t(lang, f"drill.{self.key}.name")
+
+    def cue(self, lang: str) -> str:
+        return t(lang, f"drill.{self.key}.cue")
 
     @property
     def total(self) -> int:
@@ -33,42 +39,39 @@ D = Drill
 
 AREAS: Dict[str, List[Drill]] = {
     "calves": [
-        D("Wall Calf Stretch", 45, "Back leg straight for 20 s, then bend the knee for the rest.", per_side=True),
-        D("Ankle Rocks", 45, "Half-kneeling, drive the front knee over the toes and back, heel down.", per_side=True),
+        D("wall_calf_stretch", 45, per_side=True),
+        D("ankle_rocks", 45, per_side=True),
     ],
     "hips": [
-        D("90/90 Hip Switches", 60, "Sit tall, rotate both knees side to side slowly; pause at each end."),
-        D("Pigeon Stretch", 60, "Front shin across the body, hips square; fold forward to deepen.", per_side=True),
-        D("Deep Squat Hold", 60, "Heels down, elbows push the knees out, chest up."),
+        D("90_90_hip_switches", 60),
+        D("pigeon_stretch", 60, per_side=True),
+        D("deep_squat_hold", 60),
     ],
     "hamstrings": [
-        D("Lying Hamstring Stretch", 45, "Strap or towel round the foot, leg straight, pull gently.", per_side=True),
-        D("Hamstring Floss", 45, "Half-kneeling, straighten and bend the front leg for 10 slow reps.", per_side=True),
+        D("lying_hamstring_stretch", 45, per_side=True),
+        D("hamstring_floss", 45, per_side=True),
     ],
     "hip_flexors": [
-        D("Half-Kneeling Hip Flexor Stretch", 60, "Squeeze the back glute, tuck the pelvis, reach the arm up.",
-          per_side=True),
-        D("Couch Stretch", 60, "Back knee at the wall, shin up the wall; stay upright.", per_side=True),
+        D("half_kneeling_hip_flexor_stretch", 60, per_side=True),
+        D("couch_stretch", 60, per_side=True),
     ],
     "glutes": [
-        D("Figure-4 Stretch", 45, "On your back, ankle over the opposite knee, pull the leg in.", per_side=True),
-        D("Glute Bridge March", 45, "Hold the bridge, lift one foot at a time without the hips dropping."),
+        D("figure_4_stretch", 45, per_side=True),
+        D("glute_bridge_march", 45),
     ],
     "thoracic": [
-        D("Open Book Rotation", 45, "Side-lying, knees bent; rotate the top arm open and follow it with your eyes.",
-          per_side=True),
-        D("Thread the Needle", 45, "On all fours, reach one arm under the body, then open it to the ceiling.",
-          per_side=True),
-        D("Foam Roller Thoracic Extension", 60, "Roller across the upper back, hands behind the head, extend over it."),
+        D("open_book_rotation", 45, per_side=True),
+        D("thread_the_needle", 45, per_side=True),
+        D("foam_roller_thoracic_extension", 60),
     ],
     "shoulders": [
-        D("Wall Slides", 60, "Back and forearms on the wall; slide up without the ribs flaring."),
-        D("Doorway Chest Stretch", 45, "Forearm on the door frame at shoulder height, step through.", per_side=True),
-        D("Sleeper Stretch", 45, "Lie on your side, arm at 90°; gently press the forearm down.", per_side=True),
+        D("wall_slides", 60),
+        D("doorway_chest_stretch", 45, per_side=True),
+        D("sleeper_stretch", 45, per_side=True),
     ],
     "lats": [
-        D("Child's Pose Side Reach", 45, "Walk both hands to one side and breathe into the ribs.", per_side=True),
-        D("Bench Lat Stretch", 45, "Kneel, elbows on a bench, sink the chest towards the floor."),
+        D("childs_pose_side_reach", 45, per_side=True),
+        D("bench_lat_stretch", 45),
     ],
 }
 SPORT_AREAS = {
@@ -82,9 +85,8 @@ FOCUS_AREAS = {
     "core": ["thoracic", "hip_flexors", "glutes", "lats"],
 }
 FOCUS_ALIASES = {"legs": "lower", "all": "full", "full_body": "full"}
-SPORT_TITLES = {"running": "Runner's", "cycling": "Cyclist's", "swimming": "Swimmer's"}
-OPENER = D("Cat-Cow", 60, "Slowly arch and round the spine with the breath.")
-CLOSER = D("Child's Pose Breathing", 60, "Long breaths out through the mouth to switch off.")
+OPENER = D("cat_cow", 60)
+CLOSER = D("childs_pose_breathing", 60)
 
 
 def _areas(focus: str, sports: Optional[Sequence[str]]) -> List[str]:
@@ -102,7 +104,7 @@ class MobilityGenerator:
     @classmethod
     def generate(cls, focus: str = "full", duration_minutes: int = 20, difficulty: int = 1,
                  sports: Optional[Sequence[str]] = None,
-                 session_date: Optional[datetime.date] = None) -> Dict[str, Any]:
+                 session_date: Optional[datetime.date] = None, lang: str = "en") -> Dict[str, Any]:
         focus_key = FOCUS_ALIASES.get(focus.lower(), focus.lower())
         total_sec = max(0, int(duration_minutes * 60))
         rotation = (session_date or DEFAULT_DATE).toordinal() // 7
@@ -123,23 +125,25 @@ class MobilityGenerator:
             if remaining < MIN_STEP_SEC:
                 break
             dur = min(drill.total, remaining)
-            side = f"{drill.seconds} s each side. " if drill.per_side else ""
-            steps.append(WorkoutStep("exercise", dur, drill.name, target_type="time", notes=f"{side}{drill.cue}"))
+            notes = (t(lang, "mobility.notes.perSide", seconds=drill.seconds, cue=drill.cue(lang)) if drill.per_side
+                     else drill.cue(lang))
+            steps.append(WorkoutStep("exercise", dur, drill.name(lang), target_type="time", notes=notes))
             remaining -= dur
         if steps:
             steps[-1].duration += remaining  # fill the session exactly
         if closer:
-            steps.append(WorkoutStep("cooldown", closer, CLOSER.name, target_type="time", notes=CLOSER.cue))
+            steps.append(WorkoutStep("cooldown", closer, CLOSER.name(lang), target_type="time", notes=CLOSER.cue(lang)))
 
-        title = {"lower": "Lower Body", "upper": "Upper Body", "core": "Core & Spine"}.get(focus_key)
+        # named for the focus area, else for the athlete's one endurance sport
+        title = focus_key if focus_key in ("lower", "upper", "core") else None
         if title is None:
             endurance = [s for s in (sports or []) if s in SPORT_AREAS]
-            title = SPORT_TITLES[endurance[0]] if len(endurance) == 1 else (
-                "Multisport" if endurance else "Athletic")
-        names = ", ".join(s.name for s in steps[1:-1]) if len(steps) > 2 else ""
+            title = endurance[0] if len(endurance) == 1 else ("multisport" if endurance else "athletic")
+        names = t(lang, "list.separator").join(s.name for s in steps[1:-1]) if len(steps) > 2 else ""
         return {
-            "name": f"{title} Mobility",
-            "description": f"Mobility for range of motion and recovery{': ' + names if names else ''}.",
+            "name": t(lang, f"mobility.name.{title}"),
+            "description": (t(lang, "mobility.description.drills", drills=names) if names
+                            else t(lang, "mobility.description")),
             "steps": [s.to_dict() for s in steps],
             "targetType": "time",
             "total_duration_sec": total_sec,

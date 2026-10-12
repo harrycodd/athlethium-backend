@@ -63,3 +63,11 @@ def test_manual_tss_rules():
     assert tss({"sport": "running", "plannedTss": 80, "plannedTime": 3600}, 1800, None) == 40.0
     assert tss({"sport": "running", "tss": 0}, 3600, 5) == 65.0
     assert tss({"sport": "running"}, 3600, None) == 50.0
+
+
+def test_language_is_normalised():
+    assert UserService.normalize_user_profile("u1", make_profile_doc()).language == "en"
+    for lang in ("en", "es", "fr", "de", "it", "ja"):
+        assert UserService.normalize_user_profile("u1", make_profile_doc(language=lang)).language == lang
+    for junk in ("pt", "DE", "de-DE", "", 7, None, ["de"], {"de": True}):
+        assert UserService.normalize_user_profile("u1", {"language": junk}).language == "en"

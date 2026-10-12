@@ -162,3 +162,15 @@ def test_swim_stats_have_no_power_or_speed(main_module, call, athlete):
     fit = build_fit(seconds=1800, power=[150] * 1800, sport="swimming", totals={"distance_m": 1500, "avg_speed_ms": 0.9})
     stats = upload(main_module, call, athlete, fit).json["data"]["stats"]
     assert stats == {"duration_seconds": 1800, "distance_m": 1500.0}
+
+
+def test_recorded_names_follow_the_athletes_language(main_module, call, athlete, db, monkeypatch):
+    import i18n
+    from i18n.messages import en
+    monkeypatch.setitem(i18n.CATALOGS, "de", {k: "DE:" + v for k, v in en.MESSAGES.items()})
+    db.document(f"users/{athlete.uid}").update({"language": "de"})
+    fit = build_fit(seconds=1800, heart_rate=[115] * 1800, sport="training", sets=[("squat", 8, 60, 35, True)])
+    data = upload(main_module, call, athlete, fit).json["data"]
+    w = db.document(f"workouts/{data['workout_id']}").get().to_dict()
+    assert w["name"] == "DE:Recorded Activity"
+    assert w["logged_sets"] == [{"exercise": "DE:Squat", "reps": 8, "weight_kg": 60.0, "duration_sec": 35}]

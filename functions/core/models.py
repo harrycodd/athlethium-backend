@@ -57,6 +57,7 @@ class UserProfile:
     # Setup wizard & UI preferences
     display_name: Optional[str] = None
     units: str = "Metric"  # Metric or Imperial
+    language: str = "en"  # language of generated text: en, es, fr, de, it, ja (see i18n.SUPPORTED)
     main_focus: Dict[str, bool] = field(default_factory=dict)
     activities: Dict[str, bool] = field(default_factory=dict)
     equipment_toggles: Dict[str, bool] = field(default_factory=dict)

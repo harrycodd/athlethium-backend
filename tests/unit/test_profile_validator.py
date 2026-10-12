@@ -187,3 +187,29 @@ class TestTypedOptionalFields:
     ])
     def test_rejected(self, field, value, msg):
         assert msg in errors_for(**{field: value})
+
+
+@pytest.mark.parametrize("language", ["en", "es", "fr", "de", "it", "ja"])
+def test_supported_languages(language):
+    ok, errors, norm = V.validate(make_profile_doc(language=language))
+    assert ok, errors
+    assert norm["language"] == language
+    ok, _, norm = V.validate({"language": language}, is_partial=True)
+    assert ok and norm["language"] == language
+
+
+@pytest.mark.parametrize("language", ["pt", "EN", "de-DE", "", 3, None, ["de"]])
+def test_unsupported_language_is_rejected(language):
+    doc = make_profile_doc()
+    doc["language"] = language
+    ok, errors, norm = V.validate(doc)
+    assert not ok and "language" not in norm
+    assert f"language must be one of ['en', 'es', 'fr', 'de', 'it', 'ja'], received '{language}'" in errors
+    ok, errors, norm = V.validate({"language": language}, is_partial=True)
+    assert not ok and "language" not in norm
+
+
+def test_language_is_optional_and_never_defaulted():
+    """A save without a language keeps the stored one (normalisation reads a missing one as English)."""
+    ok, _, norm = V.validate(make_profile_doc())
+    assert ok and "language" not in norm
