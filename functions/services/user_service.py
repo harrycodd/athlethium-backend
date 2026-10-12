@@ -14,7 +14,7 @@ from core.models import UserProfile, Goal
 from core.config import EQUIPMENT_MAPPING
 from engine.physiology import PhysiologyEngine
 from i18n import normalize_language, t
-from services.profile_validator import ProfileValidator
+from services.profile_validator import BODY_AREAS, ProfileValidator
 
 
 
@@ -157,7 +157,8 @@ class UserService:
                 target_time=int(_num(raw_goal, "targetTime", 0)) or None,
                 target_time_string=raw_goal.get("targetTimeString"),
                 target_pace=raw_goal.get("targetPace"),
-                notes=raw_goal.get("notes")
+                notes=raw_goal.get("notes"),
+                body_area=raw_goal.get("bodyArea") if raw_goal.get("bodyArea") in BODY_AREAS else None,
             )
 
         return UserProfile(

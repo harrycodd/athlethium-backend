@@ -75,6 +75,13 @@ def test_training_goal_type():
 
 
 class TestGoal:
+    def test_body_area_code(self):
+        goal = {"name": "Kraft", "date": "2026-11-29", "sports": ["cycling"], "bodyArea": "lower"}
+        ok, errors, norm = V.validate(make_profile_doc(goal=goal))
+        assert ok, errors
+        assert norm["goal"]["bodyArea"] == "lower"
+        assert "bodyArea must be one of" in errors_for(goal={**goal, "bodyArea": "legs"})
+
     def test_not_object(self):
         assert "goal must be an object" in errors_for(goal="race")
 

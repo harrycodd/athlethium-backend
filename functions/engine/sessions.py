@@ -17,7 +17,13 @@ ENDURANCE = ("cycling", "running", "swimming")
 LEVELS = {"beginner": 0, "intermediate": 1, "advanced": 2, "elite": 3, "pro": 4}
 
 
+BODY_AREA_FOCUS = {"core": "core", "upper": "upper", "lower": "lower", "all": "full"}
+
+
 def anatomical_focus(profile: UserProfile) -> str:
+    # The app saves the focus as a code; older goals only have it in English free-text notes.
+    if profile.goal and profile.goal.body_area in BODY_AREA_FOCUS:
+        return BODY_AREA_FOCUS[profile.goal.body_area]
     notes = (profile.goal.notes or "").lower() if profile.goal else ""
     if "core" in notes:
         return "core"

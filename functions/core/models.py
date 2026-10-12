@@ -36,6 +36,7 @@ class Goal:
     target_time_string: Optional[str] = None  # e.g. "03:45:00"
     target_pace: Optional[str] = None  # e.g. "5:20 /km"
     notes: Optional[str] = None
+    body_area: Optional[str] = None  # strength/mobility focus: core | upper | lower | all
 
 
 @dataclass

@@ -215,5 +215,12 @@ so changing the language affects new workouts only. Codes the app reads for logi
 `session_kind`, `week_type`, step `type`, target units) never change. Messages live in
 `functions/i18n/messages/<lang>.py`; a language without translations falls back to English.
 
+The app changes the language from Settings. It then regenerates the athlete's upcoming unfinished
+sessions, so they follow the new language straight away.
+
+`users/{uid}.goal.bodyArea` (`core`, `upper`, `lower` or `all`) is the strength and mobility focus,
+stored as a code so it works in any language. Older goals without it fall back to matching
+English keywords in `goal.notes`.
+
 The planner queries `workouts` by `userId` and `date`. This needs the composite index in
 `firestore.indexes.json`.

@@ -71,3 +71,10 @@ def test_language_is_normalised():
         assert UserService.normalize_user_profile("u1", make_profile_doc(language=lang)).language == lang
     for junk in ("pt", "DE", "de-DE", "", 7, None, ["de"], {"de": True}):
         assert UserService.normalize_user_profile("u1", {"language": junk}).language == "en"
+
+
+def test_goal_body_area_is_read_and_junk_ignored():
+    goal = {"name": "Strong", "date": "2026-11-29", "sports": ["cycling"], "bodyArea": "upper"}
+    assert UserService.normalize_user_profile("u1", make_profile_doc(goal=goal)).goal.body_area == "upper"
+    junk = UserService.normalize_user_profile("u1", make_profile_doc(goal={**goal, "bodyArea": ["x"]}))
+    assert junk.goal.body_area is None

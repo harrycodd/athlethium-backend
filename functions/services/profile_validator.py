@@ -27,6 +27,7 @@ NUMERIC_FIELDS = {
 }
 INTERVAL_TYPES = {"structured", "mix", "non_structured", "non-structured"}
 FITNESS_LEVELS = {"beginner", "intermediate", "advanced", "elite", "pro"}
+BODY_AREAS = ("core", "upper", "lower", "all")  # goal.bodyArea: strength/mobility focus
 
 
 class ProfileValidator:
@@ -403,5 +404,11 @@ class ProfileValidator:
 
         if "notes" in goal_data and goal_data["notes"]:
             normalized_goal["notes"] = str(goal_data["notes"]).strip()
+
+        if goal_data.get("bodyArea") is not None:
+            if goal_data["bodyArea"] in BODY_AREAS:
+                normalized_goal["bodyArea"] = goal_data["bodyArea"]
+            else:
+                errors.append(f"goal.bodyArea must be one of {BODY_AREAS}, received '{goal_data['bodyArea']}'")
 
         return errors, normalized_goal
