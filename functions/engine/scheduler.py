@@ -201,7 +201,7 @@ class TrainingScheduler:
             tss=0.0,
             planned_tss=0.0,
             target_type=TargetType.TIME.value,
-            description=t(lang, "rest.description", reason=reason),
+            description=t(lang, "rest.description", reason=reason.rstrip(".。")),  # template adds its own stop
             steps=[],
             coach_rationale=reason,
             session_kind=Kind.REST,

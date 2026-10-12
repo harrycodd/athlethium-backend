@@ -161,3 +161,10 @@ def test_anatomical_focus_from_goal_notes(notes, expected):
     from engine.sessions import anatomical_focus
     assert anatomical_focus(make_profile(goal=make_goal(notes=notes))) == expected
     assert anatomical_focus(make_profile(goal=None)) == "full"
+
+
+@pytest.mark.parametrize("issue", [{"injury": 2}, {"illness": 2}])
+def test_severe_issue_rest_day_reads_cleanly(issue):
+    doc = T.schedule_day(make_profile(**issue), MON)
+    assert doc.sport == "rest" and ".." not in doc.description
+    assert doc.description.startswith("Complete Rest Day: Severe")
