@@ -8,6 +8,13 @@ Python Cloud Functions for **Athlethium**, an endurance training app. The backen
 weeks, generates structured sessions, completes workouts from FIT files, and connects Strava.
 The React Native app lives in [harrycodd/fitness-app](https://github.com/harrycodd/fitness-app).
 
+## Project history
+
+This repository is an enhancement of [harrycodd/athlethium-aws](https://github.com/harrycodd/athlethium-aws), the original
+Athlethium backend (now archived). It has been rebuilt on Firebase and refined using [Claude Code](https://claude.com/claude-code)
+to make it ready for deployment. The app side started as
+[harrycodd/athlethium-react](https://github.com/harrycodd/athlethium-react).
+
 ---
 
 ## Architecture
