@@ -5,10 +5,8 @@ Generates structured steps, intervals, power targets (% FTP), HR zones, and paci
 
 from typing import Dict, Any, List, Optional
 from core.models import WorkoutStep, TargetType
-from core.config import INTENSITY_ZONES
+from i18n import sport_text, t
 
-
-SPORT_LABEL = {"cycling": "Bike", "running": "Run", "swimming": "Swim"}
 
 # (reps, work sec, rest sec), easiest first. The rung used grows with the athlete's level and
 # with the week of the training block, then the largest that fits the session is chosen.
@@ -24,8 +22,6 @@ VO2_LADDER = {
 SWIM_THRESHOLD_LADDER = [(8, 100, 15), (10, 100, 15), (5, 200, 20), (4, 300, 20), (3, 400, 30)]
 SWIM_SPEED_LADDER = [(10, 50, 20), (12, 50, 20), (8, 100, 30), (10, 100, 30)]
 SWIM_EASY_FACTOR = 1.25      # easy swimming takes 25% longer per 100 m than CSS
-SWIM_DRILLS = "catch-up, fist, single-arm, 6-kick switch"
-WARMUP_OPENERS = "Build gradually; in the last 5 min do 3 × 1 min building to your interval effort."
 
 
 def _mmss(seconds: float) -> str:
@@ -59,6 +55,7 @@ class EnduranceGenerator:
         level: int = 1,
         progression: int = 0,
         swim_css_sec: float = 110.0,
+        lang: str = "en",
     ) -> Dict[str, Any]:
         """
         `level` 0-4 (beginner-pro) and `progression` (week of the training block, 0-2) pick how big
@@ -74,95 +71,54 @@ class EnduranceGenerator:
         # Minimum sensible duration is 20 minutes
         total_sec = max(1200, total_sec)
 
-        int_config = INTENSITY_ZONES.get(intensity, INTENSITY_ZONES[2])
-        zone_name = int_config["name"]
-
         if sport == "swimming" and intensity in (1, 2, 4, 5):
-            return cls._swim_session(total_sec, intensity, target_type, level, progression, swim_css_sec)
-        label = SPORT_LABEL.get(sport, sport.capitalize())
+            return cls._swim_session(total_sec, intensity, target_type, level, progression, swim_css_sec, lang)
+        # short label for titles ("Bike Endurance"), the sport's name in sentences and in titles
+        label = sport_text(lang, sport, "label")
+        name = sport_text(lang, sport, "name")
+        sport_title = sport_text(lang, sport, "title")
+        params: Dict[str, Any] = {"sport": name}
 
-        # Build steps based on intensity level
+        # Build steps based on intensity level; each zone has a title and one description per style
         steps: List[WorkoutStep] = []
-        descriptions: Dict[str, str] = {}
-        title = f"{sport.capitalize()} - {zone_name}"
 
         if intensity <= 1:
             # Zone 1: Active Recovery Continuous Spin/Jog
-            title = f"{label} Recovery (Zone 1)"
-            steps = cls._build_recovery_steps(total_sec, target_type)
-            descriptions = {
-                "structured": f"Easy conversational {sport} session in Zone 1 (<55% FTP) to flush metabolites and stimulate active recovery.",
-                "mix": f"Gentle {sport} session. Keep the intensity very light and relaxed.",
-                "non_structured": "Very easy spin or jog. Keep it conversational. Cafe ride pace."
-            }
+            zone, title = "recovery", t(lang, "endurance.recovery.name", sport=label)
+            steps = cls._build_recovery_steps(total_sec, target_type, lang)
 
         elif intensity == 2:
             # Zone 2: Aerobic Endurance Base
-            title = f"{label} Endurance (Zone 2)"
-            steps = cls._build_endurance_base_steps(total_sec, target_type)
-            descriptions = {
-                "structured": "Steady Zone 2 aerobic base building at 65-72% FTP. Keep pedal pressure / running cadence consistent.",
-                "mix": f"Steady endurance {sport} with continuous pressure and steady breathing.",
-                "non_structured": "Long steady distance. Keep continuous pressure and stay conversational."
-            }
+            zone, title = "endurance", t(lang, "endurance.endurance.name", sport=label)
+            steps = cls._build_endurance_base_steps(total_sec, target_type, lang)
 
         elif intensity == 3:
             # Zone 3: Tempo / Sweet Spot Sustained Blocks
-            title = f"{sport.capitalize()} Sweet Spot / Tempo Blocks"
-            steps = cls._build_tempo_steps(total_sec, target_type)
-            descriptions = {
-                "structured": "Sustained Tempo / Sweet Spot intervals (85-88% FTP) to elevate aerobic capacity without excessive fatigue.",
-                "mix": "Include sustained brisk efforts with easy endurance recoveries.",
-                "non_structured": "Push hard on rolling terrain with steady endurance in between."
-            }
+            zone, title = "tempo", t(lang, "endurance.tempo.name", sport=sport_title)
+            steps = cls._build_tempo_steps(total_sec, target_type, lang)
 
-        elif intensity == 4:
-            # Zone 4: Threshold Over-Unders / Long Intervals
+        elif intensity in (4, 5):
+            # Zone 4: Threshold long intervals / Zone 5: VO2max intervals
+            zone = "threshold" if intensity == 4 else "vo2"
+            ladder, low, high = ((THRESHOLD_LADDER, 96, 102) if intensity == 4 else (VO2_LADDER, 110, 118))
             steps, (reps, work, rest) = cls._build_interval_set(
-                total_sec, target_type, THRESHOLD_LADDER.get(sport, THRESHOLD_LADDER["cycling"]),
-                level, progression, "Threshold", 96, 102)
-            title = f"{label} Threshold: {reps} × {work // 60} min"
-            descriptions = {
-                "structured": f"{reps} × {work // 60} min at threshold with {_mmss(rest)} easy between. "
-                              "Hard but controlled: you could hold each effort a little longer at the end. "
-                              "Raises the effort you can sustain for an hour.",
-                "mix": f"{reps} sustained hard efforts of about {work // 60} min with easy recoveries.",
-                "non_structured": f"Include {reps} long, hard, steady efforts (climbs or flat) of about {work // 60} min."
-            }
-
-        elif intensity == 5:
-            # Zone 5: VO2 Max Microbursts / Long Intervals
-            steps, (reps, work, rest) = cls._build_interval_set(
-                total_sec, target_type, VO2_LADDER.get(sport, VO2_LADDER["cycling"]),
-                level, progression, "VO2max", 110, 118)
-            title = f"{label} VO2max: {reps} × {work // 60} min"
-            descriptions = {
-                "structured": f"{reps} × {work // 60} min at VO2max effort with {_mmss(rest)} easy between. "
-                              "Hard and breathless but even: the last rep should match the first. "
-                              "Raises your aerobic ceiling.",
-                "mix": f"{reps} hard, breathless efforts of {work // 60} min with equal easy recovery.",
-                "non_structured": f"{reps} punchy {work // 60}-min efforts on hills or fast stretches."
-            }
+                total_sec, target_type, ladder.get(sport, ladder["cycling"]),
+                level, progression, f"step.interval.{zone}", low, high, lang)
+            params.update(reps=reps, minutes=work // 60, rest=_mmss(rest))
+            title = t(lang, f"endurance.{zone}.name", sport=label, reps=reps, minutes=work // 60)
 
         elif intensity == 6:
             # Zone 6: Anaerobic Capacity Surges
-            title = f"{sport.capitalize()} Anaerobic Power Surges"
-            steps = cls._build_anaerobic_steps(total_sec, target_type)
-            descriptions = {
-                "structured": "Short explosive anaerobic repeats (130-140% FTP) with full recoveries to build punchy attack power.",
-                "mix": "Hard 1-2 minute attacks followed by easy spinning.",
-                "non_structured": "Surge hard over hills or sprint segments with full recovery."
-            }
+            zone, title = "anaerobic", t(lang, "endurance.anaerobic.name", sport=sport_title)
+            steps = cls._build_anaerobic_steps(total_sec, target_type, lang)
 
         else:
             # Zone 7: Neuromuscular Sprints
-            title = f"{sport.capitalize()} Neuromuscular Sprint Power"
-            steps = cls._build_sprint_steps(total_sec, target_type)
-            descriptions = {
-                "structured": "Maximal all-out sprints (150-200% FTP) with extended recoveries for maximal neuromuscular recruitment.",
-                "mix": "Max sprints with 3-5 minutes easy spinning between efforts.",
-                "non_structured": "Town-sign sprints with full recovery."
-            }
+            zone, title = "sprint", t(lang, "endurance.sprint.name", sport=sport_title)
+            steps = cls._build_sprint_steps(total_sec, target_type, lang)
+
+        descriptions = {style: t(lang, f"endurance.{zone}.description.{style}", **params)
+                        for style in ("structured", "mix", "non_structured")}
 
         # Validate step durations sum exactly to total_sec
         cls._normalize_step_durations(steps, total_sec)
@@ -195,42 +151,42 @@ class EnduranceGenerator:
 
     @staticmethod
     def _wrap_main_set(warmup: List[WorkoutStep], main: List[WorkoutStep], total_sec: int,
-                       target_type: TargetType) -> List[WorkoutStep]:
+                       target_type: TargetType, lang: str = "en") -> List[WorkoutStep]:
         """Warm-up + main set, then any spare time as steady Zone 2 (not an endless cool-down)."""
         cooldown = 600 if total_sec >= 3600 else 300
         used = sum(st.duration for st in warmup + main)
         spare = total_sec - used - cooldown
         steps = list(warmup) + list(main)
         if spare >= 300:
-            steps.append(WorkoutStep("interval", spare, "Steady Aerobic Z2", 65, 72, target_type.value))
+            steps.append(WorkoutStep("interval", spare, t(lang, "step.steadyAerobicZ2"), 65, 72, target_type.value))
         steps.append(WorkoutStep("cooldown", max(cooldown, total_sec - sum(st.duration for st in steps)),
-                                 "Cool Down", 45, 55, target_type.value))
+                                 t(lang, "step.coolDown"), 45, 55, target_type.value))
         return steps
 
     @staticmethod
-    def _build_recovery_steps(total_sec: int, target_type: TargetType) -> List[WorkoutStep]:
+    def _build_recovery_steps(total_sec: int, target_type: TargetType, lang: str = "en") -> List[WorkoutStep]:
         warmup = min(300, int(total_sec * 0.15))
         cooldown = min(300, int(total_sec * 0.15))
         main = total_sec - warmup - cooldown
         return [
-            WorkoutStep("warmup", warmup, "Easy Ramp", 45, 55, target_type.value),
-            WorkoutStep("interval", main, "Active Recovery Steady", 50, 55, target_type.value),
-            WorkoutStep("cooldown", cooldown, "Easy Spin Down", 40, 50, target_type.value),
+            WorkoutStep("warmup", warmup, t(lang, "step.easyRamp"), 45, 55, target_type.value),
+            WorkoutStep("interval", main, t(lang, "step.activeRecoverySteady"), 50, 55, target_type.value),
+            WorkoutStep("cooldown", cooldown, t(lang, "step.easySpinDown"), 40, 50, target_type.value),
         ]
 
     @staticmethod
-    def _build_endurance_base_steps(total_sec: int, target_type: TargetType) -> List[WorkoutStep]:
+    def _build_endurance_base_steps(total_sec: int, target_type: TargetType, lang: str = "en") -> List[WorkoutStep]:
         warmup = min(600, int(total_sec * 0.15))
         cooldown = min(600, int(total_sec * 0.15))
         main = total_sec - warmup - cooldown
         return [
-            WorkoutStep("warmup", warmup, "Progressive Warmup", 50, 65, target_type.value),
-            WorkoutStep("interval", main, "Aerobic Base Z2", 65, 72, target_type.value),
-            WorkoutStep("cooldown", cooldown, "Cool Down", 50, 58, target_type.value),
+            WorkoutStep("warmup", warmup, t(lang, "step.progressiveWarmup"), 50, 65, target_type.value),
+            WorkoutStep("interval", main, t(lang, "step.aerobicBaseZ2"), 65, 72, target_type.value),
+            WorkoutStep("cooldown", cooldown, t(lang, "step.coolDown"), 50, 58, target_type.value),
         ]
 
     @staticmethod
-    def _build_tempo_steps(total_sec: int, target_type: TargetType) -> List[WorkoutStep]:
+    def _build_tempo_steps(total_sec: int, target_type: TargetType, lang: str = "en") -> List[WorkoutStep]:
         warmup = min(600, int(total_sec * 0.2))
         cooldown = min(600, int(total_sec * 0.15))
         available_work = total_sec - warmup - cooldown
@@ -245,19 +201,20 @@ class EnduranceGenerator:
             rest_dur = 180  # 3 min
             reps = max(2, min(3, available_work // (work_dur + rest_dur)))
 
-        steps = [WorkoutStep("warmup", warmup, "Warmup & Activation", 50, 70, target_type.value)]
+        steps = [WorkoutStep("warmup", warmup, t(lang, "step.warmupActivation"), 50, 70, target_type.value)]
         for i in range(reps):
-            steps.append(WorkoutStep("interval", work_dur, f"Sweet Spot Block {i+1}", 85, 88, target_type.value))
+            steps.append(WorkoutStep("interval", work_dur, t(lang, "step.sweetSpotBlock", n=i + 1), 85, 88, target_type.value))
             if i < reps - 1:
-                steps.append(WorkoutStep("recovery", rest_dur, "Recovery Spin", 50, 60, target_type.value))
+                steps.append(WorkoutStep("recovery", rest_dur, t(lang, "step.recoverySpin"), 50, 60, target_type.value))
 
         current_sum = sum(s.duration for s in steps)
-        steps.append(WorkoutStep("cooldown", max(300, total_sec - current_sum), "Cool Down", 45, 55, target_type.value))
+        steps.append(WorkoutStep("cooldown", max(300, total_sec - current_sum), t(lang, "step.coolDown"), 45, 55,
+                                 target_type.value))
         return steps
 
     @classmethod
     def _build_interval_set(cls, total_sec: int, target_type: TargetType, ladder, level: int, progression: int,
-                            name: str, low: int, high: int):
+                            name_key: str, low: int, high: int, lang: str = "en"):
         """Warm-up with openers, `reps` × work at the target with easy recoveries, then any spare
         time as steady Zone 2 and a cool-down."""
         tt = target_type.value
@@ -270,25 +227,26 @@ class EnduranceGenerator:
             reps -= 1  # short sessions keep the effort length but do fewer reps...
         if reps * work + (reps - 1) * rest > available:
             work = max(120, (available - (reps - 1) * rest) // reps // 60 * 60)  # ...or shorter efforts
-        warmup = [WorkoutStep("warmup", warmup_sec, "Warm-up", 50, 75, tt, notes=WARMUP_OPENERS)]
+        warmup = [WorkoutStep("warmup", warmup_sec, t(lang, "step.warmup"), 50, 75, tt,
+                              notes=t(lang, "notes.warmupOpeners"))]
         main: List[WorkoutStep] = []
         for i in range(reps):
-            main.append(WorkoutStep("interval", work, f"{name} {i + 1}/{reps}", low, high, tt))
+            main.append(WorkoutStep("interval", work, t(lang, name_key, n=i + 1, total=reps), low, high, tt))
             if i < reps - 1:
-                main.append(WorkoutStep("recovery", rest, "Easy", 50, 60, tt))
-        return cls._wrap_main_set(warmup, main, total_sec, target_type), (reps, work, rest)
+                main.append(WorkoutStep("recovery", rest, t(lang, "step.easy"), 50, 60, tt))
+        return cls._wrap_main_set(warmup, main, total_sec, target_type, lang), (reps, work, rest)
 
     @staticmethod
     def _swim_session(total_sec: int, intensity: int, target_type: TargetType, level: int, progression: int,
-                      css: float) -> Dict[str, Any]:
+                      css: float, lang: str = "en") -> Dict[str, Any]:
         """Distance-based pool session: warm-up with drills, a main set relative to CSS, easy swim-down."""
         tt = target_type.value
         easy_100 = css * SWIM_EASY_FACTOR
         warm_m, drills = (300, 4) if total_sec >= 2400 else (200, 2)  # shorter warm-up for short swims
         steps = [WorkoutStep("warmup", int(warm_m / 100 * easy_100 + drills * (0.5 * easy_100 * 1.1 + 15)),
-                             f"Warm-up: {warm_m} m easy + {drills} × 50 m drill", 55, 68, tt,
-                             notes=f"{warm_m} m easy, mixing strokes. Then {drills} × 50 m drill ({SWIM_DRILLS}), "
-                                   "15 s rest.")]
+                             t(lang, "swim.step.warmup", metres=warm_m, drills=drills), 55, 68, tt,
+                             notes=t(lang, "swim.notes.warmup", metres=warm_m, drills=drills,
+                                     drill_list=t(lang, "swim.drillList")))]
         cooldown = int(2 * easy_100)
         available = total_sec - steps[0].duration - cooldown
         if intensity in (4, 5):
@@ -299,16 +257,15 @@ class EnduranceGenerator:
             while reps > 4 and reps * (metres / 100 * pace + rest) > available:
                 reps -= 1  # short swims do fewer reps
             rep_sec = int(round(metres / 100 * pace))
-            effort = "at CSS (your threshold pace)" if intensity == 4 else "fast: about 5 s per 100 m quicker than CSS"
+            kind = "threshold" if intensity == 4 else "speed"
             for i in range(reps):
-                steps.append(WorkoutStep("interval", rep_sec, f"{metres} m {i + 1}/{reps}", low, high, tt,
-                                         notes=f"{metres} m {effort}, about {_mmss(rep_sec)}." if i == 0 else None))
-                steps.append(WorkoutStep("recovery", rest, f"Rest {rest} s", 40, 50, tt))
-            kind = "Threshold" if intensity == 4 else "Speed"
-            title = f"Swim {kind}: {reps} × {metres} m"
-            desc = (f"{reps} × {metres} m {effort} with {rest} s rest. Hold the same time on every rep."
-                    if intensity == 4 else
-                    f"{reps} × {metres} m fast with {rest} s rest. Strong, long strokes; don't let the last reps fade.")
+                steps.append(WorkoutStep("interval", rep_sec, t(lang, "swim.step.rep", metres=metres, n=i + 1,
+                                                                total=reps), low, high, tt,
+                                         notes=t(lang, f"swim.notes.rep.{kind}", metres=metres, time=_mmss(rep_sec))
+                                         if i == 0 else None))
+                steps.append(WorkoutStep("recovery", rest, t(lang, "swim.step.rest", seconds=rest), 40, 50, tt))
+            title = t(lang, f"swim.{kind}.name", reps=reps, metres=metres)
+            desc = t(lang, f"swim.{kind}.description", reps=reps, metres=metres, rest=rest)
         else:
             recovery = intensity <= 1
             low, high = (55, 65) if recovery else (65, 72)
@@ -316,21 +273,21 @@ class EnduranceGenerator:
             pull = 4 * int(easy_100 + 15) if available >= 4 * (easy_100 + 15) + per_200 else 0
             n200 = max(1, int((available - pull) // per_200))
             for i in range(n200):
-                steps.append(WorkoutStep("interval", int(2 * easy_100), f"200 m easy {i + 1}/{n200}", low, high, tt,
-                                         notes="Relaxed, long strokes; breathe every 3 strokes." if i == 0 else None))
-                steps.append(WorkoutStep("recovery", 20, "Rest 20 s", 40, 50, tt))
+                steps.append(WorkoutStep("interval", int(2 * easy_100), t(lang, "swim.step.easy200", n=i + 1,
+                                                                          total=n200), low, high, tt,
+                                         notes=t(lang, "swim.notes.easy200") if i == 0 else None))
+                steps.append(WorkoutStep("recovery", 20, t(lang, "swim.step.rest", seconds=20), 40, 50, tt))
             if pull:
-                steps.append(WorkoutStep("interval", pull, "4 × 100 m pull", low, high, tt,
-                                         notes="With a pull buoy, 15 s rest. Focus on a strong catch."))
-            main_set = f"{n200} × 200 m" + (" + pull" if pull else "")
-            title = f"Swim Recovery: {main_set}" if recovery else f"Swim Aerobic: {main_set}"
-            desc = ("Very easy recovery swim; technique over speed." if recovery else
-                    "Easy aerobic swim: drills for technique, then steady 200s at a relaxed, conversational effort.")
+                steps.append(WorkoutStep("interval", pull, t(lang, "swim.step.pull"), low, high, tt,
+                                         notes=t(lang, "swim.notes.pull")))
+            kind = "recovery" if recovery else "aerobic"
+            title = t(lang, f"swim.{kind}.name" + (".pull" if pull else ""), sets=n200)
+            desc = t(lang, f"swim.{kind}.description")
         spare = total_sec - sum(st.duration for st in steps) - cooldown
         if spare >= 120:
-            steps.append(WorkoutStep("interval", spare, "Easy swim", 65, 72, tt,
-                                     notes=f"About {int(spare / easy_100) * 100} m easy, any stroke."))
-        steps.append(WorkoutStep("cooldown", cooldown, "Swim-down: 200 m easy", 50, 60, tt))
+            steps.append(WorkoutStep("interval", spare, t(lang, "swim.step.easy"), 65, 72, tt,
+                                     notes=t(lang, "swim.notes.easy", metres=int(spare / easy_100) * 100)))
+        steps.append(WorkoutStep("cooldown", cooldown, t(lang, "swim.step.swimDown"), 50, 60, tt))
         EnduranceGenerator._normalize_step_durations(steps, total_sec)
         return {
             "name": title,
@@ -342,68 +299,74 @@ class EnduranceGenerator:
         }
 
     @staticmethod
-    def _build_anaerobic_steps(total_sec: int, target_type: TargetType) -> List[WorkoutStep]:
+    def _build_anaerobic_steps(total_sec: int, target_type: TargetType, lang: str = "en") -> List[WorkoutStep]:
         warmup = min(720, int(total_sec * 0.25))
-        steps = [WorkoutStep("warmup", warmup, "Dynamic Warmup", 50, 80, target_type.value)]
+        steps = [WorkoutStep("warmup", warmup, t(lang, "step.dynamicWarmup"), 50, 80, target_type.value)]
 
         reps = 6
         for i in range(reps):
-            steps.append(WorkoutStep("interval", 60, f"Anaerobic Attack {i+1}", 130, 140, target_type.value))
+            steps.append(WorkoutStep("interval", 60, t(lang, "step.anaerobicAttack", n=i + 1), 130, 140, target_type.value))
             if i < reps - 1:
-                steps.append(WorkoutStep("recovery", 120, "Active Rest Spin", 45, 55, target_type.value))
+                steps.append(WorkoutStep("recovery", 120, t(lang, "step.activeRestSpin"), 45, 55, target_type.value))
 
         current_sum = sum(s.duration for s in steps)
-        steps.append(WorkoutStep("cooldown", max(300, total_sec - current_sum), "Cool Down", 45, 55, target_type.value))
+        steps.append(WorkoutStep("cooldown", max(300, total_sec - current_sum), t(lang, "step.coolDown"), 45, 55,
+                                 target_type.value))
         return steps
 
     @staticmethod
-    def _build_sprint_steps(total_sec: int, target_type: TargetType) -> List[WorkoutStep]:
+    def _build_sprint_steps(total_sec: int, target_type: TargetType, lang: str = "en") -> List[WorkoutStep]:
         warmup = min(720, int(total_sec * 0.25))
-        steps = [WorkoutStep("warmup", warmup, "Thorough Sprint Warmup", 50, 80, target_type.value)]
+        steps = [WorkoutStep("warmup", warmup, t(lang, "step.sprintWarmup"), 50, 80, target_type.value)]
 
         reps = 6
         for i in range(reps):
-            steps.append(WorkoutStep("interval", 15, f"All-Out Sprint {i+1}", 160, 220, target_type.value))
+            steps.append(WorkoutStep("interval", 15, t(lang, "step.allOutSprint", n=i + 1), 160, 220, target_type.value))
             if i < reps - 1:
-                steps.append(WorkoutStep("recovery", 180, "Full Recovery Spin", 40, 50, target_type.value))
+                steps.append(WorkoutStep("recovery", 180, t(lang, "step.fullRecoverySpin"), 40, 50, target_type.value))
 
         current_sum = sum(s.duration for s in steps)
-        steps.append(WorkoutStep("cooldown", max(300, total_sec - current_sum), "Cool Down", 40, 50, target_type.value))
+        steps.append(WorkoutStep("cooldown", max(300, total_sec - current_sum), t(lang, "step.coolDown"), 40, 50,
+                                 target_type.value))
         return steps
 
     @classmethod
     def generate_race_week_session(cls, kind: str, sport: str, duration_hours: float,
                                    user_equipment: Optional[List[str]] = None,
-                                   race_name: str = "Race", multisport: bool = False) -> Dict[str, Any]:
+                                   race_name: str = "Race", multisport: bool = False,
+                                   lang: str = "en") -> Dict[str, Any]:
         """Opener (3 days out), shake-out (day before) and the race itself."""
         target_type = TargetType.TIME if (kind == "race" and multisport) else \
             cls.resolve_target_type(sport, user_equipment)
         tt = target_type.value
         total_sec = max(900, int(round(duration_hours * 3600)))
         if kind == "opener":
-            title = f"{sport.capitalize()} Race Opener"
-            desc = "Mostly easy with three short race-pace efforts to keep the legs sharp without adding fatigue."
-            steps = [WorkoutStep("warmup", 900, "Easy Warmup", 50, 70, tt)]
+            title = t(lang, "raceWeek.opener.name", sport=sport_text(lang, sport, "title"))
+            desc = t(lang, "raceWeek.opener.description")
+            steps = [WorkoutStep("warmup", 900, t(lang, "step.easyWarmup"), 50, 70, tt)]
             for i in range(3):
-                steps.append(WorkoutStep("interval", 60, f"Race-Pace Effort {i+1}/3", 95, 105, tt))
-                steps.append(WorkoutStep("recovery", 180, "Easy Float", 50, 65, tt))
-            steps.append(WorkoutStep("cooldown", max(300, total_sec - sum(st.duration for st in steps)), "Easy Spin Down", 45, 60, tt))
+                steps.append(WorkoutStep("interval", 60, t(lang, "step.racePaceEffort", n=i + 1, total=3), 95, 105, tt))
+                steps.append(WorkoutStep("recovery", 180, t(lang, "step.easyFloat"), 50, 65, tt))
+            steps.append(WorkoutStep("cooldown", max(300, total_sec - sum(st.duration for st in steps)),
+                                     t(lang, "step.easySpinDown"), 45, 60, tt))
         elif kind == "shakeout":
-            title = f"{sport.capitalize()} Pre-Race Shake-Out"
-            desc = "Short and easy with a few relaxed strides. Lay out your kit, fuel well and sleep early."
-            steps = [WorkoutStep("warmup", 600, "Easy", 50, 68, tt)]
+            title = t(lang, "raceWeek.shakeout.name", sport=sport_text(lang, sport, "title"))
+            desc = t(lang, "raceWeek.shakeout.description")
+            steps = [WorkoutStep("warmup", 600, t(lang, "step.easy"), 50, 68, tt)]
             for i in range(3):
-                steps.append(WorkoutStep("interval", 20, f"Relaxed Stride {i+1}/3", 105, 115, tt))
-                steps.append(WorkoutStep("recovery", 100, "Easy", 50, 65, tt))
-            steps.append(WorkoutStep("cooldown", max(120, total_sec - sum(st.duration for st in steps)), "Easy", 50, 65, tt))
+                steps.append(WorkoutStep("interval", 20, t(lang, "step.relaxedStride", n=i + 1, total=3), 105, 115, tt))
+                steps.append(WorkoutStep("recovery", 100, t(lang, "step.easy"), 50, 65, tt))
+            steps.append(WorkoutStep("cooldown", max(120, total_sec - sum(st.duration for st in steps)),
+                                     t(lang, "step.easy"), 50, 65, tt))
         else:
-            title = f"Race Day: {race_name}"
-            desc = "Race day. Warm up, start conservatively, fuel early and pace by feel and your targets."
+            title = t(lang, "raceWeek.race.name", race=race_name)
+            desc = t(lang, "raceWeek.race.description")
             if multisport:  # one power/pace range can't describe a swim-bike-run race
-                desc += " Pace each leg by your race plan."
-                steps = [WorkoutStep("interval", total_sec, race_name, None, None, tt, notes="Race effort")]
+                desc += " " + t(lang, "raceWeek.race.multisport")
+                steps = [WorkoutStep("interval", total_sec, race_name, None, None, tt,
+                                     notes=t(lang, "notes.raceEffort"))]
             else:
-                steps = [WorkoutStep("interval", total_sec, race_name, 85, 100, tt, notes="Race effort")]
+                steps = [WorkoutStep("interval", total_sec, race_name, 85, 100, tt, notes=t(lang, "notes.raceEffort"))]
         cls._normalize_step_durations(steps, total_sec)
         return {
             "name": title,
@@ -420,7 +383,8 @@ class EnduranceGenerator:
         sport: str,
         duration_hours: float,
         interval_style: str = "structured",
-        target_type: TargetType = TargetType.POWER
+        target_type: TargetType = TargetType.POWER,
+        lang: str = "en",
     ) -> Dict[str, Any]:
         """
         Generates a standardized post-deload benchmark test session (FTP Test, 5K Time Trial, CSS Test)
@@ -428,49 +392,52 @@ class EnduranceGenerator:
         """
         total_sec = max(2400, int(round(duration_hours * 3600)))
         steps: List[WorkoutStep] = []
+        tt = target_type.value
+
+        def step(kind: str, seconds: int, key: str, low: int, high: int, notes: Optional[str] = None, **params):
+            steps.append(WorkoutStep(kind, seconds, t(lang, key, **params), low, high, tt,
+                                     notes=t(lang, notes) if notes else None))
 
         if sport == "cycling":
-            title = "Cycling 20-Min FTP Benchmark Test"
-            desc = "Standardized 20-minute Functional Threshold Power (FTP) benchmark test following your deload week. Pace yourself evenly to measure maximum 20-min sustainable average power (FTP = 95% of 20-min avg)."
-            steps.append(WorkoutStep("warmup", 900, "Progressive Warm-up & Spin", 50, 75, target_type.value))
+            test = "cycling"
+            step("warmup", 900, "benchmark.cycling.step.warmup", 50, 75)
             for i in range(3):
-                steps.append(WorkoutStep("interval", 60, f"Threshold Opener {i+1}/3", 100, 105, target_type.value))
-                steps.append(WorkoutStep("recovery", 60, "Easy Spin", 45, 55, target_type.value))
-            steps.append(WorkoutStep("recovery", 300, "Pre-Test Rest & Focus", 45, 55, target_type.value))
-            steps.append(WorkoutStep("interval", 1200, "20-Min All-Out FTP Benchmark TT", 100, 115, target_type.value, notes="Pace evenly for 20 minutes at maximum sustainable effort."))
+                step("interval", 60, "benchmark.cycling.step.opener", 100, 105, n=i + 1, total=3)
+                step("recovery", 60, "benchmark.cycling.step.easySpin", 45, 55)
+            step("recovery", 300, "benchmark.cycling.step.preTest", 45, 55)
+            step("interval", 1200, "benchmark.cycling.step.test", 100, 115, notes="benchmark.cycling.notes.test")
             rem = max(300, total_sec - sum(s.duration for s in steps))
-            steps.append(WorkoutStep("cooldown", rem, "Easy Spin Down", 40, 50, target_type.value))
+            step("cooldown", rem, "step.easySpinDown", 40, 50)
 
         elif sport == "running":
-            title = "Running 5K / Threshold Pace Benchmark"
-            desc = "Post-deload running benchmark assessment. 20-minute continuous threshold time trial to calibrate your lactate threshold running pace and heart rate zones."
-            steps.append(WorkoutStep("warmup", 900, "Easy Aerobic Warm-up Jog", 50, 65, target_type.value))
+            test = "running"
+            step("warmup", 900, "benchmark.running.step.warmup", 50, 65)
             for i in range(4):
-                steps.append(WorkoutStep("interval", 25, f"Strides & Dynamic Opener {i+1}/4", 105, 120, target_type.value))
-                steps.append(WorkoutStep("recovery", 35, "Walk / Easy Float", 40, 50, target_type.value))
-            steps.append(WorkoutStep("recovery", 180, "Pre-Test Focus & Rest", 40, 50, target_type.value))
-            steps.append(WorkoutStep("interval", 1200, "20-Min Threshold Pace Benchmark Run", 98, 105, target_type.value, notes="Sustain maximum hard pace for 20 minutes to establish threshold pace."))
+                step("interval", 25, "benchmark.running.step.strides", 105, 120, n=i + 1, total=4)
+                step("recovery", 35, "benchmark.running.step.walk", 40, 50)
+            step("recovery", 180, "benchmark.running.step.preTest", 40, 50)
+            step("interval", 1200, "benchmark.running.step.test", 98, 105, notes="benchmark.running.notes.test")
             rem = max(300, total_sec - sum(s.duration for s in steps))
-            steps.append(WorkoutStep("cooldown", rem, "Cool-down Jog & Walk", 40, 50, target_type.value))
+            step("cooldown", rem, "benchmark.running.step.cooldown", 40, 50)
 
         elif sport == "swimming":
-            title = "Swimming CSS (Critical Swim Speed) Test"
-            desc = "Critical Swim Speed benchmark test (400m + 200m time trials) to update CSS pace per 100m."
-            steps.append(WorkoutStep("warmup", 600, "Warm-up & Drills (400m easy)", 50, 65, target_type.value))
-            steps.append(WorkoutStep("interval", 420, "400m Time Trial (Max Steady Effort)", 95, 105, target_type.value))
-            steps.append(WorkoutStep("recovery", 360, "Easy Recovery Kick & Float (200m)", 40, 50, target_type.value))
-            steps.append(WorkoutStep("interval", 210, "200m Time Trial (All-Out Effort)", 105, 115, target_type.value))
+            test = "swimming"
+            step("warmup", 600, "benchmark.swimming.step.warmup", 50, 65)
+            step("interval", 420, "benchmark.swimming.step.tt400", 95, 105)
+            step("recovery", 360, "benchmark.swimming.step.recovery", 40, 50)
+            step("interval", 210, "benchmark.swimming.step.tt200", 105, 115)
             rem = max(300, total_sec - sum(s.duration for s in steps))
-            steps.append(WorkoutStep("cooldown", rem, "Cool-down Swim (200m)", 40, 50, target_type.value))
+            step("cooldown", rem, "benchmark.swimming.step.cooldown", 40, 50)
 
         else:
-            title = f"{sport.capitalize()} Baseline Fitness Benchmark"
-            desc = "Standardized post-deload fitness benchmark test to evaluate current fitness levels."
-            steps.append(WorkoutStep("warmup", 600, "Progressive Warm-up", 50, 70, target_type.value))
-            steps.append(WorkoutStep("interval", 1200, "Main Benchmark Assessment Effort", 95, 105, target_type.value))
+            test = "other"
+            step("warmup", 600, "benchmark.other.step.warmup", 50, 70)
+            step("interval", 1200, "benchmark.other.step.test", 95, 105)
             rem = max(300, total_sec - sum(s.duration for s in steps))
-            steps.append(WorkoutStep("cooldown", rem, "Cool Down", 40, 50, target_type.value))
+            step("cooldown", rem, "step.coolDown", 40, 50)
 
+        title = t(lang, f"benchmark.{test}.name", sport=sport_text(lang, sport, "title"))
+        desc = t(lang, f"benchmark.{test}.description")
         cls._normalize_step_durations(steps, total_sec)
 
         return {
@@ -478,7 +445,7 @@ class EnduranceGenerator:
             "descriptions": {"structured": desc, "mix": desc, "non_structured": desc},
             "description": desc,
             "steps": [s.to_dict() for s in steps],
-            "targetType": target_type.value,
+            "targetType": tt,
             "total_duration_sec": total_sec
         }
 

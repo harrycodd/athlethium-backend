@@ -8,6 +8,7 @@ import datetime
 from typing import Dict, Any, List, Tuple
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 from core.config import SUPPORTED_SPORTS, SUPPORTED_UNITS, DAYS_OF_WEEK, EQUIPMENT_MAPPING
+from i18n import SUPPORTED as SUPPORTED_LANGUAGES
 
 # key -> (min, max, is_integer)
 NUMERIC_FIELDS = {
@@ -26,6 +27,7 @@ NUMERIC_FIELDS = {
 }
 INTERVAL_TYPES = {"structured", "mix", "non_structured", "non-structured"}
 FITNESS_LEVELS = {"beginner", "intermediate", "advanced", "elite", "pro"}
+BODY_AREAS = ("core", "upper", "lower", "all")  # goal.bodyArea: strength/mobility focus
 
 
 class ProfileValidator:
@@ -63,6 +65,15 @@ class ProfileValidator:
                 errors.append(f"units must be one of {SUPPORTED_UNITS}, received '{units}'")
             else:
                 normalized["units"] = units
+
+        # Language of generated workout text. Optional: a profile without it gets English, and a
+        # full save without it keeps whatever language is already stored.
+        if "language" in data:
+            language = data.get("language")
+            if not isinstance(language, str) or language not in SUPPORTED_LANGUAGES:
+                errors.append(f"language must be one of {list(SUPPORTED_LANGUAGES)}, received '{language}'")
+            else:
+                normalized["language"] = language
 
         # 3. Weekly Hours (Step 2)
         weekly_hours = None
@@ -393,5 +404,11 @@ class ProfileValidator:
 
         if "notes" in goal_data and goal_data["notes"]:
             normalized_goal["notes"] = str(goal_data["notes"]).strip()
+
+        if goal_data.get("bodyArea") is not None:
+            if goal_data["bodyArea"] in BODY_AREAS:
+                normalized_goal["bodyArea"] = goal_data["bodyArea"]
+            else:
+                errors.append(f"goal.bodyArea must be one of {BODY_AREAS}, received '{goal_data['bodyArea']}'")
 
         return errors, normalized_goal

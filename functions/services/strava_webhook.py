@@ -32,6 +32,7 @@ except ImportError:
     firestore = None
 
 from engine.physiology import PhysiologyEngine
+from i18n import t
 from services.activity_stats import relevant_stats
 from services.strava_service import HTTP_TIMEOUT_SEC, StravaError, StravaService, private_token_ref
 from services.user_service import UserService
@@ -276,7 +277,9 @@ class StravaWebhookService:
         if duration <= 0:
             return "ignored:no_duration"
         activity_id = int(activity["id"])
-        tss = cls.activity_tss(activity, sport, UserService.get_user_profile(uid))
+        profile = UserService.get_user_profile(uid)
+        tss = cls.activity_tss(activity, sport, profile)
+        name = activity.get("name") or t(profile.language if profile else "en", "activity.strava.name")
         completion = {
             "completed": True,
             "status": "completed",
@@ -317,7 +320,7 @@ class StravaWebhookService:
                     previous = float(data.get("actual_tss") or 0) if data.get("completed") else 0.0
                     update = dict(completion)
                     if ref.id == f"strava_{activity_id}":
-                        update.update(name=activity.get("name") or "Strava activity", sport=sport, date=date,
+                        update.update(name=name, sport=sport, date=date,
                                       time=duration, tss=tss)
                     tx.update(ref, update)
                     return "updated", tss - previous, data.get("date") or date
@@ -345,7 +348,7 @@ class StravaWebhookService:
                 target = workouts.document(f"strava_{activity_id}")
                 tx.set(target, {
                     "workoutId": target.id, "userId": uid, "date": date, "sport": sport,
-                    "name": activity.get("name") or "Strava activity", "description": "", "intensity": 2,
+                    "name": name, "description": "", "intensity": 2,
                     "time": duration, "tss": tss, "type": "Session", "createdAt": firestore.SERVER_TIMESTAMP,
                     **completion,
                 })

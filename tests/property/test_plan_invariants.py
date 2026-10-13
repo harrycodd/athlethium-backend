@@ -207,20 +207,21 @@ def test_no_hard_days_back_to_back_including_across_weeks(case):
 @SETTINGS
 @given(athletes(), st.floats(min_value=1.05, max_value=1.5))
 def test_targets_come_from_the_athletes_own_thresholds(case, factor):
+    """
+    A stronger athlete (power, heart rate and run pace) gets the same plan with harder targets.
+    Swim pace stays the same here: swim sets are by distance, so a faster swimmer's sets (and
+    their training stress, which drives the weekly load cap) legitimately differ. Swim targets
+    are covered by test_swim_targets_come_from_the_swimmers_own_pace below.
+    """
     profile, start = case
     docs = build_plan(profile, start, weeks=2)
     stronger = profile.__class__(**{**profile.__dict__,
                                     "ftp_cycling": profile.ftp_cycling * factor,
                                     "ftp_running": profile.ftp_running * factor,
                                     "fthr": profile.fthr * factor,
-                                    "ftp_pace_running": profile.ftp_pace_running / factor,
-                                    "ftp_pace_swimming": profile.ftp_pace_swimming / factor})
+                                    "ftp_pace_running": profile.ftp_pace_running / factor})
     docs_stronger = build_plan(stronger, start, weeks=2)
     for a, b in zip(docs, docs_stronger, strict=True):
-        if a["sport"] == "swimming":
-            # swim sets are by distance: a faster swimmer fits more metres into the same time
-            assert sum(s["duration"] for s in a["steps"]) == sum(s["duration"] for s in b["steps"])
-            continue
         assert [s["duration"] for s in a["steps"]] == [s["duration"] for s in b["steps"]]  # same structure
         for sa, sb in zip(a["steps"], b["steps"], strict=True):
             ra, rb = sa.get("target_range"), sb.get("target_range")
@@ -231,6 +232,39 @@ def test_targets_come_from_the_athletes_own_thresholds(case, factor):
                 assert rb["max"] >= ra["max"] and rb["min"] >= ra["min"]
             else:  # pace: stronger athlete = faster = fewer seconds
                 assert rb["max"] <= ra["max"] and rb["min"] <= ra["min"]
+
+
+@SETTINGS
+@given(st.sampled_from([("easy", 2), ("recovery", 1), ("long", 2), ("hard", 4), ("hard", 5)]),
+       st.sampled_from([0.5, 0.75, 1.0, 1.25, 1.5, 2.0]), st.integers(0, 4),
+       st.floats(min_value=60, max_value=180), st.floats(min_value=1.05, max_value=1.5))
+def test_swim_targets_come_from_the_swimmers_own_pace(kind_intensity, hours, level, css, factor):
+    """Every swim fills exactly its planned time, and a faster swimmer's pace targets are faster."""
+    from engine.planner import PlannedSession
+    from engine.sessions import build_payload
+    from engine.zones import apply_athlete_targets
+
+    kind, intensity = kind_intensity
+    session = PlannedSession(datetime.date(2026, 10, 6), kind, "swimming", intensity, hours,
+                             style="threshold" if intensity == 4 else ("vo2" if intensity == 5 else None))
+    base = UserProfile(uid="swim", sports=["swimming"], focused_sports=["swimming"],
+                       equipment=["swim_watch"], fitness_level=["beginner", "intermediate", "advanced",
+                                                                 "elite", "pro"][level],
+                       ftp_pace_swimming=css)
+    faster = UserProfile(**{**base.__dict__, "ftp_pace_swimming": css / factor})
+    for profile in (base, faster):
+        assert sum(s["duration"] for s in build_payload(session, profile)["steps"]) == round(hours * 3600)
+
+    def targets(profile):  # as the scheduler builds them: % of CSS -> the swimmer's own pace
+        payload = build_payload(session, profile)
+        assert apply_athlete_targets(payload["steps"], "swimming", payload["targetType"], profile)
+        return [s["target_range"] for s in payload["steps"] if s.get("target_range")]
+
+    slow, fast = targets(base), targets(faster)
+    assert slow and fast
+    # the slowest and the fastest targets are both quicker for the faster swimmer
+    assert max(t["max"] for t in fast) < max(t["max"] for t in slow)
+    assert min(t["min"] for t in fast) < min(t["min"] for t in slow)
 
 
 @SETTINGS

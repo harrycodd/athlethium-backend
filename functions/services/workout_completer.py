@@ -14,6 +14,7 @@ try:
 except ImportError:
     firestore = None
 from engine.physiology import PhysiologyEngine
+from i18n import t
 from services.activity_stats import logged_set, relevant_stats
 from services.user_service import UserService
 
@@ -127,10 +128,11 @@ class WorkoutCompleterService:
         }
 
     @staticmethod
-    def parse_fit(fit_file_path: str) -> Dict[str, Any]:
+    def parse_fit(fit_file_path: str, lang: str = "en") -> Dict[str, Any]:
         """
         Extracts sport, start time, duration, 1 Hz power/HR samples, session totals (distance, speed,
         ascent, calories...) and, for strength activities, each set (exercise, reps, weight).
+        Exercise names are in the athlete's language `lang`.
         """
         if not fitparse:
             raise FitFileError("fitparse module is not available")
@@ -169,7 +171,7 @@ class WorkoutCompleterService:
                     start_time = s_vals["start_time"]
                 if s_vals.get("sport"):
                     sport = FIT_SPORTS.get(str(s_vals["sport"]).lower())
-            sets = [logged_set(v.get("category"), v.get("repetitions"), v.get("weight"), v.get("duration"))
+            sets = [logged_set(v.get("category"), v.get("repetitions"), v.get("weight"), v.get("duration"), lang)
                     for v in (m.get_values() for m in fitfile.get_messages("set"))
                     if v.get("set_type") != "rest"]
         except Exception as exc:
@@ -193,9 +195,10 @@ class WorkoutCompleterService:
         Parses a .fit file, computes TSS for the right sport, checks for a cycling FTP increase,
         and completes the matching planned workout (or records a new activity).
         """
-        parsed = cls.parse_fit(fit_file_path)
-        db = firestore.client()
         user_profile = UserService.get_user_profile(user_id)
+        lang = user_profile.language if user_profile else "en"
+        parsed = cls.parse_fit(fit_file_path, lang)
+        db = firestore.client()
 
         target_ref = None
         target_data: Dict[str, Any] = {}
@@ -276,7 +279,7 @@ class WorkoutCompleterService:
                 "workoutId": final_workout_id,
                 "userId": user_id,
                 "date": date_str,
-                "name": "Recorded Activity",
+                "name": t(lang, "activity.recorded.name"),
                 "sport": sport,
                 "intensity": 2,
                 "time": parsed["duration_sec"],

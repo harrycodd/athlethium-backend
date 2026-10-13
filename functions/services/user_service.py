@@ -13,7 +13,8 @@ except ImportError:
 from core.models import UserProfile, Goal
 from core.config import EQUIPMENT_MAPPING
 from engine.physiology import PhysiologyEngine
-from services.profile_validator import ProfileValidator
+from i18n import normalize_language, t
+from services.profile_validator import BODY_AREAS, ProfileValidator
 
 
 
@@ -139,12 +140,15 @@ class UserService:
         if not isinstance(main_focus, dict):
             main_focus = {}
 
+        # Language of generated text (unsupported or missing: English)
+        language = normalize_language(raw_data.get("language"))
+
         # 4. Parse Goal
         raw_goal = raw_data.get("goal")
         goal_obj = None
         if raw_goal and isinstance(raw_goal, dict):
             goal_obj = Goal(
-                name=raw_goal.get("name", "Target Event"),
+                name=raw_goal.get("name", t(language, "goal.defaultName")),
                 date=raw_goal.get("date"),
                 type=raw_goal.get("type", "event"),
                 sports=raw_goal.get("sports", focused_sports),
@@ -153,13 +157,15 @@ class UserService:
                 target_time=int(_num(raw_goal, "targetTime", 0)) or None,
                 target_time_string=raw_goal.get("targetTimeString"),
                 target_pace=raw_goal.get("targetPace"),
-                notes=raw_goal.get("notes")
+                notes=raw_goal.get("notes"),
+                body_area=raw_goal.get("bodyArea") if raw_goal.get("bodyArea") in BODY_AREAS else None,
             )
 
         return UserProfile(
             uid=user_id,
             display_name=raw_data.get("displayName"),
             units=raw_data.get("units", "Metric"),
+            language=language,
             main_focus=main_focus,
             activities=activities,
             equipment_toggles=equipment_toggles,

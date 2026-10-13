@@ -45,6 +45,9 @@ are validated and merged.
 Response: `{"message": "...", "userId": "<uid>", "wizardCompleted": true}`.
 On validation errors the response is `400` with a `details` list.
 
+`language` (optional) is the athlete's language for generated text: one of `en`, `es`, `fr`,
+`de`, `it`, `ja`; any other value is a validation error. When omitted, the stored value is kept.
+
 ## `generate_training_session`
 
 Plans training for the signed-in athlete, skipping days that already have a session.
@@ -200,6 +203,24 @@ Transient Strava errors are retried once.
 | `workouts/{id}` | the owner (`userId == uid`) |
 | `oauthStates/{state}` | server only |
 | `stravaEvents/{id}`, `stravaLinks/{id}` | server only |
+
+### Language
+
+`users/{uid}.language` (`en`, `es`, `fr`, `de`, `it` or `ja`; missing or unsupported = `en`)
+sets the language of every text the backend writes for the athlete: a planned workout's `name`,
+`description`, `coach_rationale`, `execution_tips` and step `name`/`notes` (exercise names and
+cues included), and the names given to imported activities ("Recorded Activity", "Strava
+activity") and logged strength sets. Text is generated when the session is planned or imported,
+so changing the language affects new workouts only. Codes the app reads for logic (`sport`,
+`session_kind`, `week_type`, step `type`, target units) never change. Messages live in
+`functions/i18n/messages/<lang>.py`; a language without translations falls back to English.
+
+The app changes the language from Settings. It then regenerates the athlete's upcoming unfinished
+sessions, so they follow the new language straight away.
+
+`users/{uid}.goal.bodyArea` (`core`, `upper`, `lower` or `all`) is the strength and mobility focus,
+stored as a code so it works in any language. Older goals without it fall back to matching
+English keywords in `goal.notes`.
 
 The planner queries `workouts` by `userId` and `date`. This needs the composite index in
 `firestore.indexes.json`.

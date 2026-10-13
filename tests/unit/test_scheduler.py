@@ -161,3 +161,26 @@ def test_anatomical_focus_from_goal_notes(notes, expected):
     from engine.sessions import anatomical_focus
     assert anatomical_focus(make_profile(goal=make_goal(notes=notes))) == expected
     assert anatomical_focus(make_profile(goal=None)) == "full"
+
+
+@pytest.mark.parametrize("issue", [{"injury": 2}, {"illness": 2}])
+def test_severe_issue_rest_day_reads_cleanly(issue):
+    doc = T.schedule_day(make_profile(**issue), MON)
+    assert doc.sport == "rest" and ".." not in doc.description
+    assert doc.description.startswith("Complete Rest Day: Severe")
+
+
+@pytest.mark.parametrize("area,expected", [("core", "core"), ("upper", "upper"), ("lower", "lower"), ("all", "full")])
+def test_body_area_code_sets_strength_focus_in_any_language(area, expected):
+    from core.models import Goal
+    from engine.sessions import anatomical_focus
+    # notes in German say nothing the old English keyword match would catch
+    goal = Goal(name="Ziel", notes="Mehr Kraft im Alltag", body_area=area)
+    assert anatomical_focus(make_profile(goal=goal, language="de")) == expected
+
+
+def test_body_area_wins_over_notes_and_old_goals_still_use_notes():
+    from core.models import Goal
+    from engine.sessions import anatomical_focus
+    assert anatomical_focus(make_profile(goal=Goal(notes="target area: upper", body_area="lower"))) == "lower"
+    assert anatomical_focus(make_profile(goal=Goal(notes="Target Area: upper"))) == "upper"

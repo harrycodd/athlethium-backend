@@ -24,6 +24,7 @@ from core.models import TrainingPhase, UserProfile
 from engine.periodization import WeekContext, WeekType, monday_of, week_context
 from engine.physiology import PhysiologyEngine
 from engine.sessions import session_tss
+from i18n import t
 
 ENDURANCE_SPORTS = ("cycling", "running", "swimming")
 LEVELS = ("beginner", "intermediate", "advanced", "elite", "pro")
@@ -380,9 +381,8 @@ class WeekPlanner:
         sports, focus = endurance_sports(profile)
 
         if profile.injury >= 2 or profile.illness >= 2:
-            reason = "Severe injury" if profile.injury >= 2 else "Severe illness"
-            sessions = tuple(PlannedSession(d, Kind.REST, reason=f"{reason}: complete rest until cleared.")
-                             for d in days)
+            reason = t(profile.language, "rest.severeInjury" if profile.injury >= 2 else "rest.severeIllness")
+            sessions = tuple(PlannedSession(d, Kind.REST, reason=reason) for d in days)
             return WeekPlan(ctx, 0.0, sessions, comeback, level)
 
         minor_issue = profile.injury == 1 or profile.illness == 1
@@ -819,12 +819,13 @@ class WeekPlanner:
             if delta == 0 and race_sport:
                 hours = (profile.goal.target_time / 3600) if profile.goal.target_time else DEFAULT_RACE_H[race_sport]
                 out[i] = PlannedSession(s.date, Kind.RACE, race_sport, 4, round(min(hours, 16.0), 2),
-                                        reason=profile.goal.name or "Race")
+                                        reason=profile.goal.name or t(profile.language, "race.defaultName"))
             elif delta == -1 and race_sport:
                 out[i] = (PlannedSession(s.date, Kind.SHAKEOUT, race_sport, 2, SHAKEOUT_H)
                           if caps[i] >= SHAKEOUT_H else PlannedSession(s.date, Kind.REST))
             elif delta == -2 or delta == 1:
-                out[i] = PlannedSession(s.date, Kind.REST, reason="Race week rest" if delta < 0 else "Post-race rest")
+                out[i] = PlannedSession(s.date, Kind.REST,
+                                        reason=t(profile.language, "rest.raceWeek" if delta < 0 else "rest.postRace"))
             elif delta == -3 and race_sport:
                 hours = _floor_slot(min(OPENER_H, caps[i]))
                 out[i] = (PlannedSession(s.date, Kind.OPENER, race_sport, 2, hours)

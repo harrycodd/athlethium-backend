@@ -36,6 +36,7 @@ class Goal:
     target_time_string: Optional[str] = None  # e.g. "03:45:00"
     target_pace: Optional[str] = None  # e.g. "5:20 /km"
     notes: Optional[str] = None
+    body_area: Optional[str] = None  # strength/mobility focus: core | upper | lower | all
 
 
 @dataclass
@@ -57,6 +58,7 @@ class UserProfile:
     # Setup wizard & UI preferences
     display_name: Optional[str] = None
     units: str = "Metric"  # Metric or Imperial
+    language: str = "en"  # language of generated text: en, es, fr, de, it, ja (see i18n.SUPPORTED)
     main_focus: Dict[str, bool] = field(default_factory=dict)
     activities: Dict[str, bool] = field(default_factory=dict)
     equipment_toggles: Dict[str, bool] = field(default_factory=dict)

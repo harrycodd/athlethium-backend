@@ -14,6 +14,7 @@ from dataclasses import dataclass
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 from core.models import WorkoutStep
+from i18n import t
 
 BLOCK_DAYS = 28              # keep the same lifts for a 4-week block, then rotate
 WARMUP_SEC = 300
@@ -24,11 +25,16 @@ DEFAULT_DATE = datetime.date(2026, 1, 5)
 
 @dataclass(frozen=True)
 class Exercise:
-    name: str
+    key: str                      # messages: exercise.<key>.name / exercise.<key>.cue
     needs: Tuple[str, ...] = ()   # all of these (besides bodyweight) are required
     per_side: bool = False
     hold_sec: int = 0             # > 0: a timed hold instead of reps
-    cue: str = ""
+
+    def name(self, lang: str) -> str:
+        return t(lang, f"exercise.{self.key}.name")
+
+    def cue(self, lang: str) -> str:
+        return t(lang, f"exercise.{self.key}.cue")
 
 
 E = Exercise
@@ -36,68 +42,54 @@ E = Exercise
 # Within each pattern, loaded options come first; the last option always needs no equipment.
 VARIANTS: Dict[str, List[Exercise]] = {
     "squat": [
-        E("Barbell Back Squat", ("squat_rack",), cue="Brace, sit down between your hips, drive up through the mid-foot."),
-        E("Dumbbell Goblet Squat", ("dumbbells",),
-          cue="Hold a dumbbell at your chest; elbows inside the knees at the bottom."),
-        E("Kettlebell Goblet Squat", ("kettlebells",), cue="Hold the bell by the horns at your chest; sit deep, chest up."),
-        E("Tempo Bodyweight Squat", cue="3 s down, 1 s pause at the bottom, stand up tall."),
+        E("barbell_back_squat", ("squat_rack",)),
+        E("dumbbell_goblet_squat", ("dumbbells",)),
+        E("kettlebell_goblet_squat", ("kettlebells",)),
+        E("tempo_bodyweight_squat"),
     ],
     "hinge": [
-        E("Barbell Romanian Deadlift", ("barbell",),
-          cue="Soft knees, push the hips back until the hamstrings load; bar close to the legs."),
-        E("Dumbbell Romanian Deadlift", ("dumbbells",),
-          cue="Dumbbells slide down the thighs; flat back, hips back, squeeze the glutes to stand."),
-        E("Kettlebell Deadlift", ("kettlebells",), cue="Bell between the feet, hips back, flat back, stand tall."),
-        E("Single-Leg Romanian Deadlift", per_side=True,
-          cue="Reach the free leg back with hips square; touch a wall for balance if needed."),
+        E("barbell_romanian_deadlift", ("barbell",)),
+        E("dumbbell_romanian_deadlift", ("dumbbells",)),
+        E("kettlebell_deadlift", ("kettlebells",)),
+        E("single_leg_romanian_deadlift", per_side=True),
     ],
     "single_leg": [
-        E("Dumbbell Bulgarian Split Squat", ("dumbbells", "bench"), per_side=True,
-          cue="Rear foot on the bench, front shin close to vertical, lower under control."),
-        E("Dumbbell Step-Up", ("dumbbells", "bench"), per_side=True,
-          cue="Drive through the top foot; don't push off with the bottom one."),
-        E("Dumbbell Reverse Lunge", ("dumbbells",), per_side=True, cue="Step back, back knee to just above the floor."),
-        E("Bulgarian Split Squat", per_side=True, cue="Rear foot on a chair or step; front knee tracks over the toes."),
-        E("Reverse Lunge", per_side=True,
-          cue="Step back, back knee to just above the floor, push through the front heel."),
+        E("dumbbell_bulgarian_split_squat", ("dumbbells", "bench"), per_side=True),
+        E("dumbbell_step_up", ("dumbbells", "bench"), per_side=True),
+        E("dumbbell_reverse_lunge", ("dumbbells",), per_side=True),
+        E("bulgarian_split_squat", per_side=True),
+        E("reverse_lunge", per_side=True),
     ],
     "push": [
-        E("Barbell Bench Press", ("barbell", "bench"),
-          cue="Shoulder blades squeezed together, bar to mid-chest, press up and back."),
-        E("Dumbbell Bench Press", ("dumbbells", "bench"),
-          cue="Lower the dumbbells to chest level, elbows about 45° from the body."),
-        E("Dumbbell Floor Press", ("dumbbells",), cue="Lie on the floor; lower until the upper arms touch it, then press."),
-        E("Push-Up", cue="Body in one straight line; hands on a bench makes it easier, feet on it harder."),
+        E("barbell_bench_press", ("barbell", "bench")),
+        E("dumbbell_bench_press", ("dumbbells", "bench")),
+        E("dumbbell_floor_press", ("dumbbells",)),
+        E("push_up"),
     ],
     "vertical_push": [
-        E("Standing Dumbbell Overhead Press", ("dumbbells",), cue="Ribs down, glutes tight, press straight overhead."),
-        E("Half-Kneeling Kettlebell Press", ("kettlebells",), per_side=True,
-          cue="Squeeze the glute of the down knee; press without leaning."),
-        E("Pike Push-Up", cue="Hips high, lower the top of your head towards the floor between your hands."),
+        E("standing_dumbbell_overhead_press", ("dumbbells",)),
+        E("half_kneeling_kettlebell_press", ("kettlebells",), per_side=True),
+        E("pike_push_up"),
     ],
     "pull": [
-        E("Pull-Up", ("pullup_bar",),
-          cue="Full hang to chin over the bar; use a band or slow 5 s lowers if you can't do the reps."),
-        E("Lat Pulldown", ("lat_pulldown",), cue="Pull the bar to the top of the chest, elbows down and back."),
-        E("Seated Cable Row", ("cables",), cue="Tall chest, pull the handle to the stomach, squeeze the shoulder blades."),
-        E("One-Arm Dumbbell Row", ("dumbbells",), per_side=True,
-          cue="Hand and knee on a bench or chair; row the dumbbell to the hip."),
-        E("Resistance Band Row", ("bands",), cue="Band anchored at chest height; pull the elbows back past the ribs."),
-        E("Inverted Row", cue="Under a sturdy table or low bar, body straight; pull the chest to it."),
+        E("pull_up", ("pullup_bar",)),
+        E("lat_pulldown", ("lat_pulldown",)),
+        E("seated_cable_row", ("cables",)),
+        E("one_arm_dumbbell_row", ("dumbbells",), per_side=True),
+        E("resistance_band_row", ("bands",)),
+        E("inverted_row"),
     ],
     "core": [
-        E("Dead Bug", per_side=True, cue="Lower back pressed to the floor; slowly extend the opposite arm and leg."),
-        E("Side Plank", per_side=True, hold_sec=30, cue="Hips high, straight line from head to heels."),
-        E("Pallof Press", ("bands",), per_side=True, cue="Band at chest height to your side; press out and resist the twist."),
-        E("Hanging Knee Raise", ("pullup_bar",), cue="No swinging; curl the pelvis up, lower slowly."),
-        E("Suitcase Carry", ("dumbbells",), per_side=True, hold_sec=40,
-          cue="Heavy dumbbell in one hand; walk tall without leaning."),
-        E("Bird Dog", per_side=True, cue="Reach the opposite arm and leg long, hold 2 s, keep the hips level."),
-        E("Front Plank", hold_sec=40, cue="Squeeze the glutes and brace; don't let the hips sag."),
+        E("dead_bug", per_side=True),
+        E("side_plank", per_side=True, hold_sec=30),
+        E("pallof_press", ("bands",), per_side=True),
+        E("hanging_knee_raise", ("pullup_bar",)),
+        E("suitcase_carry", ("dumbbells",), per_side=True, hold_sec=40),
+        E("bird_dog", per_side=True),
+        E("front_plank", hold_sec=40),
     ],
 }
-CALF_RAISE = E("Single-Leg Calf Raise", per_side=True,
-               cue="On a step: full stretch at the bottom, 2 s up, 2 s down. Hold a dumbbell once 15 reps is easy.")
+CALF_RAISE = E("single_leg_calf_raise", per_side=True)
 
 # Compound blocks per focus: template A (early week) and B (later in the week). A block with two
 # patterns is a superset.
@@ -112,26 +104,22 @@ TEMPLATES: Dict[str, Tuple[List[Tuple[str, ...]], List[Tuple[str, ...]]]] = {
              [("hinge",), ("vertical_push", "pull")]),
 }
 FOCUS_ALIASES = {"legs": "lower", "all": "full", "full_body": "full"}
-FOCUS_TITLES = {"full": "Full Body", "lower": "Lower Body", "upper": "Upper Body", "core": "Core & Full Body"}
+# names: strength.name.<focus>; the athlete's level picks the prescription (sets, reps), and its
+# rest and load advice (strength.rest.<tier>, strength.load.<tier>)
 
-# (sets, reps, rest, load) for the compound lifts. Heavy, low-rep lifting is what improves
-# endurance economy; beginners build technique with lighter, higher-rep sets first.
+# (sets, reps) for the compound lifts. Heavy, low-rep lifting is what improves endurance economy;
+# beginners build technique with lighter, higher-rep sets first.
 PRESCRIPTIONS = {
-    "beginner": (3, 10, "90 s", "Moderate weight: finish each set with 3-4 reps left in the tank."),
-    "intermediate": (3, 8, "2 min", "Challenging weight: finish each set with 2-3 reps left in the tank."),
-    "heavy": (4, 5, "2-3 min", "Heavy: finish each set with 2 reps left in the tank. Never to failure."),
+    "beginner": (3, 10),
+    "intermediate": (3, 8),
+    "heavy": (4, 5),
 }
 
-WARMUP_NOTES = ("2 rounds: 10 bodyweight squats, 5 walking lunges each leg, 10 glute bridges, "
-                "10 band pull-aparts or arm circles. Then 1-2 light sets of the first lift.")
-COOLDOWN_NOTES = ("Half-kneeling hip flexor stretch 30 s each side, standing hamstring stretch 30 s each side, "
-                  "doorway chest stretch 30 s.")
 
-
-def _prescription(level: Optional[str], difficulty: int) -> Tuple[int, int, str, str]:
+def _prescription(level: Optional[str], difficulty: int) -> str:
     if level:
-        return PRESCRIPTIONS[level if level in ("beginner", "intermediate") else "heavy"]
-    return PRESCRIPTIONS["beginner" if difficulty <= 1 else "intermediate"]
+        return level if level in ("beginner", "intermediate") else "heavy"
+    return "beginner" if difficulty <= 1 else "intermediate"
 
 
 def _pick(pattern: str, equipment: set, rotation: int) -> Exercise:
@@ -142,9 +130,11 @@ def _pick(pattern: str, equipment: set, rotation: int) -> Exercise:
     return pool[rotation % len(pool)]
 
 
-def _dose(ex: Exercise, sets: int, reps: int) -> str:
-    each = " each side" if ex.per_side else ""
-    return f"{sets} × {ex.hold_sec} s hold{each}" if ex.hold_sec else f"{sets} × {reps}{each}"
+def _dose(ex: Exercise, sets: int, reps: int, lang: str) -> str:
+    side = ".perSide" if ex.per_side else ""
+    if ex.hold_sec:
+        return t(lang, "strength.dose.hold" + side, sets=sets, seconds=ex.hold_sec)
+    return t(lang, "strength.dose.reps" + side, sets=sets, reps=reps)
 
 
 class StrengthGenerator:
@@ -160,38 +150,40 @@ class StrengthGenerator:
         session_date: Optional[datetime.date] = None,
         sports: Optional[Sequence[str]] = None,
         level: Optional[str] = None,
+        lang: str = "en",
     ) -> Dict[str, Any]:
         focus_key = FOCUS_ALIASES.get(focus.lower(), focus.lower())
         if focus_key not in TEMPLATES:
             focus_key = "full"
-        title = FOCUS_TITLES[focus_key]
         total_sec = max(0, int(duration_minutes * 60))
         if total_sec == 0:
-            return {"name": f"{title} Strength", "description": "", "steps": [], "targetType": "reps",
-                    "total_duration_sec": 0}
+            return {"name": t(lang, f"strength.name.{focus_key}"), "description": "", "steps": [],
+                    "targetType": "reps", "total_duration_sec": 0}
 
         equipment = set(user_equipment or []) | {"bodyweight"}
         day = session_date or DEFAULT_DATE
         template = 0 if day.weekday() < 3 else 1   # the two weekly sessions get different lifts
         rotation = day.toordinal() // BLOCK_DAYS     # same lifts for a 4-week block
-        sets, reps, rest, load = _prescription(level, difficulty)
+        tier = _prescription(level, difficulty)
+        sets, reps = PRESCRIPTIONS[tier]
+        rest, load = t(lang, f"strength.rest.{tier}"), t(lang, f"strength.load.{tier}")
 
         blocks = TEMPLATES[focus_key][template]
         if total_sec < SHORT_SESSION_SEC:
             blocks = blocks[:2]
 
-        plan: List[Tuple[str, Exercise, int, int, str]] = []  # (step name, exercise, sets, reps, notes)
+        plan: List[Tuple[str, Exercise, int, int, str]] = []  # (block label, exercise, sets, reps, notes)
         for b, block in enumerate(blocks):
             letter = "ABC"[b]
             picks = [_pick(pattern, equipment, rotation + b + template) for pattern in block]
             for i, ex in enumerate(picks):
                 if len(picks) > 1:
                     label = f"{letter}{i + 1}"
-                    rest_note = f"Superset with {picks[1 - i].name}: alternate sets, rest {rest} after each pair."
+                    rest_note = t(lang, "strength.rest.superset", exercise=picks[1 - i].name(lang), rest=rest)
                 else:
-                    label, rest_note = letter, f"Rest {rest} between sets."
-                plan.append((f"{label}. {ex.name}", ex, sets, reps,
-                             f"{_dose(ex, sets, reps)}. {ex.cue} {rest_note} {load}"))
+                    label, rest_note = letter, t(lang, "strength.rest.straight", rest=rest)
+                plan.append((label, ex, sets, reps, t(lang, "strength.notes.lift", dose=_dose(ex, sets, reps, lang),
+                                                      cue=ex.cue(lang), rest=rest_note, load=load)))
 
         # Finisher: core, plus calf raises for runners (calf and Achilles resilience)
         finisher = [_pick("core", equipment, rotation + template + 3 * k)
@@ -200,8 +192,8 @@ class StrengthGenerator:
             finisher.append(CALF_RAISE)
         for k, ex in enumerate(finisher):
             f_sets, f_reps = (3, 12) if ex is CALF_RAISE else (2, 8)
-            plan.append((f"D{k + 1}. {ex.name}", ex, f_sets, f_reps,
-                         f"{_dose(ex, f_sets, f_reps)}. {ex.cue} Rest 45 s."))
+            plan.append((f"D{k + 1}", ex, f_sets, f_reps,
+                         t(lang, "strength.notes.finisher", dose=_dose(ex, f_sets, f_reps, lang), cue=ex.cue(lang))))
 
         # Fixed warm-up and cool-down (scaled down for short sessions); the rest is split across
         # the exercises by number of sets, the last one absorbing rounding.
@@ -210,20 +202,24 @@ class StrengthGenerator:
         cooldown = total_sec * 10 // 100 if short else COOLDOWN_SEC
         work = total_sec - warmup - cooldown
         total_sets = sum(p[2] for p in plan)
-        steps = [WorkoutStep("warmup", warmup, "Warm-up", target_type="time", notes=WARMUP_NOTES)]
+        steps = [WorkoutStep("warmup", warmup, t(lang, "step.warmup"), target_type="time",
+                             notes=t(lang, "strength.notes.warmup"))]
         used = 0
-        for i, (name, ex, s, r, notes) in enumerate(plan):
+        for i, (label, ex, s, r, notes) in enumerate(plan):
             dur = work - used if i == len(plan) - 1 else work * s // total_sets
             used += dur
-            steps.append(WorkoutStep("exercise", dur, name, target_type="reps", sets=s,
+            steps.append(WorkoutStep("exercise", dur, t(lang, "strength.step.name", label=label, exercise=ex.name(lang)),
+                                     target_type="reps", sets=s,
                                      reps=None if ex.hold_sec else r, notes=notes))
-        steps.append(WorkoutStep("cooldown", cooldown, "Cool-down Stretches", target_type="time",
-                                 notes=COOLDOWN_NOTES))
+        steps.append(WorkoutStep("cooldown", cooldown, t(lang, "strength.step.cooldown"), target_type="time",
+                                 notes=t(lang, "strength.notes.cooldown")))
 
-        summary = "; ".join(f"{name.split('. ', 1)[1]} {_dose(ex, s, r)}" for name, ex, s, r, _ in plan)
+        summary = t(lang, "strength.summary.separator").join(
+            t(lang, "strength.summary.item", exercise=ex.name(lang), dose=_dose(ex, s, r, lang))
+            for _, ex, s, r, _ in plan)
         return {
-            "name": f"{title} Strength {'AB'[template]}",
-            "description": f"Strength for endurance performance and injury resistance: {summary}.",
+            "name": t(lang, f"strength.name.{focus_key}.variant", variant="AB"[template]),
+            "description": t(lang, "strength.description", summary=summary),
             "steps": [step.to_dict() for step in steps],
             "targetType": "reps",
             "total_duration_sec": total_sec,

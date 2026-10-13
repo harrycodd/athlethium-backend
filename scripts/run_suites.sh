@@ -11,9 +11,9 @@ fi
 # 1) Full backend suite with coverage, >= 80% overall.
 "$PY" -m pytest --cov --cov-report=term-missing --cov-report=xml --cov-fail-under=80
 
-# 2) Plan-generation logic must be 100% covered (line + branch).
+# 2) Plan-generation logic and the message catalog must be 100% covered (line + branch).
 "$PY" -m coverage report --fail-under=100 \
-  --include='functions/engine/*,functions/generators/*'
+  --include='functions/engine/*,functions/generators/*,functions/i18n/*'
 
 # 3) Firestore + Storage security rules.
 npm run --silent test:rules
